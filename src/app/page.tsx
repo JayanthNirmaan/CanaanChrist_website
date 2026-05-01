@@ -16,13 +16,14 @@ import { ContactForm } from '@/components/shared/ContactForm';
 import { Counter } from '@/components/home/Counter';
 
 const coreValues = [
-  { icon: Heart, title: 'Compassion', desc: 'We cultivate kindness and empathy in every student — teaching them to see, understand, and care for the world.' },
-  { icon: Search, title: 'Curiosity', desc: 'We nurture a love for learning that goes beyond the classroom, encouraging students to ask questions and explore.' },
-  { icon: Trophy, title: 'Excellence', desc: 'We hold ourselves to the highest standards, believing that every child is capable of achieving their best.' },
-  { icon: ShieldCheck, title: 'Integrity', desc: 'We build character grounded in honesty, ethics, and a strong moral compass that guides students in life.' },
-  { icon: Users, title: 'Inclusivity', desc: 'We welcome every child and create an environment where each one feels seen, valued, and empowered.' },
-  { icon: Globe, title: 'Social Responsibility', desc: 'We raise aware citizens who contribute meaningfully to their community and society.' },
-  { icon: BookOpen, title: 'Cultural Rootedness', desc: 'We take pride in our connection to the local culture of Bangalore, helping students grow with identity.' },
+  { icon: Heart, title: 'Compassion', desc: 'We cultivate kindness and empathy in every student — teaching them to care for the world.' },
+  { icon: Search, title: 'Curiosity', desc: 'We nurture a love for learning that goes beyond the classroom, encouraging exploration.' },
+  { icon: Trophy, title: 'Excellence', desc: 'We hold high standards, believing every child is capable of achieving their very best.' },
+  { icon: ShieldCheck, title: 'Integrity', desc: 'We build character grounded in honesty, ethics, and a strong moral compass.' },
+  { icon: Users, title: 'Inclusivity', desc: 'We welcome every child, creating an environment where each one feels seen and valued.' },
+  { icon: Globe, title: 'Responsibility', desc: 'We raise aware citizens who contribute meaningfully to their community and society.' },
+  { icon: BookOpen, title: 'Cultural Pride', desc: 'We take pride in our connection to Bangalore, helping students grow with identity.' },
+  { icon: Smile, title: 'Happiness', desc: 'A joyful environment is the foundation of effective and lasting learning.' },
 ];
 
 const facilities = [
@@ -82,53 +83,53 @@ const gallery = PlaceHolderImages.filter(img => img.id.startsWith('gallery'));
 
 const ScribbleBackground = () => (
   <div className="absolute inset-0 overflow-hidden pointer-events-none select-none">
-    <div className="scribble-bg opacity-75"></div>
-    <svg className="absolute inset-0 w-full h-full opacity-40" viewBox="0 0 1000 1000" fill="none" xmlns="http://www.w3.org/2000/svg">
-      <path d="M100,200 Q250,50 400,200 T700,200" stroke="currentColor" strokeWidth="4" strokeDasharray="1000" className="text-primary animate-draw-line" />
-      <path d="M50,800 Q300,950 600,800 T950,800" stroke="currentColor" strokeWidth="4" strokeDasharray="1000" className="text-secondary animate-draw-line" style={{ animationDelay: '1s' }} />
-      <path d="M800,100 Q950,300 800,500 T800,900" stroke="currentColor" strokeWidth="4" strokeDasharray="1000" className="text-accent animate-draw-line" style={{ animationDelay: '2s' }} />
-      <path d="M200,500 C300,400 500,600 800,450" stroke="currentColor" strokeWidth="3" strokeDasharray="1000" className="text-primary animate-draw-line" style={{ animationDelay: '3s' }} />
+    <div className="scribble-bg opacity-100"></div>
+    <svg className="absolute inset-0 w-full h-full opacity-50" viewBox="0 0 1000 1000" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <path d="M100,200 Q250,50 400,200 T700,200" stroke="currentColor" strokeWidth="6" strokeDasharray="1000" className="text-primary animate-draw-line" />
+      <path d="M50,800 Q300,950 600,800 T950,800" stroke="currentColor" strokeWidth="6" strokeDasharray="1000" className="text-secondary animate-draw-line" style={{ animationDelay: '1s' }} />
+      <path d="M800,100 Q950,300 800,500 T800,900" stroke="currentColor" strokeWidth="6" strokeDasharray="1000" className="text-accent animate-draw-line" style={{ animationDelay: '2s' }} />
+      <path d="M200,500 C300,400 500,600 800,450" stroke="currentColor" strokeWidth="5" strokeDasharray="1000" className="text-primary animate-draw-line" style={{ animationDelay: '3s' }} />
     </svg>
     
-    <div className="absolute top-[15%] left-[10%] animate-float text-primary/45" style={{ animationDelay: '0s' }}>
-      <Pencil size={68} />
+    <div className="absolute top-[15%] left-[10%] animate-float text-primary/60" style={{ animationDelay: '0s' }}>
+      <Pencil size={80} />
     </div>
-    <div className="absolute top-[20%] right-[15%] animate-float text-secondary/45" style={{ animationDelay: '1s' }}>
-      <Rocket size={84} />
+    <div className="absolute top-[20%] right-[15%] animate-float text-secondary/60" style={{ animationDelay: '1s' }}>
+      <Rocket size={100} />
     </div>
-    <div className="absolute bottom-[20%] left-[15%] animate-float text-accent/45" style={{ animationDelay: '2s' }}>
-      <GraduationCap size={76} />
+    <div className="absolute bottom-[20%] left-[15%] animate-float text-accent/60" style={{ animationDelay: '2s' }}>
+      <GraduationCap size={90} />
     </div>
-    <div className="absolute bottom-[25%] right-[20%] animate-float text-primary/45" style={{ animationDelay: '1.5s' }}>
-      <BookOpen size={68} />
+    <div className="absolute bottom-[25%] right-[20%] animate-float text-primary/60" style={{ animationDelay: '1.5s' }}>
+      <BookOpen size={85} />
     </div>
-    <div className="absolute top-[50%] right-[5%] animate-float text-secondary/45" style={{ animationDelay: '0.5s' }}>
-      <Palette size={60} />
+    <div className="absolute top-[50%] right-[5%] animate-float text-secondary/60" style={{ animationDelay: '0.5s' }}>
+      <Palette size={75} />
     </div>
-    <div className="absolute top-[60%] left-[5%] animate-float text-accent/45" style={{ animationDelay: '3.5s' }}>
-      <Music size={52} />
+    <div className="absolute top-[60%] left-[5%] animate-float text-accent/60" style={{ animationDelay: '3.5s' }}>
+      <Music size={65} />
     </div>
-    <div className="absolute top-[10%] right-[40%] animate-float text-accent/45" style={{ animationDelay: '4.5s' }}>
-      <Wind size={64} />
+    <div className="absolute top-[10%] right-[40%] animate-float text-accent/60" style={{ animationDelay: '4.5s' }}>
+      <Wind size={80} />
     </div>
 
-    <div className="absolute top-[5%] left-[30%] animate-float text-primary/40" style={{ animationDelay: '2.5s' }}>
-      <Cloud size={70} />
+    <div className="absolute top-[5%] left-[30%] animate-float text-primary/55" style={{ animationDelay: '2.5s' }}>
+      <Cloud size={85} />
     </div>
-    <div className="absolute top-[40%] left-[45%] animate-float text-accent/40" style={{ animationDelay: '5s' }}>
-      <Sun size={80} />
+    <div className="absolute top-[40%] left-[45%] animate-float text-accent/55" style={{ animationDelay: '5s' }}>
+      <Sun size={95} />
     </div>
-    <div className="absolute bottom-[10%] left-[40%] animate-float text-secondary/40" style={{ animationDelay: '1.2s' }}>
-      <Shapes size={60} />
+    <div className="absolute bottom-[10%] left-[40%] animate-float text-secondary/55" style={{ animationDelay: '1.2s' }}>
+      <Shapes size={75} />
     </div>
-    <div className="absolute bottom-[5%] right-[10%] animate-float text-primary/40" style={{ animationDelay: '0.8s' }}>
-      <Smile size={56} />
+    <div className="absolute bottom-[5%] right-[10%] animate-float text-primary/55" style={{ animationDelay: '0.8s' }}>
+      <Smile size={70} />
     </div>
-    <div className="absolute top-[70%] right-[45%] animate-float text-accent/40" style={{ animationDelay: '2.2s' }}>
-      <Star size={48} />
+    <div className="absolute top-[70%] right-[45%] animate-float text-accent/55" style={{ animationDelay: '2.2s' }}>
+      <Star size={60} />
     </div>
-    <div className="absolute top-[35%] left-[12%] animate-float text-secondary/40" style={{ animationDelay: '4s' }}>
-      <Trophy size={64} />
+    <div className="absolute top-[35%] left-[12%] animate-float text-secondary/55" style={{ animationDelay: '4s' }}>
+      <Trophy size={80} />
     </div>
   </div>
 );
@@ -160,7 +161,6 @@ export default function Home() {
       </section>
 
       <section className="py-24 bg-white relative group transition-all duration-700 overflow-hidden">
-        {/* Background Bubble Animation - grows from behind the image area */}
         <div className="absolute top-1/2 right-[25%] -translate-y-1/2 translate-x-1/2 w-0 h-0 bg-primary rounded-full transition-all duration-1000 ease-in-out group-has-[.image-hover-trigger:hover]:w-[300vw] group-has-[.image-hover-trigger:hover]:h-[300vw] pointer-events-none -z-0" />
 
         <div className="relative z-10 max-w-7xl mx-auto px-6 grid grid-cols-1 md:grid-cols-2 gap-16 items-center">
@@ -225,14 +225,14 @@ export default function Home() {
             <h2 className="text-4xl font-bold text-primary">Our Core Values</h2>
             <p className="text-muted-foreground max-w-2xl mx-auto">The pillars that define the character and conduct of every student at Canaan Christ.</p>
           </div>
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
             {coreValues.map((v, i) => (
-              <div key={i} className="p-8 bg-white rounded-3xl shadow-sm border hover:shadow-xl hover:border-primary/20 transition-all group">
-                <div className="w-14 h-14 bg-primary/10 rounded-2xl flex items-center justify-center text-primary mb-6 group-hover:bg-primary group-hover:text-white transition-all transform group-hover:rotate-6">
-                  <v.icon size={28} />
+              <div key={i} className="p-6 bg-white rounded-[2rem] shadow-sm border hover:shadow-xl hover:border-primary/20 transition-all group">
+                <div className="w-12 h-12 bg-primary/10 rounded-2xl flex items-center justify-center text-primary mb-5 group-hover:bg-primary group-hover:text-white transition-all transform group-hover:animate-wiggle">
+                  <v.icon size={24} />
                 </div>
-                <h4 className="text-xl font-bold mb-3">{v.title}</h4>
-                <p className="text-muted-foreground text-sm leading-relaxed">{v.desc}</p>
+                <h4 className="text-lg font-bold mb-2">{v.title}</h4>
+                <p className="text-muted-foreground text-xs leading-relaxed">{v.desc}</p>
               </div>
             ))}
           </div>

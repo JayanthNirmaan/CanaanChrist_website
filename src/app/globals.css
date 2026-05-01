@@ -76,12 +76,21 @@
   100% { stroke-dashoffset: 0; }
 }
 
+@keyframes wiggle {
+  0%, 100% { transform: rotate(-6deg); }
+  50% { transform: rotate(6deg); }
+}
+
 .animate-float {
   animation: float 6s ease-in-out infinite;
 }
 
 .animate-draw-line {
   animation: draw-line 4s ease-out infinite alternate;
+}
+
+.animate-wiggle {
+  animation: wiggle 0.5s ease-in-out infinite;
 }
 
 .reveal-on-scroll {
@@ -93,4 +102,8 @@
 .reveal-on-scroll.active {
   opacity: 1;
   transform: translateY(0);
+}
+
+::selection {
+  @apply bg-accent text-white;
 }
