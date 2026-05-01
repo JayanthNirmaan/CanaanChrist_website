@@ -1,7 +1,6 @@
 import { Navbar } from '@/components/layout/Navbar';
 import { Footer } from '@/components/layout/Footer';
-import { AIAdmissionsTool } from '@/components/admissions/AIAdmissionsTool';
-import { CheckCircle2, FileText, Calendar, Users, HelpCircle, GraduationCap } from 'lucide-react';
+import { CheckCircle2, FileText, Calendar, Users, GraduationCap } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import Link from 'next/link';
 
@@ -90,12 +89,6 @@ export default function AdmissionsPage() {
 
           <aside className="space-y-8">
             <div className="sticky top-24">
-              <div className="bg-secondary p-8 rounded-3xl text-white mb-8">
-                <HelpCircle className="mb-4" size={32} />
-                <h3 className="text-xl font-bold mb-4">Need Guidance?</h3>
-                <p className="text-sm opacity-90 mb-6">Our AI assistant is trained on CCPS policies and can answer your queries instantly.</p>
-                <AIAdmissionsTool />
-              </div>
               <div className="p-8 bg-white rounded-3xl border shadow-sm text-center">
                 <h3 className="text-xl font-bold mb-4">Visit Campus</h3>
                 <p className="text-sm text-muted-foreground mb-6">No.6 1st Crs, 9th Mn Rd, BTM 1st Stage</p>
