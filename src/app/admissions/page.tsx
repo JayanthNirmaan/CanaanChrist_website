@@ -1,8 +1,7 @@
 import { Navbar } from '@/components/layout/Navbar';
 import { Footer } from '@/components/layout/Footer';
-import { CheckCircle2, FileText, GraduationCap, Users, Bot, Baby, Backpack, BookOpen } from 'lucide-react';
+import { CheckCircle2, FileText, GraduationCap, Users, Baby, Backpack, BookOpen } from 'lucide-react';
 import { Button } from '@/components/ui/button';
-import { AIAdmissionsTool } from '@/components/admissions/AIAdmissionsTool';
 import Link from 'next/link';
 
 export default function AdmissionsPage() {
@@ -13,7 +12,6 @@ export default function AdmissionsPage() {
       desc: 'Nursery, LKG, UKG', 
       color: 'text-pink-500', 
       bg: 'bg-pink-100',
-      hint: 'Cheerful baby learner'
     },
     { 
       icon: Backpack, 
@@ -21,7 +19,6 @@ export default function AdmissionsPage() {
       desc: 'Grades 1 to 4', 
       color: 'text-blue-500', 
       bg: 'bg-blue-100',
-      hint: 'Independent student with bag'
     },
     { 
       icon: BookOpen, 
@@ -29,7 +26,6 @@ export default function AdmissionsPage() {
       desc: 'Grades 5 to 7', 
       color: 'text-orange-500', 
       bg: 'bg-orange-100',
-      hint: 'Confident curious learner'
     },
     { 
       icon: GraduationCap, 
@@ -37,7 +33,6 @@ export default function AdmissionsPage() {
       desc: 'Grades 8 to 10', 
       color: 'text-primary', 
       bg: 'bg-primary/10',
-      hint: 'Mature senior student'
     },
   ];
 
@@ -129,19 +124,6 @@ export default function AdmissionsPage() {
                   ))}
                 </div>
               </div>
-            </div>
-
-            {/* AI Guidance Tool Section */}
-            <div className="space-y-8 pt-8">
-              <div className="text-center space-y-3">
-                <h2 className="text-3xl font-bold text-primary flex items-center justify-center gap-3">
-                  <Bot className="text-secondary" /> Instant Admissions Guidance
-                </h2>
-                <p className="text-muted-foreground max-w-xl mx-auto">
-                  Have specific questions about our policies or the enrollment process? Our AI assistant is here to help you 24/7.
-                </p>
-              </div>
-              <AIAdmissionsTool />
             </div>
           </div>
 
