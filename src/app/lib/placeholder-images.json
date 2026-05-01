@@ -8,6 +8,12 @@
       "imageHint": "modern school building"
     },
     {
+      "id": "school-logo",
+      "description": "Canaan Christ Public School Logo",
+      "imageUrl": "https://picsum.photos/seed/school-logo/200/200",
+      "imageHint": "school logo"
+    },
+    {
       "id": "principal",
       "description": "Professional female principal portrait",
       "imageUrl": "https://picsum.photos/seed/principal/400/500",

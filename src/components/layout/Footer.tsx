@@ -1,14 +1,26 @@
+
 import Link from 'next/link';
-import { GraduationCap, MapPin, Phone, Mail, Facebook, Youtube, Instagram } from 'lucide-react';
+import Image from 'next/image';
+import { MapPin, Phone, Mail, Youtube, Instagram } from 'lucide-react';
+import { PlaceHolderImages } from '@/lib/placeholder-images';
 
 export function Footer() {
+  const logo = PlaceHolderImages.find(img => img.id === 'school-logo');
+
   return (
     <footer className="bg-primary text-primary-foreground pt-20 pb-10">
       <div className="max-w-7xl mx-auto px-6 grid grid-cols-1 md:grid-cols-4 gap-12">
         <div className="space-y-6">
           <div className="flex items-center gap-2">
-            <div className="bg-white p-2 rounded-lg text-primary">
-              <GraduationCap size={24} />
+            <div className="bg-white p-1 rounded-lg shadow-sm">
+              <Image 
+                src={logo?.imageUrl || 'https://picsum.photos/seed/school-logo/200/200'} 
+                alt="Logo" 
+                width={32} 
+                height={32} 
+                className="object-contain"
+                data-ai-hint="school logo"
+              />
             </div>
             <span className="text-xl font-bold tracking-tight uppercase">Canaan Christ</span>
           </div>

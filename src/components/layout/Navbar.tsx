@@ -3,10 +3,12 @@
 
 import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
+import Image from 'next/image';
 import { usePathname } from 'next/navigation';
-import { Menu, X, GraduationCap } from 'lucide-react';
+import { Menu, X } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { cn } from '@/lib/utils';
+import { PlaceHolderImages } from '@/lib/placeholder-images';
 
 const navItems = [
   { name: 'Home', href: '/' },
@@ -19,6 +21,7 @@ export function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
   const pathname = usePathname();
+  const logo = PlaceHolderImages.find(img => img.id === 'school-logo');
 
   useEffect(() => {
     const handleScroll = () => {
@@ -37,8 +40,15 @@ export function Navbar() {
     >
       <div className="max-w-7xl mx-auto flex items-center justify-between">
         <Link href="/" className="flex items-center gap-2 group">
-          <div className="bg-primary p-2 rounded-lg text-primary-foreground group-hover:scale-110 transition-transform">
-            <GraduationCap size={24} />
+          <div className="bg-white p-1 rounded-lg group-hover:scale-110 transition-transform shadow-sm">
+            <Image 
+              src={logo?.imageUrl || 'https://picsum.photos/seed/school-logo/200/200'} 
+              alt="Canaan Christ Public School Logo" 
+              width={40} 
+              height={40} 
+              className="object-contain"
+              data-ai-hint="school logo"
+            />
           </div>
           <span className="text-xl font-bold tracking-tight text-primary">Canaan Christ Public School</span>
         </Link>
