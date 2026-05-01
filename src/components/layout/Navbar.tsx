@@ -33,13 +33,13 @@ export function Navbar() {
   return (
     <nav
       className={cn(
-        'fixed top-0 w-full z-50 transition-all duration-300 px-6 py-4',
-        scrolled ? 'bg-background/95 backdrop-blur-md shadow-sm' : 'bg-transparent'
+        'fixed top-0 w-full z-50 transition-all duration-500 px-6 py-4',
+        scrolled ? 'bg-background/90 backdrop-blur-lg shadow-lg py-3' : 'bg-transparent'
       )}
     >
       <div className="max-w-7xl mx-auto flex items-center justify-between">
         <Link href="/" className="flex items-center gap-4 group">
-          <div className="group-hover:scale-110 transition-transform flex items-center justify-center">
+          <div className="transition-all duration-300 group-hover:scale-105">
             {logo?.imageUrl ? (
               <Image 
                 src={logo.imageUrl} 
@@ -50,54 +50,82 @@ export function Navbar() {
                 priority
               />
             ) : (
-              <div className="w-20 h-20 bg-primary/10 rounded flex items-center justify-center text-primary font-bold text-2xl">CC</div>
+              <div className="w-16 h-16 bg-primary text-white rounded-2xl flex items-center justify-center font-bold text-2xl shadow-lg">CC</div>
             )}
           </div>
-          <span className="text-3xl font-bold tracking-tight text-primary hidden sm:block">Canaan Christ Public School</span>
+          <div className="flex flex-col">
+            <span className="text-2xl font-bold tracking-tight text-primary leading-none hidden sm:block">Canaan Christ</span>
+            <span className="text-sm font-bold text-muted-foreground tracking-widest uppercase hidden sm:block">Public School</span>
+          </div>
         </Link>
 
-        <div className="hidden md:flex items-center gap-10">
-          {navItems.map((item) => (
-            <Link
-              key={item.name}
-              href={item.href}
-              className={cn(
-                'text-base font-semibold transition-colors hover:text-primary',
-                pathname === item.href ? 'text-primary' : 'text-foreground/80'
-              )}
-            >
-              {item.name}
-            </Link>
-          ))}
-          <Button asChild variant="default" size="default" className="rounded-full">
-            <Link href="/admissions">Apply Now</Link>
-          </Button>
-        </div>
-
-        <button className="md:hidden text-foreground" onClick={() => setIsOpen(!isOpen)}>
-          {isOpen ? <X size={24} /> : <Menu size={24} />}
-        </button>
-      </div>
-
-      {isOpen && (
-        <div className="md:hidden absolute top-full left-0 w-full bg-background border-b shadow-lg animate-in slide-in-from-top duration-300">
-          <div className="flex flex-col p-6 gap-4">
-            {navItems.map((item) => (
+        <div className="hidden md:flex items-center gap-1">
+          {navItems.map((item) => {
+            const isActive = pathname === item.href;
+            return (
               <Link
                 key={item.name}
                 href={item.href}
-                onClick={() => setIsOpen(false)}
                 className={cn(
-                  'text-xl font-semibold py-2',
-                  pathname === item.href ? 'text-primary' : 'text-foreground/80'
+                  'px-5 py-2 text-base font-bold transition-all relative group',
+                  isActive ? 'text-primary' : 'text-foreground/70 hover:text-primary'
                 )}
               >
                 {item.name}
+                {isActive && (
+                  <span className="absolute bottom-0 left-5 right-5 h-1 bg-primary rounded-full" />
+                )}
+                {!isActive && (
+                  <span className="absolute bottom-0 left-5 right-5 h-1 bg-primary rounded-full transform scale-x-0 transition-transform group-hover:scale-x-50" />
+                )}
               </Link>
-            ))}
-            <Button asChild className="w-full mt-4 rounded-full" size="lg">
-              <Link href="/admissions" onClick={() => setIsOpen(false)}>Apply Now</Link>
+            );
+          })}
+          <div className="ml-6">
+            <Button asChild variant="default" size="lg" className="rounded-full shadow-lg hover:shadow-primary/20 hover:-translate-y-0.5 transition-all font-bold px-8">
+              <Link href="/admissions">Apply Now</Link>
             </Button>
+          </div>
+        </div>
+
+        <button className="md:hidden text-primary p-2" onClick={() => setIsOpen(!isOpen)}>
+          {isOpen ? <X size={32} /> : <Menu size={32} />}
+        </button>
+      </div>
+
+      {/* Mobile Menu */}
+      {isOpen && (
+        <div className="md:hidden fixed inset-0 top-0 left-0 w-full h-screen bg-background z-50 animate-in slide-in-from-right duration-300">
+          <div className="p-6 flex flex-col h-full">
+            <div className="flex justify-between items-center mb-12">
+              <div className="flex items-center gap-3">
+                <div className="w-12 h-12 bg-primary text-white rounded-xl flex items-center justify-center font-bold text-xl">CC</div>
+                <span className="font-bold text-xl text-primary">Canaan Christ</span>
+              </div>
+              <button onClick={() => setIsOpen(false)} className="text-primary">
+                <X size={32} />
+              </button>
+            </div>
+            <div className="flex flex-col gap-6">
+              {navItems.map((item) => (
+                <Link
+                  key={item.name}
+                  href={item.href}
+                  onClick={() => setIsOpen(false)}
+                  className={cn(
+                    'text-3xl font-bold py-2 border-b-2 transition-colors',
+                    pathname === item.href ? 'text-primary border-primary' : 'text-foreground/80 border-transparent'
+                  )}
+                >
+                  {item.name}
+                </Link>
+              ))}
+            </div>
+            <div className="mt-auto pt-12">
+              <Button asChild className="w-full h-16 text-xl rounded-full font-bold" size="lg">
+                <Link href="/admissions" onClick={() => setIsOpen(false)}>Apply Now</Link>
+              </Button>
+            </div>
           </div>
         </div>
       )}

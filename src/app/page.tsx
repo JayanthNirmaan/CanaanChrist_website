@@ -10,7 +10,7 @@ import {
   Monitor, FlaskConical, Library as LibraryIcon, Zap, Video, Bus,
   ArrowRight, CheckCircle2, MapPin, Phone, Cpu, Languages,
   Presentation, Activity, Droplets, Shield, Pencil, GraduationCap, 
-  Palette, Music, Wind
+  Palette, Music, Wind, Rocket
 } from 'lucide-react';
 import { ContactForm } from '@/components/shared/ContactForm';
 
@@ -54,7 +54,7 @@ const ScribbleBackground = () => (
       <Pencil size={64} />
     </div>
     <div className="absolute top-[20%] right-[15%] animate-float text-secondary/20" style={{ animationDelay: '1s' }}>
-      <Wind size={80} />
+      <Rocket size={80} />
     </div>
     <div className="absolute bottom-[20%] left-[15%] animate-float text-accent/20" style={{ animationDelay: '2s' }}>
       <GraduationCap size={72} />
@@ -68,6 +68,9 @@ const ScribbleBackground = () => (
     <div className="absolute top-[60%] left-[5%] animate-float text-accent/20" style={{ animationDelay: '3s' }}>
       <Music size={48} />
     </div>
+    <div className="absolute top-[10%] right-[40%] animate-float text-accent/20" style={{ animationDelay: '4s' }}>
+      <Wind size={60} />
+    </div>
   </div>
 );
 
@@ -79,14 +82,18 @@ export default function Home() {
       <section className="relative h-screen flex items-center justify-center overflow-hidden bg-white">
         <ScribbleBackground />
         
-        <div className="relative z-10 text-center space-y-8 px-6 max-w-4xl animate-fade-in">
-          <h1 className="text-5xl md:text-7xl font-bold tracking-tight uppercase text-primary">Canaan Christ Public School</h1>
-          <p className="text-xl md:text-2xl font-medium text-muted-foreground italic">"Righteousness And Truth"</p>
-          <div className="flex flex-col sm:flex-row items-center justify-center gap-4 pt-4">
-            <Button size="lg" className="h-14 px-8 text-lg rounded-full" asChild>
+        <div className="relative z-10 text-center space-y-8 px-6 max-w-4xl">
+          <h1 className="text-5xl md:text-7xl font-bold tracking-tight uppercase text-primary animate-in fade-in slide-in-from-bottom-4 duration-1000">
+            Canaan Christ Public School
+          </h1>
+          <p className="text-xl md:text-2xl font-medium text-muted-foreground italic animate-in fade-in slide-in-from-bottom-4 duration-1000 delay-300">
+            "Righteousness And Truth"
+          </p>
+          <div className="flex flex-col sm:flex-row items-center justify-center gap-4 pt-4 animate-in fade-in slide-in-from-bottom-4 duration-1000 delay-500">
+            <Button size="lg" className="h-14 px-8 text-lg rounded-full shadow-lg hover:shadow-primary/20 transition-all hover:-translate-y-1" asChild>
               <Link href="/admissions">Admissions Open 2026-27</Link>
             </Button>
-            <Button size="lg" variant="outline" className="h-14 px-8 text-lg rounded-full border-primary text-primary hover:bg-primary/5" asChild>
+            <Button size="lg" variant="outline" className="h-14 px-8 text-lg rounded-full border-primary text-primary hover:bg-primary/5 transition-all" asChild>
               <Link href="/contact">Book a Visit</Link>
             </Button>
           </div>
@@ -96,7 +103,7 @@ export default function Home() {
       <section className="py-24 bg-white relative">
         <div className="max-w-7xl mx-auto px-6 grid grid-cols-1 md:grid-cols-2 gap-16 items-center">
           <div className="space-y-6">
-            <div className="inline-block bg-primary/10 text-primary px-4 py-1.5 rounded-full text-sm font-semibold">
+            <div className="inline-block bg-primary/10 text-primary px-4 py-1.5 rounded-full text-sm font-bold">
               Established 2001
             </div>
             <h2 className="text-4xl font-bold text-primary">Affordable, Quality Education for Every Child</h2>
@@ -104,22 +111,22 @@ export default function Home() {
               Canaan Christ Public School offers a holistic learning environment under the State Syllabus, catering to students from Kindergarten to 10th Grade. Our mission is to empower every child—regardless of background—to grow intellectually, emotionally, and ethically.
             </p>
             <div className="grid grid-cols-2 gap-6">
-              <div className="p-4 bg-white rounded-xl shadow-sm border">
+              <div className="p-6 bg-white rounded-2xl shadow-sm border hover:border-primary/20 transition-all">
                 <div className="text-3xl font-bold text-primary mb-1">K-10</div>
-                <div className="text-sm text-muted-foreground">Classes Offered</div>
+                <div className="text-sm text-muted-foreground font-medium">Classes Offered</div>
               </div>
-              <div className="p-4 bg-white rounded-xl shadow-sm border">
+              <div className="p-6 bg-white rounded-2xl shadow-sm border hover:border-primary/20 transition-all">
                 <div className="text-3xl font-bold text-primary mb-1">State</div>
-                <div className="text-sm text-muted-foreground">Syllabus</div>
+                <div className="text-sm text-muted-foreground font-medium">Syllabus</div>
               </div>
             </div>
-            <Button variant="link" className="p-0 text-primary font-bold group" asChild>
+            <Button variant="link" className="p-0 text-primary font-bold group text-lg" asChild>
               <Link href="/about">
                 Our vision and values <ArrowRight className="ml-2 group-hover:translate-x-1 transition-transform" size={18} />
               </Link>
             </Button>
           </div>
-          <div className="relative h-[500px] rounded-3xl overflow-hidden shadow-2xl border-4 border-white">
+          <div className="relative h-[500px] rounded-[2.5rem] overflow-hidden shadow-2xl border-4 border-white transform hover:scale-[1.02] transition-transform">
             {gallery[0]?.imageUrl && (
               <Image 
                 src={gallery[0].imageUrl} 
@@ -135,13 +142,13 @@ export default function Home() {
 
       <section className="py-24 bg-muted/30">
         <div className="max-w-7xl mx-auto px-6 grid grid-cols-1 md:grid-cols-2 gap-12">
-          <div className="p-12 bg-primary rounded-[2rem] text-primary-foreground shadow-xl space-y-6">
+          <div className="p-12 bg-primary rounded-[3rem] text-primary-foreground shadow-xl space-y-6 hover:-translate-y-2 transition-transform">
             <h3 className="text-3xl font-bold">Our Vision</h3>
             <p className="text-lg opacity-90 leading-relaxed">
               To nurture compassionate, curious, and confident learners who contribute meaningfully to society, while rooted in values, culture, and excellence.
             </p>
           </div>
-          <div className="p-12 bg-secondary rounded-[2rem] text-secondary-foreground shadow-xl space-y-6">
+          <div className="p-12 bg-secondary rounded-[3rem] text-secondary-foreground shadow-xl space-y-6 hover:-translate-y-2 transition-transform">
             <h3 className="text-3xl font-bold">Our Mission</h3>
             <p className="text-lg opacity-90 leading-relaxed">
               Providing affordable, quality education that empowers every child—regardless of background—to grow intellectually, emotionally, and ethically. We aim to foster an inclusive learning environment that encourages creativity and critical thinking.
@@ -158,9 +165,9 @@ export default function Home() {
           </div>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
             {coreValues.map((v, i) => (
-              <div key={i} className="p-8 bg-white rounded-2xl shadow-sm border hover:shadow-md transition-shadow group">
-                <div className="w-12 h-12 bg-primary/10 rounded-xl flex items-center justify-center text-primary mb-6 group-hover:bg-primary group-hover:text-white transition-colors">
-                  <v.icon size={24} />
+              <div key={i} className="p-8 bg-white rounded-3xl shadow-sm border hover:shadow-xl hover:border-primary/20 transition-all group">
+                <div className="w-14 h-14 bg-primary/10 rounded-2xl flex items-center justify-center text-primary mb-6 group-hover:bg-primary group-hover:text-white transition-all transform group-hover:rotate-6">
+                  <v.icon size={28} />
                 </div>
                 <h4 className="text-xl font-bold mb-3">{v.title}</h4>
                 <p className="text-muted-foreground text-sm leading-relaxed">{v.desc}</p>
@@ -177,12 +184,14 @@ export default function Home() {
               <h2 className="text-4xl font-bold text-primary">Campus Facilities</h2>
               <p className="text-muted-foreground max-w-md">Investing in infrastructure to support intellectual and creative growth.</p>
             </div>
-            <Button variant="outline" className="rounded-full" asChild><Link href="/contact">Inquire for Visit</Link></Button>
+            <Button variant="outline" className="rounded-full border-primary text-primary hover:bg-primary hover:text-white transition-all" asChild>
+              <Link href="/contact">Inquire for Visit</Link>
+            </Button>
           </div>
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8">
             {facilities.map((f, i) => (
-              <div key={i} className="flex flex-col gap-4 p-6 rounded-2xl bg-white hover:border-primary/20 shadow-sm transition-all border">
-                <div className="shrink-0 w-12 h-12 bg-primary text-white rounded-lg flex items-center justify-center">
+              <div key={i} className="flex flex-col gap-4 p-8 rounded-3xl bg-white hover:border-primary/20 shadow-sm hover:shadow-lg transition-all border">
+                <div className="shrink-0 w-12 h-12 bg-primary text-white rounded-xl flex items-center justify-center shadow-md">
                   <f.icon size={24} />
                 </div>
                 <div>
@@ -199,59 +208,61 @@ export default function Home() {
         <div className="max-w-7xl mx-auto px-6 space-y-16">
           <h2 className="text-4xl font-bold text-primary text-center">School Leadership</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-12 max-w-5xl mx-auto">
-            <Card className="overflow-hidden border-none shadow-lg">
+            <Card className="overflow-hidden border-none shadow-2xl rounded-[3rem]">
               <div className="relative h-96">
                 {chairmanImg?.imageUrl && (
                   <Image src={chairmanImg.imageUrl} alt="Chairman" fill className="object-cover" />
                 )}
               </div>
-              <CardContent className="p-8 text-center bg-white">
+              <CardContent className="p-10 text-center bg-white">
                 <h4 className="text-2xl font-bold">Chairman's Vision</h4>
-                <p className="text-primary font-medium mb-4">"Education is a right, not a privilege."</p>
-                <p className="text-sm text-muted-foreground italic">"We don’t just prepare students for exams—we prepare them for life, leadership, and a future they can shape with their own hands."</p>
+                <p className="text-primary font-bold mb-4">"Education is a right, not a privilege."</p>
+                <p className="text-sm text-muted-foreground italic leading-relaxed">"We don’t just prepare students for exams—we prepare them for life, leadership, and a future they can shape with their own hands."</p>
               </CardContent>
             </Card>
-            <Card className="overflow-hidden border-none shadow-lg">
+            <Card className="overflow-hidden border-none shadow-2xl rounded-[3rem]">
               <div className="relative h-96">
                 {principalImg?.imageUrl && (
                   <Image src={principalImg.imageUrl} alt="Principal" fill className="object-cover" />
                 )}
               </div>
-              <CardContent className="p-8 text-center bg-white">
+              <CardContent className="p-10 text-center bg-white">
                 <h4 className="text-2xl font-bold">Principal's Message</h4>
-                <p className="text-primary font-medium mb-4">"Rooted in values, culture, and excellence."</p>
-                <p className="text-sm text-muted-foreground italic">"We foster an inclusive environment that nurtures intellectual, emotional, and ethical growth for every child."</p>
+                <p className="text-primary font-bold mb-4">"Rooted in values, culture, and excellence."</p>
+                <p className="text-sm text-muted-foreground italic leading-relaxed">"We foster an inclusive environment that nurtures intellectual, emotional, and ethical growth for every child."</p>
               </CardContent>
             </Card>
           </div>
         </div>
       </section>
 
-      <section className="py-20 bg-primary text-primary-foreground">
-        <div className="max-w-7xl mx-auto px-6 text-center">
+      <section className="py-20 bg-primary text-primary-foreground relative overflow-hidden">
+        <div className="absolute top-0 right-0 w-64 h-64 bg-white/5 rounded-full -translate-y-1/2 translate-x-1/2 blur-3xl"></div>
+        <div className="max-w-7xl mx-auto px-6 text-center relative z-10">
           <div className="flex flex-col items-center gap-4">
-            <div className="text-6xl md:text-8xl font-black">100%</div>
-            <div className="text-2xl md:text-3xl font-bold opacity-90 uppercase tracking-widest">Board Exam Record</div>
-            <p className="max-w-xl opacity-75 mt-4">We are proud to have maintained a 100% pass record in the Grade 10 Board Examinations year after year.</p>
+            <div className="text-7xl md:text-9xl font-black text-white">100%</div>
+            <div className="text-2xl md:text-3xl font-bold opacity-90 uppercase tracking-widest text-accent">Board Exam Record</div>
+            <p className="max-w-xl opacity-75 mt-4 text-lg">We are proud to have maintained a 100% pass record in the Grade 10 Board Examinations year after year.</p>
           </div>
         </div>
       </section>
 
       <section className="py-24 px-6 bg-white">
-        <div className="max-w-7xl mx-auto bg-secondary rounded-[3rem] p-12 md:p-24 text-center text-white space-y-8 relative overflow-hidden shadow-2xl">
-          <div className="absolute top-0 right-0 w-64 h-64 bg-white/10 rounded-full -translate-y-1/2 translate-x-1/2 blur-3xl"></div>
-          <div className="relative z-10 space-y-6">
-            <h2 className="text-4xl md:text-6xl font-bold">Admissions Open 2026–27</h2>
-            <div className="flex flex-wrap justify-center gap-6 text-xl">
-              <span className="flex items-center gap-2"><CheckCircle2 className="text-white" /> No Admission Fee</span>
-              <span className="flex items-center gap-2"><CheckCircle2 className="text-white" /> No Donation Policy</span>
-              <span className="flex items-center gap-2"><CheckCircle2 className="text-white" /> KG to 10th Grade</span>
+        <div className="max-w-7xl mx-auto bg-secondary rounded-[4rem] p-12 md:p-24 text-center text-white space-y-8 relative overflow-hidden shadow-2xl">
+          <div className="absolute top-0 right-0 w-80 h-80 bg-white/10 rounded-full -translate-y-1/2 translate-x-1/2 blur-3xl"></div>
+          <div className="absolute bottom-0 left-0 w-80 h-80 bg-primary/10 rounded-full translate-y-1/2 -translate-x-1/2 blur-3xl"></div>
+          <div className="relative z-10 space-y-8">
+            <h2 className="text-4xl md:text-6xl font-bold tracking-tight">Admissions Open 2026–27</h2>
+            <div className="flex flex-wrap justify-center gap-8 text-xl font-medium">
+              <span className="flex items-center gap-3"><CheckCircle2 className="text-accent" /> No Admission Fee</span>
+              <span className="flex items-center gap-3"><CheckCircle2 className="text-accent" /> No Donation Policy</span>
+              <span className="flex items-center gap-3"><CheckCircle2 className="text-accent" /> KG to 10th Grade</span>
             </div>
-            <div className="flex flex-col sm:flex-row justify-center gap-4 pt-4">
-              <Button size="lg" variant="default" className="bg-white text-secondary hover:bg-gray-100 font-bold h-14 px-10 rounded-full" asChild>
+            <div className="flex flex-col sm:flex-row justify-center gap-6 pt-6">
+              <Button size="lg" variant="default" className="bg-white text-secondary hover:bg-gray-100 font-bold h-16 px-12 text-lg rounded-full shadow-xl" asChild>
                 <Link href="/admissions">Apply Now</Link>
               </Button>
-              <Button size="lg" variant="outline" className="border-white text-white hover:bg-white/10 h-14 px-10 rounded-full" asChild>
+              <Button size="lg" variant="outline" className="border-white text-white hover:bg-white/10 h-16 px-12 text-lg rounded-full font-bold" asChild>
                 <Link href="/contact">Contact Us</Link>
               </Button>
             </div>
@@ -266,24 +277,24 @@ export default function Home() {
             <p className="text-lg text-muted-foreground leading-relaxed">
               Have questions about admissions or school policies? Our team is ready to help you. Fill out the form or reach out via our contact details.
             </p>
-            <div className="space-y-6">
-              <div className="flex items-start gap-4">
-                <div className="p-3 bg-primary/10 text-primary rounded-lg"><MapPin size={24} /></div>
+            <div className="space-y-8">
+              <div className="flex items-start gap-6">
+                <div className="p-4 bg-primary/10 text-primary rounded-2xl shadow-sm"><MapPin size={28} /></div>
                 <div>
-                  <h4 className="font-bold">Address</h4>
-                  <p className="text-muted-foreground">No.6 1st Crs, 9th Mn Rd, BTM 1st Stage, Bengaluru, KA 560029</p>
+                  <h4 className="font-bold text-xl mb-1">Address</h4>
+                  <p className="text-muted-foreground text-lg">No.6 1st Crs, 9th Mn Rd, BTM 1st Stage, Bengaluru, KA 560029</p>
                 </div>
               </div>
-              <div className="flex items-start gap-4">
-                <div className="p-3 bg-primary/10 text-primary rounded-lg"><Phone size={24} /></div>
+              <div className="flex items-start gap-6">
+                <div className="p-4 bg-primary/10 text-primary rounded-2xl shadow-sm"><Phone size={28} /></div>
                 <div>
-                  <h4 className="font-bold">Call Us</h4>
-                  <p className="text-muted-foreground">+91 80 1234 5678</p>
+                  <h4 className="font-bold text-xl mb-1">Call Us</h4>
+                  <p className="text-muted-foreground text-lg">+91 80 1234 5678</p>
                 </div>
               </div>
             </div>
           </div>
-          <div className="bg-white p-10 rounded-[2rem] shadow-xl border">
+          <div className="bg-white p-10 md:p-12 rounded-[3.5rem] shadow-2xl border border-muted/50">
             <ContactForm />
           </div>
         </div>
