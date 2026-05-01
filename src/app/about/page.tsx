@@ -13,7 +13,7 @@ export default function AboutPage() {
     <main className="min-h-screen">
       <Navbar />
       
-      <section className="pt-32 pb-20 bg-background text-center">
+      <section className="pt-24 pb-12 bg-background text-center">
         <div className="max-w-4xl mx-auto px-6 space-y-4">
           <h1 className="text-5xl font-bold text-primary">About Our School</h1>
           <p className="text-xl text-muted-foreground">"Righteousness And Truth" - Since 2001</p>
@@ -21,7 +21,7 @@ export default function AboutPage() {
       </section>
 
       {/* Sticky Layout Section */}
-      <section className="pb-24 bg-white relative">
+      <section className="pb-16 bg-white relative">
         <div className="max-w-7xl mx-auto px-6">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-20">
             
@@ -46,7 +46,7 @@ export default function AboutPage() {
             </div>
 
             {/* Right: Scrollable Content */}
-            <div className="space-y-32">
+            <div className="space-y-16">
               {/* Our Journey */}
               <div className="space-y-8">
                 <div className="w-16 h-16 bg-primary/10 text-primary rounded-2xl flex items-center justify-center">
@@ -105,8 +105,8 @@ export default function AboutPage() {
       </section>
 
       {/* Leadership Messages */}
-      <section className="py-24 bg-white border-t">
-        <div className="max-w-7xl mx-auto px-6 space-y-24">
+      <section className="py-16 bg-white border-t">
+        <div className="max-w-7xl mx-auto px-6 space-y-16">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-20 items-center">
             <div className="space-y-6">
               <h2 className="text-3xl font-bold text-primary">Chairman's Message</h2>

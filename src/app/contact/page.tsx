@@ -12,14 +12,14 @@ export default function ContactPage() {
       <Navbar />
       
       {/* Header */}
-      <section className="pt-40 pb-20 bg-background text-center">
+      <section className="pt-32 pb-12 bg-background text-center">
         <div className="max-w-4xl mx-auto px-6 space-y-4">
           <h1 className="text-5xl font-bold text-primary">Contact Us</h1>
           <p className="text-xl text-muted-foreground">Get in touch with the Canaan Christ family. We're here to help.</p>
         </div>
       </section>
 
-      <section className="py-24 bg-white">
+      <section className="py-16 bg-white">
         <div className="max-w-7xl mx-auto px-6 grid grid-cols-1 lg:grid-cols-2 gap-16">
           <div className="space-y-12">
             <div className="bg-background p-10 rounded-[2.5rem] border shadow-sm space-y-8">

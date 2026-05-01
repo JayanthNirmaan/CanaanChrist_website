@@ -42,7 +42,7 @@ export default function AdmissionsPage() {
       <Navbar />
       
       {/* Header */}
-      <section className="pt-40 pb-20 bg-background text-center">
+      <section className="pt-32 pb-12 bg-background text-center">
         <div className="max-w-4xl mx-auto px-6 space-y-4">
           <h1 className="text-5xl font-bold text-primary">Admissions 2026-27</h1>
           <p className="text-xl text-muted-foreground">Join the Canaan Christ family. Quality education for all walks of life.</p>
@@ -50,7 +50,7 @@ export default function AdmissionsPage() {
       </section>
 
       {/* Policies Highlight */}
-      <section className="py-12 bg-muted/30 border-y">
+      <section className="py-10 bg-muted/30 border-y">
         <div className="max-w-7xl mx-auto px-6 grid grid-cols-1 md:grid-cols-2 gap-8 text-center md:text-left">
           <div className="flex items-center gap-4 justify-center md:justify-start">
             <div className="p-3 bg-green-100 text-green-600 rounded-full shrink-0"><CheckCircle2 size={24} /></div>
@@ -70,10 +70,10 @@ export default function AdmissionsPage() {
       </section>
 
       {/* Main Content */}
-      <section className="py-24 bg-white">
+      <section className="py-16 bg-white">
         <div className="max-w-7xl mx-auto px-6 grid grid-cols-1 lg:grid-cols-12 gap-16">
           
-          <div className="lg:col-span-7 space-y-16">
+          <div className="lg:col-span-7 space-y-12">
             <div className="bg-background p-10 rounded-[2.5rem] shadow-sm border space-y-8">
               <h2 className="text-3xl font-bold text-primary flex items-center gap-3">
                 <FileText className="text-secondary" /> Admission Process

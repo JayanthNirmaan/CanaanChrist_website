@@ -1,4 +1,3 @@
-
 'use client';
 
 import React from 'react';
@@ -34,7 +33,7 @@ export default function GalleryPage() {
       <Navbar />
       
       {/* Header Section */}
-      <section className="pt-40 pb-20 bg-background text-center relative overflow-hidden">
+      <section className="pt-32 pb-12 bg-background text-center relative overflow-hidden">
         <div className="absolute inset-0 scribble-bg opacity-100 pointer-events-none" />
         <div className="max-w-4xl mx-auto px-6 space-y-4 relative z-10">
           <h1 className="text-6xl font-bold text-primary">Campus Snapshots</h1>
@@ -43,7 +42,7 @@ export default function GalleryPage() {
       </section>
 
       {/* Grid Gallery Section - Tight Packed & Fun */}
-      <section className="py-12 bg-white px-4 md:px-6">
+      <section className="py-8 bg-white px-4 md:px-6">
         <div className="max-w-7xl mx-auto">
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-1.5 md:gap-2 auto-rows-min">
             {gallery.map((item, index) => (
@@ -79,7 +78,7 @@ export default function GalleryPage() {
       </section>
 
       {/* Closing Statement */}
-      <section className="py-20 bg-muted/20 text-center">
+      <section className="py-12 bg-muted/20 text-center">
         <div className="max-w-2xl mx-auto px-6">
           <p className="text-lg text-muted-foreground italic leading-relaxed font-headline">
             "Every snapshot is a story of a child finding their truth and walking the path of righteousness."

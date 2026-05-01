@@ -1,4 +1,3 @@
-
 import Image from 'next/image';
 import Link from 'next/link';
 import { Button } from '@/components/ui/button';
@@ -166,7 +165,7 @@ export default function Home() {
       </section>
 
       {/* Holistic Education Section with immersive hover */}
-      <section className="py-24 bg-white relative group/section transition-all duration-700 overflow-hidden">
+      <section className="py-16 bg-white relative group/section transition-all duration-700 overflow-hidden">
         <div className="absolute top-1/2 right-[25%] -translate-y-1/2 translate-x-1/2 w-0 h-0 bg-primary rounded-full transition-all duration-1000 ease-in-out group-has-[.image-trigger:hover]/section:w-[300vw] group-has-[.image-trigger:hover]/section:h-[300vw] pointer-events-none z-0" />
 
         <div className="relative z-10 max-w-7xl mx-auto px-6 grid grid-cols-1 md:grid-cols-2 gap-16 items-center">
@@ -208,7 +207,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="py-24 bg-muted/30">
+      <section className="py-16 bg-muted/30">
         <div className="max-w-7xl mx-auto px-6 grid grid-cols-1 md:grid-cols-2 gap-12">
           <div className="p-12 bg-primary rounded-[3rem] text-primary-foreground shadow-xl space-y-6 hover:-translate-y-2 transition-all relative overflow-hidden group">
             <div className="absolute -right-8 -bottom-8 text-white/40 opacity-0 group-hover:opacity-100 group-hover:scale-125 transition-all duration-700 pointer-events-none rotate-12">
@@ -231,7 +230,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="py-24 bg-white">
+      <section className="py-16 bg-white">
         <div className="max-w-7xl mx-auto px-6 text-center space-y-16">
           <div className="space-y-4">
             <h2 className="text-4xl font-bold text-primary">Our Core Values</h2>
@@ -253,12 +252,12 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="py-24 bg-muted/20">
+      <section className="py-16 bg-muted/20">
         <div className="max-w-7xl mx-auto px-6 space-y-16">
           <div className="flex flex-col md:flex-row justify-between items-end gap-6 text-center md:text-left">
             <div className="space-y-4">
               <h2 className="text-4xl font-bold text-primary">Campus Facilities</h2>
-              <p className="text-muted-foreground max-w-md">Investing in infrastructure to support intellectual and creative growth.</p>
+              <p className="text-muted-foreground max-md mx-auto md:mx-0">Investing in infrastructure to support intellectual and creative growth.</p>
             </div>
             <Button variant="outline" className="rounded-full border-primary text-primary hover:bg-primary hover:text-white transition-all" asChild>
               <Link href="/contact">Inquire for Visit</Link>
@@ -303,12 +302,12 @@ export default function Home() {
       </section>
 
       {/* Gallery Reference Section - Fun & Tight Packed */}
-      <section className="py-24 bg-white overflow-hidden">
+      <section className="py-16 bg-white overflow-hidden">
         <div className="max-w-7xl mx-auto px-6 space-y-12">
           <div className="flex flex-col md:flex-row justify-between items-end gap-6 text-center md:text-left">
             <div className="space-y-4">
               <h2 className="text-4xl font-bold text-primary">Campus Moments</h2>
-              <p className="text-muted-foreground max-w-md">Captured joy, learning, and growth in our school gallery.</p>
+              <p className="text-muted-foreground max-w-md mx-auto md:mx-0">Captured joy, learning, and growth in our school gallery.</p>
             </div>
             <Button variant="outline" className="rounded-full border-primary text-primary hover:bg-primary hover:text-white transition-all" asChild>
               <Link href="/gallery">View Full Gallery</Link>
@@ -340,7 +339,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="py-24 bg-white">
+      <section className="py-16 bg-white">
         <div className="max-w-7xl mx-auto px-6 space-y-16">
           <h2 className="text-4xl font-bold text-primary text-center">School Leadership</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-12 max-w-5xl mx-auto">
@@ -372,7 +371,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="py-20 bg-primary text-primary-foreground relative overflow-hidden">
+      <section className="py-12 bg-primary text-primary-foreground relative overflow-hidden">
         <div className="absolute top-0 right-0 w-64 h-64 bg-white/5 rounded-full -translate-y-1/2 translate-x-1/2 blur-3xl"></div>
         <div className="max-w-7xl mx-auto px-6 text-center relative z-10">
           <div className="flex flex-col items-center gap-4">
@@ -385,8 +384,8 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="py-24 px-6 bg-white">
-        <div className="max-w-7xl mx-auto bg-secondary rounded-[4rem] p-12 md:p-24 text-center text-white space-y-8 relative overflow-hidden shadow-2xl">
+      <section className="py-16 px-6 bg-white">
+        <div className="max-w-7xl mx-auto bg-secondary rounded-[4rem] p-12 md:p-20 text-center text-white space-y-8 relative overflow-hidden shadow-2xl">
           <div className="absolute top-0 right-0 w-80 h-80 bg-white/10 rounded-full -translate-y-1/2 translate-x-1/2 blur-3xl"></div>
           <div className="absolute bottom-0 left-0 w-80 h-80 bg-primary/10 rounded-full translate-y-1/2 -translate-x-1/2 blur-3xl"></div>
           <div className="relative z-10 space-y-8">
@@ -408,7 +407,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section id="contact" className="py-24 bg-white">
+      <section id="contact" className="py-16 bg-white">
         <div className="max-w-7xl mx-auto px-6 grid grid-cols-1 md:grid-cols-2 gap-20">
           <div className="space-y-8">
             <h2 className="text-4xl font-bold text-primary">Get in Touch</h2>
