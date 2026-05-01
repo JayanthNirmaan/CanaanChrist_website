@@ -5,7 +5,7 @@
 
 @layer base {
   :root {
-    --background: 225 12% 95%; /* #F0F1F4 */
+    --background: 0 0% 100%; /* Pure white */
     --foreground: 222 47% 11%;
     --card: 0 0% 100%;
     --card-foreground: 222 47% 11%;
@@ -67,4 +67,12 @@
 
 .reveal-on-scroll.active {
   animation: fade-in 0.8s ease-out forwards;
+}
+
+.scribble-bg {
+  position: absolute;
+  inset: 0;
+  background-image: radial-gradient(circle, #e5e7eb 1px, transparent 1px);
+  background-size: 40px 40px;
+  pointer-events: none;
 }

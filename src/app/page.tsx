@@ -1,3 +1,4 @@
+
 import Image from 'next/image';
 import Link from 'next/link';
 import { Button } from '@/components/ui/button';
@@ -11,7 +12,7 @@ import {
   Monitor, FlaskConical, Library as LibraryIcon, Zap, Video, Bus,
   ArrowRight, CheckCircle2, MapPin, Phone, Cpu, Languages, Waves, 
   Presentation, Activity, Droplets, Shield, Trash2, Camera, Flame, 
-  Lock
+  Lock, Pencil, GraduationCap, Palette, Music, Wind
 } from 'lucide-react';
 import { ContactForm } from '@/components/shared/ContactForm';
 
@@ -40,34 +41,58 @@ const facilities = [
   { icon: Bus, title: 'Transport', desc: 'Safe and reliable school transport facility.' },
 ];
 
-const heroImage = PlaceHolderImages.find(img => img.id === 'hero-bg');
 const principalImg = PlaceHolderImages.find(img => img.id === 'principal');
 const chairmanImg = PlaceHolderImages.find(img => img.id === 'chairman');
 const gallery = PlaceHolderImages.filter(img => img.id.startsWith('gallery'));
 
+const ScribbleBackground = () => (
+  <div className="absolute inset-0 overflow-hidden pointer-events-none select-none">
+    <div className="scribble-bg opacity-40"></div>
+    {/* Animated Scribble Lines */}
+    <svg className="absolute inset-0 w-full h-full opacity-10" viewBox="0 0 1000 1000" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <path d="M100,200 Q250,50 400,200 T700,200" stroke="currentColor" strokeWidth="2" strokeDasharray="1000" className="text-primary animate-draw-line" />
+      <path d="M50,800 Q300,950 600,800 T950,800" stroke="currentColor" strokeWidth="2" strokeDasharray="1000" className="text-secondary animate-draw-line" style={{ animationDelay: '1s' }} />
+      <path d="M800,100 Q950,300 800,500 T800,900" stroke="currentColor" strokeWidth="2" strokeDasharray="1000" className="text-accent animate-draw-line" style={{ animationDelay: '2s' }} />
+    </svg>
+    {/* Floating Items */}
+    <div className="absolute top-[15%] left-[10%] animate-float text-primary/20" style={{ animationDelay: '0s' }}>
+      <Pencil size={64} />
+    </div>
+    <div className="absolute top-[20%] right-[15%] animate-float text-secondary/20" style={{ animationDelay: '1s' }}>
+      <Wind size={80} /> {/* Represents the Kite */}
+    </div>
+    <div className="absolute bottom-[20%] left-[15%] animate-float text-accent/20" style={{ animationDelay: '2s' }}>
+      <GraduationCap size={72} />
+    </div>
+    <div className="absolute bottom-[25%] right-[20%] animate-float text-primary/20" style={{ animationDelay: '1.5s' }}>
+      <BookOpen size={64} />
+    </div>
+    <div className="absolute top-[50%] right-[5%] animate-float text-secondary/20" style={{ animationDelay: '0.5s' }}>
+      <Palette size={56} />
+    </div>
+    <div className="absolute top-[60%] left-[5%] animate-float text-accent/20" style={{ animationDelay: '3s' }}>
+      <Music size={48} />
+    </div>
+  </div>
+);
+
 export default function Home() {
   return (
-    <main className="min-h-screen">
+    <main className="min-h-screen bg-white">
       <Navbar />
 
       {/* Hero Section */}
-      <section className="relative h-screen flex items-center justify-center text-white overflow-hidden">
-        <Image
-          src={heroImage?.imageUrl || 'https://picsum.photos/seed/school-hero/1920/1080'}
-          alt="School Campus"
-          fill
-          className="object-cover brightness-[0.4]"
-          priority
-          data-ai-hint="modern school campus"
-        />
+      <section className="relative h-screen flex items-center justify-center overflow-hidden bg-white">
+        <ScribbleBackground />
+        
         <div className="relative z-10 text-center space-y-8 px-6 max-w-4xl animate-fade-in">
-          <h1 className="text-5xl md:text-7xl font-bold tracking-tight uppercase">Canaan Christ Public School</h1>
-          <p className="text-xl md:text-2xl font-medium text-white/90 italic">"Righteousness And Truth"</p>
+          <h1 className="text-5xl md:text-7xl font-bold tracking-tight uppercase text-primary">Canaan Christ Public School</h1>
+          <p className="text-xl md:text-2xl font-medium text-muted-foreground italic">"Righteousness And Truth"</p>
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4 pt-4">
-            <Button size="lg" className="h-14 px-8 text-lg" asChild>
+            <Button size="lg" className="h-14 px-8 text-lg rounded-full" asChild>
               <Link href="/admissions">Admissions Open 2026-27</Link>
             </Button>
-            <Button size="lg" variant="outline" className="h-14 px-8 text-lg bg-white/10 hover:bg-white/20 border-white" asChild>
+            <Button size="lg" variant="outline" className="h-14 px-8 text-lg rounded-full border-primary text-primary hover:bg-primary/5" asChild>
               <Link href="/contact">Book a Visit</Link>
             </Button>
           </div>
@@ -75,7 +100,7 @@ export default function Home() {
       </section>
 
       {/* About Brief Section */}
-      <section className="py-24 bg-background">
+      <section className="py-24 bg-white relative">
         <div className="max-w-7xl mx-auto px-6 grid grid-cols-1 md:grid-cols-2 gap-16 items-center">
           <div className="space-y-6">
             <div className="inline-block bg-primary/10 text-primary px-4 py-1.5 rounded-full text-sm font-semibold">
@@ -101,7 +126,7 @@ export default function Home() {
               </Link>
             </Button>
           </div>
-          <div className="relative h-[500px] rounded-3xl overflow-hidden shadow-2xl">
+          <div className="relative h-[500px] rounded-3xl overflow-hidden shadow-2xl border-4 border-white">
             <Image 
               src={gallery[0]?.imageUrl || 'https://picsum.photos/seed/class/600/400'} 
               alt="Classroom" 
@@ -114,15 +139,15 @@ export default function Home() {
       </section>
 
       {/* Vision & Mission */}
-      <section className="py-24 bg-white">
+      <section className="py-24 bg-muted/30">
         <div className="max-w-7xl mx-auto px-6 grid grid-cols-1 md:grid-cols-2 gap-12">
-          <div className="p-12 bg-primary rounded-[2rem] text-primary-foreground space-y-6">
+          <div className="p-12 bg-primary rounded-[2rem] text-primary-foreground shadow-xl space-y-6">
             <h3 className="text-3xl font-bold">Our Vision</h3>
             <p className="text-lg opacity-90 leading-relaxed">
               To nurture compassionate, curious, and confident learners who contribute meaningfully to society, while rooted in values, culture, and excellence.
             </p>
           </div>
-          <div className="p-12 bg-secondary rounded-[2rem] text-secondary-foreground space-y-6">
+          <div className="p-12 bg-secondary rounded-[2rem] text-secondary-foreground shadow-xl space-y-6">
             <h3 className="text-3xl font-bold">Our Mission</h3>
             <p className="text-lg opacity-90 leading-relaxed">
               Providing affordable, quality education that empowers every child—regardless of background—to grow intellectually, emotionally, and ethically. We aim to foster an inclusive learning environment that encourages creativity and critical thinking.
@@ -132,7 +157,7 @@ export default function Home() {
       </section>
 
       {/* Core Values */}
-      <section className="py-24 bg-background">
+      <section className="py-24 bg-white">
         <div className="max-w-7xl mx-auto px-6 text-center space-y-16">
           <div className="space-y-4">
             <h2 className="text-4xl font-bold text-primary">Our Core Values</h2>
@@ -153,18 +178,18 @@ export default function Home() {
       </section>
 
       {/* Facilities */}
-      <section className="py-24 bg-white">
+      <section className="py-24 bg-muted/20">
         <div className="max-w-7xl mx-auto px-6 space-y-16">
           <div className="flex flex-col md:flex-row justify-between items-end gap-6 text-center md:text-left">
             <div className="space-y-4">
               <h2 className="text-4xl font-bold text-primary">Campus Facilities</h2>
               <p className="text-muted-foreground max-w-md">Investing in infrastructure to support intellectual and creative growth.</p>
             </div>
-            <Button variant="outline" asChild><Link href="/contact">Inquire for Visit</Link></Button>
+            <Button variant="outline" className="rounded-full" asChild><Link href="/contact">Inquire for Visit</Link></Button>
           </div>
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8">
             {facilities.map((f, i) => (
-              <div key={i} className="flex flex-col gap-4 p-6 rounded-2xl bg-background hover:bg-white border hover:border-primary/20 transition-all">
+              <div key={i} className="flex flex-col gap-4 p-6 rounded-2xl bg-white hover:border-primary/20 shadow-sm transition-all border">
                 <div className="shrink-0 w-12 h-12 bg-primary text-white rounded-lg flex items-center justify-center">
                   <f.icon size={24} />
                 </div>
@@ -179,7 +204,7 @@ export default function Home() {
       </section>
 
       {/* Leadership */}
-      <section className="py-24 bg-background">
+      <section className="py-24 bg-white">
         <div className="max-w-7xl mx-auto px-6 space-y-16">
           <h2 className="text-4xl font-bold text-primary text-center">School Leadership</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-12 max-w-5xl mx-auto">
@@ -187,7 +212,7 @@ export default function Home() {
               <div className="relative h-96">
                 <Image src={chairmanImg?.imageUrl || 'https://picsum.photos/seed/chairman/400/500'} alt="Chairman" fill className="object-cover" />
               </div>
-              <CardContent className="p-8 text-center">
+              <CardContent className="p-8 text-center bg-white">
                 <h4 className="text-2xl font-bold">Chairman's Vision</h4>
                 <p className="text-primary font-medium mb-4">"Education is a right, not a privilege."</p>
                 <p className="text-sm text-muted-foreground italic">"We don’t just prepare students for exams—we prepare them for life, leadership, and a future they can shape with their own hands."</p>
@@ -197,7 +222,7 @@ export default function Home() {
               <div className="relative h-96">
                 <Image src={principalImg?.imageUrl || 'https://picsum.photos/seed/principal/400/500'} alt="Principal" fill className="object-cover" />
               </div>
-              <CardContent className="p-8 text-center">
+              <CardContent className="p-8 text-center bg-white">
                 <h4 className="text-2xl font-bold">Principal's Message</h4>
                 <p className="text-primary font-medium mb-4">"Rooted in values, culture, and excellence."</p>
                 <p className="text-sm text-muted-foreground italic">"We foster an inclusive environment that nurtures intellectual, emotional, and ethical growth for every child."</p>
@@ -219,8 +244,8 @@ export default function Home() {
       </section>
 
       {/* Admissions CTA */}
-      <section className="py-24 px-6">
-        <div className="max-w-7xl mx-auto bg-secondary rounded-[3rem] p-12 md:p-24 text-center text-white space-y-8 relative overflow-hidden">
+      <section className="py-24 px-6 bg-white">
+        <div className="max-w-7xl mx-auto bg-secondary rounded-[3rem] p-12 md:p-24 text-center text-white space-y-8 relative overflow-hidden shadow-2xl">
           <div className="absolute top-0 right-0 w-64 h-64 bg-white/10 rounded-full -translate-y-1/2 translate-x-1/2 blur-3xl"></div>
           <div className="relative z-10 space-y-6">
             <h2 className="text-4xl md:text-6xl font-bold">Admissions Open 2026–27</h2>
@@ -242,7 +267,7 @@ export default function Home() {
       </section>
 
       {/* Contact Section */}
-      <section id="contact" className="py-24 bg-background">
+      <section id="contact" className="py-24 bg-white">
         <div className="max-w-7xl mx-auto px-6 grid grid-cols-1 md:grid-cols-2 gap-20">
           <div className="space-y-8">
             <h2 className="text-4xl font-bold text-primary">Get in Touch</h2>
