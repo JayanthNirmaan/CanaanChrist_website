@@ -87,44 +87,44 @@ const ScribbleBackground = () => (
   <div className="absolute inset-0 overflow-hidden pointer-events-none select-none">
     <div className="scribble-bg opacity-100"></div>
     <svg className="absolute inset-0 w-full h-full opacity-50" viewBox="0 0 1000 1000" fill="none" xmlns="http://www.w3.org/2000/svg">
-      <path d="M100,200 Q250,50 400,200 T700,200" stroke="currentColor" strokeWidth="1" strokeDasharray="1000" className="text-primary animate-draw-line" />
-      <path d="M50,800 Q300,950 600,800 T950,800" stroke="currentColor" strokeWidth="1" strokeDasharray="1000" className="text-secondary animate-draw-line" style={{ animationDelay: '1s' }} />
-      <path d="M800,100 Q950,300 800,500 T800,900" stroke="currentColor" strokeWidth="1" strokeDasharray="1000" className="text-accent animate-draw-line" style={{ animationDelay: '2s' }} />
+      <path d="M100,200 Q250,50 400,200 T700,200" stroke="currentColor" strokeWidth="3" strokeDasharray="1000" className="text-primary animate-draw-line" />
+      <path d="M50,800 Q300,950 600,800 T950,800" stroke="currentColor" strokeWidth="3" strokeDasharray="1000" className="text-secondary animate-draw-line" style={{ animationDelay: '1s' }} />
+      <path d="M800,100 Q950,300 800,500 T800,900" stroke="currentColor" strokeWidth="3" strokeDasharray="1000" className="text-accent animate-draw-line" style={{ animationDelay: '2s' }} />
     </svg>
     
     <div className="absolute top-[15%] left-[10%] animate-float text-primary opacity-50" style={{ animationDelay: '0s' }}>
-      <Pencil size={85} strokeWidth={0.2} />
+      <Pencil size={85} strokeWidth={0.8} />
     </div>
     <div className="absolute top-[20%] right-[15%] animate-float text-secondary opacity-50" style={{ animationDelay: '1s' }}>
-      <Rocket size={110} strokeWidth={0.2} />
+      <Rocket size={110} strokeWidth={0.8} />
     </div>
     <div className="absolute bottom-[20%] left-[15%] animate-float text-accent opacity-50" style={{ animationDelay: '2s' }}>
-      <GraduationCap size={95} strokeWidth={0.2} />
+      <GraduationCap size={95} strokeWidth={0.8} />
     </div>
     <div className="absolute bottom-[25%] right-[20%] animate-float text-primary opacity-50" style={{ animationDelay: '1.5s' }}>
-      <BookOpen size={90} strokeWidth={0.2} />
+      <BookOpen size={90} strokeWidth={0.8} />
     </div>
     <div className="absolute top-[50%] right-[5%] animate-float text-secondary opacity-50" style={{ animationDelay: '0.5s' }}>
-      <Palette size={80} strokeWidth={0.2} />
+      <Palette size={80} strokeWidth={0.8} />
     </div>
     <div className="absolute top-[60%] left-[5%] animate-float text-accent opacity-50" style={{ animationDelay: '3.5s' }}>
-      <Music size={75} strokeWidth={0.2} />
+      <Music size={75} strokeWidth={0.8} />
     </div>
     <div className="absolute top-[10%] right-[40%] animate-float text-accent opacity-50" style={{ animationDelay: '4.5s' }}>
-      <Wind size={85} strokeWidth={0.2} />
+      <Wind size={85} strokeWidth={0.8} />
     </div>
 
     <div className="absolute top-[5%] left-[30%] animate-float text-primary opacity-50" style={{ animationDelay: '2.5s' }}>
-      <Cloud size={95} strokeWidth={0.2} />
+      <Cloud size={95} strokeWidth={0.8} />
     </div>
     <div className="absolute bottom-[10%] left-[40%] animate-float text-secondary opacity-50" style={{ animationDelay: '1.2s' }}>
-      <Shapes size={85} strokeWidth={0.2} />
+      <Shapes size={85} strokeWidth={0.8} />
     </div>
     <div className="absolute bottom-[5%] right-[10%] animate-float text-primary opacity-50" style={{ animationDelay: '0.8s' }}>
-      <Smile size={80} strokeWidth={0.2} />
+      <Smile size={80} strokeWidth={0.8} />
     </div>
     <div className="absolute top-[35%] left-[12%] animate-float text-secondary opacity-50" style={{ animationDelay: '4s' }}>
-      <Trophy size={90} strokeWidth={0.2} />
+      <Trophy size={90} strokeWidth={0.8} />
     </div>
   </div>
 );
@@ -164,7 +164,6 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Holistic Education Section with immersive hover */}
       <section className="py-16 bg-white relative group/section transition-all duration-700 overflow-hidden">
         <div className="absolute top-1/2 right-[25%] -translate-y-1/2 translate-x-1/2 w-0 h-0 bg-primary rounded-full transition-all duration-1000 ease-in-out group-has-[.image-trigger:hover]/section:w-[300vw] group-has-[.image-trigger:hover]/section:h-[300vw] pointer-events-none z-0" />
 
