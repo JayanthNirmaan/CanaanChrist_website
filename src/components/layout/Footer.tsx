@@ -7,7 +7,7 @@ export function Footer() {
   const logo = PlaceHolderImages.find(img => img.id === 'school-logo');
 
   return (
-    <footer className="bg-primary text-primary-foreground pt-20 pb-10">
+    <footer className="bg-primary text-primary-foreground pt-12 pb-8">
       <div className="max-w-7xl mx-auto px-6 grid grid-cols-1 md:grid-cols-4 gap-12">
         <div className="space-y-6">
           <div className="flex items-center gap-4">
@@ -77,7 +77,7 @@ export function Footer() {
           </Link>
         </div>
       </div>
-      <div className="max-w-7xl mx-auto px-6 mt-20 pt-8 border-t border-white/20 text-center text-primary-foreground/60 text-sm">
+      <div className="max-w-7xl mx-auto px-6 mt-12 pt-6 border-t border-white/20 text-center text-primary-foreground/60 text-sm">
         <p>&copy; {new Date().getFullYear()} Canaan Christ Public School. All rights reserved.</p>
       </div>
     </footer>
