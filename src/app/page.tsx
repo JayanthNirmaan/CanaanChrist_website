@@ -1,3 +1,4 @@
+
 import Image from 'next/image';
 import Link from 'next/link';
 import { Button } from '@/components/ui/button';
@@ -25,17 +26,54 @@ const coreValues = [
 ];
 
 const facilities = [
-  { icon: Monitor, title: 'Smart Classrooms', desc: 'Well-equipped with smart boards, projectors, and proper ventilation.' },
-  { icon: FlaskConical, title: 'Science Laboratory', desc: 'Hands-on learning for physics, chemistry, and biology.' },
-  { icon: Cpu, title: 'Robotics Lab', desc: 'Innovation and robotics lab for future-ready skills.' },
-  { icon: LibraryIcon, title: 'Digital Library', desc: 'Resources including books, journals, and digital assets.' },
-  { icon: Languages, title: 'Language Lab', desc: 'Focused training for communication and linguistic skills.' },
-  { icon: Zap, title: 'Playpen & Playground', desc: 'Safe spaces for kindergarten and primary students.' },
-  { icon: Video, title: 'Auditorium', desc: 'A hub for cultural activities, seminars, and events.' },
-  { icon: Activity, title: 'First-Aid', desc: 'On-campus first-aid facility for student health and safety.' },
-  { icon: Droplets, title: 'Clean Water', desc: 'Safe and clean drinking water facilities for everyone.' },
-  { icon: Shield, title: 'Hygienic Restrooms', desc: 'Maintained and clean sanitation facilities.' },
-  { icon: Bus, title: 'Transport', desc: 'Safe and reliable school transport facility.' },
+  { 
+    icon: Monitor, 
+    title: 'Smart Classrooms', 
+    desc: 'Well-equipped with smart boards, projectors, and proper ventilation.',
+    imageId: 'facility-smart-classroom'
+  },
+  { 
+    icon: FlaskConical, 
+    title: 'Science Laboratory', 
+    desc: 'Hands-on learning for physics, chemistry, and biology.',
+    imageId: 'facility-science-lab'
+  },
+  { 
+    icon: Cpu, 
+    title: 'Robotics Lab', 
+    desc: 'Innovation and robotics lab for future-ready skills.',
+    imageId: 'facility-robotics'
+  },
+  { 
+    icon: LibraryIcon, 
+    title: 'Digital Library', 
+    desc: 'Resources including books, journals, and digital assets.',
+    imageId: 'facility-library'
+  },
+  { 
+    icon: Languages, 
+    title: 'Language Lab', 
+    desc: 'Focused training for communication and linguistic skills.',
+    imageId: 'gallery-5'
+  },
+  { 
+    icon: Zap, 
+    title: 'Playground', 
+    desc: 'Safe spaces for kindergarten and primary students.',
+    imageId: 'facility-playground'
+  },
+  { 
+    icon: Video, 
+    title: 'Auditorium', 
+    desc: 'A hub for cultural activities, seminars, and events.',
+    imageId: 'facility-auditorium'
+  },
+  { 
+    icon: Bus, 
+    title: 'Transport', 
+    desc: 'Safe and reliable school transport facility.',
+    imageId: 'facility-transport'
+  },
 ];
 
 const principalImg = PlaceHolderImages.find(img => img.id === 'principal');
@@ -189,17 +227,41 @@ export default function Home() {
             </Button>
           </div>
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8">
-            {facilities.map((f, i) => (
-              <div key={i} className="flex flex-col gap-4 p-8 rounded-3xl bg-white hover:border-primary/20 shadow-sm hover:shadow-lg transition-all border">
-                <div className="shrink-0 w-12 h-12 bg-primary text-white rounded-xl flex items-center justify-center shadow-md">
-                  <f.icon size={24} />
+            {facilities.map((f, i) => {
+              const facilityImage = PlaceHolderImages.find(img => img.id === f.imageId);
+              return (
+                <div key={i} className="group relative h-80 overflow-hidden rounded-[2.5rem] border transition-all duration-500 hover:shadow-2xl hover:-translate-y-2">
+                  {/* Expandable Image Background */}
+                  <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-all duration-700 ease-in-out">
+                    {facilityImage && (
+                      <Image 
+                        src={facilityImage.imageUrl} 
+                        alt={f.title} 
+                        fill 
+                        className="object-cover scale-110 group-hover:scale-100 transition-transform duration-1000"
+                        data-ai-hint={facilityImage.imageHint}
+                      />
+                    )}
+                    <div className="absolute inset-0 bg-primary/80 mix-blend-multiply" />
+                  </div>
+
+                  {/* Content Overlay */}
+                  <div className="relative h-full p-10 flex flex-col justify-between z-10 transition-all duration-500">
+                    <div className="shrink-0 w-14 h-14 bg-primary text-white rounded-2xl flex items-center justify-center shadow-lg group-hover:bg-white group-hover:text-primary transition-all duration-300">
+                      <f.icon size={28} />
+                    </div>
+                    <div className="space-y-3">
+                      <h4 className="text-2xl font-bold text-foreground group-hover:text-white transition-colors">
+                        {f.title}
+                      </h4>
+                      <p className="text-muted-foreground text-sm leading-relaxed group-hover:text-white/90 transition-all duration-300 line-clamp-2 group-hover:line-clamp-none">
+                        {f.desc}
+                      </p>
+                    </div>
+                  </div>
                 </div>
-                <div>
-                  <h4 className="text-lg font-bold mb-2">{f.title}</h4>
-                  <p className="text-muted-foreground text-sm">{f.desc}</p>
-                </div>
-              </div>
-            ))}
+              );
+            })}
           </div>
         </div>
       </section>

@@ -62,11 +62,52 @@
       "imageHint": "school bus"
     },
     {
-      "id": "hero-video",
-      "description": "Promotional school video",
-      "imageUrl": "/assets/video-thumbnail.jpg",
-      "videoUrl": "/assets/school-promo.mp4",
-      "imageHint": "school video"
+      "id": "facility-smart-classroom",
+      "description": "Smart classroom with digital boards",
+      "imageUrl": "https://picsum.photos/seed/smartclass/600/400",
+      "imageHint": "smart classroom"
+    },
+    {
+      "id": "facility-science-lab",
+      "description": "Students in science lab",
+      "imageUrl": "https://picsum.photos/seed/sciencelab/600/400",
+      "imageHint": "science laboratory"
+    },
+    {
+      "id": "facility-robotics",
+      "description": "Robotics and technology lab",
+      "imageUrl": "https://picsum.photos/seed/robotics/600/400",
+      "imageHint": "robotics technology"
+    },
+    {
+      "id": "facility-library",
+      "description": "Modern school library",
+      "imageUrl": "https://picsum.photos/seed/school-lib/600/400",
+      "imageHint": "school library"
+    },
+    {
+      "id": "facility-playground",
+      "description": "Colorful school playground",
+      "imageUrl": "https://picsum.photos/seed/play/600/400",
+      "imageHint": "school playground"
+    },
+    {
+      "id": "facility-auditorium",
+      "description": "Large school auditorium",
+      "imageUrl": "https://picsum.photos/seed/audi/600/400",
+      "imageHint": "school auditorium"
+    },
+    {
+      "id": "facility-transport",
+      "description": "School bus transport fleet",
+      "imageUrl": "https://picsum.photos/seed/bus/600/400",
+      "imageHint": "school bus"
+    },
+    {
+      "id": "facility-health",
+      "description": "School medical room",
+      "imageUrl": "https://picsum.photos/seed/health/600/400",
+      "imageHint": "school infirmary"
     }
   ]
 }
