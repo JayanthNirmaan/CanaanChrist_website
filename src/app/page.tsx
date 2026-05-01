@@ -159,42 +159,45 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="py-24 bg-white relative">
+      <section className="py-24 bg-white relative group transition-all duration-500 hover:bg-primary">
         <div className="max-w-7xl mx-auto px-6 grid grid-cols-1 md:grid-cols-2 gap-16 items-center">
           <div className="space-y-6">
-            <div className="inline-block bg-primary/10 text-primary px-4 py-1.5 rounded-full text-sm font-bold">
+            <div className="inline-block bg-primary/10 text-primary px-4 py-1.5 rounded-full text-sm font-bold transition-all duration-500 group-hover:bg-white group-hover:text-primary">
               Established 2001
             </div>
-            <h2 className="text-4xl font-bold text-primary">Affordable, Quality Education for Every Child</h2>
-            <p className="text-lg text-muted-foreground leading-relaxed">
+            <h2 className="text-4xl font-bold text-primary transition-colors duration-500 group-hover:text-white">Affordable, Quality Education for Every Child</h2>
+            <p className="text-lg text-muted-foreground leading-relaxed transition-colors duration-500 group-hover:text-primary-foreground/90">
               Canaan Christ Public School offers a holistic learning environment under the State Syllabus, catering to students from Kindergarten to 10th Grade. Our mission is to empower every child—regardless of background—to grow intellectually, emotionally, and ethically.
             </p>
             <div className="grid grid-cols-2 gap-6">
-              <div className="p-6 bg-white rounded-2xl shadow-sm border hover:border-primary/20 transition-all">
-                <div className="text-3xl font-bold text-primary mb-1">K-10</div>
-                <div className="text-sm text-muted-foreground font-medium">Classes Offered</div>
+              <div className="p-6 bg-white rounded-2xl shadow-sm border hover:border-primary/20 transition-all duration-500 group-hover:bg-white/10 group-hover:border-white/20 group-hover:shadow-none">
+                <div className="text-3xl font-bold text-primary mb-1 transition-colors duration-500 group-hover:text-white">K-10</div>
+                <div className="text-sm text-muted-foreground font-medium transition-colors duration-500 group-hover:text-white/80">Classes Offered</div>
               </div>
-              <div className="p-6 bg-white rounded-2xl shadow-sm border hover:border-primary/20 transition-all">
-                <div className="text-3xl font-bold text-primary mb-1">State</div>
-                <div className="text-sm text-muted-foreground font-medium">Syllabus</div>
+              <div className="p-6 bg-white rounded-2xl shadow-sm border hover:border-primary/20 transition-all duration-500 group-hover:bg-white/10 group-hover:border-white/20 group-hover:shadow-none">
+                <div className="text-3xl font-bold text-primary mb-1 transition-colors duration-500 group-hover:text-white">State</div>
+                <div className="text-sm text-muted-foreground font-medium transition-colors duration-500 group-hover:text-white/80">Syllabus</div>
               </div>
             </div>
-            <Button variant="link" className="p-0 text-primary font-bold group text-lg" asChild>
+            <Button variant="link" className="p-0 text-primary font-bold group text-lg transition-colors duration-500 group-hover:text-white" asChild>
               <Link href="/about">
                 Our vision and values <ArrowRight className="ml-2 group-hover:translate-x-1 transition-transform" size={18} />
               </Link>
             </Button>
           </div>
-          <div className="relative h-[500px] rounded-[2.5rem] overflow-hidden shadow-2xl border-4 border-white transform hover:scale-[1.02] transition-transform">
+          <div className="relative h-[500px] rounded-[2.5rem] overflow-hidden shadow-2xl border-4 border-white transition-all duration-500 group-hover:scale-105 group-hover:shadow-primary/40 group-hover:border-white/50">
             {gallery[0]?.imageUrl && (
               <Image 
                 src={gallery[0].imageUrl} 
                 alt="Classroom" 
                 fill 
-                className="object-cover"
+                className="object-cover transition-transform duration-700 group-hover:scale-110"
                 data-ai-hint="classroom students"
               />
             )}
+            <div className="absolute inset-0 bg-primary/20 opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex items-center justify-center overflow-hidden">
+               <div className="w-[150%] h-[150%] bg-primary rounded-full scale-0 group-hover:scale-100 transition-transform duration-700 ease-out origin-center mix-blend-multiply opacity-60" />
+            </div>
           </div>
         </div>
       </section>
