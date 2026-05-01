@@ -1,3 +1,4 @@
+
 'use client';
 
 import React, { useState, useEffect } from 'react';
@@ -13,6 +14,7 @@ const navItems = [
   { name: 'Home', href: '/' },
   { name: 'About', href: '/about' },
   { name: 'Admissions', href: '/admissions' },
+  { name: 'Gallery', href: '/gallery' },
   { name: 'Contact', href: '/contact' },
 ];
 
@@ -46,13 +48,13 @@ export function Navbar() {
               <Image 
                 src={logo.imageUrl} 
                 alt="Canaan Christ Public School Logo" 
-                width={50} 
-                height={50} 
+                width={45} 
+                height={45} 
                 className="object-contain"
                 priority
               />
             ) : (
-              <div className="w-10 h-10 bg-primary text-white rounded-lg flex items-center justify-center font-bold text-lg shadow-lg">CC</div>
+              <div className="w-9 h-9 bg-primary text-white rounded-lg flex items-center justify-center font-bold text-lg shadow-lg">CC</div>
             )}
           </div>
           <div className="flex flex-col">

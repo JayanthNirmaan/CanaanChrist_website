@@ -27,39 +27,75 @@
     },
     {
       "id": "gallery-1",
-      "description": "Students in classroom",
-      "imageUrl": "/assets/gallery-1.jpg",
-      "imageHint": "classroom students"
+      "description": "Earth Day Celebration",
+      "imageUrl": "https://picsum.photos/seed/earthday/800/600",
+      "imageHint": "earth day"
     },
     {
       "id": "gallery-2",
-      "description": "Library with books",
-      "imageUrl": "/assets/gallery-2.jpg",
-      "imageHint": "school library"
+      "description": "Science Exhibition",
+      "imageUrl": "https://picsum.photos/seed/science/800/600",
+      "imageHint": "science exhibition"
     },
     {
       "id": "gallery-3",
-      "description": "Science laboratory",
-      "imageUrl": "/assets/gallery-3.jpg",
-      "imageHint": "science lab"
+      "description": "Annual Sports Meet",
+      "imageUrl": "https://picsum.photos/seed/sports/800/600",
+      "imageHint": "sports meet"
     },
     {
       "id": "gallery-4",
-      "description": "Sports field playground",
-      "imageUrl": "/assets/gallery-4.jpg",
-      "imageHint": "school sports"
+      "description": "Cultural Fest",
+      "imageUrl": "https://picsum.photos/seed/fest/800/600",
+      "imageHint": "school festival"
     },
     {
       "id": "gallery-5",
-      "description": "Art and craft room",
-      "imageUrl": "/assets/gallery-5.jpg",
-      "imageHint": "art room"
+      "description": "Independence Day",
+      "imageUrl": "https://picsum.photos/seed/flag/800/600",
+      "imageHint": "flag hoisting"
     },
     {
       "id": "gallery-6",
-      "description": "School bus transport",
-      "imageUrl": "/assets/gallery-6.jpg",
+      "description": "Graduation Ceremony",
+      "imageUrl": "https://picsum.photos/seed/grad/800/600",
+      "imageHint": "graduation day"
+    },
+    {
+      "id": "gallery-7",
+      "description": "Yoga Workshop",
+      "imageUrl": "https://picsum.photos/seed/yoga/800/600",
+      "imageHint": "yoga morning"
+    },
+    {
+      "id": "gallery-8",
+      "description": "Art & Craft Workshop",
+      "imageUrl": "https://picsum.photos/seed/art/800/600",
+      "imageHint": "art workshop"
+    },
+    {
+      "id": "gallery-9",
+      "description": "Reading Hour",
+      "imageUrl": "https://picsum.photos/seed/reading/800/600",
+      "imageHint": "school library"
+    },
+    {
+      "id": "gallery-10",
+      "description": "Field Trip",
+      "imageUrl": "https://picsum.photos/seed/trip/800/600",
       "imageHint": "school bus"
+    },
+    {
+      "id": "gallery-11",
+      "description": "Math Olympiad",
+      "imageUrl": "https://picsum.photos/seed/math/800/600",
+      "imageHint": "math competition"
+    },
+    {
+      "id": "gallery-12",
+      "description": "Music Performance",
+      "imageUrl": "https://picsum.photos/seed/music/800/600",
+      "imageHint": "school choir"
     },
     {
       "id": "facility-smart-classroom",
