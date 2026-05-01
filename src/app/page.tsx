@@ -1,4 +1,3 @@
-
 import Image from 'next/image';
 import Link from 'next/link';
 import { Button } from '@/components/ui/button';
@@ -10,27 +9,35 @@ import { cn } from '@/lib/utils';
 import { 
   Heart, Search, Trophy, ShieldCheck, Users, Globe, BookOpen,
   Monitor, FlaskConical, Library as LibraryIcon, Zap, Video, Bus,
-  ArrowRight, CheckCircle2, MapPin, Phone
+  ArrowRight, CheckCircle2, MapPin, Phone, Cpu, Languages, Waves, 
+  Presentation, Activity, Droplets, Shield, Trash2, Camera, Flame, 
+  Lock
 } from 'lucide-react';
 import { ContactForm } from '@/components/shared/ContactForm';
 
 const coreValues = [
-  { icon: Heart, title: 'Compassion', desc: 'Empathy and kindness in every action.' },
-  { icon: Search, title: 'Curiosity', desc: 'Fostering a lifelong love for learning.' },
-  { icon: Trophy, title: 'Excellence', desc: 'Aspiring for high standards in all pursuits.' },
-  { icon: ShieldCheck, title: 'Integrity', desc: 'Upholding honesty and strong moral principles.' },
-  { icon: Users, title: 'Inclusivity', desc: 'Welcoming diversity and ensuring belonging.' },
-  { icon: Globe, title: 'Social Responsibility', desc: 'Contributing positively to the community.' },
-  { icon: BookOpen, title: 'Cultural Rootedness', desc: 'Connecting education with rich traditions.' },
+  { icon: Heart, title: 'Compassion', desc: 'We cultivate kindness and empathy in every student — teaching them to see, understand, and care for the world.' },
+  { icon: Search, title: 'Curiosity', desc: 'We nurture a love for learning that goes beyond the classroom, encouraging students to ask questions and explore.' },
+  { icon: Trophy, title: 'Excellence', desc: 'We hold ourselves to the highest standards, believing that every child is capable of achieving their best.' },
+  { icon: ShieldCheck, title: 'Integrity', desc: 'We build character grounded in honesty, ethics, and a strong moral compass that guides students in life.' },
+  { icon: Users, title: 'Inclusivity', desc: 'We welcome every child and create an environment where each one feels seen, valued, and empowered.' },
+  { icon: Globe, title: 'Social Responsibility', desc: 'We raise aware citizens who contribute meaningfully to their community and society.' },
+  { icon: BookOpen, title: 'Cultural Rootedness', desc: 'We take pride in our connection to the local culture of Bangalore, helping students grow with identity.' },
 ];
 
 const facilities = [
-  { icon: Monitor, title: 'Smart Classrooms', desc: 'Interactive digital learning spaces.' },
-  { icon: FlaskConical, title: 'Modern Labs', desc: 'Well-equipped science and computer labs.' },
-  { icon: LibraryIcon, title: 'Vast Library', desc: 'Diverse collection for every curious mind.' },
-  { icon: Zap, title: 'Playground', desc: 'Safe spaces for physical development.' },
-  { icon: Video, title: 'CCTV Security', desc: '24/7 campus surveillance for safety.' },
-  { icon: Bus, title: 'Transport', desc: 'Safe and reliable school bus services.' },
+  { icon: Monitor, title: 'Smart Classrooms', desc: 'Well-equipped with smart boards, projectors, and proper ventilation.' },
+  { icon: FlaskConical, title: 'Science Laboratory', desc: 'Hands-on learning for physics, chemistry, and biology.' },
+  { icon: Cpu, title: 'Robotics Lab', desc: 'Innovation and robotics lab for future-ready skills.' },
+  { icon: LibraryIcon, title: 'Digital Library', desc: 'Resources including books, journals, and digital assets.' },
+  { icon: Languages, title: 'Language Lab', desc: 'Focused training for communication and linguistic skills.' },
+  { icon: Zap, title: 'Playpen & Playground', desc: 'Safe spaces for kindergarten and primary students.' },
+  { icon: Video, title: 'Auditorium', desc: 'A hub for cultural activities, seminars, and events.' },
+  { icon: Activity, title: 'First-Aid', desc: 'On-campus first-aid facility for student health and safety.' },
+  { icon: Droplets, title: 'Clean Water', desc: 'Safe and clean drinking water facilities for everyone.' },
+  { icon: Shield, title: 'Hygienic Restrooms', desc: 'Maintained and clean sanitation facilities.' },
+  { icon: Camera, title: 'CCTV Security', desc: '24/7 surveillance across the entire campus for safety.' },
+  { icon: Bus, title: 'Transport', desc: 'Safe and reliable school transport facility.' },
 ];
 
 const heroImage = PlaceHolderImages.find(img => img.id === 'hero-bg');
@@ -54,13 +61,13 @@ export default function Home() {
           data-ai-hint="modern school campus"
         />
         <div className="relative z-10 text-center space-y-8 px-6 max-w-4xl animate-fade-in">
-          <h1 className="text-5xl md:text-7xl font-bold tracking-tight">Canaan Christ Public School</h1>
+          <h1 className="text-5xl md:text-7xl font-bold tracking-tight uppercase">Canaan Christ Public School</h1>
           <p className="text-xl md:text-2xl font-medium text-white/90 italic">"Righteousness And Truth"</p>
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4 pt-4">
             <Button size="lg" className="h-14 px-8 text-lg" asChild>
               <Link href="/admissions">Admissions Open 2026-27</Link>
             </Button>
-            <Button size="lg" variant="outline" className="h-14 px-8 text-lg bg-white/10 hover:bg-white/20 border-white">
+            <Button size="lg" variant="outline" className="h-14 px-8 text-lg bg-white/10 hover:bg-white/20 border-white" asChild>
               <Link href="/contact">Book a Visit</Link>
             </Button>
           </div>
@@ -74,13 +81,13 @@ export default function Home() {
             <div className="inline-block bg-primary/10 text-primary px-4 py-1.5 rounded-full text-sm font-semibold">
               Established 2001
             </div>
-            <h2 className="text-4xl font-bold text-primary">Nurturing Minds Since Two Decades</h2>
+            <h2 className="text-4xl font-bold text-primary">Affordable, Quality Education for Every Child</h2>
             <p className="text-lg text-muted-foreground leading-relaxed">
-              Canaan Christ Public School offers a holistic learning environment under the State Syllabus, catering to students from KG to 10th Grade. Our mission is to integrate academic excellence with moral character.
+              Canaan Christ Public School offers a holistic learning environment under the State Syllabus, catering to students from Kindergarten to 10th Grade. Our mission is to empower every child—regardless of background—to grow intellectually, emotionally, and ethically.
             </p>
             <div className="grid grid-cols-2 gap-6">
               <div className="p-4 bg-white rounded-xl shadow-sm border">
-                <div className="text-3xl font-bold text-primary mb-1">KG-10</div>
+                <div className="text-3xl font-bold text-primary mb-1">K-10</div>
                 <div className="text-sm text-muted-foreground">Classes Offered</div>
               </div>
               <div className="p-4 bg-white rounded-xl shadow-sm border">
@@ -90,7 +97,7 @@ export default function Home() {
             </div>
             <Button variant="link" className="p-0 text-primary font-bold group" asChild>
               <Link href="/about">
-                Learn more about our journey <ArrowRight className="ml-2 group-hover:translate-x-1 transition-transform" size={18} />
+                Our vision and values <ArrowRight className="ml-2 group-hover:translate-x-1 transition-transform" size={18} />
               </Link>
             </Button>
           </div>
@@ -112,13 +119,13 @@ export default function Home() {
           <div className="p-12 bg-primary rounded-[2rem] text-primary-foreground space-y-6">
             <h3 className="text-3xl font-bold">Our Vision</h3>
             <p className="text-lg opacity-90 leading-relaxed">
-              To be a premier educational institution that fosters intellectual curiosity, moral integrity, and a spirit of service, empowering students to lead and excel in a dynamic world.
+              To nurture compassionate, curious, and confident learners who contribute meaningfully to society, while rooted in values, culture, and excellence.
             </p>
           </div>
           <div className="p-12 bg-secondary rounded-[2rem] text-secondary-foreground space-y-6">
             <h3 className="text-3xl font-bold">Our Mission</h3>
             <p className="text-lg opacity-90 leading-relaxed">
-              Providing a nurturing environment that encourages academic excellence, creativity, and social responsibility, grounded in the values of righteousness and truth.
+              Providing affordable, quality education that empowers every child—regardless of background—to grow intellectually, emotionally, and ethically. We aim to foster an inclusive learning environment that encourages creativity and critical thinking.
             </p>
           </div>
         </div>
@@ -129,7 +136,7 @@ export default function Home() {
         <div className="max-w-7xl mx-auto px-6 text-center space-y-16">
           <div className="space-y-4">
             <h2 className="text-4xl font-bold text-primary">Our Core Values</h2>
-            <p className="text-muted-foreground max-w-2xl mx-auto">The pillars that define the character and conduct of every student at Canaan.</p>
+            <p className="text-muted-foreground max-w-2xl mx-auto">The pillars that define the character and conduct of every student at Canaan Christ.</p>
           </div>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
             {coreValues.map((v, i) => (
@@ -148,16 +155,16 @@ export default function Home() {
       {/* Facilities */}
       <section className="py-24 bg-white">
         <div className="max-w-7xl mx-auto px-6 space-y-16">
-          <div className="flex flex-col md:flex-row justify-between items-end gap-6">
+          <div className="flex flex-col md:flex-row justify-between items-end gap-6 text-center md:text-left">
             <div className="space-y-4">
-              <h2 className="text-4xl font-bold text-primary">Modern Facilities</h2>
-              <p className="text-muted-foreground max-w-md">Investing in world-class infrastructure for an immersive learning experience.</p>
+              <h2 className="text-4xl font-bold text-primary">Campus Facilities</h2>
+              <p className="text-muted-foreground max-w-md">Investing in infrastructure to support intellectual and creative growth.</p>
             </div>
-            <Button variant="outline" asChild><Link href="/contact">View All Facilities</Link></Button>
+            <Button variant="outline" asChild><Link href="/contact">Inquire for Visit</Link></Button>
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8">
             {facilities.map((f, i) => (
-              <div key={i} className="flex gap-6 p-6 rounded-2xl bg-background hover:bg-white border hover:border-primary/20 transition-all">
+              <div key={i} className="flex flex-col gap-4 p-6 rounded-2xl bg-background hover:bg-white border hover:border-primary/20 transition-all">
                 <div className="shrink-0 w-12 h-12 bg-primary text-white rounded-lg flex items-center justify-center">
                   <f.icon size={24} />
                 </div>
@@ -181,9 +188,9 @@ export default function Home() {
                 <Image src={chairmanImg?.imageUrl || 'https://picsum.photos/seed/chairman/400/500'} alt="Chairman" fill className="object-cover" />
               </div>
               <CardContent className="p-8 text-center">
-                <h4 className="text-2xl font-bold">Mr. David Samuel</h4>
-                <p className="text-primary font-medium mb-4">Chairman</p>
-                <p className="text-sm text-muted-foreground italic">"Education is the most powerful weapon which you can use to change the world."</p>
+                <h4 className="text-2xl font-bold">Chairman's Vision</h4>
+                <p className="text-primary font-medium mb-4">"Education is a right, not a privilege."</p>
+                <p className="text-sm text-muted-foreground italic">"We don’t just prepare students for exams—we prepare them for life, leadership, and a future they can shape with their own hands."</p>
               </CardContent>
             </Card>
             <Card className="overflow-hidden border-none shadow-lg">
@@ -191,9 +198,9 @@ export default function Home() {
                 <Image src={principalImg?.imageUrl || 'https://picsum.photos/seed/principal/400/500'} alt="Principal" fill className="object-cover" />
               </div>
               <CardContent className="p-8 text-center">
-                <h4 className="text-2xl font-bold">Mrs. Sarah Johnson</h4>
-                <p className="text-primary font-medium mb-4">Principal</p>
-                <p className="text-sm text-muted-foreground italic">"We focus on creating a balance between academic brilliance and character building."</p>
+                <h4 className="text-2xl font-bold">Principal's Message</h4>
+                <p className="text-primary font-medium mb-4">"Rooted in values, culture, and excellence."</p>
+                <p className="text-sm text-muted-foreground italic">"We foster an inclusive environment that nurtures intellectual, emotional, and ethical growth for every child."</p>
               </CardContent>
             </Card>
           </div>
@@ -205,31 +212,8 @@ export default function Home() {
         <div className="max-w-7xl mx-auto px-6 text-center">
           <div className="flex flex-col items-center gap-4">
             <div className="text-6xl md:text-8xl font-black">100%</div>
-            <div className="text-2xl md:text-3xl font-bold opacity-90 uppercase tracking-widest">Board Exam Results</div>
-            <p className="max-w-xl opacity-75 mt-4">Consecutive excellence in academic performance reflects our commitment to high-quality teaching standards.</p>
-          </div>
-        </div>
-      </section>
-
-      {/* Gallery */}
-      <section className="py-24 bg-white">
-        <div className="max-w-7xl mx-auto px-6 space-y-12 text-center">
-          <h2 className="text-4xl font-bold text-primary">Life at Canaan</h2>
-          <div className="grid grid-cols-2 md:grid-cols-3 gap-4 h-[600px]">
-            {gallery.length > 0 ? gallery.slice(0, 6).map((img, i) => (
-              <div key={i} className={cn("relative rounded-xl overflow-hidden group", i === 0 && "md:row-span-2", i === 3 && "md:col-span-2")}>
-                <Image 
-                  src={img.imageUrl} 
-                  alt={img.description} 
-                  fill 
-                  className="object-cover group-hover:scale-105 transition-transform duration-500"
-                />
-              </div>
-            )) : (
-              <div className="col-span-3 h-full bg-muted flex items-center justify-center rounded-xl">
-                <p className="text-muted-foreground">Gallery is loading...</p>
-              </div>
-            )}
+            <div className="text-2xl md:text-3xl font-bold opacity-90 uppercase tracking-widest">Board Exam Record</div>
+            <p className="max-w-xl opacity-75 mt-4">We are proud to have maintained a 100% pass record in the Grade 10 Board Examinations year after year.</p>
           </div>
         </div>
       </section>
@@ -241,8 +225,8 @@ export default function Home() {
           <div className="relative z-10 space-y-6">
             <h2 className="text-4xl md:text-6xl font-bold">Admissions Open 2026–27</h2>
             <div className="flex flex-wrap justify-center gap-6 text-xl">
+              <span className="flex items-center gap-2"><CheckCircle2 className="text-white" /> No Admission Fee</span>
               <span className="flex items-center gap-2"><CheckCircle2 className="text-white" /> No Donation Policy</span>
-              <span className="flex items-center gap-2"><CheckCircle2 className="text-white" /> State Syllabus</span>
               <span className="flex items-center gap-2"><CheckCircle2 className="text-white" /> KG to 10th Grade</span>
             </div>
             <div className="flex flex-col sm:flex-row justify-center gap-4 pt-4">
@@ -270,7 +254,7 @@ export default function Home() {
                 <div className="p-3 bg-primary/10 text-primary rounded-lg"><MapPin size={24} /></div>
                 <div>
                   <h4 className="font-bold">Address</h4>
-                  <p className="text-muted-foreground">No.6 1st Cross, 9th Main Road, BTM 1st Stage, Bengaluru</p>
+                  <p className="text-muted-foreground">No.6 1st Crs, 9th Mn Rd, BTM 1st Stage, Bengaluru, KA 560029</p>
                 </div>
               </div>
               <div className="flex items-start gap-4">

@@ -1,4 +1,3 @@
-
 import Image from 'next/image';
 import { Navbar } from '@/components/layout/Navbar';
 import { Footer } from '@/components/layout/Footer';
@@ -18,7 +17,7 @@ export default function AboutPage() {
       <section className="pt-32 pb-20 bg-background text-center">
         <div className="max-w-4xl mx-auto px-6 space-y-4">
           <h1 className="text-5xl font-bold text-primary">About Our School</h1>
-          <p className="text-xl text-muted-foreground">Dedicated to fostering a culture of excellence and integrity since 2001.</p>
+          <p className="text-xl text-muted-foreground">"Righteousness And Truth" - Since 2001</p>
         </div>
       </section>
 
@@ -38,16 +37,16 @@ export default function AboutPage() {
             <div className="w-16 h-16 bg-primary/10 text-primary rounded-2xl flex items-center justify-center">
               <History size={32} />
             </div>
-            <h2 className="text-4xl font-bold">Our Legacy</h2>
+            <h2 className="text-4xl font-bold">Our Journey</h2>
             <div className="space-y-4 text-lg text-muted-foreground leading-relaxed">
               <p>
-                Canaan Christ Public School was founded in 2001 with a singular vision: to provide high-quality education that is accessible and grounded in strong moral values.
+                Canaan Christ Public School was established in 2001 with a dream to create a place where education isn’t a privilege, but a right.
               </p>
               <p>
-                What started as a small community school in BTM Stage 1 has now grown into a premier institution recognized for its academic rigor and holistic development approach.
+                Born out of a dream to provide quality education to children from all walks of life, we have spent over two decades ensuring that no child is left behind due to their circumstances.
               </p>
               <p>
-                Over the past 23 years, we have nurtured thousands of students who have gone on to excel in various fields, always carrying with them the values of Righteousness and Truth.
+                Today, CCPS stands as a beacon of inclusive learning in Bangalore, known for its academic excellence and a consistent 100% pass record in board examinations.
               </p>
             </div>
           </div>
@@ -60,17 +59,17 @@ export default function AboutPage() {
           <div className="bg-white p-10 rounded-3xl shadow-sm border space-y-6">
             <Eye className="text-primary" size={40} />
             <h3 className="text-2xl font-bold">Vision</h3>
-            <p className="text-muted-foreground">To empower students to become compassionate global citizens who lead with integrity and innovate for a better future.</p>
+            <p className="text-muted-foreground">To nurture compassionate, curious, and confident learners who contribute meaningfully to society, while rooted in values, culture, and excellence.</p>
           </div>
           <div className="bg-white p-10 rounded-3xl shadow-sm border space-y-6">
             <Target className="text-secondary" size={40} />
             <h3 className="text-2xl font-bold">Mission</h3>
-            <p className="text-muted-foreground">Integrating modern pedagogy with traditional values to create a balanced learning ecosystem for every child.</p>
+            <p className="text-muted-foreground">To provide affordable, quality education that empowers every child to grow intellectually, emotionally, and ethically while staying connected to the local culture of Bangalore.</p>
           </div>
           <div className="bg-white p-10 rounded-3xl shadow-sm border space-y-6">
             <Shield className="text-primary" size={40} />
-            <h3 className="text-2xl font-bold">Values</h3>
-            <p className="text-muted-foreground">Righteousness, Truth, Empathy, and Social Responsibility are the cornerstones of our educational philosophy.</p>
+            <h3 className="text-2xl font-bold">Inclusivity</h3>
+            <p className="text-muted-foreground">We welcome every child, regardless of background, and create an environment where each one feels seen, valued, and empowered to grow.</p>
           </div>
         </div>
       </section>
@@ -81,12 +80,17 @@ export default function AboutPage() {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-20 items-center">
             <div className="space-y-6">
               <h2 className="text-3xl font-bold text-primary">Chairman's Message</h2>
-              <p className="text-lg text-muted-foreground italic leading-relaxed">
-                "Our goal at Canaan is not just to produce graduates, but to nurture responsible human beings who can make a meaningful difference in the world. We believe in providing a platform where every child can discover their unique potential."
-              </p>
+              <div className="space-y-4 text-lg text-muted-foreground leading-relaxed">
+                <p>
+                  "Canaan Christ Public School was born out of a dream—to create a place where education isn’t a privilege, but a right. A place where every child, no matter their background, has the chance to learn, grow, and thrive."
+                </p>
+                <p>
+                  "We don’t just prepare students for exams—we prepare them for life, for leadership, and for a future they can shape with their own hands. Thank you for being part of this mission."
+                </p>
+              </div>
               <div>
-                <h4 className="text-xl font-bold">Mr. David Samuel</h4>
-                <p className="text-primary">Chairman</p>
+                <h4 className="text-xl font-bold">Mr. Chairman</h4>
+                <p className="text-primary">Chairman / Director</p>
               </div>
             </div>
             <div className="relative h-[500px] rounded-[3rem] overflow-hidden shadow-xl">
@@ -100,12 +104,17 @@ export default function AboutPage() {
             </div>
             <div className="space-y-6">
               <h2 className="text-3xl font-bold text-primary">Principal's Message</h2>
-              <p className="text-lg text-muted-foreground italic leading-relaxed">
-                "As we move further into the 21st century, education must evolve to meet new challenges. At Canaan, we blend digital-first learning tools with character-focused mentoring to prepare our students for the complexities of tomorrow."
-              </p>
+              <div className="space-y-4 text-lg text-muted-foreground leading-relaxed">
+                <p>
+                  "At Canaan Christ Public School, we envision every child growing into a compassionate, curious, and confident learner — rooted in values, culture, and a genuine desire to contribute to society."
+                </p>
+                <p>
+                  "We are proud to have maintained a 100% pass record in the Grade 10 Board Examinations year after year — proof that our vision and mission translate into real, lasting results."
+                </p>
+              </div>
               <div>
-                <h4 className="text-xl font-bold">Mrs. Sarah Johnson</h4>
-                <p className="text-primary">Principal</p>
+                <h4 className="text-xl font-bold">Mrs. Principal</h4>
+                <p className="text-primary">Principal / HM</p>
               </div>
             </div>
           </div>

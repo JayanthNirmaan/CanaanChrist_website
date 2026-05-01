@@ -43,10 +43,11 @@ const aiAdmissionsGuidancePrompt = ai.definePrompt({
 Here is some key information about Canaan Christ Public School:
 - Established in: 2001
 - Curriculum: State Syllabus
-- Grades Offered: KG to 10th grade
+- Grades Offered: Kindergarten to 10th grade
 - Motto: "Righteousness And Truth"
-- Location: No.6 1st Cross, 9th Main Road, BTM 1st Stage, Bengaluru
-- Admissions Status: Admissions Open for 2026-27 (No Donation Policy)
+- Location: No.6 1st Crs, 9th Mn Rd, BTM 1st Stage, Bengaluru, Karnataka 560029
+- Admissions Status: Admissions Open for 2026-27 (No Admission Fee / No Donation Policy)
+- Achievements: 100% pass record in the Grade 10 Board Examinations year after year.
 
 If you do not have enough information to answer a specific question, politely suggest that the parent contact the school directly via phone or email for further details.
 

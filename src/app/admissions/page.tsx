@@ -1,8 +1,7 @@
-
 import { Navbar } from '@/components/layout/Navbar';
 import { Footer } from '@/components/layout/Footer';
 import { AIAdmissionsTool } from '@/components/admissions/AIAdmissionsTool';
-import { CheckCircle2, FileText, Calendar, Users, HelpCircle } from 'lucide-react';
+import { CheckCircle2, FileText, Calendar, Users, HelpCircle, GraduationCap } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import Link from 'next/link';
 
@@ -15,7 +14,27 @@ export default function AdmissionsPage() {
       <section className="pt-32 pb-20 bg-primary text-primary-foreground text-center">
         <div className="max-w-4xl mx-auto px-6 space-y-4">
           <h1 className="text-5xl font-bold">Admissions 2026-27</h1>
-          <p className="text-xl opacity-90">Join our vibrant academic community focused on righteousness and truth.</p>
+          <p className="text-xl opacity-90">Join the Canaan Christ family. Quality education for all walks of life.</p>
+        </div>
+      </section>
+
+      {/* Policies Highlight */}
+      <section className="py-12 bg-muted/50 border-b">
+        <div className="max-w-7xl mx-auto px-6 grid grid-cols-1 md:grid-cols-2 gap-8 text-center md:text-left">
+          <div className="flex items-center gap-4 justify-center md:justify-start">
+            <div className="p-3 bg-green-100 text-green-600 rounded-full"><CheckCircle2 size={24} /></div>
+            <div>
+              <h3 className="font-bold">No Admission Fee</h3>
+              <p className="text-sm text-muted-foreground">We believe education should be accessible.</p>
+            </div>
+          </div>
+          <div className="flex items-center gap-4 justify-center md:justify-start">
+            <div className="p-3 bg-green-100 text-green-600 rounded-full"><CheckCircle2 size={24} /></div>
+            <div>
+              <h3 className="font-bold">No Donation Policy</h3>
+              <p className="text-sm text-muted-foreground">Merit and inclusivity are our only criteria.</p>
+            </div>
+          </div>
         </div>
       </section>
 
@@ -30,10 +49,10 @@ export default function AdmissionsPage() {
               </h2>
               <div className="space-y-6">
                 {[
-                  { step: '01', title: 'Inquiry & Visit', desc: 'Visit our campus for a tour and collect the application form from the office.' },
-                  { step: '02', title: 'Application Submission', desc: 'Submit the filled application along with required documents (Birth Certificate, TC, Reports).' },
-                  { step: '03', title: 'Interactive Session', desc: 'An age-appropriate interaction with the student and parents will be scheduled.' },
-                  { step: '04', title: 'Fee Payment', desc: 'Once selected, complete the admission formalities by paying the required fees.' },
+                  { step: '01', title: 'Inquiry & Visit', desc: 'Visit our campus in BTM 1st Stage to see our well-equipped classrooms and facilities.' },
+                  { step: '02', title: 'Application', desc: 'Collect and submit the application form with required documents at the school office.' },
+                  { step: '03', title: 'Interaction', desc: 'An age-appropriate interaction session with the student and parents.' },
+                  { step: '04', title: 'Confirmation', desc: 'Complete the simple admission formalities. Remember: No Admission Fee or Donation is charged.' },
                 ].map((s, i) => (
                   <div key={i} className="flex gap-6">
                     <div className="shrink-0 w-12 h-12 rounded-full bg-primary/10 text-primary flex items-center justify-center font-bold text-xl">
@@ -50,21 +69,20 @@ export default function AdmissionsPage() {
 
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
               <div className="bg-white p-8 rounded-3xl border shadow-sm">
-                <Calendar className="text-primary mb-4" size={32} />
-                <h3 className="text-xl font-bold mb-4">Important Dates</h3>
-                <ul className="space-y-3 text-sm text-muted-foreground">
-                  <li className="flex justify-between border-b pb-2"><span>Form Release:</span> <span>Dec 1, 2025</span></li>
-                  <li className="flex justify-between border-b pb-2"><span>Interviews Start:</span> <span>Jan 15, 2026</span></li>
-                  <li className="flex justify-between border-b pb-2"><span>First List:</span> <span>Feb 10, 2026</span></li>
-                </ul>
+                <GraduationCap className="text-primary mb-4" size={32} />
+                <h3 className="text-xl font-bold mb-4">Academic Record</h3>
+                <p className="text-sm text-muted-foreground leading-relaxed">
+                  We are proud of our consistent 100% pass record in the Grade 10 Board Examinations, proof of our teaching standards.
+                </p>
               </div>
               <div className="bg-white p-8 rounded-3xl border shadow-sm">
                 <Users className="text-primary mb-4" size={32} />
-                <h3 className="text-xl font-bold mb-4">Eligibility</h3>
+                <h3 className="text-xl font-bold mb-4">Classes Offered</h3>
                 <ul className="space-y-3 text-sm text-muted-foreground">
-                  <li className="flex items-center gap-2"><CheckCircle2 className="text-green-500" size={16} /> KG: 3+ Years</li>
-                  <li className="flex items-center gap-2"><CheckCircle2 className="text-green-500" size={16} /> Grade 1: 6+ Years</li>
-                  <li className="flex items-center gap-2"><CheckCircle2 className="text-green-500" size={16} /> Grades 2-10: Based on TC</li>
+                  <li className="flex items-center gap-2"><CheckCircle2 className="text-green-500" size={16} /> Kindergarten</li>
+                  <li className="flex items-center gap-2"><CheckCircle2 className="text-green-500" size={16} /> Primary School</li>
+                  <li className="flex items-center gap-2"><CheckCircle2 className="text-green-500" size={16} /> Higher Primary</li>
+                  <li className="flex items-center gap-2"><CheckCircle2 className="text-green-500" size={16} /> High School (Grade 10)</li>
                 </ul>
               </div>
             </div>
@@ -75,12 +93,13 @@ export default function AdmissionsPage() {
               <div className="bg-secondary p-8 rounded-3xl text-white mb-8">
                 <HelpCircle className="mb-4" size={32} />
                 <h3 className="text-xl font-bold mb-4">Need Guidance?</h3>
-                <p className="text-sm opacity-90 mb-6">Our AI assistant can answer common questions about our policies and process instantly.</p>
+                <p className="text-sm opacity-90 mb-6">Our AI assistant is trained on CCPS policies and can answer your queries instantly.</p>
                 <AIAdmissionsTool />
               </div>
               <div className="p-8 bg-white rounded-3xl border shadow-sm text-center">
-                <h3 className="text-xl font-bold mb-4">Download Brochure</h3>
-                <Button className="w-full" asChild><Link href="#">Download PDF</Link></Button>
+                <h3 className="text-xl font-bold mb-4">Visit Campus</h3>
+                <p className="text-sm text-muted-foreground mb-6">No.6 1st Crs, 9th Mn Rd, BTM 1st Stage</p>
+                <Button className="w-full" asChild><Link href="/contact">Get Directions</Link></Button>
               </div>
             </div>
           </aside>

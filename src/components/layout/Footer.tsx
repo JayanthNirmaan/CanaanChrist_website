@@ -1,6 +1,5 @@
-
 import Link from 'next/link';
-import { GraduationCap, MapPin, Phone, Mail, Facebook, Twitter, Instagram } from 'lucide-react';
+import { GraduationCap, MapPin, Phone, Mail, Facebook, Youtube, Instagram } from 'lucide-react';
 
 export function Footer() {
   return (
@@ -11,15 +10,18 @@ export function Footer() {
             <div className="bg-white p-2 rounded-lg text-primary">
               <GraduationCap size={24} />
             </div>
-            <span className="text-xl font-bold tracking-tight">CANAAN CONNECT</span>
+            <span className="text-xl font-bold tracking-tight uppercase">Canaan Christ</span>
           </div>
           <p className="text-primary-foreground/80 leading-relaxed">
-            Established in 2001, providing excellence in education from KG to 10th Grade under the State Syllabus.
+            "Righteousness And Truth" - Providing quality education from Kindergarten to 10th Grade under the State Syllabus since 2001.
           </p>
           <div className="flex gap-4">
-            <Facebook className="cursor-pointer hover:text-white transition-colors" size={20} />
-            <Twitter className="cursor-pointer hover:text-white transition-colors" size={20} />
-            <Instagram className="cursor-pointer hover:text-white transition-colors" size={20} />
+            <a href="https://www.youtube.com/@CANAANCHRISTPUBLICSCHOOL" target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors">
+              <Youtube size={20} />
+            </a>
+            <a href="https://www.instagram.com/canaanchristpublicschool" target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors">
+              <Instagram size={20} />
+            </a>
           </div>
         </div>
 
@@ -28,8 +30,6 @@ export function Footer() {
           <ul className="space-y-4 text-primary-foreground/80">
             <li><Link href="/about" className="hover:text-white">About Us</Link></li>
             <li><Link href="/admissions" className="hover:text-white">Admissions</Link></li>
-            <li><Link href="/academics" className="hover:text-white">Academics</Link></li>
-            <li><Link href="/facilities" className="hover:text-white">Facilities</Link></li>
             <li><Link href="/contact" className="hover:text-white">Contact</Link></li>
           </ul>
         </div>
@@ -39,7 +39,7 @@ export function Footer() {
           <ul className="space-y-4 text-primary-foreground/80">
             <li className="flex items-start gap-3">
               <MapPin className="shrink-0" size={18} />
-              <span>No.6 1st Cross, 9th Main Road, BTM 1st Stage, Bengaluru</span>
+              <span>No.6 1st Crs, 9th Mn Rd, BTM 1st Stage, New Gurappana Palya, Bengaluru, 560029</span>
             </li>
             <li className="flex items-center gap-3">
               <Phone className="shrink-0" size={18} />
@@ -47,14 +47,14 @@ export function Footer() {
             </li>
             <li className="flex items-center gap-3">
               <Mail className="shrink-0" size={18} />
-              <span>admissions@canaanconnect.edu.in</span>
+              <span>info@canaanconnect.edu.in</span>
             </li>
           </ul>
         </div>
 
         <div>
           <h4 className="text-lg font-semibold mb-6">Admissions 2026-27</h4>
-          <p className="text-primary-foreground/80 mb-4">Admissions are open. We follow a strict no-donation policy.</p>
+          <p className="text-primary-foreground/80 mb-4">Admissions are open. No Admission Fee / No Donation Policy.</p>
           <Link 
             href="/admissions" 
             className="inline-block bg-white text-primary px-6 py-2 rounded-md font-medium hover:bg-gray-100 transition-colors"
