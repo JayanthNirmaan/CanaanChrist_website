@@ -1,0 +1,59 @@
+
+{
+  "placeholderImages": [
+    {
+      "id": "hero-bg",
+      "description": "Modern school building campus",
+      "imageUrl": "https://picsum.photos/seed/school-hero/1920/1080",
+      "imageHint": "modern school building"
+    },
+    {
+      "id": "principal",
+      "description": "Professional female principal portrait",
+      "imageUrl": "https://picsum.photos/seed/principal/400/500",
+      "imageHint": "professional portrait"
+    },
+    {
+      "id": "chairman",
+      "description": "Professional male chairman portrait",
+      "imageUrl": "https://picsum.photos/seed/chairman/400/500",
+      "imageHint": "executive portrait"
+    },
+    {
+      "id": "gallery-1",
+      "description": "Students in classroom",
+      "imageUrl": "https://picsum.photos/seed/class/600/400",
+      "imageHint": "classroom students"
+    },
+    {
+      "id": "gallery-2",
+      "description": "Library with books",
+      "imageUrl": "https://picsum.photos/seed/library/600/400",
+      "imageHint": "school library"
+    },
+    {
+      "id": "gallery-3",
+      "description": "Science laboratory",
+      "imageUrl": "https://picsum.photos/seed/lab/600/400",
+      "imageHint": "science lab"
+    },
+    {
+      "id": "gallery-4",
+      "description": "Sports field playground",
+      "imageUrl": "https://picsum.photos/seed/sports/600/400",
+      "imageHint": "school sports"
+    },
+    {
+      "id": "gallery-5",
+      "description": "Art and craft room",
+      "imageUrl": "https://picsum.photos/seed/art/600/400",
+      "imageHint": "art room"
+    },
+    {
+      "id": "gallery-6",
+      "description": "School bus transport",
+      "imageUrl": "https://picsum.photos/seed/bus/600/400",
+      "imageHint": "school bus"
+    }
+  ]
+}
