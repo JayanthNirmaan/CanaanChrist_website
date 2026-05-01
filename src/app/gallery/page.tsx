@@ -11,15 +11,6 @@ import { cn } from '@/lib/utils';
 export default function GalleryPage() {
   const gallery = PlaceHolderImages.filter(img => img.id.startsWith('gallery-'));
 
-  // Deterministic rotations based on index to avoid hydration mismatch
-  const getRotation = (index: number) => {
-    const rotations = [
-      'rotate-1', '-rotate-1', 'rotate-2', '-rotate-2', 
-      'rotate-[1.5deg]', '-rotate-[1.5deg]', 'rotate-3', '-rotate-3'
-    ];
-    return rotations[index % rotations.length];
-  };
-
   // Deterministic sizing logic to create a "random" but stable masonry-like feel
   const getSizeClass = (index: number) => {
     // Patterns of spans: [col, row, aspect]
@@ -46,39 +37,35 @@ export default function GalleryPage() {
         </div>
       </section>
 
-      {/* Fun Stack Gallery Section */}
-      <section className="py-24 bg-white px-6">
+      {/* Grid Gallery Section */}
+      <section className="py-12 bg-white px-6">
         <div className="max-w-7xl mx-auto">
-          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8 md:gap-12 auto-rows-min">
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 md:gap-6 auto-rows-min">
             {gallery.map((item, index) => (
               <div 
                 key={item.id}
                 className={cn(
-                  "group relative rounded-2xl overflow-hidden shadow-lg transition-all duration-500 cursor-pointer",
-                  "hover:scale-105 hover:rotate-0 hover:z-30 hover:shadow-2xl border-4 border-white bg-white",
-                  getRotation(index),
+                  "group relative rounded-xl overflow-hidden shadow-md transition-all duration-500 cursor-pointer",
+                  "hover:scale-[1.02] hover:z-30 hover:shadow-xl bg-muted",
                   getSizeClass(index)
                 )}
               >
-                <div className="relative w-full h-full min-h-[250px]">
+                <div className="relative w-full h-full min-h-[200px]">
                   <Image 
                     src={item.imageUrl} 
                     alt={item.description} 
                     fill 
-                    className="object-cover grayscale-[0.2] group-hover:grayscale-0 transition-all duration-500"
+                    className="object-cover transition-all duration-500"
                     data-ai-hint={item.imageHint}
                   />
                   
                   {/* Hover Overlay with Gaegu Font */}
                   <div className="absolute inset-0 bg-primary/80 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center p-6 text-center">
-                    <h3 className="text-white text-2xl md:text-4xl font-headline font-bold transform translate-y-4 group-hover:translate-y-0 transition-transform duration-300">
+                    <h3 className="text-white text-2xl md:text-3xl font-headline font-bold transform translate-y-4 group-hover:translate-y-0 transition-transform duration-300">
                       {item.description}
                     </h3>
                   </div>
                 </div>
-                
-                {/* Visual Decorative Edge (Tape effect) */}
-                <div className="absolute -top-3 left-1/2 -translate-x-1/2 w-12 h-6 bg-white/30 backdrop-blur-sm -rotate-2 z-10 pointer-events-none group-hover:opacity-0 transition-opacity" />
               </div>
             ))}
           </div>
