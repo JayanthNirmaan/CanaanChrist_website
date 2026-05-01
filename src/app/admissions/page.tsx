@@ -3,6 +3,7 @@ import { Footer } from '@/components/layout/Footer';
 import { CheckCircle2, FileText, GraduationCap, Backpack, BookOpen, Smile, Baby, User, UserRound } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import Link from 'next/link';
+import { RegistrationForm } from '@/components/admissions/RegistrationForm';
 
 export default function AdmissionsPage() {
   const classes = [
@@ -37,7 +38,7 @@ export default function AdmissionsPage() {
   ];
 
   return (
-    <main className="min-h-screen">
+    <main className="min-h-screen bg-white">
       <Navbar />
       
       {/* Header */}
@@ -70,9 +71,9 @@ export default function AdmissionsPage() {
 
       {/* Main Content */}
       <section className="py-24 bg-white">
-        <div className="max-w-7xl mx-auto px-6 grid grid-cols-1 lg:grid-cols-3 gap-12">
+        <div className="max-w-7xl mx-auto px-6 grid grid-cols-1 lg:grid-cols-12 gap-16">
           
-          <div className="lg:col-span-2 space-y-16">
+          <div className="lg:col-span-7 space-y-16">
             <div className="bg-background p-10 rounded-[2.5rem] shadow-sm border space-y-8">
               <h2 className="text-3xl font-bold text-primary flex items-center gap-3">
                 <FileText className="text-secondary" /> Admission Process
@@ -127,9 +128,15 @@ export default function AdmissionsPage() {
             </div>
           </div>
 
-          <aside className="space-y-8">
+          <aside className="lg:col-span-5 space-y-8">
             <div className="sticky top-32">
-              <div className="p-8 bg-primary rounded-[2.5rem] text-primary-foreground shadow-2xl text-center space-y-6">
+              <div className="bg-white p-10 rounded-[3rem] shadow-2xl border-2 border-primary/5">
+                <h2 className="text-2xl font-bold text-primary mb-2">Admission Inquiry</h2>
+                <p className="text-sm text-muted-foreground mb-8">Start your child's journey with us today.</p>
+                <RegistrationForm />
+              </div>
+
+              <div className="mt-8 p-8 bg-primary rounded-[2.5rem] text-primary-foreground shadow-2xl text-center space-y-6">
                 <div className="space-y-2">
                   <h3 className="text-2xl font-bold">Visit Campus</h3>
                   <p className="text-sm opacity-80 leading-relaxed">No.6 1st Crs, 9th Mn Rd, BTM 1st Stage, Bengaluru</p>
