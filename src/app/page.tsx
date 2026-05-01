@@ -217,15 +217,13 @@ export default function Home() {
             </Button>
           </div>
           <div className="image-trigger relative h-[400px] md:h-[500px] rounded-[2.5rem] overflow-hidden shadow-2xl border-4 border-white transition-all duration-500 hover:scale-105 hover:shadow-primary/40 hover:border-white/50 cursor-pointer">
-            {gallery[0]?.imageUrl && (
-              <Image 
-                src={gallery[0].imageUrl} 
-                alt="Classroom" 
-                fill 
-                className="object-cover transition-transform duration-700"
-                data-ai-hint="classroom students"
-              />
-            )}
+            <Image 
+              src="/assets/CanaanChristSchool.png" 
+              alt="School Campus" 
+              fill 
+              className="object-cover transition-transform duration-700"
+              data-ai-hint="school building"
+            />
           </div>
         </div>
       </section>
