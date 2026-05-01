@@ -1,10 +1,17 @@
 import { Navbar } from '@/components/layout/Navbar';
 import { Footer } from '@/components/layout/Footer';
-import { CheckCircle2, FileText, Calendar, Users, GraduationCap } from 'lucide-react';
+import { CheckCircle2, FileText, Calendar, Users, GraduationCap, Smile, Backpack, BookOpen, School } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import Link from 'next/link';
 
 export default function AdmissionsPage() {
+  const classes = [
+    { icon: Smile, title: 'Kindergarten', desc: 'Nursery, LKG, UKG', color: 'text-pink-500', bg: 'bg-pink-100' },
+    { icon: Backpack, title: 'Primary School', desc: 'Grades 1 to 4', color: 'text-blue-500', bg: 'bg-blue-100' },
+    { icon: BookOpen, title: 'Higher Primary', desc: 'Grades 5 to 7', color: 'text-orange-500', bg: 'bg-orange-100' },
+    { icon: School, title: 'High School', desc: 'Grades 8 to 10', color: 'text-primary', bg: 'bg-primary/10' },
+  ];
+
   return (
     <main className="min-h-screen">
       <Navbar />
@@ -76,13 +83,20 @@ export default function AdmissionsPage() {
               </div>
               <div className="bg-white p-8 rounded-3xl border shadow-sm">
                 <Users className="text-primary mb-4" size={32} />
-                <h3 className="text-xl font-bold mb-4">Classes Offered</h3>
-                <ul className="space-y-3 text-sm text-muted-foreground">
-                  <li className="flex items-center gap-2"><CheckCircle2 className="text-green-500" size={16} /> Kindergarten</li>
-                  <li className="flex items-center gap-2"><CheckCircle2 className="text-green-500" size={16} /> Primary School</li>
-                  <li className="flex items-center gap-2"><CheckCircle2 className="text-green-500" size={16} /> Higher Primary</li>
-                  <li className="flex items-center gap-2"><CheckCircle2 className="text-green-500" size={16} /> High School (Grade 10)</li>
-                </ul>
+                <h3 className="text-xl font-bold mb-6">Classes Offered</h3>
+                <div className="grid grid-cols-1 gap-4">
+                  {classes.map((cls, idx) => (
+                    <div key={idx} className="flex items-center gap-4 group">
+                      <div className={`p-2.5 rounded-xl ${cls.bg} ${cls.color} transition-transform group-hover:scale-110`}>
+                        <cls.icon size={20} />
+                      </div>
+                      <div>
+                        <h4 className="font-bold text-foreground leading-none mb-1">{cls.title}</h4>
+                        <p className="text-xs text-muted-foreground">{cls.desc}</p>
+                      </div>
+                    </div>
+                  ))}
+                </div>
               </div>
             </div>
           </div>
