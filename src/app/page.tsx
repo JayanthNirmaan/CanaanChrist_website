@@ -152,7 +152,7 @@ export default function Home() {
             <Button size="lg" className="h-14 px-8 text-lg rounded-full shadow-lg hover:shadow-primary/20 transition-all hover:-translate-y-1" asChild>
               <Link href="/admissions">Admissions Open 2026-27</Link>
             </Button>
-            <Button size="lg" variant="outline" className="h-14 px-8 text-lg rounded-full border-primary text-primary hover:bg-primary/5 transition-all" asChild>
+            <Button size="lg" variant="outline" className="h-14 px-8 text-lg rounded-full border-primary text-primary hover:bg-primary hover:text-primary-foreground transition-all" asChild>
               <Link href="/contact">Book a Visit</Link>
             </Button>
           </div>
