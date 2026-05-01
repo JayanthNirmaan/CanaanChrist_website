@@ -33,29 +33,31 @@ export function Navbar() {
   return (
     <nav
       className={cn(
-        'fixed top-0 w-full z-50 transition-all duration-500 px-6 py-4',
-        scrolled ? 'bg-background/90 backdrop-blur-lg shadow-lg py-3' : 'bg-transparent'
+        'fixed top-0 w-full z-50 transition-all duration-500 px-6',
+        scrolled 
+          ? 'bg-background/60 backdrop-blur-xl border-b border-border/40 py-1.5 shadow-sm' 
+          : 'bg-transparent py-3'
       )}
     >
       <div className="max-w-7xl mx-auto flex items-center justify-between">
-        <Link href="/" className="flex items-center gap-4 group">
+        <Link href="/" className="flex items-center gap-3 group">
           <div className="transition-all duration-300 group-hover:scale-105">
             {logo?.imageUrl ? (
               <Image 
                 src={logo.imageUrl} 
                 alt="Canaan Christ Public School Logo" 
-                width={110} 
-                height={110} 
+                width={85} 
+                height={85} 
                 className="object-contain"
                 priority
               />
             ) : (
-              <div className="w-16 h-16 bg-primary text-white rounded-2xl flex items-center justify-center font-bold text-2xl shadow-lg">CC</div>
+              <div className="w-12 h-12 bg-primary text-white rounded-xl flex items-center justify-center font-bold text-xl shadow-lg">CC</div>
             )}
           </div>
           <div className="flex flex-col">
-            <span className="text-2xl font-bold tracking-tight text-primary leading-none hidden sm:block">Canaan Christ</span>
-            <span className="text-sm font-bold text-muted-foreground tracking-widest uppercase hidden sm:block">Public School</span>
+            <span className="text-xl font-bold tracking-tight text-primary leading-none hidden sm:block">Canaan Christ</span>
+            <span className="text-[10px] font-bold text-muted-foreground tracking-widest uppercase hidden sm:block">Public School</span>
           </div>
         </Link>
 
@@ -67,29 +69,29 @@ export function Navbar() {
                 key={item.name}
                 href={item.href}
                 className={cn(
-                  'px-5 py-2 text-base font-bold transition-all relative group',
+                  'px-4 py-1.5 text-sm font-bold transition-all relative group',
                   isActive ? 'text-primary' : 'text-foreground/70 hover:text-primary'
                 )}
               >
                 {item.name}
                 {isActive && (
-                  <span className="absolute bottom-0 left-5 right-5 h-1 bg-primary rounded-full" />
+                  <span className="absolute bottom-0 left-4 right-4 h-0.5 bg-primary rounded-full" />
                 )}
                 {!isActive && (
-                  <span className="absolute bottom-0 left-5 right-5 h-1 bg-primary rounded-full transform scale-x-0 transition-transform group-hover:scale-x-50" />
+                  <span className="absolute bottom-0 left-4 right-4 h-0.5 bg-primary rounded-full transform scale-x-0 transition-transform group-hover:scale-x-50" />
                 )}
               </Link>
             );
           })}
-          <div className="ml-6">
-            <Button asChild variant="default" size="lg" className="rounded-full shadow-lg hover:shadow-primary/20 hover:-translate-y-0.5 transition-all font-bold px-8">
+          <div className="ml-4">
+            <Button asChild variant="default" size="sm" className="rounded-full shadow-lg hover:shadow-primary/20 hover:-translate-y-0.5 transition-all font-bold px-6 h-9">
               <Link href="/admissions">Apply Now</Link>
             </Button>
           </div>
         </div>
 
         <button className="md:hidden text-primary p-2" onClick={() => setIsOpen(!isOpen)}>
-          {isOpen ? <X size={32} /> : <Menu size={32} />}
+          {isOpen ? <X size={28} /> : <Menu size={28} />}
         </button>
       </div>
 
@@ -97,13 +99,13 @@ export function Navbar() {
       {isOpen && (
         <div className="md:hidden fixed inset-0 top-0 left-0 w-full h-screen bg-background z-50 animate-in slide-in-from-right duration-300">
           <div className="p-6 flex flex-col h-full">
-            <div className="flex justify-between items-center mb-12">
+            <div className="flex justify-between items-center mb-10">
               <div className="flex items-center gap-3">
-                <div className="w-12 h-12 bg-primary text-white rounded-xl flex items-center justify-center font-bold text-xl">CC</div>
-                <span className="font-bold text-xl text-primary">Canaan Christ</span>
+                <div className="w-10 h-10 bg-primary text-white rounded-xl flex items-center justify-center font-bold text-lg">CC</div>
+                <span className="font-bold text-lg text-primary">Canaan Christ</span>
               </div>
               <button onClick={() => setIsOpen(false)} className="text-primary">
-                <X size={32} />
+                <X size={28} />
               </button>
             </div>
             <div className="flex flex-col gap-6">
@@ -113,7 +115,7 @@ export function Navbar() {
                   href={item.href}
                   onClick={() => setIsOpen(false)}
                   className={cn(
-                    'text-3xl font-bold py-2 border-b-2 transition-colors',
+                    'text-2xl font-bold py-2 border-b transition-colors',
                     pathname === item.href ? 'text-primary border-primary' : 'text-foreground/80 border-transparent'
                   )}
                 >
@@ -121,8 +123,8 @@ export function Navbar() {
                 </Link>
               ))}
             </div>
-            <div className="mt-auto pt-12">
-              <Button asChild className="w-full h-16 text-xl rounded-full font-bold" size="lg">
+            <div className="mt-auto pt-10">
+              <Button asChild className="w-full h-14 text-lg rounded-full font-bold" size="lg">
                 <Link href="/admissions" onClick={() => setIsOpen(false)}>Apply Now</Link>
               </Button>
             </div>
