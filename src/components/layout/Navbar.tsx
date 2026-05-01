@@ -53,23 +53,23 @@ export function Navbar() {
               <div className="w-20 h-20 bg-primary/10 rounded flex items-center justify-center text-primary font-bold text-2xl">CC</div>
             )}
           </div>
-          <span className="text-2xl font-bold tracking-tight text-primary hidden sm:block">Canaan Christ Public School</span>
+          <span className="text-3xl font-bold tracking-tight text-primary hidden sm:block">Canaan Christ Public School</span>
         </Link>
 
-        <div className="hidden md:flex items-center gap-8">
+        <div className="hidden md:flex items-center gap-10">
           {navItems.map((item) => (
             <Link
               key={item.name}
               href={item.href}
               className={cn(
-                'text-sm font-medium transition-colors hover:text-primary',
+                'text-base font-semibold transition-colors hover:text-primary',
                 pathname === item.href ? 'text-primary' : 'text-foreground/80'
               )}
             >
               {item.name}
             </Link>
           ))}
-          <Button asChild variant="default" size="sm">
+          <Button asChild variant="default" size="default" className="rounded-full">
             <Link href="/admissions">Apply Now</Link>
           </Button>
         </div>
@@ -88,14 +88,14 @@ export function Navbar() {
                 href={item.href}
                 onClick={() => setIsOpen(false)}
                 className={cn(
-                  'text-lg font-medium py-2',
+                  'text-xl font-semibold py-2',
                   pathname === item.href ? 'text-primary' : 'text-foreground/80'
                 )}
               >
                 {item.name}
               </Link>
             ))}
-            <Button asChild className="w-full mt-4">
+            <Button asChild className="w-full mt-4 rounded-full" size="lg">
               <Link href="/admissions" onClick={() => setIsOpen(false)}>Apply Now</Link>
             </Button>
           </div>
