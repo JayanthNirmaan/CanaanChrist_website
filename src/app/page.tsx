@@ -87,44 +87,44 @@ const ScribbleBackground = () => (
   <div className="absolute inset-0 overflow-hidden pointer-events-none select-none">
     <div className="scribble-bg opacity-100"></div>
     <svg className="absolute inset-0 w-full h-full opacity-50" viewBox="0 0 1000 1000" fill="none" xmlns="http://www.w3.org/2000/svg">
-      <path d="M100,200 Q250,50 400,200 T700,200" stroke="currentColor" strokeWidth="3" strokeDasharray="1000" className="text-primary animate-draw-line" />
-      <path d="M50,800 Q300,950 600,800 T950,800" stroke="currentColor" strokeWidth="3" strokeDasharray="1000" className="text-secondary animate-draw-line" style={{ animationDelay: '1s' }} />
-      <path d="M800,100 Q950,300 800,500 T800,900" stroke="currentColor" strokeWidth="3" strokeDasharray="1000" className="text-accent animate-draw-line" style={{ animationDelay: '2s' }} />
+      <path d="M100,200 Q250,50 400,200 T700,200" stroke="currentColor" strokeWidth="4" strokeDasharray="1000" className="text-primary animate-draw-line" />
+      <path d="M50,800 Q300,950 600,800 T950,800" stroke="currentColor" strokeWidth="4" strokeDasharray="1000" className="text-secondary animate-draw-line" style={{ animationDelay: '1s' }} />
+      <path d="M800,100 Q950,300 800,500 T800,900" stroke="currentColor" strokeWidth="4" strokeDasharray="1000" className="text-accent animate-draw-line" style={{ animationDelay: '2s' }} />
     </svg>
     
     <div className="absolute top-[15%] left-[10%] animate-float text-primary opacity-50" style={{ animationDelay: '0s' }}>
-      <Pencil size={85} strokeWidth={0.8} />
+      <Pencil size={85} strokeWidth={1.5} />
     </div>
     <div className="absolute top-[20%] right-[15%] animate-float text-secondary opacity-50" style={{ animationDelay: '1s' }}>
-      <Rocket size={110} strokeWidth={0.8} />
+      <Rocket size={110} strokeWidth={1.5} />
     </div>
     <div className="absolute bottom-[20%] left-[15%] animate-float text-accent opacity-50" style={{ animationDelay: '2s' }}>
-      <GraduationCap size={95} strokeWidth={0.8} />
+      <GraduationCap size={95} strokeWidth={1.5} />
     </div>
     <div className="absolute bottom-[25%] right-[20%] animate-float text-primary opacity-50" style={{ animationDelay: '1.5s' }}>
-      <BookOpen size={90} strokeWidth={0.8} />
+      <BookOpen size={90} strokeWidth={1.5} />
     </div>
     <div className="absolute top-[50%] right-[5%] animate-float text-secondary opacity-50" style={{ animationDelay: '0.5s' }}>
-      <Palette size={80} strokeWidth={0.8} />
+      <Palette size={80} strokeWidth={1.5} />
     </div>
     <div className="absolute top-[60%] left-[5%] animate-float text-accent opacity-50" style={{ animationDelay: '3.5s' }}>
-      <Music size={75} strokeWidth={0.8} />
+      <Music size={75} strokeWidth={1.5} />
     </div>
     <div className="absolute top-[10%] right-[40%] animate-float text-accent opacity-50" style={{ animationDelay: '4.5s' }}>
-      <Wind size={85} strokeWidth={0.8} />
+      <Wind size={85} strokeWidth={1.5} />
     </div>
 
     <div className="absolute top-[5%] left-[30%] animate-float text-primary opacity-50" style={{ animationDelay: '2.5s' }}>
-      <Cloud size={95} strokeWidth={0.8} />
+      <Cloud size={95} strokeWidth={1.5} />
     </div>
     <div className="absolute bottom-[10%] left-[40%] animate-float text-secondary opacity-50" style={{ animationDelay: '1.2s' }}>
-      <Shapes size={85} strokeWidth={0.8} />
+      <Shapes size={85} strokeWidth={1.5} />
     </div>
     <div className="absolute bottom-[5%] right-[10%] animate-float text-primary opacity-50" style={{ animationDelay: '0.8s' }}>
-      <Smile size={80} strokeWidth={0.8} />
+      <Smile size={80} strokeWidth={1.5} />
     </div>
     <div className="absolute top-[35%] left-[12%] animate-float text-secondary opacity-50" style={{ animationDelay: '4s' }}>
-      <Trophy size={90} strokeWidth={0.8} />
+      <Trophy size={90} strokeWidth={1.5} />
     </div>
   </div>
 );
@@ -137,9 +137,9 @@ export default function Home() {
       <section className="relative h-screen flex items-center justify-center overflow-hidden bg-white">
         <ScribbleBackground />
         
-        <div className="relative z-10 text-center space-y-6 px-6 max-w-4xl">
+        <div className="relative z-10 text-center space-y-4 px-6 max-w-4xl">
           <div className="space-y-4">
-            <h1 className="text-5xl md:text-7xl font-bold tracking-tight uppercase text-primary animate-in fade-in slide-in-from-bottom-4 duration-1000">
+            <h1 className="text-5xl md:text-7xl lg:text-8xl font-bold tracking-tight uppercase text-primary animate-in fade-in slide-in-from-bottom-4 duration-1000">
               Canaan Christ Public School
             </h1>
             <p className="text-xl md:text-2xl font-medium text-muted-foreground italic animate-in fade-in slide-in-from-bottom-4 duration-1000 delay-300">
@@ -164,26 +164,50 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="py-16 bg-white relative group/section transition-all duration-700 overflow-hidden">
+      {/* Video Section */}
+      <section className="py-8 bg-white overflow-hidden">
+        <div className="max-w-5xl mx-auto px-6">
+          <div className="relative group">
+            <div className="absolute -top-6 -left-6 text-accent animate-float opacity-40">
+              <Wind size={48} strokeWidth={1.5} />
+            </div>
+            <div className="absolute -bottom-6 -right-6 text-secondary animate-float opacity-40" style={{ animationDelay: '1s' }}>
+              <Palette size={48} strokeWidth={1.5} />
+            </div>
+            
+            <div className="relative aspect-video rounded-[3rem] overflow-hidden shadow-2xl border-4 border-white ring-8 ring-primary/5 transition-transform duration-500 hover:scale-[1.01]">
+              <iframe
+                className="absolute inset-0 w-full h-full"
+                src="https://www.youtube.com/embed/PjGkVCAo8Fw"
+                title="Canaan Christ Campus Tour"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowFullScreen
+              ></iframe>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section className="py-8 bg-white relative group/section transition-all duration-700 overflow-hidden">
         <div className="absolute top-1/2 right-[25%] -translate-y-1/2 translate-x-1/2 w-0 h-0 bg-primary rounded-full transition-all duration-1000 ease-in-out group-has-[.image-trigger:hover]/section:w-[300vw] group-has-[.image-trigger:hover]/section:h-[300vw] pointer-events-none z-0" />
 
-        <div className="relative z-10 max-w-7xl mx-auto px-6 grid grid-cols-1 md:grid-cols-2 gap-16 items-center">
+        <div className="relative z-10 max-w-7xl mx-auto px-6 grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
           <div className="space-y-6">
             <div className="inline-block bg-primary/10 text-primary px-4 py-1.5 rounded-full text-sm font-bold transition-all duration-500 group-has-[.image-trigger:hover]/section:bg-white group-has-[.image-trigger:hover]/section:text-primary">
               Established 2001
             </div>
-            <h2 className="text-4xl font-bold text-primary transition-colors duration-500 group-has-[.image-trigger:hover]/section:text-white">Affordable, Quality Education for Every Child</h2>
-            <p className="text-lg text-muted-foreground leading-relaxed transition-colors duration-500 group-has-[.image-trigger:hover]/section:text-white/90">
+            <h2 className="text-3xl md:text-5xl font-bold text-primary transition-colors duration-500 group-has-[.image-trigger:hover]/section:text-white">Affordable, Quality Education for Every Child</h2>
+            <p className="text-base md:text-lg text-muted-foreground leading-relaxed transition-colors duration-500 group-has-[.image-trigger:hover]/section:text-white/90">
               Canaan Christ Public School offers a holistic learning environment under the State Syllabus, catering to students from Kindergarten to 10th Grade. Our mission is to empower every child—regardless of background—to grow intellectually, emotionally, and ethically.
             </p>
-            <div className="grid grid-cols-2 gap-6">
+            <div className="grid grid-cols-2 gap-4">
               <div className="p-6 bg-white rounded-2xl shadow-sm border hover:border-primary/20 transition-all duration-500 group-has-[.image-trigger:hover]/section:bg-white/10 group-has-[.image-trigger:hover]/section:border-white/20 group-has-[.image-trigger:hover]/section:shadow-none">
                 <div className="text-3xl font-bold text-primary mb-1 transition-colors duration-500 group-has-[.image-trigger:hover]/section:text-white">K-10</div>
-                <div className="text-sm text-muted-foreground font-medium transition-colors duration-500 group-has-[.image-trigger:hover]/section:text-white/80">Classes Offered</div>
+                <div className="text-xs text-muted-foreground font-bold transition-colors duration-500 group-has-[.image-trigger:hover]/section:text-white/80 uppercase">Classes Offered</div>
               </div>
               <div className="p-6 bg-white rounded-2xl shadow-sm border hover:border-primary/20 transition-all duration-500 group-has-[.image-trigger:hover]/section:bg-white/10 group-has-[.image-trigger:hover]/section:border-white/20 group-has-[.image-trigger:hover]/section:shadow-none">
                 <div className="text-3xl font-bold text-primary mb-1 transition-colors duration-500 group-has-[.image-trigger:hover]/section:text-white">State</div>
-                <div className="text-sm text-muted-foreground font-medium transition-colors duration-500 group-has-[.image-trigger:hover]/section:text-white/80">Syllabus</div>
+                <div className="text-xs text-muted-foreground font-bold transition-colors duration-500 group-has-[.image-trigger:hover]/section:text-white/80 uppercase">Syllabus</div>
               </div>
             </div>
             <Button variant="link" className="p-0 text-primary font-bold group text-lg transition-colors duration-500 group-has-[.image-trigger:hover]/section:text-white" asChild>
@@ -192,7 +216,7 @@ export default function Home() {
               </Link>
             </Button>
           </div>
-          <div className="image-trigger relative h-[500px] rounded-[2.5rem] overflow-hidden shadow-2xl border-4 border-white transition-all duration-500 hover:scale-105 hover:shadow-primary/40 hover:border-white/50 cursor-pointer">
+          <div className="image-trigger relative h-[400px] md:h-[500px] rounded-[2.5rem] overflow-hidden shadow-2xl border-4 border-white transition-all duration-500 hover:scale-105 hover:shadow-primary/40 hover:border-white/50 cursor-pointer">
             {gallery[0]?.imageUrl && (
               <Image 
                 src={gallery[0].imageUrl} 
@@ -206,67 +230,67 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="py-16 bg-muted/30">
-        <div className="max-w-7xl mx-auto px-6 grid grid-cols-1 md:grid-cols-2 gap-12">
-          <div className="p-12 bg-primary rounded-[3rem] text-primary-foreground shadow-xl space-y-6 hover:-translate-y-2 transition-all relative overflow-hidden group">
+      <section className="py-8 bg-muted/30">
+        <div className="max-w-7xl mx-auto px-6 grid grid-cols-1 md:grid-cols-2 gap-8">
+          <div className="p-10 bg-primary rounded-[3rem] text-primary-foreground shadow-xl space-y-4 hover:-translate-y-2 transition-all relative overflow-hidden group">
             <div className="absolute -right-8 -bottom-8 text-white/40 opacity-0 group-hover:opacity-100 group-hover:scale-125 transition-all duration-700 pointer-events-none rotate-12">
               <Eye size={240} strokeWidth={1} />
             </div>
-            <h3 className="text-3xl font-bold relative z-10">Our Vision</h3>
-            <p className="text-lg opacity-90 leading-relaxed relative z-10">
+            <h3 className="text-2xl md:text-3xl font-bold relative z-10">Our Vision</h3>
+            <p className="text-base md:text-lg opacity-90 leading-relaxed relative z-10">
               To nurture compassionate, curious, and confident learners who contribute meaningfully to society, while rooted in values, culture, and excellence.
             </p>
           </div>
-          <div className="p-12 bg-secondary rounded-[3rem] text-secondary-foreground shadow-xl space-y-6 hover:-translate-y-2 transition-all relative overflow-hidden group">
+          <div className="p-10 bg-secondary rounded-[3rem] text-secondary-foreground shadow-xl space-y-4 hover:-translate-y-2 transition-all relative overflow-hidden group">
             <div className="absolute -right-8 -bottom-8 text-white/40 opacity-0 group-hover:opacity-100 group-hover:scale-125 transition-all duration-700 pointer-events-none -rotate-12">
               <Target size={240} strokeWidth={1} />
             </div>
-            <h3 className="text-3xl font-bold relative z-10">Our Mission</h3>
-            <p className="text-lg opacity-90 leading-relaxed relative z-10">
-              Providing affordable, quality education that empowers every child—regardless of background—to grow intellectually, emotionally, and ethically. We aim to foster an inclusive learning environment that encourages creativity and critical thinking.
+            <h3 className="text-2xl md:text-3xl font-bold relative z-10">Our Mission</h3>
+            <p className="text-base md:text-lg opacity-90 leading-relaxed relative z-10">
+              Providing affordable, quality education that empowers every child—regardless of background—to grow intellectually, emotionally, and ethically. We aim to foster an inclusive learning environment.
             </p>
           </div>
         </div>
       </section>
 
-      <section className="py-16 bg-white">
-        <div className="max-w-7xl mx-auto px-6 text-center space-y-16">
+      <section className="py-8 bg-white">
+        <div className="max-w-7xl mx-auto px-6 text-center space-y-8">
           <div className="space-y-4">
-            <h2 className="text-4xl font-bold text-primary">Our Core Values</h2>
-            <p className="text-muted-foreground max-w-2xl mx-auto">The pillars that define the character and conduct of every student at Canaan Christ.</p>
+            <h2 className="text-3xl md:text-4xl font-bold text-primary">Our Core Values</h2>
+            <p className="text-muted-foreground max-w-2xl mx-auto text-sm md:text-base">The pillars that define the character and conduct of every student at Canaan Christ.</p>
           </div>
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
             {coreValues.map((v, i) => (
-              <div key={i} className="p-5 bg-white rounded-[1.5rem] shadow-sm border hover:shadow-xl hover:border-primary/20 transition-all group flex flex-col gap-3 text-left hover:-rotate-1 hover:scale-105">
+              <div key={i} className="p-6 bg-white rounded-[2rem] shadow-sm border hover:shadow-xl hover:border-primary/20 transition-all group flex flex-col gap-3 text-left hover:-rotate-1 hover:scale-105">
                 <div className="flex items-center gap-4">
                   <div className="w-10 h-10 bg-primary/10 rounded-xl flex items-center justify-center text-primary group-hover:bg-primary group-hover:text-white transition-all transform group-hover:animate-wiggle shrink-0">
-                    <v.icon size={20} />
+                    <v.icon size={20} strokeWidth={2} />
                   </div>
                   <h4 className="text-xl font-bold text-foreground group-hover:text-primary transition-colors">{v.title}</h4>
                 </div>
-                <p className="text-muted-foreground text-[11px] leading-relaxed line-clamp-2 group-hover:line-clamp-none transition-all">{v.desc}</p>
+                <p className="text-muted-foreground text-sm leading-relaxed line-clamp-2 group-hover:line-clamp-none transition-all">{v.desc}</p>
               </div>
             ))}
           </div>
         </div>
       </section>
 
-      <section className="py-16 bg-muted/20">
-        <div className="max-w-7xl mx-auto px-6 space-y-16">
-          <div className="flex flex-col md:flex-row justify-between items-end gap-6 text-center md:text-left">
-            <div className="space-y-4">
-              <h2 className="text-4xl font-bold text-primary">Campus Facilities</h2>
-              <p className="text-muted-foreground max-md mx-auto md:mx-0">Investing in infrastructure to support intellectual and creative growth.</p>
+      <section className="py-8 bg-muted/20">
+        <div className="max-w-7xl mx-auto px-6 space-y-8">
+          <div className="flex flex-col md:flex-row justify-between items-end gap-4 text-center md:text-left">
+            <div className="space-y-2">
+              <h2 className="text-3xl md:text-4xl font-bold text-primary">Campus Facilities</h2>
+              <p className="text-muted-foreground max-w-md text-sm md:text-base">Investing in infrastructure to support intellectual and creative growth.</p>
             </div>
             <Button variant="outline" className="rounded-full border-primary text-primary hover:bg-primary hover:text-white transition-all" asChild>
               <Link href="/contact">Inquire for Visit</Link>
             </Button>
           </div>
-          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8">
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6">
             {facilities.map((f, i) => {
               const facilityImage = PlaceHolderImages.find(img => img.id === f.imageId);
               return (
-                <div key={i} className="group relative h-80 overflow-hidden rounded-[2.5rem] border transition-all duration-500 hover:shadow-2xl hover:-translate-y-2">
+                <div key={i} className="group relative h-72 overflow-hidden rounded-[2.5rem] border transition-all duration-500 hover:shadow-2xl hover:-translate-y-2">
                   <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-all duration-700 ease-in-out">
                     {facilityImage && (
                       <Image 
@@ -280,15 +304,15 @@ export default function Home() {
                     <div className="absolute inset-0 bg-primary/80 mix-blend-multiply" />
                   </div>
 
-                  <div className="relative h-full p-10 flex flex-col justify-between z-10 transition-all duration-500">
-                    <div className="shrink-0 w-14 h-14 bg-primary text-white rounded-2xl flex items-center justify-center shadow-lg group-hover:bg-white group-hover:text-primary transition-all duration-300">
-                      <f.icon size={28} />
+                  <div className="relative h-full p-8 flex flex-col justify-between z-10 transition-all duration-500">
+                    <div className="shrink-0 w-12 h-12 bg-primary text-white rounded-2xl flex items-center justify-center shadow-lg group-hover:bg-white group-hover:text-primary transition-all duration-300">
+                      <f.icon size={24} />
                     </div>
-                    <div className="space-y-3">
-                      <h4 className="text-2xl font-bold text-foreground group-hover:text-white transition-colors">
+                    <div className="space-y-2">
+                      <h4 className="text-xl font-bold text-foreground group-hover:text-white transition-colors">
                         {f.title}
                       </h4>
-                      <p className="text-muted-foreground text-sm leading-relaxed group-hover:text-white/90 transition-all duration-300 line-clamp-2 group-hover:line-clamp-none">
+                      <p className="text-muted-foreground text-xs leading-relaxed group-hover:text-white/90 transition-all duration-300 line-clamp-2 group-hover:line-clamp-none">
                         {f.desc}
                       </p>
                     </div>
@@ -300,25 +324,24 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Gallery Reference Section - Fun & Tight Packed */}
-      <section className="py-16 bg-white overflow-hidden">
-        <div className="max-w-7xl mx-auto px-6 space-y-12">
-          <div className="flex flex-col md:flex-row justify-between items-end gap-6 text-center md:text-left">
-            <div className="space-y-4">
-              <h2 className="text-4xl font-bold text-primary">Campus Moments</h2>
-              <p className="text-muted-foreground max-w-md mx-auto md:mx-0">Captured joy, learning, and growth in our school gallery.</p>
+      <section className="py-8 bg-white overflow-hidden">
+        <div className="max-w-7xl mx-auto px-6 space-y-8">
+          <div className="flex flex-col md:flex-row justify-between items-end gap-4 text-center md:text-left">
+            <div className="space-y-2">
+              <h2 className="text-3xl md:text-4xl font-bold text-primary">Campus Moments</h2>
+              <p className="text-muted-foreground max-w-md text-sm md:text-base">Captured joy, learning, and growth in our school gallery.</p>
             </div>
             <Button variant="outline" className="rounded-full border-primary text-primary hover:bg-primary hover:text-white transition-all" asChild>
               <Link href="/gallery">View Full Gallery</Link>
             </Button>
           </div>
           
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-1.5 md:gap-2 h-[450px]">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-2 h-[400px]">
             {gallery.slice(0, 4).map((img, idx) => {
               const tilts = ["rotate-1", "-rotate-2", "rotate-2", "-rotate-1"];
               return (
                 <div key={img.id} className={cn(
-                  "relative rounded-xl overflow-hidden group shadow-lg border-4 border-white transition-all duration-500 hover:rotate-0 hover:scale-105 hover:z-20 cursor-pointer",
+                  "relative rounded-2xl overflow-hidden group shadow-lg border-4 border-white transition-all duration-500 hover:rotate-0 hover:scale-105 hover:z-20 cursor-pointer",
                   idx === 0 || idx === 3 ? "md:col-span-2" : "md:col-span-1",
                   tilts[idx]
                 )}>
@@ -329,7 +352,7 @@ export default function Home() {
                     className="object-cover transition-transform duration-700" 
                   />
                   <div className="absolute inset-0 bg-primary/60 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center p-4 text-center">
-                    <span className="text-white font-headline text-xl md:text-2xl">{img.description}</span>
+                    <span className="text-white font-headline text-lg md:text-xl">{img.description}</span>
                   </div>
                 </div>
               );
@@ -338,67 +361,67 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="py-16 bg-white">
-        <div className="max-w-7xl mx-auto px-6 space-y-16">
-          <h2 className="text-4xl font-bold text-primary text-center">School Leadership</h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-12 max-w-5xl mx-auto">
+      <section className="py-8 bg-white">
+        <div className="max-w-7xl mx-auto px-6 space-y-8">
+          <h2 className="text-3xl md:text-4xl font-bold text-primary text-center">School Leadership</h2>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-5xl mx-auto">
             <Card className="overflow-hidden border-none shadow-2xl rounded-[3rem]">
-              <div className="relative h-96">
+              <div className="relative h-80 md:h-96">
                 {chairmanImg?.imageUrl && (
                   <Image src={chairmanImg.imageUrl} alt="Chairman" fill className="object-cover" />
                 )}
               </div>
-              <CardContent className="p-10 text-center bg-white">
+              <CardContent className="p-8 text-center bg-white">
                 <h4 className="text-2xl font-bold">Chairman's Vision</h4>
-                <p className="text-primary font-bold mb-4">"Education is a right, not a privilege."</p>
-                <p className="text-sm text-muted-foreground italic leading-relaxed">"We don’t just prepare students for exams—we prepare them for life, leadership, and a future they can shape with their own hands."</p>
+                <p className="text-primary font-bold mb-3">"Education is a right, not a privilege."</p>
+                <p className="text-sm text-muted-foreground italic leading-relaxed">"We don’t just prepare students for exams—we prepare them for life and leadership."</p>
               </CardContent>
             </Card>
             <Card className="overflow-hidden border-none shadow-2xl rounded-[3rem]">
-              <div className="relative h-96">
+              <div className="relative h-80 md:h-96">
                 {principalImg?.imageUrl && (
                   <Image src={principalImg.imageUrl} alt="Principal" fill className="object-cover" />
                 )}
               </div>
-              <CardContent className="p-10 text-center bg-white">
+              <CardContent className="p-8 text-center bg-white">
                 <h4 className="text-2xl font-bold">Principal's Message</h4>
-                <p className="text-primary font-bold mb-4">"Rooted in values, culture, and excellence."</p>
-                <p className="text-sm text-muted-foreground italic leading-relaxed">"We foster an inclusive environment that nurtures intellectual, emotional, and ethical growth for every child."</p>
+                <p className="text-primary font-bold mb-3">"Rooted in values, culture, and excellence."</p>
+                <p className="text-sm text-muted-foreground italic leading-relaxed">"We foster an inclusive environment that nurtures intellectual and emotional growth."</p>
               </CardContent>
             </Card>
           </div>
         </div>
       </section>
 
-      <section className="py-12 bg-primary text-primary-foreground relative overflow-hidden">
+      <section className="py-8 bg-primary text-primary-foreground relative overflow-hidden">
         <div className="absolute top-0 right-0 w-64 h-64 bg-white/5 rounded-full -translate-y-1/2 translate-x-1/2 blur-3xl"></div>
         <div className="max-w-7xl mx-auto px-6 text-center relative z-10">
-          <div className="flex flex-col items-center gap-4">
+          <div className="flex flex-col items-center gap-2">
             <div className="text-7xl md:text-9xl font-black text-white">
               <Counter end={100} />
             </div>
-            <div className="text-2xl md:text-3xl font-bold opacity-90 uppercase tracking-widest text-accent">Board Exam Record</div>
-            <p className="max-w-xl opacity-75 mt-4 text-lg">We are proud to have maintained a 100% pass record in the Grade 10 Board Examinations year after year.</p>
+            <div className="text-xl md:text-2xl font-bold opacity-90 uppercase tracking-widest text-accent">Board Exam Record</div>
+            <p className="max-w-xl opacity-75 mt-2 text-sm md:text-base">We are proud to have maintained a 100% pass record in the Grade 10 Board Examinations year after year.</p>
           </div>
         </div>
       </section>
 
-      <section className="py-16 px-6 bg-white">
-        <div className="max-w-7xl mx-auto bg-secondary rounded-[4rem] p-12 md:p-20 text-center text-white space-y-8 relative overflow-hidden shadow-2xl">
+      <section className="py-8 px-6 bg-white">
+        <div className="max-w-7xl mx-auto bg-secondary rounded-[3rem] md:rounded-[4rem] p-10 md:p-16 text-center text-white space-y-6 relative overflow-hidden shadow-2xl">
           <div className="absolute top-0 right-0 w-80 h-80 bg-white/10 rounded-full -translate-y-1/2 translate-x-1/2 blur-3xl"></div>
           <div className="absolute bottom-0 left-0 w-80 h-80 bg-primary/10 rounded-full translate-y-1/2 -translate-x-1/2 blur-3xl"></div>
-          <div className="relative z-10 space-y-8">
-            <h2 className="text-4xl md:text-6xl font-bold tracking-tight">Admissions Open 2026–27</h2>
-            <div className="flex flex-wrap justify-center gap-8 text-xl font-medium">
-              <span className="flex items-center gap-3"><CheckCircle2 className="text-accent" /> No Admission Fee</span>
-              <span className="flex items-center gap-3"><CheckCircle2 className="text-accent" /> No Donation Policy</span>
-              <span className="flex items-center gap-3"><CheckCircle2 className="text-accent" /> KG to 10th Grade</span>
+          <div className="relative z-10 space-y-6">
+            <h2 className="text-3xl md:text-6xl font-bold tracking-tight">Admissions Open 2026–27</h2>
+            <div className="flex flex-wrap justify-center gap-4 md:gap-8 text-sm md:text-lg font-medium">
+              <span className="flex items-center gap-2"><CheckCircle2 className="text-accent" size={20} /> No Admission Fee</span>
+              <span className="flex items-center gap-2"><CheckCircle2 className="text-accent" size={20} /> No Donation Policy</span>
+              <span className="flex items-center gap-2"><CheckCircle2 className="text-accent" size={20} /> KG to 10th Grade</span>
             </div>
-            <div className="flex flex-col sm:flex-row justify-center gap-6 pt-6">
-              <Button size="lg" variant="default" className="bg-white text-secondary hover:bg-gray-100 font-bold h-16 px-12 text-lg rounded-full shadow-xl" asChild>
+            <div className="flex flex-col sm:flex-row justify-center gap-4 pt-4">
+              <Button size="lg" variant="default" className="bg-white text-secondary hover:bg-gray-100 font-bold h-14 md:h-16 px-8 md:px-12 text-lg rounded-full shadow-xl" asChild>
                 <Link href="/admissions">Apply Now</Link>
               </Button>
-              <Button size="lg" variant="outline" className="bg-transparent border-white text-white hover:bg-white hover:text-secondary h-16 px-12 text-lg rounded-full font-bold transition-colors" asChild>
+              <Button size="lg" variant="outline" className="bg-transparent border-white text-white hover:bg-white hover:text-secondary h-14 md:h-16 px-8 md:px-12 text-lg rounded-full font-bold transition-colors" asChild>
                 <Link href="/contact">Contact Us</Link>
               </Button>
             </div>
@@ -406,31 +429,31 @@ export default function Home() {
         </div>
       </section>
 
-      <section id="contact" className="py-16 bg-white">
-        <div className="max-w-7xl mx-auto px-6 grid grid-cols-1 md:grid-cols-2 gap-20">
-          <div className="space-y-8">
-            <h2 className="text-4xl font-bold text-primary">Get in Touch</h2>
-            <p className="text-lg text-muted-foreground leading-relaxed">
-              Have questions about admissions or school policies? Our team is ready to help you. Fill out the form or reach out via our contact details.
+      <section id="contact" className="py-8 bg-white">
+        <div className="max-w-7xl mx-auto px-6 grid grid-cols-1 md:grid-cols-2 gap-12">
+          <div className="space-y-6">
+            <h2 className="text-3xl md:text-4xl font-bold text-primary">Get in Touch</h2>
+            <p className="text-base md:text-lg text-muted-foreground leading-relaxed">
+              Have questions about admissions or school policies? Our team is ready to help you.
             </p>
-            <div className="space-y-8">
-              <div className="flex items-start gap-6">
-                <div className="p-4 bg-primary/10 text-primary rounded-2xl shadow-sm"><MapPin size={28} /></div>
+            <div className="space-y-6">
+              <div className="flex items-start gap-4">
+                <div className="p-3 bg-primary/10 text-primary rounded-2xl shadow-sm"><MapPin size={24} /></div>
                 <div>
-                  <h4 className="font-bold text-xl mb-1">Address</h4>
-                  <p className="text-muted-foreground text-lg">No.6 1st Crs, 9th Mn Rd, BTM 1st Stage, Bengaluru, KA 560029</p>
+                  <h4 className="font-bold text-lg mb-1">Address</h4>
+                  <p className="text-muted-foreground text-base">No.6 1st Crs, 9th Mn Rd, BTM 1st Stage, Bengaluru, KA 560029</p>
                 </div>
               </div>
-              <div className="flex items-start gap-6">
-                <div className="p-4 bg-primary/10 text-primary rounded-2xl shadow-sm"><Phone size={28} /></div>
+              <div className="flex items-start gap-4">
+                <div className="p-3 bg-primary/10 text-primary rounded-2xl shadow-sm"><Phone size={24} /></div>
                 <div>
-                  <h4 className="font-bold text-xl mb-1">Call Us</h4>
-                  <p className="text-muted-foreground text-lg">+91 80 1234 5678</p>
+                  <h4 className="font-bold text-lg mb-1">Call Us</h4>
+                  <p className="text-muted-foreground text-base">+91 80 1234 5678</p>
                 </div>
               </div>
             </div>
           </div>
-          <div className="bg-white p-10 md:p-12 rounded-[3.5rem] shadow-2xl border border-muted/50">
+          <div className="bg-white p-8 md:p-10 rounded-[3rem] shadow-2xl border border-muted/50">
             <ContactForm />
           </div>
         </div>
