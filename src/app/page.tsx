@@ -1,3 +1,4 @@
+
 import Image from 'next/image';
 import Link from 'next/link';
 import { Button } from '@/components/ui/button';
@@ -301,7 +302,7 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Gallery Reference Section */}
+      {/* Gallery Reference Section - Tight Packed */}
       <section className="py-24 bg-white">
         <div className="max-w-7xl mx-auto px-6 space-y-12">
           <div className="flex flex-col md:flex-row justify-between items-end gap-6 text-center md:text-left">
@@ -314,10 +315,10 @@ export default function Home() {
             </Button>
           </div>
           
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-4 h-[400px]">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-1.5 md:gap-2 h-[400px]">
             {gallery.slice(0, 4).map((img, idx) => (
               <div key={img.id} className={cn(
-                "relative rounded-[2rem] overflow-hidden group shadow-md",
+                "relative rounded-xl overflow-hidden group shadow-md",
                 idx === 0 || idx === 3 ? "md:col-span-2" : "md:col-span-1"
               )}>
                 <Image 

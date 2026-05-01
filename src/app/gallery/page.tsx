@@ -37,16 +37,16 @@ export default function GalleryPage() {
         </div>
       </section>
 
-      {/* Grid Gallery Section */}
-      <section className="py-12 bg-white px-6">
+      {/* Grid Gallery Section - Tight Packed */}
+      <section className="py-12 bg-white px-4 md:px-6">
         <div className="max-w-7xl mx-auto">
-          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 md:gap-6 auto-rows-min">
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-1.5 md:gap-2 auto-rows-min">
             {gallery.map((item, index) => (
               <div 
                 key={item.id}
                 className={cn(
-                  "group relative rounded-xl overflow-hidden shadow-md transition-all duration-500 cursor-pointer",
-                  "hover:scale-[1.02] hover:z-30 hover:shadow-xl bg-muted",
+                  "group relative rounded-lg overflow-hidden shadow-md transition-all duration-500 cursor-pointer",
+                  "hover:scale-[1.01] hover:z-30 hover:shadow-xl bg-muted",
                   getSizeClass(index)
                 )}
               >
