@@ -55,7 +55,7 @@ export function TypingEffect() {
       </span>
       <div className="text-xl md:text-2xl font-bold text-accent min-w-[150px] flex items-center">
         <span>{currentText}</span>
-        <span className="inline-block w-[2px] h-[1em] bg-accent ml-1 animate-cursor-blink">|</span>
+        <span className="inline-block w-[2px] h-[1.2em] bg-accent ml-1 animate-cursor-blink"></span>
       </div>
     </div>
   );
