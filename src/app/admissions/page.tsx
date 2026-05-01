@@ -1,6 +1,6 @@
 import { Navbar } from '@/components/layout/Navbar';
 import { Footer } from '@/components/layout/Footer';
-import { CheckCircle2, FileText, Calendar, Users, GraduationCap, Smile, Backpack, BookOpen, School } from 'lucide-react';
+import { CheckCircle2, FileText, GraduationCap, Users, Smile, Backpack, BookOpen, School } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import Link from 'next/link';
 
@@ -9,7 +9,7 @@ export default function AdmissionsPage() {
     { icon: Smile, title: 'Kindergarten', desc: 'Nursery, LKG, UKG', color: 'text-pink-500', bg: 'bg-pink-100' },
     { icon: Backpack, title: 'Primary School', desc: 'Grades 1 to 4', color: 'text-blue-500', bg: 'bg-blue-100' },
     { icon: BookOpen, title: 'Higher Primary', desc: 'Grades 5 to 7', color: 'text-orange-500', bg: 'bg-orange-100' },
-    { icon: School, title: 'High School', desc: 'Grades 8 to 10', color: 'text-primary', bg: 'bg-primary/10' },
+    { icon: GraduationCap, title: 'High School', desc: 'Grades 8 to 10', color: 'text-primary', bg: 'bg-primary/10' },
   ];
 
   return (
