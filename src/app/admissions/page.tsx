@@ -1,6 +1,6 @@
 import { Navbar } from '@/components/layout/Navbar';
 import { Footer } from '@/components/layout/Footer';
-import { CheckCircle2, FileText, GraduationCap, Users, Bot, Baby, User, UserRound } from 'lucide-react';
+import { CheckCircle2, FileText, GraduationCap, Users, Bot, Baby, Backpack, BookOpen } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { AIAdmissionsTool } from '@/components/admissions/AIAdmissionsTool';
 import Link from 'next/link';
@@ -16,15 +16,15 @@ export default function AdmissionsPage() {
       hint: 'Cheerful baby learner'
     },
     { 
-      icon: User, 
+      icon: Backpack, 
       title: 'Primary School', 
       desc: 'Grades 1 to 4', 
       color: 'text-blue-500', 
       bg: 'bg-blue-100',
-      hint: 'Independent young student'
+      hint: 'Independent student with bag'
     },
     { 
-      icon: UserRound, 
+      icon: BookOpen, 
       title: 'Higher Primary', 
       desc: 'Grades 5 to 7', 
       color: 'text-orange-500', 

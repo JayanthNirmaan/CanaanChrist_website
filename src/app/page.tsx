@@ -10,7 +10,7 @@ import {
   Monitor, FlaskConical, Library as LibraryIcon, Zap, Video, Bus,
   ArrowRight, CheckCircle2, MapPin, Phone, Cpu, Languages,
   Pencil, GraduationCap, Palette, Music, Wind, Rocket, Smile, Shapes, 
-  Cloud, Star, Activity, Droplets, Shield, Eye, Target
+  Cloud, Activity, Droplets, Shield, Eye, Target
 } from 'lucide-react';
 import { ContactForm } from '@/components/shared/ContactForm';
 import { Counter } from '@/components/home/Counter';
@@ -121,9 +121,6 @@ const ScribbleBackground = () => (
     <div className="absolute bottom-[5%] right-[10%] animate-float text-primary opacity-90" style={{ animationDelay: '0.8s' }}>
       <Smile size={80} />
     </div>
-    <div className="absolute top-[70%] right-[45%] animate-float text-accent opacity-90" style={{ animationDelay: '2.2s' }}>
-      <Star size={70} />
-    </div>
     <div className="absolute top-[35%] left-[12%] animate-float text-secondary opacity-90" style={{ animationDelay: '4s' }}>
       <Trophy size={90} />
     </div>
@@ -207,7 +204,7 @@ export default function Home() {
       <section className="py-24 bg-muted/30">
         <div className="max-w-7xl mx-auto px-6 grid grid-cols-1 md:grid-cols-2 gap-12">
           <div className="p-12 bg-primary rounded-[3rem] text-primary-foreground shadow-xl space-y-6 hover:-translate-y-2 transition-all relative overflow-hidden group">
-            <div className="absolute -right-8 -bottom-8 text-white/20 opacity-0 group-hover:opacity-100 group-hover:scale-125 transition-all duration-700 pointer-events-none rotate-12">
+            <div className="absolute -right-8 -bottom-8 text-white/40 opacity-0 group-hover:opacity-100 group-hover:scale-125 transition-all duration-700 pointer-events-none rotate-12">
               <Eye size={240} strokeWidth={1} />
             </div>
             <h3 className="text-3xl font-bold relative z-10">Our Vision</h3>
@@ -216,7 +213,7 @@ export default function Home() {
             </p>
           </div>
           <div className="p-12 bg-secondary rounded-[3rem] text-secondary-foreground shadow-xl space-y-6 hover:-translate-y-2 transition-all relative overflow-hidden group">
-            <div className="absolute -right-8 -bottom-8 text-white/20 opacity-0 group-hover:opacity-100 group-hover:scale-125 transition-all duration-700 pointer-events-none -rotate-12">
+            <div className="absolute -right-8 -bottom-8 text-white/40 opacity-0 group-hover:opacity-100 group-hover:scale-125 transition-all duration-700 pointer-events-none -rotate-12">
               <Target size={240} strokeWidth={1} />
             </div>
             <h3 className="text-3xl font-bold relative z-10">Our Mission</h3>
