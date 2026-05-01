@@ -159,8 +159,11 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="py-24 bg-white relative group transition-all duration-500 has-[.image-hover-trigger:hover]:bg-primary">
-        <div className="max-w-7xl mx-auto px-6 grid grid-cols-1 md:grid-cols-2 gap-16 items-center">
+      <section className="py-24 bg-white relative group transition-all duration-700 overflow-hidden">
+        {/* Background Bubble Animation - grows from behind the image area */}
+        <div className="absolute top-1/2 right-[25%] -translate-y-1/2 translate-x-1/2 w-0 h-0 bg-primary rounded-full transition-all duration-1000 ease-in-out group-has-[.image-hover-trigger:hover]:w-[300vw] group-has-[.image-hover-trigger:hover]:h-[300vw] pointer-events-none -z-0" />
+
+        <div className="relative z-10 max-w-7xl mx-auto px-6 grid grid-cols-1 md:grid-cols-2 gap-16 items-center">
           <div className="space-y-6">
             <div className="inline-block bg-primary/10 text-primary px-4 py-1.5 rounded-full text-sm font-bold transition-all duration-500 group-has-[.image-hover-trigger:hover]:bg-white group-has-[.image-hover-trigger:hover]:text-primary">
               Established 2001
@@ -195,9 +198,6 @@ export default function Home() {
                 data-ai-hint="classroom students"
               />
             )}
-            <div className="absolute inset-0 bg-primary/20 opacity-0 group-has-[.image-hover-trigger:hover]:opacity-100 transition-opacity duration-500 flex items-center justify-center overflow-hidden">
-               <div className="w-[150%] h-[150%] bg-primary rounded-full scale-0 group-has-[.image-hover-trigger:hover]:scale-100 transition-transform duration-700 ease-out origin-center mix-blend-multiply opacity-60" />
-            </div>
           </div>
         </div>
       </section>
