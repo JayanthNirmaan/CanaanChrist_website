@@ -1,4 +1,3 @@
-
 import Image from 'next/image';
 import Link from 'next/link';
 import { Button } from '@/components/ui/button';
@@ -10,10 +9,11 @@ import {
   Heart, Search, Trophy, ShieldCheck, Users, Globe, BookOpen,
   Monitor, FlaskConical, Library as LibraryIcon, Zap, Video, Bus,
   ArrowRight, CheckCircle2, MapPin, Phone, Cpu, Languages,
-  Presentation, Activity, Droplets, Shield, Pencil, GraduationCap, 
-  Palette, Music, Wind, Rocket, Smile, Shapes, Cloud, Star, Sun
+  Pencil, GraduationCap, Palette, Music, Wind, Rocket, Smile, Shapes, 
+  Cloud, Star, Sun, Activity, Droplets, Shield
 } from 'lucide-react';
 import { ContactForm } from '@/components/shared/ContactForm';
+import { Counter } from '@/components/home/Counter';
 
 const coreValues = [
   { icon: Heart, title: 'Compassion', desc: 'We cultivate kindness and empathy in every student — teaching them to see, understand, and care for the world.' },
@@ -82,53 +82,52 @@ const gallery = PlaceHolderImages.filter(img => img.id.startsWith('gallery'));
 
 const ScribbleBackground = () => (
   <div className="absolute inset-0 overflow-hidden pointer-events-none select-none">
-    <div className="scribble-bg opacity-50"></div>
-    <svg className="absolute inset-0 w-full h-full opacity-20" viewBox="0 0 1000 1000" fill="none" xmlns="http://www.w3.org/2000/svg">
-      <path d="M100,200 Q250,50 400,200 T700,200" stroke="currentColor" strokeWidth="3" strokeDasharray="1000" className="text-primary animate-draw-line" />
-      <path d="M50,800 Q300,950 600,800 T950,800" stroke="currentColor" strokeWidth="3" strokeDasharray="1000" className="text-secondary animate-draw-line" style={{ animationDelay: '1s' }} />
-      <path d="M800,100 Q950,300 800,500 T800,900" stroke="currentColor" strokeWidth="3" strokeDasharray="1000" className="text-accent animate-draw-line" style={{ animationDelay: '2s' }} />
-      <path d="M200,500 C300,400 500,600 800,450" stroke="currentColor" strokeWidth="2" strokeDasharray="1000" className="text-primary animate-draw-line" style={{ animationDelay: '3s' }} />
+    <div className="scribble-bg opacity-75"></div>
+    <svg className="absolute inset-0 w-full h-full opacity-40" viewBox="0 0 1000 1000" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <path d="M100,200 Q250,50 400,200 T700,200" stroke="currentColor" strokeWidth="4" strokeDasharray="1000" className="text-primary animate-draw-line" />
+      <path d="M50,800 Q300,950 600,800 T950,800" stroke="currentColor" strokeWidth="4" strokeDasharray="1000" className="text-secondary animate-draw-line" style={{ animationDelay: '1s' }} />
+      <path d="M800,100 Q950,300 800,500 T800,900" stroke="currentColor" strokeWidth="4" strokeDasharray="1000" className="text-accent animate-draw-line" style={{ animationDelay: '2s' }} />
+      <path d="M200,500 C300,400 500,600 800,450" stroke="currentColor" strokeWidth="3" strokeDasharray="1000" className="text-primary animate-draw-line" style={{ animationDelay: '3s' }} />
     </svg>
     
-    <div className="absolute top-[15%] left-[10%] animate-float text-primary/35" style={{ animationDelay: '0s' }}>
+    <div className="absolute top-[15%] left-[10%] animate-float text-primary/45" style={{ animationDelay: '0s' }}>
       <Pencil size={68} />
     </div>
-    <div className="absolute top-[20%] right-[15%] animate-float text-secondary/35" style={{ animationDelay: '1s' }}>
+    <div className="absolute top-[20%] right-[15%] animate-float text-secondary/45" style={{ animationDelay: '1s' }}>
       <Rocket size={84} />
     </div>
-    <div className="absolute bottom-[20%] left-[15%] animate-float text-accent/35" style={{ animationDelay: '2s' }}>
+    <div className="absolute bottom-[20%] left-[15%] animate-float text-accent/45" style={{ animationDelay: '2s' }}>
       <GraduationCap size={76} />
     </div>
-    <div className="absolute bottom-[25%] right-[20%] animate-float text-primary/35" style={{ animationDelay: '1.5s' }}>
+    <div className="absolute bottom-[25%] right-[20%] animate-float text-primary/45" style={{ animationDelay: '1.5s' }}>
       <BookOpen size={68} />
     </div>
-    <div className="absolute top-[50%] right-[5%] animate-float text-secondary/35" style={{ animationDelay: '0.5s' }}>
+    <div className="absolute top-[50%] right-[5%] animate-float text-secondary/45" style={{ animationDelay: '0.5s' }}>
       <Palette size={60} />
     </div>
-    <div className="absolute top-[60%] left-[5%] animate-float text-accent/35" style={{ animationDelay: '3.5s' }}>
+    <div className="absolute top-[60%] left-[5%] animate-float text-accent/45" style={{ animationDelay: '3.5s' }}>
       <Music size={52} />
     </div>
-    <div className="absolute top-[10%] right-[40%] animate-float text-accent/35" style={{ animationDelay: '4.5s' }}>
+    <div className="absolute top-[10%] right-[40%] animate-float text-accent/45" style={{ animationDelay: '4.5s' }}>
       <Wind size={64} />
     </div>
 
-    {/* New Kids Fun Elements */}
-    <div className="absolute top-[5%] left-[30%] animate-float text-primary/30" style={{ animationDelay: '2.5s' }}>
+    <div className="absolute top-[5%] left-[30%] animate-float text-primary/40" style={{ animationDelay: '2.5s' }}>
       <Cloud size={70} />
     </div>
-    <div className="absolute top-[40%] left-[45%] animate-float text-accent/30" style={{ animationDelay: '5s' }}>
+    <div className="absolute top-[40%] left-[45%] animate-float text-accent/40" style={{ animationDelay: '5s' }}>
       <Sun size={80} />
     </div>
-    <div className="absolute bottom-[10%] left-[40%] animate-float text-secondary/30" style={{ animationDelay: '1.2s' }}>
+    <div className="absolute bottom-[10%] left-[40%] animate-float text-secondary/40" style={{ animationDelay: '1.2s' }}>
       <Shapes size={60} />
     </div>
-    <div className="absolute bottom-[5%] right-[10%] animate-float text-primary/30" style={{ animationDelay: '0.8s' }}>
+    <div className="absolute bottom-[5%] right-[10%] animate-float text-primary/40" style={{ animationDelay: '0.8s' }}>
       <Smile size={56} />
     </div>
-    <div className="absolute top-[70%] right-[45%] animate-float text-accent/30" style={{ animationDelay: '2.2s' }}>
+    <div className="absolute top-[70%] right-[45%] animate-float text-accent/40" style={{ animationDelay: '2.2s' }}>
       <Star size={48} />
     </div>
-    <div className="absolute top-[35%] left-[12%] animate-float text-secondary/30" style={{ animationDelay: '4s' }}>
+    <div className="absolute top-[35%] left-[12%] animate-float text-secondary/40" style={{ animationDelay: '4s' }}>
       <Trophy size={64} />
     </div>
   </div>
@@ -322,7 +321,9 @@ export default function Home() {
         <div className="absolute top-0 right-0 w-64 h-64 bg-white/5 rounded-full -translate-y-1/2 translate-x-1/2 blur-3xl"></div>
         <div className="max-w-7xl mx-auto px-6 text-center relative z-10">
           <div className="flex flex-col items-center gap-4">
-            <div className="text-7xl md:text-9xl font-black text-white">100%</div>
+            <div className="text-7xl md:text-9xl font-black text-white">
+              <Counter end={100} />
+            </div>
             <div className="text-2xl md:text-3xl font-bold opacity-90 uppercase tracking-widest text-accent">Board Exam Record</div>
             <p className="max-w-xl opacity-75 mt-4 text-lg">We are proud to have maintained a 100% pass record in the Grade 10 Board Examinations year after year.</p>
           </div>
