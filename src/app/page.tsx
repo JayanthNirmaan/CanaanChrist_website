@@ -1,4 +1,3 @@
-
 import Image from 'next/image';
 import Link from 'next/link';
 import { Button } from '@/components/ui/button';
@@ -6,13 +5,12 @@ import { Card, CardContent } from '@/components/ui/card';
 import { PlaceHolderImages } from '@/lib/placeholder-images';
 import { Navbar } from '@/components/layout/Navbar';
 import { Footer } from '@/components/layout/Footer';
-import { cn } from '@/lib/utils';
 import { 
   Heart, Search, Trophy, ShieldCheck, Users, Globe, BookOpen,
   Monitor, FlaskConical, Library as LibraryIcon, Zap, Video, Bus,
-  ArrowRight, CheckCircle2, MapPin, Phone, Cpu, Languages, Waves, 
-  Presentation, Activity, Droplets, Shield, Trash2, Camera, Flame, 
-  Lock, Pencil, GraduationCap, Palette, Music, Wind
+  ArrowRight, CheckCircle2, MapPin, Phone, Cpu, Languages,
+  Presentation, Activity, Droplets, Shield, Pencil, GraduationCap, 
+  Palette, Music, Wind
 } from 'lucide-react';
 import { ContactForm } from '@/components/shared/ContactForm';
 
@@ -37,7 +35,6 @@ const facilities = [
   { icon: Activity, title: 'First-Aid', desc: 'On-campus first-aid facility for student health and safety.' },
   { icon: Droplets, title: 'Clean Water', desc: 'Safe and clean drinking water facilities for everyone.' },
   { icon: Shield, title: 'Hygienic Restrooms', desc: 'Maintained and clean sanitation facilities.' },
-  { icon: Camera, title: 'CCTV Security', desc: '24/7 surveillance across the entire campus for safety.' },
   { icon: Bus, title: 'Transport', desc: 'Safe and reliable school transport facility.' },
 ];
 
@@ -48,18 +45,16 @@ const gallery = PlaceHolderImages.filter(img => img.id.startsWith('gallery'));
 const ScribbleBackground = () => (
   <div className="absolute inset-0 overflow-hidden pointer-events-none select-none">
     <div className="scribble-bg opacity-40"></div>
-    {/* Animated Scribble Lines */}
     <svg className="absolute inset-0 w-full h-full opacity-10" viewBox="0 0 1000 1000" fill="none" xmlns="http://www.w3.org/2000/svg">
       <path d="M100,200 Q250,50 400,200 T700,200" stroke="currentColor" strokeWidth="2" strokeDasharray="1000" className="text-primary animate-draw-line" />
       <path d="M50,800 Q300,950 600,800 T950,800" stroke="currentColor" strokeWidth="2" strokeDasharray="1000" className="text-secondary animate-draw-line" style={{ animationDelay: '1s' }} />
       <path d="M800,100 Q950,300 800,500 T800,900" stroke="currentColor" strokeWidth="2" strokeDasharray="1000" className="text-accent animate-draw-line" style={{ animationDelay: '2s' }} />
     </svg>
-    {/* Floating Items */}
     <div className="absolute top-[15%] left-[10%] animate-float text-primary/20" style={{ animationDelay: '0s' }}>
       <Pencil size={64} />
     </div>
     <div className="absolute top-[20%] right-[15%] animate-float text-secondary/20" style={{ animationDelay: '1s' }}>
-      <Wind size={80} /> {/* Represents the Kite */}
+      <Wind size={80} />
     </div>
     <div className="absolute bottom-[20%] left-[15%] animate-float text-accent/20" style={{ animationDelay: '2s' }}>
       <GraduationCap size={72} />
@@ -81,7 +76,6 @@ export default function Home() {
     <main className="min-h-screen bg-white">
       <Navbar />
 
-      {/* Hero Section */}
       <section className="relative h-screen flex items-center justify-center overflow-hidden bg-white">
         <ScribbleBackground />
         
@@ -99,7 +93,6 @@ export default function Home() {
         </div>
       </section>
 
-      {/* About Brief Section */}
       <section className="py-24 bg-white relative">
         <div className="max-w-7xl mx-auto px-6 grid grid-cols-1 md:grid-cols-2 gap-16 items-center">
           <div className="space-y-6">
@@ -127,18 +120,19 @@ export default function Home() {
             </Button>
           </div>
           <div className="relative h-[500px] rounded-3xl overflow-hidden shadow-2xl border-4 border-white">
-            <Image 
-              src={gallery[0]?.imageUrl || 'https://picsum.photos/seed/class/600/400'} 
-              alt="Classroom" 
-              fill 
-              className="object-cover"
-              data-ai-hint="classroom students"
-            />
+            {gallery[0]?.imageUrl && (
+              <Image 
+                src={gallery[0].imageUrl} 
+                alt="Classroom" 
+                fill 
+                className="object-cover"
+                data-ai-hint="classroom students"
+              />
+            )}
           </div>
         </div>
       </section>
 
-      {/* Vision & Mission */}
       <section className="py-24 bg-muted/30">
         <div className="max-w-7xl mx-auto px-6 grid grid-cols-1 md:grid-cols-2 gap-12">
           <div className="p-12 bg-primary rounded-[2rem] text-primary-foreground shadow-xl space-y-6">
@@ -156,7 +150,6 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Core Values */}
       <section className="py-24 bg-white">
         <div className="max-w-7xl mx-auto px-6 text-center space-y-16">
           <div className="space-y-4">
@@ -177,7 +170,6 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Facilities */}
       <section className="py-24 bg-muted/20">
         <div className="max-w-7xl mx-auto px-6 space-y-16">
           <div className="flex flex-col md:flex-row justify-between items-end gap-6 text-center md:text-left">
@@ -203,14 +195,15 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Leadership */}
       <section className="py-24 bg-white">
         <div className="max-w-7xl mx-auto px-6 space-y-16">
           <h2 className="text-4xl font-bold text-primary text-center">School Leadership</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-12 max-w-5xl mx-auto">
             <Card className="overflow-hidden border-none shadow-lg">
               <div className="relative h-96">
-                <Image src={chairmanImg?.imageUrl || 'https://picsum.photos/seed/chairman/400/500'} alt="Chairman" fill className="object-cover" />
+                {chairmanImg?.imageUrl && (
+                  <Image src={chairmanImg.imageUrl} alt="Chairman" fill className="object-cover" />
+                )}
               </div>
               <CardContent className="p-8 text-center bg-white">
                 <h4 className="text-2xl font-bold">Chairman's Vision</h4>
@@ -220,7 +213,9 @@ export default function Home() {
             </Card>
             <Card className="overflow-hidden border-none shadow-lg">
               <div className="relative h-96">
-                <Image src={principalImg?.imageUrl || 'https://picsum.photos/seed/principal/400/500'} alt="Principal" fill className="object-cover" />
+                {principalImg?.imageUrl && (
+                  <Image src={principalImg.imageUrl} alt="Principal" fill className="object-cover" />
+                )}
               </div>
               <CardContent className="p-8 text-center bg-white">
                 <h4 className="text-2xl font-bold">Principal's Message</h4>
@@ -232,7 +227,6 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Achievements Stat */}
       <section className="py-20 bg-primary text-primary-foreground">
         <div className="max-w-7xl mx-auto px-6 text-center">
           <div className="flex flex-col items-center gap-4">
@@ -243,7 +237,6 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Admissions CTA */}
       <section className="py-24 px-6 bg-white">
         <div className="max-w-7xl mx-auto bg-secondary rounded-[3rem] p-12 md:p-24 text-center text-white space-y-8 relative overflow-hidden shadow-2xl">
           <div className="absolute top-0 right-0 w-64 h-64 bg-white/10 rounded-full -translate-y-1/2 translate-x-1/2 blur-3xl"></div>
@@ -266,7 +259,6 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Contact Section */}
       <section id="contact" className="py-24 bg-white">
         <div className="max-w-7xl mx-auto px-6 grid grid-cols-1 md:grid-cols-2 gap-20">
           <div className="space-y-8">

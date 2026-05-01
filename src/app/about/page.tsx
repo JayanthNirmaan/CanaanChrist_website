@@ -13,7 +13,6 @@ export default function AboutPage() {
     <main className="min-h-screen">
       <Navbar />
       
-      {/* Header */}
       <section className="pt-32 pb-20 bg-background text-center">
         <div className="max-w-4xl mx-auto px-6 space-y-4">
           <h1 className="text-5xl font-bold text-primary">About Our School</h1>
@@ -21,17 +20,18 @@ export default function AboutPage() {
         </div>
       </section>
 
-      {/* History */}
       <section className="py-24 bg-white">
         <div className="max-w-7xl mx-auto px-6 grid grid-cols-1 md:grid-cols-2 gap-20 items-center">
           <div className="relative h-[600px] rounded-3xl overflow-hidden shadow-2xl">
-            <Image 
-              src={gallery[1]?.imageUrl || 'https://picsum.photos/seed/library/600/400'} 
-              alt="School Campus" 
-              fill 
-              className="object-cover"
-              data-ai-hint="library"
-            />
+            {gallery[1]?.imageUrl && (
+              <Image 
+                src={gallery[1].imageUrl} 
+                alt="School Campus" 
+                fill 
+                className="object-cover"
+                data-ai-hint="library"
+              />
+            )}
           </div>
           <div className="space-y-8">
             <div className="w-16 h-16 bg-primary/10 text-primary rounded-2xl flex items-center justify-center">
@@ -53,7 +53,6 @@ export default function AboutPage() {
         </div>
       </section>
 
-      {/* Vision, Mission, Values Details */}
       <section className="py-24 bg-background">
         <div className="max-w-7xl mx-auto px-6 grid grid-cols-1 md:grid-cols-3 gap-8">
           <div className="bg-white p-10 rounded-3xl shadow-sm border space-y-6">
@@ -74,7 +73,6 @@ export default function AboutPage() {
         </div>
       </section>
 
-      {/* Leadership Messages */}
       <section className="py-24 bg-white">
         <div className="max-w-7xl mx-auto px-6 space-y-24">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-20 items-center">
@@ -94,13 +92,17 @@ export default function AboutPage() {
               </div>
             </div>
             <div className="relative h-[500px] rounded-[3rem] overflow-hidden shadow-xl">
-              <Image src={chairmanImg?.imageUrl || 'https://picsum.photos/seed/chairman/400/500'} alt="Chairman" fill className="object-cover" />
+              {chairmanImg?.imageUrl && (
+                <Image src={chairmanImg.imageUrl} alt="Chairman" fill className="object-cover" />
+              )}
             </div>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-20 items-center">
             <div className="relative h-[500px] rounded-[3rem] overflow-hidden shadow-xl md:order-last">
-              <Image src={principalImg?.imageUrl || 'https://picsum.photos/seed/principal/400/500'} alt="Principal" fill className="object-cover" />
+              {principalImg?.imageUrl && (
+                <Image src={principalImg.imageUrl} alt="Principal" fill className="object-cover" />
+              )}
             </div>
             <div className="space-y-6">
               <h2 className="text-3xl font-bold text-primary">Principal's Message</h2>

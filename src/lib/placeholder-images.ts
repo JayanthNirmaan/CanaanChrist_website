@@ -1,4 +1,3 @@
-
 import data from '@/app/lib/placeholder-images.json';
 
 export type ImagePlaceholder = {
@@ -6,6 +5,7 @@ export type ImagePlaceholder = {
   description: string;
   imageUrl: string;
   imageHint: string;
+  videoUrl?: string;
 };
 
 export const PlaceHolderImages: ImagePlaceholder[] = data.placeholderImages;

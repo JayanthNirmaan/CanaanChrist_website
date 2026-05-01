@@ -1,4 +1,3 @@
-
 import Link from 'next/link';
 import Image from 'next/image';
 import { MapPin, Phone, Mail, Youtube, Instagram } from 'lucide-react';
@@ -13,14 +12,16 @@ export function Footer() {
         <div className="space-y-6">
           <div className="flex items-center gap-2">
             <div className="bg-white p-1 rounded-lg shadow-sm">
-              <Image 
-                src={logo?.imageUrl || 'https://picsum.photos/seed/school-logo/200/200'} 
-                alt="Logo" 
-                width={32} 
-                height={32} 
-                className="object-contain"
-                data-ai-hint="school logo"
-              />
+              {logo?.imageUrl && (
+                <Image 
+                  src={logo.imageUrl} 
+                  alt="Logo" 
+                  width={32} 
+                  height={32} 
+                  className="object-contain"
+                  data-ai-hint="school logo"
+                />
+              )}
             </div>
             <span className="text-xl font-bold tracking-tight uppercase">Canaan Christ Public School</span>
           </div>

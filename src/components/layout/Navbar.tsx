@@ -1,4 +1,3 @@
-
 'use client';
 
 import React, { useState, useEffect } from 'react';
@@ -41,19 +40,20 @@ export function Navbar() {
       <div className="max-w-7xl mx-auto flex items-center justify-between">
         <Link href="/" className="flex items-center gap-2 group">
           <div className="bg-white p-1 rounded-lg group-hover:scale-110 transition-transform shadow-sm">
-            <Image 
-              src={logo?.imageUrl || 'https://picsum.photos/seed/school-logo/200/200'} 
-              alt="Canaan Christ Public School Logo" 
-              width={40} 
-              height={40} 
-              className="object-contain"
-              data-ai-hint="school logo"
-            />
+            {logo?.imageUrl && (
+              <Image 
+                src={logo.imageUrl} 
+                alt="Canaan Christ Public School Logo" 
+                width={40} 
+                height={40} 
+                className="object-contain"
+                data-ai-hint="school logo"
+              />
+            )}
           </div>
           <span className="text-xl font-bold tracking-tight text-primary">Canaan Christ Public School</span>
         </Link>
 
-        {/* Desktop Menu */}
         <div className="hidden md:flex items-center gap-8">
           {navItems.map((item) => (
             <Link
@@ -72,13 +72,11 @@ export function Navbar() {
           </Button>
         </div>
 
-        {/* Mobile Toggle */}
         <button className="md:hidden text-foreground" onClick={() => setIsOpen(!isOpen)}>
           {isOpen ? <X size={24} /> : <Menu size={24} />}
         </button>
       </div>
 
-      {/* Mobile Menu */}
       {isOpen && (
         <div className="md:hidden absolute top-full left-0 w-full bg-background border-b shadow-lg animate-in slide-in-from-top duration-300">
           <div className="flex flex-col p-6 gap-4">
