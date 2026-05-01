@@ -1,3 +1,4 @@
+
 import Image from 'next/image';
 import Link from 'next/link';
 import { Button } from '@/components/ui/button';
@@ -10,7 +11,7 @@ import {
   Monitor, FlaskConical, Library as LibraryIcon, Zap, Video, Bus,
   ArrowRight, CheckCircle2, MapPin, Phone, Cpu, Languages,
   Pencil, GraduationCap, Palette, Music, Wind, Rocket, Smile, Shapes, 
-  Cloud, Star, Sun, Activity, Droplets, Shield
+  Cloud, Star, Activity, Droplets, Shield, Eye, Target
 } from 'lucide-react';
 import { ContactForm } from '@/components/shared/ContactForm';
 import { Counter } from '@/components/home/Counter';
@@ -205,15 +206,21 @@ export default function Home() {
 
       <section className="py-24 bg-muted/30">
         <div className="max-w-7xl mx-auto px-6 grid grid-cols-1 md:grid-cols-2 gap-12">
-          <div className="p-12 bg-primary rounded-[3rem] text-primary-foreground shadow-xl space-y-6 hover:-translate-y-2 transition-transform">
-            <h3 className="text-3xl font-bold">Our Vision</h3>
-            <p className="text-lg opacity-90 leading-relaxed">
+          <div className="p-12 bg-primary rounded-[3rem] text-primary-foreground shadow-xl space-y-6 hover:-translate-y-2 transition-all relative overflow-hidden group">
+            <div className="absolute -right-8 -bottom-8 text-white/10 opacity-0 group-hover:opacity-100 group-hover:scale-125 transition-all duration-700 pointer-events-none rotate-12">
+              <Eye size={240} strokeWidth={1} />
+            </div>
+            <h3 className="text-3xl font-bold relative z-10">Our Vision</h3>
+            <p className="text-lg opacity-90 leading-relaxed relative z-10">
               To nurture compassionate, curious, and confident learners who contribute meaningfully to society, while rooted in values, culture, and excellence.
             </p>
           </div>
-          <div className="p-12 bg-secondary rounded-[3rem] text-secondary-foreground shadow-xl space-y-6 hover:-translate-y-2 transition-transform">
-            <h3 className="text-3xl font-bold">Our Mission</h3>
-            <p className="text-lg opacity-90 leading-relaxed">
+          <div className="p-12 bg-secondary rounded-[3rem] text-secondary-foreground shadow-xl space-y-6 hover:-translate-y-2 transition-all relative overflow-hidden group">
+            <div className="absolute -right-8 -bottom-8 text-white/10 opacity-0 group-hover:opacity-100 group-hover:scale-125 transition-all duration-700 pointer-events-none -rotate-12">
+              <Target size={240} strokeWidth={1} />
+            </div>
+            <h3 className="text-3xl font-bold relative z-10">Our Mission</h3>
+            <p className="text-lg opacity-90 leading-relaxed relative z-10">
               Providing affordable, quality education that empowers every child—regardless of background—to grow intellectually, emotionally, and ethically. We aim to foster an inclusive learning environment that encourages creativity and critical thinking.
             </p>
           </div>
@@ -228,7 +235,7 @@ export default function Home() {
           </div>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
             {coreValues.map((v, i) => (
-              <div key={i} className="p-5 bg-white rounded-[1.5rem] shadow-sm border hover:shadow-xl hover:border-primary/20 transition-all group flex flex-col gap-3 text-left hover:rotate-2">
+              <div key={i} className="p-5 bg-white rounded-[1.5rem] shadow-sm border hover:shadow-xl hover:border-primary/20 transition-all group flex flex-col gap-3 text-left hover:-rotate-1 hover:scale-105">
                 <div className="flex items-center gap-4">
                   <div className="w-10 h-10 bg-primary/10 rounded-xl flex items-center justify-center text-primary group-hover:bg-primary group-hover:text-white transition-all transform group-hover:animate-wiggle shrink-0">
                     <v.icon size={20} />
