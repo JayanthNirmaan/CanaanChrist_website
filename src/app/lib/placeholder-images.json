@@ -2,16 +2,16 @@
 {
   "placeholderImages": [
     {
-      "id": "hero-bg",
-      "description": "Modern school building campus",
-      "imageUrl": "https://picsum.photos/seed/school-hero/1920/1080",
-      "imageHint": "modern school building"
-    },
-    {
       "id": "school-logo",
       "description": "Canaan Christ Public School Logo",
       "imageUrl": "https://picsum.photos/seed/school-logo/200/200",
       "imageHint": "school logo"
+    },
+    {
+      "id": "hero-bg",
+      "description": "Modern school building campus",
+      "imageUrl": "https://picsum.photos/seed/school-hero/1920/1080",
+      "imageHint": "modern school building"
     },
     {
       "id": "principal",

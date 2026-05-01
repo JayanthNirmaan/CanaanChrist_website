@@ -22,7 +22,7 @@ export function Footer() {
                 data-ai-hint="school logo"
               />
             </div>
-            <span className="text-xl font-bold tracking-tight uppercase">Canaan Christ</span>
+            <span className="text-xl font-bold tracking-tight uppercase">Canaan Christ Public School</span>
           </div>
           <p className="text-primary-foreground/80 leading-relaxed">
             "Righteousness And Truth" - Providing quality education from Kindergarten to 10th Grade under the State Syllabus since 2001.
