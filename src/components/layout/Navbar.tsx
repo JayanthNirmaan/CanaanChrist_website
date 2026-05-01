@@ -35,8 +35,8 @@ export function Navbar() {
       className={cn(
         'fixed top-0 w-full z-50 transition-all duration-300 px-6',
         scrolled 
-          ? 'bg-background border-b border-border/40 py-2 shadow-lg' 
-          : 'bg-transparent py-6'
+          ? 'bg-background border-b border-border/40 py-1.5 shadow-lg' 
+          : 'bg-transparent py-3'
       )}
     >
       <div className="max-w-7xl mx-auto flex items-center justify-between">
@@ -46,8 +46,8 @@ export function Navbar() {
               <Image 
                 src={logo.imageUrl} 
                 alt="Canaan Christ Public School Logo" 
-                width={70} 
-                height={70} 
+                width={55} 
+                height={55} 
                 className="object-contain"
                 priority
               />
@@ -56,8 +56,8 @@ export function Navbar() {
             )}
           </div>
           <div className="flex flex-col">
-            <span className="text-lg font-bold tracking-tight text-primary leading-none hidden sm:block">Canaan Christ</span>
-            <span className="text-[9px] font-bold text-muted-foreground tracking-widest uppercase hidden sm:block">Public School</span>
+            <span className="text-base font-bold tracking-tight text-primary leading-none hidden sm:block">Canaan Christ</span>
+            <span className="text-[8px] font-bold text-muted-foreground tracking-widest uppercase hidden sm:block">Public School</span>
           </div>
         </Link>
 
@@ -75,16 +75,16 @@ export function Navbar() {
               >
                 {item.name}
                 {isActive && (
-                  <span className="absolute bottom-[-4px] left-4 right-4 h-0.5 bg-primary rounded-full" />
+                  <span className="absolute bottom-[-2px] left-4 right-4 h-0.5 bg-primary rounded-full" />
                 )}
                 {!isActive && (
-                  <span className="absolute bottom-[-4px] left-4 right-4 h-0.5 bg-primary rounded-full transform scale-x-0 transition-transform group-hover:scale-x-50" />
+                  <span className="absolute bottom-[-2px] left-4 right-4 h-0.5 bg-primary rounded-full transform scale-x-0 transition-transform group-hover:scale-x-50" />
                 )}
               </Link>
             );
           })}
           <div className="ml-6">
-            <Button asChild variant="default" size="sm" className="rounded-full shadow-lg hover:shadow-primary/20 hover:-translate-y-0.5 transition-all font-bold px-6 h-10">
+            <Button asChild variant="default" size="sm" className="rounded-full shadow-lg hover:shadow-primary/20 hover:-translate-y-0.5 transition-all font-bold px-6 h-9">
               <Link href="/admissions">Apply Now</Link>
             </Button>
           </div>
