@@ -242,7 +242,7 @@ export default function Home() {
                   <div className="w-10 h-10 bg-primary/10 rounded-xl flex items-center justify-center text-primary group-hover:bg-primary group-hover:text-white transition-all transform group-hover:animate-wiggle shrink-0">
                     <v.icon size={20} />
                   </div>
-                  <h4 className="text-base font-bold text-foreground group-hover:text-primary transition-colors">{v.title}</h4>
+                  <h4 className="text-xl font-bold text-foreground group-hover:text-primary transition-colors">{v.title}</h4>
                 </div>
                 <p className="text-muted-foreground text-[11px] leading-relaxed line-clamp-2 group-hover:line-clamp-none transition-all">{v.desc}</p>
               </div>
