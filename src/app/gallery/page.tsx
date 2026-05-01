@@ -11,17 +11,22 @@ import { cn } from '@/lib/utils';
 export default function GalleryPage() {
   const gallery = PlaceHolderImages.filter(img => img.id.startsWith('gallery-'));
 
-  // Deterministic sizing logic to create a "random" but stable masonry-like feel
+  // Deterministic sizing logic for masonry feel
   const getSizeClass = (index: number) => {
-    // Patterns of spans: [col, row, aspect]
     const layouts = [
-      "lg:col-span-2 lg:row-span-2 aspect-[4/3]", // Large
-      "lg:col-span-1 lg:row-span-1 aspect-square", // Small Square
-      "lg:col-span-1 lg:row-span-2 aspect-[3/4]", // Vertical
-      "lg:col-span-2 lg:row-span-1 aspect-[2/1]", // Horizontal
-      "lg:col-span-1 lg:row-span-1 aspect-[4/3]", // Medium
+      "lg:col-span-2 lg:row-span-2 aspect-[4/3]",
+      "lg:col-span-1 lg:row-span-1 aspect-square",
+      "lg:col-span-1 lg:row-span-2 aspect-[3/4]",
+      "lg:col-span-2 lg:row-span-1 aspect-[2/1]",
+      "lg:col-span-1 lg:row-span-1 aspect-[4/3]",
     ];
     return layouts[index % layouts.length];
+  };
+
+  // Playful rotations for a kids-friendly "scattered" feel
+  const getRotationClass = (index: number) => {
+    const rotations = ["rotate-1", "-rotate-1", "rotate-2", "-rotate-2", "rotate-3", "-rotate-3"];
+    return rotations[index % rotations.length];
   };
 
   return (
@@ -37,7 +42,7 @@ export default function GalleryPage() {
         </div>
       </section>
 
-      {/* Grid Gallery Section - Tight Packed */}
+      {/* Grid Gallery Section - Tight Packed & Fun */}
       <section className="py-12 bg-white px-4 md:px-6">
         <div className="max-w-7xl mx-auto">
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-1.5 md:gap-2 auto-rows-min">
@@ -45,9 +50,10 @@ export default function GalleryPage() {
               <div 
                 key={item.id}
                 className={cn(
-                  "group relative rounded-lg overflow-hidden shadow-md transition-all duration-500 cursor-pointer",
-                  "hover:scale-[1.01] hover:z-30 hover:shadow-xl bg-muted",
-                  getSizeClass(index)
+                  "group relative rounded-xl overflow-hidden shadow-md transition-all duration-500 cursor-pointer",
+                  "hover:scale-[1.05] hover:z-30 hover:shadow-2xl hover:rotate-0 bg-muted border-4 border-white",
+                  getSizeClass(index),
+                  getRotationClass(index)
                 )}
               >
                 <div className="relative w-full h-full min-h-[200px]">

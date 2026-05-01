@@ -175,7 +175,7 @@ export default function Home() {
               Established 2001
             </div>
             <h2 className="text-4xl font-bold text-primary transition-colors duration-500 group-has-[.image-trigger:hover]/section:text-white">Affordable, Quality Education for Every Child</h2>
-            <p className="text-lg text-muted-foreground leading-relaxed transition-colors duration-500 group-has-[.image-trigger:hover]/section:text-primary-foreground/90">
+            <p className="text-lg text-muted-foreground leading-relaxed transition-colors duration-500 group-has-[.image-trigger:hover]/section:text-white/90">
               Canaan Christ Public School offers a holistic learning environment under the State Syllabus, catering to students from Kindergarten to 10th Grade. Our mission is to empower every child—regardless of background—to grow intellectually, emotionally, and ethically.
             </p>
             <div className="grid grid-cols-2 gap-6">
@@ -302,8 +302,8 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Gallery Reference Section - Tight Packed */}
-      <section className="py-24 bg-white">
+      {/* Gallery Reference Section - Fun & Tight Packed */}
+      <section className="py-24 bg-white overflow-hidden">
         <div className="max-w-7xl mx-auto px-6 space-y-12">
           <div className="flex flex-col md:flex-row justify-between items-end gap-6 text-center md:text-left">
             <div className="space-y-4">
@@ -315,23 +315,27 @@ export default function Home() {
             </Button>
           </div>
           
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-1.5 md:gap-2 h-[400px]">
-            {gallery.slice(0, 4).map((img, idx) => (
-              <div key={img.id} className={cn(
-                "relative rounded-xl overflow-hidden group shadow-md",
-                idx === 0 || idx === 3 ? "md:col-span-2" : "md:col-span-1"
-              )}>
-                <Image 
-                  src={img.imageUrl} 
-                  alt={img.description} 
-                  fill 
-                  className="object-cover transition-transform duration-700 group-hover:scale-110" 
-                />
-                <div className="absolute inset-0 bg-primary/60 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center p-4 text-center">
-                  <span className="text-white font-headline text-xl md:text-2xl">{img.description}</span>
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-1.5 md:gap-2 h-[450px]">
+            {gallery.slice(0, 4).map((img, idx) => {
+              const tilts = ["rotate-1", "-rotate-2", "rotate-2", "-rotate-1"];
+              return (
+                <div key={img.id} className={cn(
+                  "relative rounded-xl overflow-hidden group shadow-lg border-4 border-white transition-all duration-500 hover:rotate-0 hover:scale-105 hover:z-20 cursor-pointer",
+                  idx === 0 || idx === 3 ? "md:col-span-2" : "md:col-span-1",
+                  tilts[idx]
+                )}>
+                  <Image 
+                    src={img.imageUrl} 
+                    alt={img.description} 
+                    fill 
+                    className="object-cover transition-transform duration-700" 
+                  />
+                  <div className="absolute inset-0 bg-primary/60 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center p-4 text-center">
+                    <span className="text-white font-headline text-xl md:text-2xl">{img.description}</span>
+                  </div>
                 </div>
-              </div>
-            ))}
+              );
+            })}
           </div>
         </div>
       </section>
