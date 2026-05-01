@@ -1,4 +1,3 @@
-
 import Link from 'next/link';
 import Image from 'next/image';
 import { MapPin, Phone, Mail, Youtube, Instagram } from 'lucide-react';
@@ -17,12 +16,12 @@ export function Footer() {
                 <Image 
                   src={logo.imageUrl} 
                   alt="Canaan Christ Public School Logo" 
-                  width={40} 
-                  height={40} 
+                  width={50} 
+                  height={50} 
                   className="object-contain"
                 />
               ) : (
-                <div className="w-8 h-8 bg-primary/10 rounded flex items-center justify-center text-primary font-bold">CC</div>
+                <div className="w-10 h-10 bg-primary/10 rounded flex items-center justify-center text-primary font-bold">CC</div>
               )}
             </div>
             <span className="text-xl font-bold tracking-tight uppercase">Canaan Christ</span>

@@ -1,4 +1,3 @@
-
 'use client';
 
 import React, { useState, useEffect } from 'react';
@@ -45,13 +44,13 @@ export function Navbar() {
               <Image 
                 src={logo.imageUrl} 
                 alt="Canaan Christ Public School Logo" 
-                width={48} 
-                height={48} 
+                width={60} 
+                height={60} 
                 className="object-contain"
                 priority
               />
             ) : (
-              <div className="w-10 h-10 bg-primary/10 rounded flex items-center justify-center text-primary font-bold">CC</div>
+              <div className="w-12 h-12 bg-primary/10 rounded flex items-center justify-center text-primary font-bold">CC</div>
             )}
           </div>
           <span className="text-xl font-bold tracking-tight text-primary hidden sm:block">Canaan Christ Public School</span>
