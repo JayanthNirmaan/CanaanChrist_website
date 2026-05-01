@@ -1,3 +1,4 @@
+
 import Image from 'next/image';
 import Link from 'next/link';
 import { Button } from '@/components/ui/button';
@@ -45,7 +46,7 @@ export default function Home() {
       {/* Hero Section */}
       <section className="relative h-screen flex items-center justify-center text-white overflow-hidden">
         <Image
-          src={heroImage?.imageUrl || ''}
+          src={heroImage?.imageUrl || 'https://picsum.photos/seed/school-hero/1920/1080'}
           alt="School Campus"
           fill
           className="object-cover brightness-[0.4]"
@@ -95,7 +96,7 @@ export default function Home() {
           </div>
           <div className="relative h-[500px] rounded-3xl overflow-hidden shadow-2xl">
             <Image 
-              src={gallery[0]?.imageUrl || ''} 
+              src={gallery[0]?.imageUrl || 'https://picsum.photos/seed/class/600/400'} 
               alt="Classroom" 
               fill 
               className="object-cover"
@@ -152,7 +153,7 @@ export default function Home() {
               <h2 className="text-4xl font-bold text-primary">Modern Facilities</h2>
               <p className="text-muted-foreground max-w-md">Investing in world-class infrastructure for an immersive learning experience.</p>
             </div>
-            <Button variant="outline" asChild><Link href="/facilities">View All Facilities</Link></Button>
+            <Button variant="outline" asChild><Link href="/contact">View All Facilities</Link></Button>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {facilities.map((f, i) => (
@@ -177,7 +178,7 @@ export default function Home() {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-12 max-w-5xl mx-auto">
             <Card className="overflow-hidden border-none shadow-lg">
               <div className="relative h-96">
-                <Image src={chairmanImg?.imageUrl || ''} alt="Chairman" fill className="object-cover" />
+                <Image src={chairmanImg?.imageUrl || 'https://picsum.photos/seed/chairman/400/500'} alt="Chairman" fill className="object-cover" />
               </div>
               <CardContent className="p-8 text-center">
                 <h4 className="text-2xl font-bold">Mr. David Samuel</h4>
@@ -187,7 +188,7 @@ export default function Home() {
             </Card>
             <Card className="overflow-hidden border-none shadow-lg">
               <div className="relative h-96">
-                <Image src={principalImg?.imageUrl || ''} alt="Principal" fill className="object-cover" />
+                <Image src={principalImg?.imageUrl || 'https://picsum.photos/seed/principal/400/500'} alt="Principal" fill className="object-cover" />
               </div>
               <CardContent className="p-8 text-center">
                 <h4 className="text-2xl font-bold">Mrs. Sarah Johnson</h4>
@@ -215,7 +216,7 @@ export default function Home() {
         <div className="max-w-7xl mx-auto px-6 space-y-12 text-center">
           <h2 className="text-4xl font-bold text-primary">Life at Canaan</h2>
           <div className="grid grid-cols-2 md:grid-cols-3 gap-4 h-[600px]">
-            {gallery.slice(0, 6).map((img, i) => (
+            {gallery.length > 0 ? gallery.slice(0, 6).map((img, i) => (
               <div key={i} className={cn("relative rounded-xl overflow-hidden group", i === 0 && "md:row-span-2", i === 3 && "md:col-span-2")}>
                 <Image 
                   src={img.imageUrl} 
@@ -224,7 +225,11 @@ export default function Home() {
                   className="object-cover group-hover:scale-105 transition-transform duration-500"
                 />
               </div>
-            ))}
+            )) : (
+              <div className="col-span-3 h-full bg-muted flex items-center justify-center rounded-xl">
+                <p className="text-muted-foreground">Gallery is loading...</p>
+              </div>
+            )}
           </div>
         </div>
       </section>

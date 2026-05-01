@@ -27,7 +27,7 @@ export default function AboutPage() {
         <div className="max-w-7xl mx-auto px-6 grid grid-cols-1 md:grid-cols-2 gap-20 items-center">
           <div className="relative h-[600px] rounded-3xl overflow-hidden shadow-2xl">
             <Image 
-              src={gallery[1]?.imageUrl || ''} 
+              src={gallery[1]?.imageUrl || 'https://picsum.photos/seed/library/600/400'} 
               alt="School Campus" 
               fill 
               className="object-cover"
@@ -90,13 +90,13 @@ export default function AboutPage() {
               </div>
             </div>
             <div className="relative h-[500px] rounded-[3rem] overflow-hidden shadow-xl">
-              <Image src={chairmanImg?.imageUrl || ''} alt="Chairman" fill className="object-cover" />
+              <Image src={chairmanImg?.imageUrl || 'https://picsum.photos/seed/chairman/400/500'} alt="Chairman" fill className="object-cover" />
             </div>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-20 items-center">
             <div className="relative h-[500px] rounded-[3rem] overflow-hidden shadow-xl md:order-last">
-              <Image src={principalImg?.imageUrl || ''} alt="Principal" fill className="object-cover" />
+              <Image src={principalImg?.imageUrl || 'https://picsum.photos/seed/principal/400/500'} alt="Principal" fill className="object-cover" />
             </div>
             <div className="space-y-6">
               <h2 className="text-3xl font-bold text-primary">Principal's Message</h2>
