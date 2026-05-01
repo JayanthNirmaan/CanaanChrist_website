@@ -345,7 +345,7 @@ export default function Home() {
               <Button size="lg" variant="default" className="bg-white text-secondary hover:bg-gray-100 font-bold h-16 px-12 text-lg rounded-full shadow-xl" asChild>
                 <Link href="/admissions">Apply Now</Link>
               </Button>
-              <Button size="lg" variant="outline" className="border-white text-white hover:bg-white/10 h-16 px-12 text-lg rounded-full font-bold" asChild>
+              <Button size="lg" variant="outline" className="bg-transparent border-white text-white hover:bg-white hover:text-secondary h-16 px-12 text-lg rounded-full font-bold transition-colors" asChild>
                 <Link href="/contact">Contact Us</Link>
               </Button>
             </div>
