@@ -12,25 +12,25 @@ export default function ContactPage() {
       <Navbar />
       
       {/* Header */}
-      <section className="pt-32 pb-20 bg-primary text-primary-foreground text-center">
+      <section className="pt-40 pb-20 bg-background text-center">
         <div className="max-w-4xl mx-auto px-6 space-y-4">
-          <h1 className="text-5xl font-bold">Contact Us</h1>
-          <p className="text-xl opacity-90">Get in touch with the Canaan Christ family.</p>
+          <h1 className="text-5xl font-bold text-primary">Contact Us</h1>
+          <p className="text-xl text-muted-foreground">Get in touch with the Canaan Christ family. We're here to help.</p>
         </div>
       </section>
 
-      <section className="py-24 bg-background">
+      <section className="py-24 bg-white">
         <div className="max-w-7xl mx-auto px-6 grid grid-cols-1 lg:grid-cols-2 gap-16">
           <div className="space-y-12">
-            <div className="bg-white p-10 rounded-3xl border shadow-sm space-y-8">
+            <div className="bg-background p-10 rounded-[2.5rem] border shadow-sm space-y-8">
               <h2 className="text-3xl font-bold text-primary">School Information</h2>
               <div className="space-y-8">
                 <div className="flex items-start gap-4">
                   <div className="p-3 bg-primary/10 text-primary rounded-lg shrink-0"><MapPin size={24} /></div>
                   <div>
                     <h4 className="font-bold text-lg">Our Location</h4>
-                    <p className="text-muted-foreground">No.6 1st Crs, 9th Mn Rd, BTM 1st Stage, New Gurappana Palya, Bengaluru, Karnataka 560029</p>
-                    <Button variant="link" className="p-0 h-auto text-primary" asChild>
+                    <p className="text-muted-foreground leading-relaxed">No.6 1st Crs, 9th Mn Rd, BTM 1st Stage, New Gurappana Palya, Bengaluru, Karnataka 560029</p>
+                    <Button variant="link" className="p-0 h-auto text-primary font-bold" asChild>
                       <a href={googleMapsUrl} target="_blank" rel="noopener noreferrer">View on Google Maps <ExternalLink size={14} className="ml-1" /></a>
                     </Button>
                   </div>
@@ -59,8 +59,7 @@ export default function ContactPage() {
               </div>
             </div>
 
-            {/* Map Placeholder or Embed */}
-            <div className="bg-muted rounded-3xl h-[400px] flex items-center justify-center border-2 border-dashed overflow-hidden relative">
+            <div className="bg-muted rounded-[2.5rem] h-[400px] flex items-center justify-center overflow-hidden relative shadow-inner">
               <iframe 
                 src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d15555.0877881023!2d77.606706!3d12.922378!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae150ecf543665%3A0x1307a77451053b3b!2sCanaan%20Christ%20Public%20School!5e0!3m2!1sen!2sin!4v1709500000000!5m2!1sen!2sin" 
                 width="100%" 
@@ -74,7 +73,7 @@ export default function ContactPage() {
           </div>
 
           <div className="space-y-8">
-            <div className="bg-white p-10 rounded-3xl shadow-xl border-2 border-primary/5">
+            <div className="bg-white p-10 rounded-[3rem] shadow-2xl border-2 border-primary/5">
               <h2 className="text-3xl font-bold text-primary mb-6">Send an Enquiry</h2>
               <p className="text-muted-foreground mb-10">Fill in the details below and our admissions office will contact you within 24 hours.</p>
               <ContactForm />

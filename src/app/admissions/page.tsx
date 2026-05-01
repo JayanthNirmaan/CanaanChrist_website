@@ -1,6 +1,6 @@
 import { Navbar } from '@/components/layout/Navbar';
 import { Footer } from '@/components/layout/Footer';
-import { CheckCircle2, FileText, GraduationCap, Users, Baby, Backpack, BookOpen } from 'lucide-react';
+import { CheckCircle2, FileText, GraduationCap, Backpack, BookOpen, Smile, Baby, User, UserRound } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import Link from 'next/link';
 
@@ -21,7 +21,7 @@ export default function AdmissionsPage() {
       bg: 'bg-blue-100',
     },
     { 
-      icon: BookOpen, 
+      icon: UserRound, 
       title: 'Higher Primary', 
       desc: 'Grades 5 to 7', 
       color: 'text-orange-500', 
@@ -41,39 +41,39 @@ export default function AdmissionsPage() {
       <Navbar />
       
       {/* Header */}
-      <section className="pt-32 pb-20 bg-primary text-primary-foreground text-center">
+      <section className="pt-40 pb-20 bg-background text-center">
         <div className="max-w-4xl mx-auto px-6 space-y-4">
-          <h1 className="text-5xl font-bold">Admissions 2026-27</h1>
-          <p className="text-xl opacity-90">Join the Canaan Christ family. Quality education for all walks of life.</p>
+          <h1 className="text-5xl font-bold text-primary">Admissions 2026-27</h1>
+          <p className="text-xl text-muted-foreground">Join the Canaan Christ family. Quality education for all walks of life.</p>
         </div>
       </section>
 
       {/* Policies Highlight */}
-      <section className="py-12 bg-muted/50 border-b">
+      <section className="py-12 bg-muted/30 border-y">
         <div className="max-w-7xl mx-auto px-6 grid grid-cols-1 md:grid-cols-2 gap-8 text-center md:text-left">
           <div className="flex items-center gap-4 justify-center md:justify-start">
-            <div className="p-3 bg-green-100 text-green-600 rounded-full"><CheckCircle2 size={24} /></div>
+            <div className="p-3 bg-green-100 text-green-600 rounded-full shrink-0"><CheckCircle2 size={24} /></div>
             <div>
               <h3 className="font-bold">No Admission Fee</h3>
-              <p className="text-sm text-muted-foreground">We believe education should be accessible.</p>
+              <p className="text-sm text-muted-foreground">We believe education should be accessible to everyone.</p>
             </div>
           </div>
           <div className="flex items-center gap-4 justify-center md:justify-start">
-            <div className="p-3 bg-green-100 text-green-600 rounded-full"><CheckCircle2 size={24} /></div>
+            <div className="p-3 bg-green-100 text-green-600 rounded-full shrink-0"><CheckCircle2 size={24} /></div>
             <div>
               <h3 className="font-bold">No Donation Policy</h3>
-              <p className="text-sm text-muted-foreground">Merit and inclusivity are our only criteria.</p>
+              <p className="text-sm text-muted-foreground">Merit and inclusivity are our only criteria for selection.</p>
             </div>
           </div>
         </div>
       </section>
 
       {/* Main Content */}
-      <section className="py-24 bg-background">
+      <section className="py-24 bg-white">
         <div className="max-w-7xl mx-auto px-6 grid grid-cols-1 lg:grid-cols-3 gap-12">
           
           <div className="lg:col-span-2 space-y-16">
-            <div className="bg-white p-10 rounded-3xl shadow-sm border space-y-8">
+            <div className="bg-background p-10 rounded-[2.5rem] shadow-sm border space-y-8">
               <h2 className="text-3xl font-bold text-primary flex items-center gap-3">
                 <FileText className="text-secondary" /> Admission Process
               </h2>
@@ -85,7 +85,7 @@ export default function AdmissionsPage() {
                   { step: '04', title: 'Confirmation', desc: 'Complete the simple admission formalities. Remember: No Admission Fee or Donation is charged.' },
                 ].map((s, i) => (
                   <div key={i} className="flex gap-6">
-                    <div className="shrink-0 w-12 h-12 rounded-full bg-primary/10 text-primary flex items-center justify-center font-bold text-xl">
+                    <div className="shrink-0 w-12 h-12 rounded-full bg-primary text-white flex items-center justify-center font-bold text-xl shadow-lg">
                       {s.step}
                     </div>
                     <div>
@@ -98,16 +98,16 @@ export default function AdmissionsPage() {
             </div>
 
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-              <div className="bg-white p-8 rounded-3xl border shadow-sm">
+              <div className="bg-background p-8 rounded-[2rem] border shadow-sm">
                 <GraduationCap className="text-primary mb-4" size={32} />
                 <h3 className="text-xl font-bold mb-4">Academic Record</h3>
                 <p className="text-sm text-muted-foreground leading-relaxed">
-                  We are proud of our consistent 100% pass record in the Grade 10 Board Examinations, proof of our teaching standards.
+                  We are proud of our consistent 100% pass record in the Grade 10 Board Examinations, proof of our teaching standards and student dedication.
                 </p>
               </div>
-              <div className="bg-white p-8 rounded-3xl border shadow-sm">
+              <div className="bg-background p-8 rounded-[2rem] border shadow-sm">
                 <div className="flex items-center gap-3 mb-6">
-                  <Users className="text-primary" size={32} />
+                  <UserRound className="text-primary" size={32} />
                   <h3 className="text-xl font-bold">Classes Offered</h3>
                 </div>
                 <div className="grid grid-cols-1 gap-6">
@@ -128,17 +128,17 @@ export default function AdmissionsPage() {
           </div>
 
           <aside className="space-y-8">
-            <div className="sticky top-24">
-              <div className="p-8 bg-white rounded-3xl border shadow-sm text-center space-y-6">
+            <div className="sticky top-32">
+              <div className="p-8 bg-primary rounded-[2.5rem] text-primary-foreground shadow-2xl text-center space-y-6">
                 <div className="space-y-2">
-                  <h3 className="text-xl font-bold">Visit Campus</h3>
-                  <p className="text-sm text-muted-foreground">No.6 1st Crs, 9th Mn Rd, BTM 1st Stage</p>
+                  <h3 className="text-2xl font-bold">Visit Campus</h3>
+                  <p className="text-sm opacity-80 leading-relaxed">No.6 1st Crs, 9th Mn Rd, BTM 1st Stage, Bengaluru</p>
                 </div>
-                <Button className="w-full h-12 rounded-full font-bold" asChild>
+                <Button className="w-full h-14 rounded-full font-bold bg-white text-primary hover:bg-white/90 shadow-lg text-lg" asChild>
                   <Link href="/contact">Get Directions</Link>
                 </Button>
-                <div className="pt-4 border-t">
-                  <p className="text-xs text-muted-foreground">Office Hours: 8:30 AM - 4:00 PM</p>
+                <div className="pt-4 border-t border-white/20">
+                  <p className="text-xs opacity-70">Office Hours: 8:30 AM - 4:00 PM</p>
                 </div>
               </div>
             </div>
