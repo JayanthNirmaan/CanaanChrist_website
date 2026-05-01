@@ -15,6 +15,7 @@ import {
 import { ContactForm } from '@/components/shared/ContactForm';
 import { Counter } from '@/components/home/Counter';
 import { TypingEffect } from '@/components/home/TypingEffect';
+import { cn } from '@/lib/utils';
 
 const coreValues = [
   { icon: Heart, title: 'Compassion', desc: 'We cultivate kindness and empathy in every student.' },
@@ -86,44 +87,44 @@ const ScribbleBackground = () => (
   <div className="absolute inset-0 overflow-hidden pointer-events-none select-none">
     <div className="scribble-bg opacity-100"></div>
     <svg className="absolute inset-0 w-full h-full opacity-30" viewBox="0 0 1000 1000" fill="none" xmlns="http://www.w3.org/2000/svg">
-      <path d="M100,200 Q250,50 400,200 T700,200" stroke="currentColor" strokeWidth="2" strokeDasharray="1000" className="text-primary animate-draw-line" />
-      <path d="M50,800 Q300,950 600,800 T950,800" stroke="currentColor" strokeWidth="2" strokeDasharray="1000" className="text-secondary animate-draw-line" style={{ animationDelay: '1s' }} />
-      <path d="M800,100 Q950,300 800,500 T800,900" stroke="currentColor" strokeWidth="2" strokeDasharray="1000" className="text-accent animate-draw-line" style={{ animationDelay: '2s' }} />
+      <path d="M100,200 Q250,50 400,200 T700,200" stroke="currentColor" strokeWidth="1" strokeDasharray="1000" className="text-primary animate-draw-line" />
+      <path d="M50,800 Q300,950 600,800 T950,800" stroke="currentColor" strokeWidth="1" strokeDasharray="1000" className="text-secondary animate-draw-line" style={{ animationDelay: '1s' }} />
+      <path d="M800,100 Q950,300 800,500 T800,900" stroke="currentColor" strokeWidth="1" strokeDasharray="1000" className="text-accent animate-draw-line" style={{ animationDelay: '2s' }} />
     </svg>
     
-    <div className="absolute top-[15%] left-[10%] animate-float text-primary opacity-20" style={{ animationDelay: '0s' }}>
-      <Pencil size={85} strokeWidth={0.5} />
+    <div className="absolute top-[15%] left-[10%] animate-float text-primary opacity-10" style={{ animationDelay: '0s' }}>
+      <Pencil size={85} strokeWidth={0.2} />
     </div>
-    <div className="absolute top-[20%] right-[15%] animate-float text-secondary opacity-20" style={{ animationDelay: '1s' }}>
-      <Rocket size={110} strokeWidth={0.5} />
+    <div className="absolute top-[20%] right-[15%] animate-float text-secondary opacity-10" style={{ animationDelay: '1s' }}>
+      <Rocket size={110} strokeWidth={0.2} />
     </div>
-    <div className="absolute bottom-[20%] left-[15%] animate-float text-accent opacity-20" style={{ animationDelay: '2s' }}>
-      <GraduationCap size={95} strokeWidth={0.5} />
+    <div className="absolute bottom-[20%] left-[15%] animate-float text-accent opacity-10" style={{ animationDelay: '2s' }}>
+      <GraduationCap size={95} strokeWidth={0.2} />
     </div>
-    <div className="absolute bottom-[25%] right-[20%] animate-float text-primary opacity-20" style={{ animationDelay: '1.5s' }}>
-      <BookOpen size={90} strokeWidth={0.5} />
+    <div className="absolute bottom-[25%] right-[20%] animate-float text-primary opacity-10" style={{ animationDelay: '1.5s' }}>
+      <BookOpen size={90} strokeWidth={0.2} />
     </div>
-    <div className="absolute top-[50%] right-[5%] animate-float text-secondary opacity-20" style={{ animationDelay: '0.5s' }}>
-      <Palette size={80} strokeWidth={0.5} />
+    <div className="absolute top-[50%] right-[5%] animate-float text-secondary opacity-10" style={{ animationDelay: '0.5s' }}>
+      <Palette size={80} strokeWidth={0.2} />
     </div>
-    <div className="absolute top-[60%] left-[5%] animate-float text-accent opacity-20" style={{ animationDelay: '3.5s' }}>
-      <Music size={75} strokeWidth={0.5} />
+    <div className="absolute top-[60%] left-[5%] animate-float text-accent opacity-10" style={{ animationDelay: '3.5s' }}>
+      <Music size={75} strokeWidth={0.2} />
     </div>
-    <div className="absolute top-[10%] right-[40%] animate-float text-accent opacity-20" style={{ animationDelay: '4.5s' }}>
-      <Wind size={85} strokeWidth={0.5} />
+    <div className="absolute top-[10%] right-[40%] animate-float text-accent opacity-10" style={{ animationDelay: '4.5s' }}>
+      <Wind size={85} strokeWidth={0.2} />
     </div>
 
-    <div className="absolute top-[5%] left-[30%] animate-float text-primary opacity-20" style={{ animationDelay: '2.5s' }}>
-      <Cloud size={95} strokeWidth={0.5} />
+    <div className="absolute top-[5%] left-[30%] animate-float text-primary opacity-10" style={{ animationDelay: '2.5s' }}>
+      <Cloud size={95} strokeWidth={0.2} />
     </div>
-    <div className="absolute bottom-[10%] left-[40%] animate-float text-secondary opacity-20" style={{ animationDelay: '1.2s' }}>
-      <Shapes size={85} strokeWidth={0.5} />
+    <div className="absolute bottom-[10%] left-[40%] animate-float text-secondary opacity-10" style={{ animationDelay: '1.2s' }}>
+      <Shapes size={85} strokeWidth={0.2} />
     </div>
-    <div className="absolute bottom-[5%] right-[10%] animate-float text-primary opacity-20" style={{ animationDelay: '0.8s' }}>
-      <Smile size={80} strokeWidth={0.5} />
+    <div className="absolute bottom-[5%] right-[10%] animate-float text-primary opacity-10" style={{ animationDelay: '0.8s' }}>
+      <Smile size={80} strokeWidth={0.2} />
     </div>
-    <div className="absolute top-[35%] left-[12%] animate-float text-secondary opacity-20" style={{ animationDelay: '4s' }}>
-      <Trophy size={90} strokeWidth={0.5} />
+    <div className="absolute top-[35%] left-[12%] animate-float text-secondary opacity-10" style={{ animationDelay: '4s' }}>
+      <Trophy size={90} strokeWidth={0.2} />
     </div>
   </div>
 );
@@ -296,6 +297,40 @@ export default function Home() {
                 </div>
               );
             })}
+          </div>
+        </div>
+      </section>
+
+      {/* Gallery Reference Section */}
+      <section className="py-24 bg-white">
+        <div className="max-w-7xl mx-auto px-6 space-y-12">
+          <div className="flex flex-col md:flex-row justify-between items-end gap-6 text-center md:text-left">
+            <div className="space-y-4">
+              <h2 className="text-4xl font-bold text-primary">Campus Moments</h2>
+              <p className="text-muted-foreground max-w-md">Captured joy, learning, and growth in our school gallery.</p>
+            </div>
+            <Button variant="outline" className="rounded-full border-primary text-primary hover:bg-primary hover:text-white transition-all" asChild>
+              <Link href="/gallery">View Full Gallery</Link>
+            </Button>
+          </div>
+          
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-4 h-[400px]">
+            {gallery.slice(0, 4).map((img, idx) => (
+              <div key={img.id} className={cn(
+                "relative rounded-[2rem] overflow-hidden group shadow-md",
+                idx === 0 || idx === 3 ? "md:col-span-2" : "md:col-span-1"
+              )}>
+                <Image 
+                  src={img.imageUrl} 
+                  alt={img.description} 
+                  fill 
+                  className="object-cover transition-transform duration-700 group-hover:scale-110" 
+                />
+                <div className="absolute inset-0 bg-primary/60 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center p-4 text-center">
+                  <span className="text-white font-headline text-xl md:text-2xl">{img.description}</span>
+                </div>
+              </div>
+            ))}
           </div>
         </div>
       </section>
