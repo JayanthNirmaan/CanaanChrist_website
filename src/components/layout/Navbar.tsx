@@ -40,7 +40,7 @@ export function Navbar() {
           <div className="bg-primary p-2 rounded-lg text-primary-foreground group-hover:scale-110 transition-transform">
             <GraduationCap size={24} />
           </div>
-          <span className="text-xl font-bold tracking-tight text-primary">CANAAN CONNECT</span>
+          <span className="text-xl font-bold tracking-tight text-primary">Canaan Christ Public School</span>
         </Link>
 
         {/* Desktop Menu */}
