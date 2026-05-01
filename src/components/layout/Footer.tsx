@@ -10,18 +10,18 @@ export function Footer() {
     <footer className="bg-primary text-primary-foreground pt-20 pb-10">
       <div className="max-w-7xl mx-auto px-6 grid grid-cols-1 md:grid-cols-4 gap-12">
         <div className="space-y-6">
-          <div className="flex items-center gap-2">
-            <div className="bg-white p-1 rounded-lg shadow-sm flex items-center justify-center">
+          <div className="flex items-center gap-4">
+            <div className="bg-white p-2 rounded-xl shadow-md flex items-center justify-center">
               {logo?.imageUrl ? (
                 <Image 
                   src={logo.imageUrl} 
                   alt="Canaan Christ Public School Logo" 
-                  width={50} 
-                  height={50} 
+                  width={100} 
+                  height={100} 
                   className="object-contain"
                 />
               ) : (
-                <div className="w-10 h-10 bg-primary/10 rounded flex items-center justify-center text-primary font-bold">CC</div>
+                <div className="w-16 h-16 bg-primary/10 rounded flex items-center justify-center text-primary font-bold text-xl">CC</div>
               )}
             </div>
             <span className="text-xl font-bold tracking-tight uppercase">Canaan Christ</span>

@@ -38,22 +38,22 @@ export function Navbar() {
       )}
     >
       <div className="max-w-7xl mx-auto flex items-center justify-between">
-        <Link href="/" className="flex items-center gap-2 group">
-          <div className="bg-white p-1 rounded-lg group-hover:scale-110 transition-transform shadow-sm flex items-center justify-center">
+        <Link href="/" className="flex items-center gap-4 group">
+          <div className="bg-white p-1.5 rounded-xl group-hover:scale-110 transition-transform shadow-md flex items-center justify-center">
             {logo?.imageUrl ? (
               <Image 
                 src={logo.imageUrl} 
                 alt="Canaan Christ Public School Logo" 
-                width={60} 
-                height={60} 
+                width={110} 
+                height={110} 
                 className="object-contain"
                 priority
               />
             ) : (
-              <div className="w-12 h-12 bg-primary/10 rounded flex items-center justify-center text-primary font-bold">CC</div>
+              <div className="w-20 h-20 bg-primary/10 rounded flex items-center justify-center text-primary font-bold text-2xl">CC</div>
             )}
           </div>
-          <span className="text-xl font-bold tracking-tight text-primary hidden sm:block">Canaan Christ Public School</span>
+          <span className="text-2xl font-bold tracking-tight text-primary hidden sm:block">Canaan Christ Public School</span>
         </Link>
 
         <div className="hidden md:flex items-center gap-8">
