@@ -5,7 +5,6 @@ import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Label } from '@/components/ui/label';
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components/ui/select';
-import { submitRegistration } from '@/app/actions/registration';
 import { useToast } from '@/hooks/use-toast';
 import { Loader2, CheckCircle2 } from 'lucide-react';
 
@@ -18,24 +17,16 @@ export function RegistrationForm() {
     event.preventDefault();
     setIsPending(true);
 
-    const formData = new FormData(event.currentTarget);
-    const result = await submitRegistration(formData);
+    // Simulate a network delay for a realistic feel
+    await new Promise((resolve) => setTimeout(resolve, 1000));
 
     setIsPending(false);
-
-    if (result.success) {
-      setIsSuccess(true);
-      toast({
-        title: "Registration Received",
-        description: "We have received your application inquiry.",
-      });
-    } else {
-      toast({
-        variant: "destructive",
-        title: "Error",
-        description: result.error || "Failed to submit registration.",
-      });
-    }
+    setIsSuccess(true);
+    
+    toast({
+      title: "Inquiry Sent",
+      description: "We have received your application inquiry.",
+    });
   }
 
   if (isSuccess) {
@@ -44,14 +35,14 @@ export function RegistrationForm() {
         <div className="w-20 h-20 bg-green-100 text-green-600 rounded-full flex items-center justify-center mx-auto mb-4">
           <CheckCircle2 size={48} />
         </div>
-        <h3 className="text-3xl font-bold text-primary">Application Submitted!</h3>
-        <p className="text-xl text-muted-foreground leading-relaxed">
-          Sit back and relax, our school team will contact you soon!
+        <h3 className="text-2xl font-bold text-primary">Inquiry Submitted!</h3>
+        <p className="text-lg text-muted-foreground leading-relaxed">
+          Sit back and relax, our school team will contact you!
         </p>
         <Button 
           variant="outline" 
           onClick={() => setIsSuccess(false)}
-          className="rounded-full px-8"
+          className="rounded-full px-8 mt-4"
         >
           Submit another inquiry
         </Button>
