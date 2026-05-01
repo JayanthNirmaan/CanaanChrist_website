@@ -1,15 +1,44 @@
 import { Navbar } from '@/components/layout/Navbar';
 import { Footer } from '@/components/layout/Footer';
-import { CheckCircle2, FileText, GraduationCap, Users, Smile, Backpack, BookOpen, School } from 'lucide-react';
+import { CheckCircle2, FileText, GraduationCap, Users, Smile, Backpack, BookOpen, Bot } from 'lucide-react';
 import { Button } from '@/components/ui/button';
+import { AIAdmissionsTool } from '@/components/admissions/AIAdmissionsTool';
 import Link from 'next/link';
 
 export default function AdmissionsPage() {
   const classes = [
-    { icon: Smile, title: 'Kindergarten', desc: 'Nursery, LKG, UKG', color: 'text-pink-500', bg: 'bg-pink-100' },
-    { icon: Backpack, title: 'Primary School', desc: 'Grades 1 to 4', color: 'text-blue-500', bg: 'bg-blue-100' },
-    { icon: BookOpen, title: 'Higher Primary', desc: 'Grades 5 to 7', color: 'text-orange-500', bg: 'bg-orange-100' },
-    { icon: GraduationCap, title: 'High School', desc: 'Grades 8 to 10', color: 'text-primary', bg: 'bg-primary/10' },
+    { 
+      icon: Smile, 
+      title: 'Kindergarten', 
+      desc: 'Nursery, LKG, UKG', 
+      color: 'text-pink-500', 
+      bg: 'bg-pink-100',
+      hint: 'Cheerful early learner'
+    },
+    { 
+      icon: Backpack, 
+      title: 'Primary School', 
+      desc: 'Grades 1 to 4', 
+      color: 'text-blue-500', 
+      bg: 'bg-blue-100',
+      hint: 'Independent young student'
+    },
+    { 
+      icon: BookOpen, 
+      title: 'Higher Primary', 
+      desc: 'Grades 5 to 7', 
+      color: 'text-orange-500', 
+      bg: 'bg-orange-100',
+      hint: 'Confident curious learner'
+    },
+    { 
+      icon: GraduationCap, 
+      title: 'High School', 
+      desc: 'Grades 8 to 10', 
+      color: 'text-primary', 
+      bg: 'bg-primary/10',
+      hint: 'Mature senior student'
+    },
   ];
 
   return (
@@ -48,7 +77,7 @@ export default function AdmissionsPage() {
       <section className="py-24 bg-background">
         <div className="max-w-7xl mx-auto px-6 grid grid-cols-1 lg:grid-cols-3 gap-12">
           
-          <div className="lg:col-span-2 space-y-12">
+          <div className="lg:col-span-2 space-y-16">
             <div className="bg-white p-10 rounded-3xl shadow-sm border space-y-8">
               <h2 className="text-3xl font-bold text-primary flex items-center gap-3">
                 <FileText className="text-secondary" /> Admission Process
@@ -82,13 +111,15 @@ export default function AdmissionsPage() {
                 </p>
               </div>
               <div className="bg-white p-8 rounded-3xl border shadow-sm">
-                <Users className="text-primary mb-4" size={32} />
-                <h3 className="text-xl font-bold mb-6">Classes Offered</h3>
-                <div className="grid grid-cols-1 gap-4">
+                <div className="flex items-center gap-3 mb-6">
+                  <Users className="text-primary" size={32} />
+                  <h3 className="text-xl font-bold">Classes Offered</h3>
+                </div>
+                <div className="grid grid-cols-1 gap-6">
                   {classes.map((cls, idx) => (
                     <div key={idx} className="flex items-center gap-4 group">
-                      <div className={`p-2.5 rounded-xl ${cls.bg} ${cls.color} transition-transform group-hover:scale-110`}>
-                        <cls.icon size={20} />
+                      <div className={`p-3 rounded-2xl ${cls.bg} ${cls.color} transition-all duration-300 group-hover:scale-110 group-hover:shadow-md`}>
+                        <cls.icon size={24} />
                       </div>
                       <div>
                         <h4 className="font-bold text-foreground leading-none mb-1">{cls.title}</h4>
@@ -99,14 +130,34 @@ export default function AdmissionsPage() {
                 </div>
               </div>
             </div>
+
+            {/* AI Guidance Tool Section */}
+            <div className="space-y-8 pt-8">
+              <div className="text-center space-y-3">
+                <h2 className="text-3xl font-bold text-primary flex items-center justify-center gap-3">
+                  <Bot className="text-secondary" /> Instant Admissions Guidance
+                </h2>
+                <p className="text-muted-foreground max-w-xl mx-auto">
+                  Have specific questions about our policies or the enrollment process? Our AI assistant is here to help you 24/7.
+                </p>
+              </div>
+              <AIAdmissionsTool />
+            </div>
           </div>
 
           <aside className="space-y-8">
             <div className="sticky top-24">
-              <div className="p-8 bg-white rounded-3xl border shadow-sm text-center">
-                <h3 className="text-xl font-bold mb-4">Visit Campus</h3>
-                <p className="text-sm text-muted-foreground mb-6">No.6 1st Crs, 9th Mn Rd, BTM 1st Stage</p>
-                <Button className="w-full" asChild><Link href="/contact">Get Directions</Link></Button>
+              <div className="p-8 bg-white rounded-3xl border shadow-sm text-center space-y-6">
+                <div className="space-y-2">
+                  <h3 className="text-xl font-bold">Visit Campus</h3>
+                  <p className="text-sm text-muted-foreground">No.6 1st Crs, 9th Mn Rd, BTM 1st Stage</p>
+                </div>
+                <Button className="w-full h-12 rounded-full font-bold" asChild>
+                  <Link href="/contact">Get Directions</Link>
+                </Button>
+                <div className="pt-4 border-t">
+                  <p className="text-xs text-muted-foreground">Office Hours: 8:30 AM - 4:00 PM</p>
+                </div>
               </div>
             </div>
           </aside>
