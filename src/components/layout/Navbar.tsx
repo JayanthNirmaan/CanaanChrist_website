@@ -39,7 +39,7 @@ export function Navbar() {
     >
       <div className="max-w-7xl mx-auto flex items-center justify-between">
         <Link href="/" className="flex items-center gap-4 group">
-          <div className="bg-white p-1.5 rounded-xl group-hover:scale-110 transition-transform shadow-md flex items-center justify-center">
+          <div className="group-hover:scale-110 transition-transform flex items-center justify-center">
             {logo?.imageUrl ? (
               <Image 
                 src={logo.imageUrl} 
