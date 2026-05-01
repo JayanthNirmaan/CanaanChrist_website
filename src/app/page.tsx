@@ -1,3 +1,4 @@
+
 import Image from 'next/image';
 import Link from 'next/link';
 import { Button } from '@/components/ui/button';
@@ -77,9 +78,9 @@ const facilities = [
   },
 ];
 
-const principalImg = PlaceHolderImages.find(img => img.id === 'principal');
-const chairmanImg = PlaceHolderImages.find(img => img.id === 'chairman');
 const gallery = PlaceHolderImages.filter(img => img.id.startsWith('gallery'));
+const chairmanImg = PlaceHolderImages.find(img => img.id === 'chairman');
+const principalImg = PlaceHolderImages.find(img => img.id === 'principal');
 
 const ScribbleBackground = () => (
   <div className="absolute inset-0 overflow-hidden pointer-events-none select-none">
@@ -158,36 +159,37 @@ export default function Home() {
         </div>
       </section>
 
+      {/* Holistic Education Section with restored hover animation */}
       <section className="py-24 bg-white relative group/section transition-all duration-700 overflow-hidden">
-        {/* Immersive background bubble triggered only when image is hovered */}
-        <div className="absolute top-1/2 right-[25%] -translate-y-1/2 translate-x-1/2 w-0 h-0 bg-primary rounded-full transition-all duration-1000 ease-in-out group-hover/image:w-[300vw] group-hover/image:h-[300vw] pointer-events-none z-0" />
+        {/* Immersive background bubble triggered by the image container hover */}
+        <div className="absolute top-1/2 right-[25%] -translate-y-1/2 translate-x-1/2 w-0 h-0 bg-primary rounded-full transition-all duration-1000 ease-in-out group-has-[.image-trigger:hover]/section:w-[300vw] group-has-[.image-trigger:hover]/section:h-[300vw] pointer-events-none z-0" />
 
         <div className="relative z-10 max-w-7xl mx-auto px-6 grid grid-cols-1 md:grid-cols-2 gap-16 items-center">
           <div className="space-y-6">
-            <div className="inline-block bg-primary/10 text-primary px-4 py-1.5 rounded-full text-sm font-bold transition-all duration-500 group-hover/image:bg-white group-hover/image:text-primary">
+            <div className="inline-block bg-primary/10 text-primary px-4 py-1.5 rounded-full text-sm font-bold transition-all duration-500 group-has-[.image-trigger:hover]/section:bg-white group-has-[.image-trigger:hover]/section:text-primary">
               Established 2001
             </div>
-            <h2 className="text-4xl font-bold text-primary transition-colors duration-500 group-hover/image:text-white">Affordable, Quality Education for Every Child</h2>
-            <p className="text-lg text-muted-foreground leading-relaxed transition-colors duration-500 group-hover/image:text-primary-foreground/90">
+            <h2 className="text-4xl font-bold text-primary transition-colors duration-500 group-has-[.image-trigger:hover]/section:text-white">Affordable, Quality Education for Every Child</h2>
+            <p className="text-lg text-muted-foreground leading-relaxed transition-colors duration-500 group-has-[.image-trigger:hover]/section:text-primary-foreground/90">
               Canaan Christ Public School offers a holistic learning environment under the State Syllabus, catering to students from Kindergarten to 10th Grade. Our mission is to empower every child—regardless of background—to grow intellectually, emotionally, and ethically.
             </p>
             <div className="grid grid-cols-2 gap-6">
-              <div className="p-6 bg-white rounded-2xl shadow-sm border hover:border-primary/20 transition-all duration-500 group-hover/image:bg-white/10 group-hover/image:border-white/20 group-hover/image:shadow-none">
-                <div className="text-3xl font-bold text-primary mb-1 transition-colors duration-500 group-hover/image:text-white">K-10</div>
-                <div className="text-sm text-muted-foreground font-medium transition-colors duration-500 group-hover/image:text-white/80">Classes Offered</div>
+              <div className="p-6 bg-white rounded-2xl shadow-sm border hover:border-primary/20 transition-all duration-500 group-has-[.image-trigger:hover]/section:bg-white/10 group-has-[.image-trigger:hover]/section:border-white/20 group-has-[.image-trigger:hover]/section:shadow-none">
+                <div className="text-3xl font-bold text-primary mb-1 transition-colors duration-500 group-has-[.image-trigger:hover]/section:text-white">K-10</div>
+                <div className="text-sm text-muted-foreground font-medium transition-colors duration-500 group-has-[.image-trigger:hover]/section:text-white/80">Classes Offered</div>
               </div>
-              <div className="p-6 bg-white rounded-2xl shadow-sm border hover:border-primary/20 transition-all duration-500 group-hover/image:bg-white/10 group-hover/image:border-white/20 group-hover/image:shadow-none">
-                <div className="text-3xl font-bold text-primary mb-1 transition-colors duration-500 group-hover/image:text-white">State</div>
-                <div className="text-sm text-muted-foreground font-medium transition-colors duration-500 group-hover/image:text-white/80">Syllabus</div>
+              <div className="p-6 bg-white rounded-2xl shadow-sm border hover:border-primary/20 transition-all duration-500 group-has-[.image-trigger:hover]/section:bg-white/10 group-has-[.image-trigger:hover]/section:border-white/20 group-has-[.image-trigger:hover]/section:shadow-none">
+                <div className="text-3xl font-bold text-primary mb-1 transition-colors duration-500 group-has-[.image-trigger:hover]/section:text-white">State</div>
+                <div className="text-sm text-muted-foreground font-medium transition-colors duration-500 group-has-[.image-trigger:hover]/section:text-white/80">Syllabus</div>
               </div>
             </div>
-            <Button variant="link" className="p-0 text-primary font-bold group text-lg transition-colors duration-500 group-hover/image:text-white" asChild>
+            <Button variant="link" className="p-0 text-primary font-bold group text-lg transition-colors duration-500 group-has-[.image-trigger:hover]/section:text-white" asChild>
               <Link href="/about">
                 Our vision and values <ArrowRight className="ml-2 group-hover:translate-x-1 transition-transform" size={18} />
               </Link>
             </Button>
           </div>
-          <div className="group/image relative h-[500px] rounded-[2.5rem] overflow-hidden shadow-2xl border-4 border-white transition-all duration-500 hover:scale-105 hover:shadow-primary/40 hover:border-white/50">
+          <div className="image-trigger relative h-[500px] rounded-[2.5rem] overflow-hidden shadow-2xl border-4 border-white transition-all duration-500 hover:scale-105 hover:shadow-primary/40 hover:border-white/50 cursor-pointer">
             {gallery[0]?.imageUrl && (
               <Image 
                 src={gallery[0].imageUrl} 
@@ -204,7 +206,8 @@ export default function Home() {
       <section className="py-24 bg-muted/30">
         <div className="max-w-7xl mx-auto px-6 grid grid-cols-1 md:grid-cols-2 gap-12">
           <div className="p-12 bg-primary rounded-[3rem] text-primary-foreground shadow-xl space-y-6 hover:-translate-y-2 transition-all relative overflow-hidden group">
-            <div className="absolute -right-8 -bottom-8 text-white/40 opacity-0 group-hover:opacity-100 group-hover:scale-125 transition-all duration-700 pointer-events-none rotate-12">
+            {/* Brightened white background element on hover */}
+            <div className="absolute -right-8 -bottom-8 text-white/60 opacity-0 group-hover:opacity-100 group-hover:scale-125 transition-all duration-700 pointer-events-none rotate-12">
               <Eye size={240} strokeWidth={1} />
             </div>
             <h3 className="text-3xl font-bold relative z-10">Our Vision</h3>
@@ -213,7 +216,8 @@ export default function Home() {
             </p>
           </div>
           <div className="p-12 bg-secondary rounded-[3rem] text-secondary-foreground shadow-xl space-y-6 hover:-translate-y-2 transition-all relative overflow-hidden group">
-            <div className="absolute -right-8 -bottom-8 text-white/40 opacity-0 group-hover:opacity-100 group-hover:scale-125 transition-all duration-700 pointer-events-none -rotate-12">
+            {/* Brightened white background element on hover */}
+            <div className="absolute -right-8 -bottom-8 text-white/60 opacity-0 group-hover:opacity-100 group-hover:scale-125 transition-all duration-700 pointer-events-none -rotate-12">
               <Target size={240} strokeWidth={1} />
             </div>
             <h3 className="text-3xl font-bold relative z-10">Our Mission</h3>
