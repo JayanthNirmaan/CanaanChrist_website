@@ -1,3 +1,4 @@
+
 'use client';
 
 import React, { useState, useEffect } from 'react';
@@ -39,19 +40,21 @@ export function Navbar() {
     >
       <div className="max-w-7xl mx-auto flex items-center justify-between">
         <Link href="/" className="flex items-center gap-2 group">
-          <div className="bg-white p-1 rounded-lg group-hover:scale-110 transition-transform shadow-sm">
-            {logo?.imageUrl && (
+          <div className="bg-white p-1 rounded-lg group-hover:scale-110 transition-transform shadow-sm flex items-center justify-center">
+            {logo?.imageUrl ? (
               <Image 
                 src={logo.imageUrl} 
                 alt="Canaan Christ Public School Logo" 
-                width={40} 
-                height={40} 
+                width={48} 
+                height={48} 
                 className="object-contain"
-                data-ai-hint="school logo"
+                priority
               />
+            ) : (
+              <div className="w-10 h-10 bg-primary/10 rounded flex items-center justify-center text-primary font-bold">CC</div>
             )}
           </div>
-          <span className="text-xl font-bold tracking-tight text-primary">Canaan Christ Public School</span>
+          <span className="text-xl font-bold tracking-tight text-primary hidden sm:block">Canaan Christ Public School</span>
         </Link>
 
         <div className="hidden md:flex items-center gap-8">

@@ -1,3 +1,4 @@
+
 import Link from 'next/link';
 import Image from 'next/image';
 import { MapPin, Phone, Mail, Youtube, Instagram } from 'lucide-react';
@@ -11,19 +12,20 @@ export function Footer() {
       <div className="max-w-7xl mx-auto px-6 grid grid-cols-1 md:grid-cols-4 gap-12">
         <div className="space-y-6">
           <div className="flex items-center gap-2">
-            <div className="bg-white p-1 rounded-lg shadow-sm">
-              {logo?.imageUrl && (
+            <div className="bg-white p-1 rounded-lg shadow-sm flex items-center justify-center">
+              {logo?.imageUrl ? (
                 <Image 
                   src={logo.imageUrl} 
-                  alt="Logo" 
-                  width={32} 
-                  height={32} 
+                  alt="Canaan Christ Public School Logo" 
+                  width={40} 
+                  height={40} 
                   className="object-contain"
-                  data-ai-hint="school logo"
                 />
+              ) : (
+                <div className="w-8 h-8 bg-primary/10 rounded flex items-center justify-center text-primary font-bold">CC</div>
               )}
             </div>
-            <span className="text-xl font-bold tracking-tight uppercase">Canaan Christ Public School</span>
+            <span className="text-xl font-bold tracking-tight uppercase">Canaan Christ</span>
           </div>
           <p className="text-primary-foreground/80 leading-relaxed">
             "Righteousness And Truth" - Providing quality education from Kindergarten to 10th Grade under the State Syllabus since 2001.
