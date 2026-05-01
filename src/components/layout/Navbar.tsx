@@ -35,7 +35,7 @@ export function Navbar() {
       className={cn(
         'fixed top-0 w-full z-50 transition-all duration-300 px-6',
         scrolled 
-          ? 'bg-background border-b border-border/40 py-1.5 shadow-lg' 
+          ? 'bg-background/80 backdrop-blur-md border-b border-border/40 py-1.5 shadow-lg' 
           : 'bg-transparent py-3'
       )}
     >
@@ -46,8 +46,8 @@ export function Navbar() {
               <Image 
                 src={logo.imageUrl} 
                 alt="Canaan Christ Public School Logo" 
-                width={55} 
-                height={55} 
+                width={50} 
+                height={50} 
                 className="object-contain"
                 priority
               />
@@ -56,8 +56,8 @@ export function Navbar() {
             )}
           </div>
           <div className="flex flex-col">
-            <span className="text-base font-bold tracking-tight text-primary leading-none hidden sm:block">Canaan Christ</span>
-            <span className="text-[8px] font-bold text-muted-foreground tracking-widest uppercase hidden sm:block">Public School</span>
+            <span className="text-sm font-bold tracking-tight text-primary leading-none hidden sm:block">Canaan Christ</span>
+            <span className="text-[7px] font-bold text-muted-foreground tracking-widest uppercase hidden sm:block">Public School</span>
           </div>
         </Link>
 
@@ -69,7 +69,7 @@ export function Navbar() {
                 key={item.name}
                 href={item.href}
                 className={cn(
-                  'px-4 py-1.5 text-sm font-bold transition-all relative group',
+                  'px-4 py-1 text-sm font-bold transition-all relative group',
                   isActive ? 'text-primary' : 'text-foreground/80 hover:text-primary'
                 )}
               >
@@ -84,7 +84,7 @@ export function Navbar() {
             );
           })}
           <div className="ml-6">
-            <Button asChild variant="default" size="sm" className="rounded-full shadow-lg hover:shadow-primary/20 hover:-translate-y-0.5 transition-all font-bold px-6 h-9">
+            <Button asChild variant="default" size="sm" className="rounded-full shadow-lg hover:shadow-primary/20 hover:-translate-y-0.5 transition-all font-bold px-6 h-8 text-xs">
               <Link href="/admissions">Apply Now</Link>
             </Button>
           </div>
