@@ -49,13 +49,13 @@ export function TypingEffect() {
   }, [currentText, isDeleting, currentPhraseIndex, typingSpeed]);
 
   return (
-    <div className="flex items-center justify-center gap-2 mt-2 h-10 animate-in fade-in duration-1000 delay-700">
-      <span className="text-xl md:text-2xl font-normal text-muted-foreground">
+    <div className="flex items-center justify-center gap-2 mt-4 h-12 animate-in fade-in duration-1000 delay-700">
+      <span className="text-2xl md:text-3xl font-bold font-headline text-muted-foreground/80">
         Shaping
       </span>
-      <div className="text-xl md:text-2xl font-bold text-accent min-w-[150px] flex items-center">
+      <div className="text-2xl md:text-3xl font-bold font-headline text-accent min-w-[200px] flex items-center">
         <span>{currentText}</span>
-        <span className="inline-block w-[2px] h-[1.2em] bg-accent ml-1 animate-cursor-blink"></span>
+        <span className="inline-block w-[3px] h-[0.9em] bg-accent ml-1 animate-cursor-blink"></span>
       </div>
     </div>
   );
