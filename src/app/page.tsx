@@ -85,45 +85,45 @@ const principalImg = PlaceHolderImages.find(img => img.id === 'principal');
 const ScribbleBackground = () => (
   <div className="absolute inset-0 overflow-hidden pointer-events-none select-none">
     <div className="scribble-bg opacity-100"></div>
-    <svg className="absolute inset-0 w-full h-full opacity-50" viewBox="0 0 1000 1000" fill="none" xmlns="http://www.w3.org/2000/svg">
-      <path d="M100,200 Q250,50 400,200 T700,200" stroke="currentColor" strokeWidth="10" strokeDasharray="1000" className="text-primary animate-draw-line" />
-      <path d="M50,800 Q300,950 600,800 T950,800" stroke="currentColor" strokeWidth="10" strokeDasharray="1000" className="text-secondary animate-draw-line" style={{ animationDelay: '1s' }} />
-      <path d="M800,100 Q950,300 800,500 T800,900" stroke="currentColor" strokeWidth="10" strokeDasharray="1000" className="text-accent animate-draw-line" style={{ animationDelay: '2s' }} />
+    <svg className="absolute inset-0 w-full h-full opacity-30" viewBox="0 0 1000 1000" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <path d="M100,200 Q250,50 400,200 T700,200" stroke="currentColor" strokeWidth="6" strokeDasharray="1000" className="text-primary animate-draw-line" />
+      <path d="M50,800 Q300,950 600,800 T950,800" stroke="currentColor" strokeWidth="6" strokeDasharray="1000" className="text-secondary animate-draw-line" style={{ animationDelay: '1s' }} />
+      <path d="M800,100 Q950,300 800,500 T800,900" stroke="currentColor" strokeWidth="6" strokeDasharray="1000" className="text-accent animate-draw-line" style={{ animationDelay: '2s' }} />
     </svg>
     
-    <div className="absolute top-[15%] left-[10%] animate-float text-primary opacity-90" style={{ animationDelay: '0s' }}>
-      <Pencil size={85} />
+    <div className="absolute top-[15%] left-[10%] animate-float text-primary opacity-40" style={{ animationDelay: '0s' }}>
+      <Pencil size={85} strokeWidth={1} />
     </div>
-    <div className="absolute top-[20%] right-[15%] animate-float text-secondary opacity-90" style={{ animationDelay: '1s' }}>
-      <Rocket size={110} />
+    <div className="absolute top-[20%] right-[15%] animate-float text-secondary opacity-40" style={{ animationDelay: '1s' }}>
+      <Rocket size={110} strokeWidth={1} />
     </div>
-    <div className="absolute bottom-[20%] left-[15%] animate-float text-accent opacity-90" style={{ animationDelay: '2s' }}>
-      <GraduationCap size={95} />
+    <div className="absolute bottom-[20%] left-[15%] animate-float text-accent opacity-40" style={{ animationDelay: '2s' }}>
+      <GraduationCap size={95} strokeWidth={1} />
     </div>
-    <div className="absolute bottom-[25%] right-[20%] animate-float text-primary opacity-90" style={{ animationDelay: '1.5s' }}>
-      <BookOpen size={90} />
+    <div className="absolute bottom-[25%] right-[20%] animate-float text-primary opacity-40" style={{ animationDelay: '1.5s' }}>
+      <BookOpen size={90} strokeWidth={1} />
     </div>
-    <div className="absolute top-[50%] right-[5%] animate-float text-secondary opacity-90" style={{ animationDelay: '0.5s' }}>
-      <Palette size={80} />
+    <div className="absolute top-[50%] right-[5%] animate-float text-secondary opacity-40" style={{ animationDelay: '0.5s' }}>
+      <Palette size={80} strokeWidth={1} />
     </div>
-    <div className="absolute top-[60%] left-[5%] animate-float text-accent opacity-90" style={{ animationDelay: '3.5s' }}>
-      <Music size={75} />
+    <div className="absolute top-[60%] left-[5%] animate-float text-accent opacity-40" style={{ animationDelay: '3.5s' }}>
+      <Music size={75} strokeWidth={1} />
     </div>
-    <div className="absolute top-[10%] right-[40%] animate-float text-accent opacity-90" style={{ animationDelay: '4.5s' }}>
-      <Wind size={85} />
+    <div className="absolute top-[10%] right-[40%] animate-float text-accent opacity-40" style={{ animationDelay: '4.5s' }}>
+      <Wind size={85} strokeWidth={1} />
     </div>
 
-    <div className="absolute top-[5%] left-[30%] animate-float text-primary opacity-90" style={{ animationDelay: '2.5s' }}>
-      <Cloud size={95} />
+    <div className="absolute top-[5%] left-[30%] animate-float text-primary opacity-40" style={{ animationDelay: '2.5s' }}>
+      <Cloud size={95} strokeWidth={1} />
     </div>
-    <div className="absolute bottom-[10%] left-[40%] animate-float text-secondary opacity-90" style={{ animationDelay: '1.2s' }}>
-      <Shapes size={85} />
+    <div className="absolute bottom-[10%] left-[40%] animate-float text-secondary opacity-40" style={{ animationDelay: '1.2s' }}>
+      <Shapes size={85} strokeWidth={1} />
     </div>
-    <div className="absolute bottom-[5%] right-[10%] animate-float text-primary opacity-90" style={{ animationDelay: '0.8s' }}>
-      <Smile size={80} />
+    <div className="absolute bottom-[5%] right-[10%] animate-float text-primary opacity-40" style={{ animationDelay: '0.8s' }}>
+      <Smile size={80} strokeWidth={1} />
     </div>
-    <div className="absolute top-[35%] left-[12%] animate-float text-secondary opacity-90" style={{ animationDelay: '4s' }}>
-      <Trophy size={90} />
+    <div className="absolute top-[35%] left-[12%] animate-float text-secondary opacity-40" style={{ animationDelay: '4s' }}>
+      <Trophy size={90} strokeWidth={1} />
     </div>
   </div>
 );
@@ -206,8 +206,7 @@ export default function Home() {
       <section className="py-24 bg-muted/30">
         <div className="max-w-7xl mx-auto px-6 grid grid-cols-1 md:grid-cols-2 gap-12">
           <div className="p-12 bg-primary rounded-[3rem] text-primary-foreground shadow-xl space-y-6 hover:-translate-y-2 transition-all relative overflow-hidden group">
-            {/* Brightened white background element on hover */}
-            <div className="absolute -right-8 -bottom-8 text-white/60 opacity-0 group-hover:opacity-100 group-hover:scale-125 transition-all duration-700 pointer-events-none rotate-12">
+            <div className="absolute -right-8 -bottom-8 text-white/40 opacity-0 group-hover:opacity-100 group-hover:scale-125 transition-all duration-700 pointer-events-none rotate-12">
               <Eye size={240} strokeWidth={1} />
             </div>
             <h3 className="text-3xl font-bold relative z-10">Our Vision</h3>
@@ -216,8 +215,7 @@ export default function Home() {
             </p>
           </div>
           <div className="p-12 bg-secondary rounded-[3rem] text-secondary-foreground shadow-xl space-y-6 hover:-translate-y-2 transition-all relative overflow-hidden group">
-            {/* Brightened white background element on hover */}
-            <div className="absolute -right-8 -bottom-8 text-white/60 opacity-0 group-hover:opacity-100 group-hover:scale-125 transition-all duration-700 pointer-events-none -rotate-12">
+            <div className="absolute -right-8 -bottom-8 text-white/40 opacity-0 group-hover:opacity-100 group-hover:scale-125 transition-all duration-700 pointer-events-none -rotate-12">
               <Target size={240} strokeWidth={1} />
             </div>
             <h3 className="text-3xl font-bold relative z-10">Our Mission</h3>
