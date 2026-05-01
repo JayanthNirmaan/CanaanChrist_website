@@ -115,9 +115,6 @@ const ScribbleBackground = () => (
     <div className="absolute top-[5%] left-[30%] animate-float text-primary opacity-90" style={{ animationDelay: '2.5s' }}>
       <Cloud size={95} />
     </div>
-    <div className="absolute top-[40%] left-[45%] animate-float text-accent opacity-90" style={{ animationDelay: '5s' }}>
-      <Sun size={105} />
-    </div>
     <div className="absolute bottom-[10%] left-[40%] animate-float text-secondary opacity-90" style={{ animationDelay: '1.2s' }}>
       <Shapes size={85} />
     </div>
