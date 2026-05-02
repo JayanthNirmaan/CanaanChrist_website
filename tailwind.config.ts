@@ -99,6 +99,10 @@ export default {
         'draw-line': {
           '0%': { strokeDashoffset: '1000' },
           '100%': { strokeDashoffset: '0' },
+        },
+        marquee: {
+          '0%': { transform: 'translateX(0)' },
+          '100%': { transform: 'translateX(-100%)' },
         }
       },
       animation: {
@@ -107,6 +111,7 @@ export default {
         'fade-in': 'fade-in 0.6s ease-out forwards',
         float: 'float 6s ease-in-out infinite',
         'draw-line': 'draw-line 4s ease-out infinite alternate',
+        marquee: 'marquee 60s linear infinite',
       },
     },
   },

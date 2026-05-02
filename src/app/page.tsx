@@ -57,7 +57,7 @@ const facilities = [
     icon: Languages, 
     title: 'Language Lab', 
     desc: 'Focused training for communication and linguistic skills.',
-    imageId: 'gallery-5'
+    imageId: 'facility-language'
   },
   { 
     icon: Zap, 
@@ -139,23 +139,23 @@ export default function Home() {
         
         <div className="relative z-10 text-center space-y-4 px-6 max-w-4xl">
           <div className="space-y-4">
-            <h1 className="text-5xl md:text-7xl lg:text-8xl font-bold tracking-tight uppercase text-primary animate-in fade-in slide-in-from-bottom-4 duration-1000">
+            <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold tracking-tight uppercase text-primary animate-in fade-in slide-in-from-bottom-4 duration-1000">
               Canaan Christ Public School
             </h1>
-            <p className="text-xl md:text-2xl font-medium text-muted-foreground italic animate-in fade-in slide-in-from-bottom-4 duration-1000 delay-300">
+            <p className="text-lg md:text-xl font-medium text-muted-foreground italic animate-in fade-in slide-in-from-bottom-4 duration-1000 delay-300">
               "Righteousness And Truth"
             </p>
             <TypingEffect />
           </div>
           
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4 pt-8 animate-in fade-in slide-in-from-bottom-4 duration-1000 delay-1000">
-            <Button size="lg" className="h-14 px-8 text-lg rounded-full shadow-lg hover:shadow-primary/20 transition-all hover:-translate-y-1" asChild>
+            <Button size="lg" className="h-12 px-8 text-lg rounded-full shadow-lg hover:shadow-primary/20 transition-all hover:-translate-y-1" asChild>
               <Link href="/admissions">Admissions Open 2026-27</Link>
             </Button>
             <Button 
               size="lg" 
               variant="outline" 
-              className="h-14 px-8 text-lg rounded-full border-primary text-primary hover:bg-primary hover:text-white transition-all" 
+              className="h-12 px-8 text-lg rounded-full border-primary text-primary hover:bg-primary hover:text-white transition-all" 
               asChild
             >
               <Link href="/contact">Book a Visit</Link>
@@ -165,7 +165,7 @@ export default function Home() {
       </section>
 
       {/* Video Section */}
-      <section className="py-8 bg-white overflow-hidden">
+      <section className="py-4 md:py-8 bg-white overflow-hidden">
         <div className="max-w-5xl mx-auto px-6">
           <div className="relative group">
             <div className="absolute -top-6 -left-6 text-accent animate-float opacity-40">
@@ -175,7 +175,7 @@ export default function Home() {
               <Palette size={48} strokeWidth={2} />
             </div>
             
-            <div className="relative aspect-video rounded-[3rem] overflow-hidden shadow-2xl border-4 border-white ring-8 ring-primary/5 transition-transform duration-500 hover:scale-[1.01]">
+            <div className="relative aspect-video rounded-[2.5rem] overflow-hidden shadow-2xl border-4 border-white ring-8 ring-primary/5 transition-transform duration-500 hover:scale-[1.01]">
               <iframe
                 className="absolute inset-0 w-full h-full"
                 src="https://www.youtube.com/embed/Kk4pM6j1uZs"
@@ -216,7 +216,7 @@ export default function Home() {
               </Link>
             </Button>
           </div>
-          <div className="image-trigger relative h-[400px] md:h-[500px] rounded-[2.5rem] overflow-hidden shadow-2xl border-4 border-white transition-all duration-500 hover:scale-105 hover:shadow-primary/40 hover:border-white/50 cursor-pointer">
+          <div className="image-trigger relative h-[400px] md:h-[500px] rounded-[2rem] overflow-hidden shadow-2xl border-4 border-white transition-all duration-500 hover:scale-105 hover:shadow-primary/40 hover:border-white/50 cursor-pointer">
             <Image 
               src="/assets/CanaanChristSchool.png" 
               alt="School Campus" 
@@ -228,9 +228,9 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="py-8 bg-muted/30">
+      <section className="py-4 md:py-8 bg-muted/30">
         <div className="max-w-7xl mx-auto px-6 grid grid-cols-1 md:grid-cols-2 gap-8">
-          <div className="p-10 bg-primary rounded-[3rem] text-primary-foreground shadow-xl space-y-4 hover:-translate-y-2 transition-all relative overflow-hidden group">
+          <div className="p-8 md:p-10 bg-primary rounded-[2.5rem] text-primary-foreground shadow-xl space-y-4 hover:-translate-y-2 transition-all relative overflow-hidden group">
             <div className="absolute -right-8 -bottom-8 text-white/40 opacity-0 group-hover:opacity-100 group-hover:scale-125 transition-all duration-700 pointer-events-none rotate-12">
               <Eye size={240} strokeWidth={1} />
             </div>
@@ -239,7 +239,7 @@ export default function Home() {
               To nurture compassionate, curious, and confident learners who contribute meaningfully to society, while rooted in values, culture, and excellence.
             </p>
           </div>
-          <div className="p-10 bg-secondary rounded-[3rem] text-secondary-foreground shadow-xl space-y-4 hover:-translate-y-2 transition-all relative overflow-hidden group">
+          <div className="p-8 md:p-10 bg-secondary rounded-[2.5rem] text-secondary-foreground shadow-xl space-y-4 hover:-translate-y-2 transition-all relative overflow-hidden group">
             <div className="absolute -right-8 -bottom-8 text-white/40 opacity-0 group-hover:opacity-100 group-hover:scale-125 transition-all duration-700 pointer-events-none -rotate-12">
               <Target size={240} strokeWidth={1} />
             </div>
@@ -251,7 +251,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="py-8 bg-white">
+      <section className="py-4 md:py-8 bg-white">
         <div className="max-w-7xl mx-auto px-6 text-center space-y-8">
           <div className="space-y-4">
             <h2 className="text-3xl md:text-4xl font-bold text-primary">Our Core Values</h2>
@@ -259,7 +259,7 @@ export default function Home() {
           </div>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
             {coreValues.map((v, i) => (
-              <div key={i} className="p-6 bg-white rounded-[2rem] shadow-sm border hover:shadow-xl hover:border-primary/20 transition-all group flex flex-col gap-3 text-left hover:-rotate-1 hover:scale-105">
+              <div key={i} className="p-6 bg-white rounded-[1.5rem] shadow-sm border hover:shadow-xl hover:border-primary/20 transition-all group flex flex-col gap-3 text-left hover:-rotate-1 hover:scale-105">
                 <div className="flex items-center gap-4">
                   <div className="w-10 h-10 bg-primary/10 rounded-xl flex items-center justify-center text-primary group-hover:bg-primary group-hover:text-white transition-all transform group-hover:animate-wiggle shrink-0">
                     <v.icon size={20} strokeWidth={2} />
@@ -273,7 +273,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="py-8 bg-muted/20">
+      <section className="py-4 md:py-8 bg-muted/20">
         <div className="max-w-7xl mx-auto px-6 space-y-8">
           <div className="flex flex-col md:flex-row justify-between items-end gap-4 text-center md:text-left">
             <div className="space-y-2">
@@ -288,9 +288,9 @@ export default function Home() {
             {facilities.map((f, i) => {
               const facilityImage = PlaceHolderImages.find(img => img.id === f.imageId);
               return (
-                <div key={i} className="group relative h-72 overflow-hidden rounded-[2.5rem] border transition-all duration-500 hover:shadow-2xl hover:-translate-y-2">
+                <div key={i} className="group relative h-72 overflow-hidden rounded-[2rem] border transition-all duration-500 hover:shadow-2xl hover:-translate-y-2">
                   <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-all duration-700 ease-in-out">
-                    {facilityImage && (
+                    {facilityImage?.imageUrl && (
                       <Image 
                         src={facilityImage.imageUrl} 
                         alt={f.title} 
@@ -322,7 +322,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="py-8 bg-white overflow-hidden">
+      <section className="py-4 md:py-8 bg-white overflow-hidden">
         <div className="max-w-7xl mx-auto px-6 space-y-8">
           <div className="flex flex-col md:flex-row justify-between items-end gap-4 text-center md:text-left">
             <div className="space-y-2">
@@ -339,7 +339,7 @@ export default function Home() {
               const tilts = ["rotate-1", "-rotate-2", "rotate-2", "-rotate-1"];
               return (
                 <div key={img.id} className={cn(
-                  "relative rounded-2xl overflow-hidden group shadow-lg border-4 border-white transition-all duration-500 hover:rotate-0 hover:scale-105 hover:z-20 cursor-pointer",
+                  "relative rounded-xl overflow-hidden group shadow-lg border-4 border-white transition-all duration-500 hover:rotate-0 hover:scale-105 hover:z-20 cursor-pointer",
                   idx === 0 || idx === 3 ? "md:col-span-2" : "md:col-span-1",
                   tilts[idx]
                 )}>
@@ -359,11 +359,11 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="py-8 bg-white">
+      <section className="py-4 md:py-8 bg-white">
         <div className="max-w-7xl mx-auto px-6 space-y-8">
           <h2 className="text-3xl md:text-4xl font-bold text-primary text-center">School Leadership</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-5xl mx-auto">
-            <Card className="overflow-hidden border-none shadow-2xl rounded-[3rem]">
+            <Card className="overflow-hidden border-none shadow-2xl rounded-[2.5rem]">
               <div className="relative h-80 md:h-96">
                 {chairmanImg?.imageUrl && (
                   <Image src={chairmanImg.imageUrl} alt="Chairman" fill className="object-cover" />
@@ -375,7 +375,7 @@ export default function Home() {
                 <p className="text-sm text-muted-foreground italic leading-relaxed">"We don’t just prepare students for exams—we prepare them for life and leadership."</p>
               </CardContent>
             </Card>
-            <Card className="overflow-hidden border-none shadow-2xl rounded-[3rem]">
+            <Card className="overflow-hidden border-none shadow-2xl rounded-[2.5rem]">
               <div className="relative h-80 md:h-96">
                 {principalImg?.imageUrl && (
                   <Image src={principalImg.imageUrl} alt="Principal" fill className="object-cover" />
@@ -391,35 +391,54 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="py-8 bg-primary text-primary-foreground relative overflow-hidden">
-        <div className="absolute top-0 right-0 w-64 h-64 bg-white/5 rounded-full -translate-y-1/2 translate-x-1/2 blur-3xl"></div>
+      <section className="py-12 bg-primary text-primary-foreground relative overflow-hidden">
+        {/* Continuous Scrolling Background */}
+        <div className="absolute inset-0 z-0 opacity-15 pointer-events-none flex overflow-hidden">
+          <div className="flex animate-marquee whitespace-nowrap min-w-full">
+            {gallery.map((img, idx) => (
+              <div key={`scroll-1-${idx}`} className="relative h-full aspect-video min-w-[300px] md:min-w-[400px] mx-2 grayscale brightness-200">
+                <Image src={img.imageUrl} alt="" fill className="object-cover rounded-lg" />
+              </div>
+            ))}
+          </div>
+          <div className="flex animate-marquee whitespace-nowrap min-w-full">
+            {gallery.map((img, idx) => (
+              <div key={`scroll-2-${idx}`} className="relative h-full aspect-video min-w-[300px] md:min-w-[400px] mx-2 grayscale brightness-200">
+                <Image src={img.imageUrl} alt="" fill className="object-cover rounded-lg" />
+              </div>
+            ))}
+          </div>
+        </div>
+
         <div className="max-w-7xl mx-auto px-6 text-center relative z-10">
           <div className="flex flex-col items-center gap-2">
             <div className="text-7xl md:text-9xl font-black text-white">
               <Counter end={100} />
             </div>
             <div className="text-xl md:text-2xl font-bold opacity-90 uppercase tracking-widest text-accent">Board Exam Record</div>
-            <p className="max-w-xl opacity-75 mt-2 text-sm md:text-base">We are proud to have maintained a 100% pass record in the Grade 10 Board Examinations year after year.</p>
+            <p className="max-w-xl opacity-80 mt-2 text-sm md:text-base font-medium">
+              We are proud to have maintained a 100% pass record in the Grade 10 Board Examinations year after year.
+            </p>
           </div>
         </div>
       </section>
 
       <section className="py-8 px-6 bg-white">
-        <div className="max-w-7xl mx-auto bg-secondary rounded-[3rem] md:rounded-[4rem] p-10 md:p-16 text-center text-white space-y-6 relative overflow-hidden shadow-2xl">
+        <div className="max-w-7xl mx-auto bg-secondary rounded-[2.5rem] md:rounded-[3.5rem] p-8 md:p-12 text-center text-white space-y-6 relative overflow-hidden shadow-2xl">
           <div className="absolute top-0 right-0 w-80 h-80 bg-white/10 rounded-full -translate-y-1/2 translate-x-1/2 blur-3xl"></div>
           <div className="absolute bottom-0 left-0 w-80 h-80 bg-primary/10 rounded-full translate-y-1/2 -translate-x-1/2 blur-3xl"></div>
           <div className="relative z-10 space-y-6">
-            <h2 className="text-3xl md:text-6xl font-bold tracking-tight">Admissions Open 2026–27</h2>
+            <h2 className="text-3xl md:text-5xl lg:text-6xl font-bold tracking-tight">Admissions Open 2026–27</h2>
             <div className="flex flex-wrap justify-center gap-4 md:gap-8 text-sm md:text-lg font-medium">
               <span className="flex items-center gap-2"><CheckCircle2 className="text-accent" size={20} /> No Admission Fee</span>
               <span className="flex items-center gap-2"><CheckCircle2 className="text-accent" size={20} /> No Donation Policy</span>
               <span className="flex items-center gap-2"><CheckCircle2 className="text-accent" size={20} /> KG to 10th Grade</span>
             </div>
             <div className="flex flex-col sm:flex-row justify-center gap-4 pt-4">
-              <Button size="lg" variant="default" className="bg-white text-secondary hover:bg-gray-100 font-bold h-14 md:h-16 px-8 md:px-12 text-lg rounded-full shadow-xl" asChild>
+              <Button size="lg" variant="default" className="bg-white text-secondary hover:bg-gray-100 font-bold h-12 md:h-14 px-8 md:px-12 text-lg rounded-full shadow-xl" asChild>
                 <Link href="/admissions">Apply Now</Link>
               </Button>
-              <Button size="lg" variant="outline" className="bg-transparent border-white text-white hover:bg-white hover:text-secondary h-14 md:h-16 px-8 md:px-12 text-lg rounded-full font-bold transition-colors" asChild>
+              <Button size="lg" variant="outline" className="bg-transparent border-white text-white hover:bg-white hover:text-secondary h-12 md:h-14 px-8 md:px-12 text-lg rounded-full font-bold transition-colors" asChild>
                 <Link href="/contact">Contact Us</Link>
               </Button>
             </div>
@@ -436,14 +455,14 @@ export default function Home() {
             </p>
             <div className="space-y-6">
               <div className="flex items-start gap-4">
-                <div className="p-3 bg-primary/10 text-primary rounded-2xl shadow-sm"><MapPin size={24} /></div>
+                <div className="p-3 bg-primary/10 text-primary rounded-xl shadow-sm"><MapPin size={24} /></div>
                 <div>
                   <h4 className="font-bold text-lg mb-1">Address</h4>
                   <p className="text-muted-foreground text-base">No.6 1st Crs, 9th Mn Rd, BTM 1st Stage, Bengaluru, KA 560029</p>
                 </div>
               </div>
               <div className="flex items-start gap-4">
-                <div className="p-3 bg-primary/10 text-primary rounded-2xl shadow-sm"><Phone size={24} /></div>
+                <div className="p-3 bg-primary/10 text-primary rounded-xl shadow-sm"><Phone size={24} /></div>
                 <div>
                   <h4 className="font-bold text-lg mb-1">Call Us</h4>
                   <p className="text-muted-foreground text-base">+91 80 1234 5678</p>
@@ -451,7 +470,7 @@ export default function Home() {
               </div>
             </div>
           </div>
-          <div className="bg-white p-8 md:p-10 rounded-[3rem] shadow-2xl border border-muted/50">
+          <div className="bg-white p-8 md:p-10 rounded-[2.5rem] shadow-2xl border border-muted/50">
             <ContactForm />
           </div>
         </div>
