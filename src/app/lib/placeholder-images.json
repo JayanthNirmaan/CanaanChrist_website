@@ -100,31 +100,31 @@
     {
       "id": "achievement-1",
       "description": "Student Achievement 1",
-      "imageUrl": "/assets/Achievement1.png",
+      "imageUrl": "/assets/Group Image.png",
       "imageHint": "student award"
     },
     {
       "id": "achievement-2",
       "description": "Student Achievement 2",
-      "imageUrl": "/assets/Achievement2.png",
+      "imageUrl": "/assets/Boards Result.png",
       "imageHint": "student honor"
     },
     {
       "id": "achievement-3",
       "description": "Student Achievement 3",
-      "imageUrl": "/assets/Achievement3.png",
+      "imageUrl": "/assets/Student Studying.png",
       "imageHint": "student success"
     },
     {
       "id": "achievement-4",
       "description": "Student Achievement 4",
-      "imageUrl": "/assets/Achievement4.png",
+      "imageUrl": "/assets/Teacher Student.png",
       "imageHint": "top student"
     },
     {
       "id": "achievement-5",
       "description": "Student Achievement 5",
-      "imageUrl": "/assets/Achievement5.png",
+      "imageUrl": "/assets/Student Standing.png",
       "imageHint": "academic excellence"
     },
     {

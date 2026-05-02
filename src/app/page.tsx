@@ -89,9 +89,9 @@ const ScribbleBackground = () => (
   <div className="absolute inset-0 overflow-hidden pointer-events-none select-none">
     <div className="scribble-bg opacity-100"></div>
     <svg className="absolute inset-0 w-full h-full opacity-50" viewBox="0 0 1000 1000" fill="none" xmlns="http://www.w3.org/2000/svg">
-      <path d="M100,200 Q250,50 400,200 T700,200" stroke="currentColor" strokeWidth="2" strokeDasharray="1000" className="text-primary animate-draw-line" />
-      <path d="M50,800 Q300,950 600,800 T950,800" stroke="currentColor" strokeWidth="2" strokeDasharray="1000" className="text-secondary animate-draw-line" style={{ animationDelay: '1s' }} />
-      <path d="M800,100 Q950,300 800,500 T800,900" stroke="currentColor" strokeWidth="2" strokeDasharray="1000" className="text-accent animate-draw-line" style={{ animationDelay: '2s' }} />
+      <path d="M100,200 Q250,50 400,200 T700,200" stroke="currentColor" strokeWidth="1.5" strokeDasharray="1000" className="text-primary animate-draw-line" />
+      <path d="M50,800 Q300,950 600,800 T950,800" stroke="currentColor" strokeWidth="1.5" strokeDasharray="1000" className="text-secondary animate-draw-line" style={{ animationDelay: '1s' }} />
+      <path d="M800,100 Q950,300 800,500 T800,900" stroke="currentColor" strokeWidth="1.5" strokeDasharray="1000" className="text-accent animate-draw-line" style={{ animationDelay: '2s' }} />
     </svg>
     
     {/* Background Icons with 50% opacity and thin stroke (strokeWidth=1.5) */}
