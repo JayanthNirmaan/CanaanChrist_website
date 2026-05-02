@@ -1,3 +1,4 @@
+
 import Image from 'next/image';
 import { Navbar } from '@/components/layout/Navbar';
 import { Footer } from '@/components/layout/Footer';
@@ -6,6 +7,7 @@ import { History, Target, Eye, Shield } from 'lucide-react';
 
 const principalImg = PlaceHolderImages.find(img => img.id === 'principal');
 const chairmanImg = PlaceHolderImages.find(img => img.id === 'chairman');
+const staffImg = PlaceHolderImages.find(img => img.id === 'staff-representative');
 const gallery = PlaceHolderImages.filter(img => img.id.startsWith('gallery'));
 
 export default function AboutPage() {
@@ -28,15 +30,13 @@ export default function AboutPage() {
             {/* Left: Sticky Image Container */}
             <div className="lg:sticky lg:top-32 self-start h-fit">
               <div className="relative h-[600px] rounded-3xl overflow-hidden shadow-2xl border-8 border-muted/20">
-                {gallery[1]?.imageUrl && (
-                  <Image 
-                    src={gallery[1].imageUrl} 
-                    alt="School Campus" 
-                    fill 
-                    className="object-cover"
-                    data-ai-hint="school campus"
-                  />
-                )}
+                <Image 
+                  src="/assets/CanaanChristSchool.png" 
+                  alt="School Campus" 
+                  fill 
+                  className="object-cover"
+                  data-ai-hint="school campus"
+                />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent pointer-events-none" />
                 <div className="absolute bottom-8 left-8 text-white">
                   <h3 className="text-2xl font-bold">Our Campus</h3>
@@ -104,9 +104,11 @@ export default function AboutPage() {
         </div>
       </section>
 
-      {/* Leadership Messages */}
+      {/* Leadership & Staff Messages */}
       <section className="py-16 bg-white border-t">
-        <div className="max-w-7xl mx-auto px-6 space-y-16">
+        <div className="max-w-7xl mx-auto px-6 space-y-24">
+          
+          {/* Chairman */}
           <div className="grid grid-cols-1 md:grid-cols-2 gap-20 items-center">
             <div className="space-y-6">
               <h2 className="text-3xl font-bold text-primary">Chairman's Message</h2>
@@ -130,6 +132,7 @@ export default function AboutPage() {
             </div>
           </div>
 
+          {/* Principal */}
           <div className="grid grid-cols-1 md:grid-cols-2 gap-20 items-center">
             <div className="relative h-[500px] rounded-[3rem] overflow-hidden shadow-xl md:order-last">
               {principalImg?.imageUrl && (
@@ -152,6 +155,37 @@ export default function AboutPage() {
               </div>
             </div>
           </div>
+
+          {/* Staff Message */}
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-20 items-center">
+            <div className="space-y-6">
+              <h2 className="text-3xl font-bold text-primary">Staff's Perspective</h2>
+              <div className="space-y-4 text-lg text-muted-foreground leading-relaxed">
+                <p>
+                  "At Canaan Christ Public School, our educators are more than just teachers—they are mentors, guides, and champions for every student's potential."
+                </p>
+                <p>
+                  "We work tirelessly to create a classroom environment that is safe, engaging, and intellectually stimulating, ensuring that 'Righteousness and Truth' aren't just words on a crest, but values lived in every lesson. We believe that when students feel seen and supported, they can achieve anything."
+                </p>
+              </div>
+              <div>
+                <h4 className="text-xl font-bold">Senior Faculty</h4>
+                <p className="text-primary">Teaching Staff Representative</p>
+              </div>
+            </div>
+            <div className="relative h-[500px] rounded-[3rem] overflow-hidden shadow-xl">
+              {staffImg?.imageUrl && (
+                <Image 
+                  src={staffImg.imageUrl} 
+                  alt="Staff Representative" 
+                  fill 
+                  className="object-cover"
+                  data-ai-hint="school teachers"
+                />
+              )}
+            </div>
+          </div>
+
         </div>
       </section>
 

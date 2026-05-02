@@ -26,6 +26,12 @@
       "imageHint": "chairman portrait"
     },
     {
+      "id": "staff-representative",
+      "description": "Diverse group of smiling school teachers",
+      "imageUrl": "https://picsum.photos/seed/staff/800/600",
+      "imageHint": "school teachers"
+    },
+    {
       "id": "gallery-1",
       "description": "Cultural Activity",
       "imageUrl": "/assets/Cultural Activity.png",
