@@ -94,7 +94,6 @@ const ScribbleBackground = () => (
       <path d="M800,100 Q950,300 800,500 T800,900" stroke="currentColor" strokeWidth="1.5" strokeDasharray="1000" className="text-accent animate-draw-line" style={{ animationDelay: '2s' }} />
     </svg>
     
-    {/* Background Icons with 50% opacity and thin stroke (strokeWidth=1.5) */}
     <div className="absolute top-[15%] left-[10%] animate-float text-primary opacity-50" style={{ animationDelay: '0s' }}>
       <Pencil size={85} strokeWidth={1.5} />
     </div>
@@ -116,7 +115,6 @@ const ScribbleBackground = () => (
     <div className="absolute top-[10%] right-[40%] animate-float text-accent opacity-50" style={{ animationDelay: '4.5s' }}>
       <Wind size={85} strokeWidth={1.5} />
     </div>
-
     <div className="absolute top-[5%] left-[30%] animate-float text-primary opacity-50" style={{ animationDelay: '2.5s' }}>
       <Cloud size={95} strokeWidth={1.5} />
     </div>
@@ -281,7 +279,7 @@ export default function Home() {
           <div className="flex flex-col md:flex-row justify-between items-end gap-4 text-center md:text-left">
             <div className="space-y-2">
               <h2 className="text-3xl md:text-4xl font-bold text-primary">Campus Facilities</h2>
-              <p className="text-muted-foreground max-w-md text-sm md:text-base">Investing in infrastructure to support intellectual and creative growth.</p>
+              <p className="text-muted-foreground max-md text-sm md:text-base">Investing in infrastructure to support intellectual and creative growth.</p>
             </div>
             <Button variant="outline" className="rounded-full border-primary text-primary hover:bg-primary hover:text-white transition-all" asChild>
               <Link href="/contact">Inquire for Visit</Link>
@@ -394,32 +392,31 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="py-8 bg-primary text-primary-foreground relative overflow-hidden">
+      <section className="py-12 md:py-16 bg-primary/90 relative overflow-hidden min-h-[500px] flex items-center">
         {/* Continuous Scrolling Background */}
-        <div className="absolute inset-0 z-0 opacity-15 pointer-events-none flex overflow-hidden">
-          <div className="flex animate-marquee whitespace-nowrap min-w-full">
+        <div className="absolute inset-0 z-0 opacity-40 pointer-events-none flex flex-col justify-center overflow-hidden">
+          <div className="flex animate-marquee whitespace-nowrap min-w-full items-center gap-6">
             {achievementImages.map((img, idx) => (
-              <div key={`scroll-1-${idx}`} className="relative h-full aspect-video min-w-[300px] md:min-w-[400px] mx-2 grayscale brightness-200">
-                <Image src={img.imageUrl} alt="" fill className="object-cover rounded-lg" />
+              <div key={`scroll-1-${idx}`} className="relative h-[250px] md:h-[350px] aspect-[4/3] min-w-[300px] md:min-w-[450px] rounded-[2rem] overflow-hidden shadow-2xl">
+                <Image src={img.imageUrl} alt="" fill className="object-cover" />
               </div>
             ))}
-          </div>
-          <div className="flex animate-marquee whitespace-nowrap min-w-full">
+            {/* Duplicate for seamless loop */}
             {achievementImages.map((img, idx) => (
-              <div key={`scroll-2-${idx}`} className="relative h-full aspect-video min-w-[300px] md:min-w-[400px] mx-2 grayscale brightness-200">
-                <Image src={img.imageUrl} alt="" fill className="object-cover rounded-lg" />
+              <div key={`scroll-1-dup-${idx}`} className="relative h-[250px] md:h-[350px] aspect-[4/3] min-w-[300px] md:min-w-[450px] rounded-[2rem] overflow-hidden shadow-2xl">
+                <Image src={img.imageUrl} alt="" fill className="object-cover" />
               </div>
             ))}
           </div>
         </div>
 
-        <div className="max-w-7xl mx-auto px-6 text-center relative z-10">
-          <div className="flex flex-col items-center gap-2">
-            <div className="text-7xl md:text-9xl font-black text-white">
+        <div className="max-w-7xl mx-auto px-6 text-center relative z-10 w-full py-12">
+          <div className="flex flex-col items-center gap-2 drop-shadow-2xl">
+            <div className="text-8xl md:text-[12rem] font-black text-white leading-none">
               <Counter end={100} />
             </div>
-            <div className="text-xl md:text-2xl font-bold opacity-90 uppercase tracking-widest text-accent">Board Exam Record</div>
-            <p className="max-w-xl opacity-80 mt-2 text-sm md:text-base font-medium">
+            <div className="text-2xl md:text-4xl font-bold text-accent uppercase tracking-[0.2em]">Board Exam Record</div>
+            <p className="max-w-2xl text-white mt-4 text-lg md:text-xl font-semibold leading-relaxed">
               We are proud to have maintained a 100% pass record in the Grade 10 Board Examinations year after year.
             </p>
           </div>
