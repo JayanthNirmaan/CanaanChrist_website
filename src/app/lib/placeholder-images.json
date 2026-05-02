@@ -57,7 +57,7 @@
     },
     {
       "id": "gallery-6",
-      "description": "Meditation Sesion",
+      "description": "Meditation Session",
       "imageUrl": "/assets/Meditation Session.png",
       "imageHint": "graduation day"
     },
@@ -75,13 +75,13 @@
     },
     {
       "id": "gallery-9",
-      "description": "Kindergarden Race",
+      "description": "Kindergarten Race",
       "imageUrl": "/assets/Kindergarden Race.png",
       "imageHint": "school library"
     },
     {
       "id": "gallery-10",
-      "description": "Kindergarden Outdoor Activity",
+      "description": "Kindergarten Outdoor Activity",
       "imageUrl": "/assets/Kindergarden Outdoor Activity.png",
       "imageHint": "school bus"
     },
@@ -96,6 +96,36 @@
       "description": "Interactive Lessons",
       "imageUrl": "/assets/Interactive Lessons.png",
       "imageHint": "school choir"
+    },
+    {
+      "id": "achievement-1",
+      "description": "Student Achievement 1",
+      "imageUrl": "/assets/Achievement1.png",
+      "imageHint": "student award"
+    },
+    {
+      "id": "achievement-2",
+      "description": "Student Achievement 2",
+      "imageUrl": "/assets/Achievement2.png",
+      "imageHint": "student honor"
+    },
+    {
+      "id": "achievement-3",
+      "description": "Student Achievement 3",
+      "imageUrl": "/assets/Achievement3.png",
+      "imageHint": "student success"
+    },
+    {
+      "id": "achievement-4",
+      "description": "Student Achievement 4",
+      "imageUrl": "/assets/Achievement4.png",
+      "imageHint": "top student"
+    },
+    {
+      "id": "achievement-5",
+      "description": "Student Achievement 5",
+      "imageUrl": "/assets/Achievement5.png",
+      "imageHint": "academic excellence"
     },
     {
       "id": "facility-smart-classroom",

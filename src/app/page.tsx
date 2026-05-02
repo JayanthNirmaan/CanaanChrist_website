@@ -1,3 +1,4 @@
+
 import Image from 'next/image';
 import Link from 'next/link';
 import { Button } from '@/components/ui/button';
@@ -80,6 +81,7 @@ const facilities = [
 ];
 
 const gallery = PlaceHolderImages.filter(img => img.id.startsWith('gallery'));
+const achievementImages = PlaceHolderImages.filter(img => img.id.startsWith('achievement-'));
 const chairmanImg = PlaceHolderImages.find(img => img.id === 'chairman');
 const principalImg = PlaceHolderImages.find(img => img.id === 'principal');
 
@@ -87,44 +89,44 @@ const ScribbleBackground = () => (
   <div className="absolute inset-0 overflow-hidden pointer-events-none select-none">
     <div className="scribble-bg opacity-100"></div>
     <svg className="absolute inset-0 w-full h-full opacity-50" viewBox="0 0 1000 1000" fill="none" xmlns="http://www.w3.org/2000/svg">
-      <path d="M100,200 Q250,50 400,200 T700,200" stroke="currentColor" strokeWidth="6" strokeDasharray="1000" className="text-primary animate-draw-line" />
-      <path d="M50,800 Q300,950 600,800 T950,800" stroke="currentColor" strokeWidth="6" strokeDasharray="1000" className="text-secondary animate-draw-line" style={{ animationDelay: '1s' }} />
-      <path d="M800,100 Q950,300 800,500 T800,900" stroke="currentColor" strokeWidth="6" strokeDasharray="1000" className="text-accent animate-draw-line" style={{ animationDelay: '2s' }} />
+      <path d="M100,200 Q250,50 400,200 T700,200" stroke="currentColor" strokeWidth="8" strokeDasharray="1000" className="text-primary animate-draw-line" />
+      <path d="M50,800 Q300,950 600,800 T950,800" stroke="currentColor" strokeWidth="8" strokeDasharray="1000" className="text-secondary animate-draw-line" style={{ animationDelay: '1s' }} />
+      <path d="M800,100 Q950,300 800,500 T800,900" stroke="currentColor" strokeWidth="8" strokeDasharray="1000" className="text-accent animate-draw-line" style={{ animationDelay: '2s' }} />
     </svg>
     
     <div className="absolute top-[15%] left-[10%] animate-float text-primary opacity-50" style={{ animationDelay: '0s' }}>
-      <Pencil size={85} strokeWidth={2} />
+      <Pencil size={85} strokeWidth={3} />
     </div>
     <div className="absolute top-[20%] right-[15%] animate-float text-secondary opacity-50" style={{ animationDelay: '1s' }}>
-      <Rocket size={110} strokeWidth={2} />
+      <Rocket size={110} strokeWidth={3} />
     </div>
     <div className="absolute bottom-[20%] left-[15%] animate-float text-accent opacity-50" style={{ animationDelay: '2s' }}>
-      <GraduationCap size={95} strokeWidth={2} />
+      <GraduationCap size={95} strokeWidth={3} />
     </div>
     <div className="absolute bottom-[25%] right-[20%] animate-float text-primary opacity-50" style={{ animationDelay: '1.5s' }}>
-      <BookOpen size={90} strokeWidth={2} />
+      <BookOpen size={90} strokeWidth={3} />
     </div>
     <div className="absolute top-[50%] right-[5%] animate-float text-secondary opacity-50" style={{ animationDelay: '0.5s' }}>
-      <Palette size={80} strokeWidth={2} />
+      <Palette size={80} strokeWidth={3} />
     </div>
     <div className="absolute top-[60%] left-[5%] animate-float text-accent opacity-50" style={{ animationDelay: '3.5s' }}>
-      <Music size={75} strokeWidth={2} />
+      <Music size={75} strokeWidth={3} />
     </div>
     <div className="absolute top-[10%] right-[40%] animate-float text-accent opacity-50" style={{ animationDelay: '4.5s' }}>
-      <Wind size={85} strokeWidth={2} />
+      <Wind size={85} strokeWidth={3} />
     </div>
 
     <div className="absolute top-[5%] left-[30%] animate-float text-primary opacity-50" style={{ animationDelay: '2.5s' }}>
-      <Cloud size={95} strokeWidth={2} />
+      <Cloud size={95} strokeWidth={3} />
     </div>
     <div className="absolute bottom-[10%] left-[40%] animate-float text-secondary opacity-50" style={{ animationDelay: '1.2s' }}>
-      <Shapes size={85} strokeWidth={2} />
+      <Shapes size={85} strokeWidth={3} />
     </div>
     <div className="absolute bottom-[5%] right-[10%] animate-float text-primary opacity-50" style={{ animationDelay: '0.8s' }}>
-      <Smile size={80} strokeWidth={2} />
+      <Smile size={80} strokeWidth={3} />
     </div>
     <div className="absolute top-[35%] left-[12%] animate-float text-secondary opacity-50" style={{ animationDelay: '4s' }}>
-      <Trophy size={90} strokeWidth={2} />
+      <Trophy size={90} strokeWidth={3} />
     </div>
   </div>
 );
@@ -165,14 +167,14 @@ export default function Home() {
       </section>
 
       {/* Video Section */}
-      <section className="py-4 md:py-8 bg-white overflow-hidden">
+      <section className="py-4 md:py-6 bg-white overflow-hidden">
         <div className="max-w-5xl mx-auto px-6">
           <div className="relative group">
             <div className="absolute -top-6 -left-6 text-accent animate-float opacity-40">
-              <Wind size={48} strokeWidth={2} />
+              <Wind size={48} strokeWidth={3} />
             </div>
             <div className="absolute -bottom-6 -right-6 text-secondary animate-float opacity-40" style={{ animationDelay: '1s' }}>
-              <Palette size={48} strokeWidth={2} />
+              <Palette size={48} strokeWidth={3} />
             </div>
             
             <div className="relative aspect-video rounded-[2.5rem] overflow-hidden shadow-2xl border-4 border-white ring-8 ring-primary/5 transition-transform duration-500 hover:scale-[1.01]">
@@ -188,7 +190,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="py-8 bg-white relative group/section transition-all duration-700 overflow-hidden">
+      <section className="py-4 md:py-6 bg-white relative group/section transition-all duration-700 overflow-hidden">
         <div className="absolute top-1/2 right-[25%] -translate-y-1/2 translate-x-1/2 w-0 h-0 bg-primary rounded-full transition-all duration-1000 ease-in-out group-has-[.image-trigger:hover]/section:w-[300vw] group-has-[.image-trigger:hover]/section:h-[300vw] pointer-events-none z-0" />
 
         <div className="relative z-10 max-w-7xl mx-auto px-6 grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
@@ -228,7 +230,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="py-4 md:py-8 bg-muted/30">
+      <section className="py-4 md:py-6 bg-muted/30">
         <div className="max-w-7xl mx-auto px-6 grid grid-cols-1 md:grid-cols-2 gap-8">
           <div className="p-8 md:p-10 bg-primary rounded-[2.5rem] text-primary-foreground shadow-xl space-y-4 hover:-translate-y-2 transition-all relative overflow-hidden group">
             <div className="absolute -right-8 -bottom-8 text-white/40 opacity-0 group-hover:opacity-100 group-hover:scale-125 transition-all duration-700 pointer-events-none rotate-12">
@@ -251,7 +253,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="py-4 md:py-8 bg-white">
+      <section className="py-4 md:py-6 bg-white">
         <div className="max-w-7xl mx-auto px-6 text-center space-y-8">
           <div className="space-y-4">
             <h2 className="text-3xl md:text-4xl font-bold text-primary">Our Core Values</h2>
@@ -273,7 +275,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="py-4 md:py-8 bg-muted/20">
+      <section className="py-4 md:py-6 bg-muted/20">
         <div className="max-w-7xl mx-auto px-6 space-y-8">
           <div className="flex flex-col md:flex-row justify-between items-end gap-4 text-center md:text-left">
             <div className="space-y-2">
@@ -322,7 +324,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="py-4 md:py-8 bg-white overflow-hidden">
+      <section className="py-4 md:py-6 bg-white overflow-hidden">
         <div className="max-w-7xl mx-auto px-6 space-y-8">
           <div className="flex flex-col md:flex-row justify-between items-end gap-4 text-center md:text-left">
             <div className="space-y-2">
@@ -359,7 +361,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="py-4 md:py-8 bg-white">
+      <section className="py-4 md:py-6 bg-white">
         <div className="max-w-7xl mx-auto px-6 space-y-8">
           <h2 className="text-3xl md:text-4xl font-bold text-primary text-center">School Leadership</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-5xl mx-auto">
@@ -391,18 +393,18 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="py-12 bg-primary text-primary-foreground relative overflow-hidden">
+      <section className="py-8 bg-primary text-primary-foreground relative overflow-hidden">
         {/* Continuous Scrolling Background */}
         <div className="absolute inset-0 z-0 opacity-15 pointer-events-none flex overflow-hidden">
           <div className="flex animate-marquee whitespace-nowrap min-w-full">
-            {gallery.map((img, idx) => (
+            {achievementImages.map((img, idx) => (
               <div key={`scroll-1-${idx}`} className="relative h-full aspect-video min-w-[300px] md:min-w-[400px] mx-2 grayscale brightness-200">
                 <Image src={img.imageUrl} alt="" fill className="object-cover rounded-lg" />
               </div>
             ))}
           </div>
           <div className="flex animate-marquee whitespace-nowrap min-w-full">
-            {gallery.map((img, idx) => (
+            {achievementImages.map((img, idx) => (
               <div key={`scroll-2-${idx}`} className="relative h-full aspect-video min-w-[300px] md:min-w-[400px] mx-2 grayscale brightness-200">
                 <Image src={img.imageUrl} alt="" fill className="object-cover rounded-lg" />
               </div>
@@ -423,7 +425,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="py-8 px-6 bg-white">
+      <section className="py-6 px-6 bg-white">
         <div className="max-w-7xl mx-auto bg-secondary rounded-[2.5rem] md:rounded-[3.5rem] p-8 md:p-12 text-center text-white space-y-6 relative overflow-hidden shadow-2xl">
           <div className="absolute top-0 right-0 w-80 h-80 bg-white/10 rounded-full -translate-y-1/2 translate-x-1/2 blur-3xl"></div>
           <div className="absolute bottom-0 left-0 w-80 h-80 bg-primary/10 rounded-full translate-y-1/2 -translate-x-1/2 blur-3xl"></div>
@@ -446,7 +448,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section id="contact" className="py-8 bg-white">
+      <section id="contact" className="py-6 bg-white">
         <div className="max-w-7xl mx-auto px-6 grid grid-cols-1 md:grid-cols-2 gap-12">
           <div className="space-y-6">
             <h2 className="text-3xl md:text-4xl font-bold text-primary">Get in Touch</h2>
