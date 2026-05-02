@@ -245,7 +245,7 @@ export default function Home() {
             </div>
             <h3 className="text-2xl md:text-3xl font-bold relative z-10">Our Mission</h3>
             <p className="text-base md:text-lg opacity-90 leading-relaxed relative z-10">
-              Providing affordable, quality education that empowers every child—regardless of background—to grow intellectually, emotionally, and ethically. We aim to foster an inclusive learning environment.
+              Our mission is to provide affordable, quality education that empowers every child—regardless of background—to grow intellectually, emotionally, and ethically. We aim to foster an inclusive learning environment that encourages creativity, critical thinking, and a deep sense of social responsibility, while staying connected to the local community and culture of Bangalore.
             </p>
           </div>
         </div>
