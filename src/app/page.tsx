@@ -89,43 +89,43 @@ const ScribbleBackground = () => (
   <div className="absolute inset-0 overflow-hidden pointer-events-none select-none">
     <div className="scribble-bg opacity-100"></div>
     <svg className="absolute inset-0 w-full h-full opacity-50" viewBox="0 0 1000 1000" fill="none" xmlns="http://www.w3.org/2000/svg">
-      <path d="M100,200 Q250,50 400,200 T700,200" stroke="currentColor" strokeWidth="1.5" strokeDasharray="1000" className="text-primary animate-draw-line" />
-      <path d="M50,800 Q300,950 600,800 T950,800" stroke="currentColor" strokeWidth="1.5" strokeDasharray="1000" className="text-secondary animate-draw-line" style={{ animationDelay: '1s' }} />
-      <path d="M800,100 Q950,300 800,500 T800,900" stroke="currentColor" strokeWidth="1.5" strokeDasharray="1000" className="text-accent animate-draw-line" style={{ animationDelay: '2s' }} />
+      <path d="M100,200 Q250,50 400,200 T700,200" stroke="currentColor" strokeWidth="1" strokeDasharray="1000" className="text-primary animate-draw-line" />
+      <path d="M50,800 Q300,950 600,800 T950,800" stroke="currentColor" strokeWidth="1" strokeDasharray="1000" className="text-secondary animate-draw-line" style={{ animationDelay: '1s' }} />
+      <path d="M800,100 Q950,300 800,500 T800,900" stroke="currentColor" strokeWidth="1" strokeDasharray="1000" className="text-accent animate-draw-line" style={{ animationDelay: '2s' }} />
     </svg>
     
     <div className="absolute top-[15%] left-[10%] animate-float text-primary opacity-50" style={{ animationDelay: '0s' }}>
-      <Pencil size={85} strokeWidth={1.5} />
+      <Pencil size={85} strokeWidth={1} />
     </div>
     <div className="absolute top-[20%] right-[15%] animate-float text-secondary opacity-50" style={{ animationDelay: '1s' }}>
-      <Rocket size={110} strokeWidth={1.5} />
+      <Rocket size={110} strokeWidth={1} />
     </div>
     <div className="absolute bottom-[20%] left-[15%] animate-float text-accent opacity-50" style={{ animationDelay: '2s' }}>
-      <GraduationCap size={95} strokeWidth={1.5} />
+      <GraduationCap size={95} strokeWidth={1} />
     </div>
     <div className="absolute bottom-[25%] right-[20%] animate-float text-primary opacity-50" style={{ animationDelay: '1.5s' }}>
-      <BookOpen size={90} strokeWidth={1.5} />
+      <BookOpen size={90} strokeWidth={1} />
     </div>
     <div className="absolute top-[50%] right-[5%] animate-float text-secondary opacity-50" style={{ animationDelay: '0.5s' }}>
-      <Palette size={80} strokeWidth={1.5} />
+      <Palette size={80} strokeWidth={1} />
     </div>
     <div className="absolute top-[60%] left-[5%] animate-float text-accent opacity-50" style={{ animationDelay: '3.5s' }}>
-      <Music size={75} strokeWidth={1.5} />
+      <Music size={75} strokeWidth={1} />
     </div>
     <div className="absolute top-[10%] right-[40%] animate-float text-accent opacity-50" style={{ animationDelay: '4.5s' }}>
-      <Wind size={85} strokeWidth={1.5} />
+      <Wind size={85} strokeWidth={1} />
     </div>
     <div className="absolute top-[5%] left-[30%] animate-float text-primary opacity-50" style={{ animationDelay: '2.5s' }}>
-      <Cloud size={95} strokeWidth={1.5} />
+      <Cloud size={95} strokeWidth={1} />
     </div>
     <div className="absolute bottom-[10%] left-[40%] animate-float text-secondary opacity-50" style={{ animationDelay: '1.2s' }}>
-      <Shapes size={85} strokeWidth={1.5} />
+      <Shapes size={85} strokeWidth={1} />
     </div>
     <div className="absolute bottom-[5%] right-[10%] animate-float text-primary opacity-50" style={{ animationDelay: '0.8s' }}>
-      <Smile size={80} strokeWidth={1.5} />
+      <Smile size={80} strokeWidth={1} />
     </div>
     <div className="absolute top-[35%] left-[12%] animate-float text-secondary opacity-50" style={{ animationDelay: '4s' }}>
-      <Trophy size={90} strokeWidth={1.5} />
+      <Trophy size={90} strokeWidth={1} />
     </div>
   </div>
 );
@@ -170,10 +170,10 @@ export default function Home() {
         <div className="max-w-5xl mx-auto px-6">
           <div className="relative group">
             <div className="absolute -top-6 -left-6 text-accent animate-float opacity-40">
-              <Wind size={48} strokeWidth={1.5} />
+              <Wind size={48} strokeWidth={1} />
             </div>
             <div className="absolute -bottom-6 -right-6 text-secondary animate-float opacity-40" style={{ animationDelay: '1s' }}>
-              <Palette size={48} strokeWidth={1.5} />
+              <Palette size={48} strokeWidth={1} />
             </div>
             
             <div className="relative aspect-video rounded-[2.5rem] overflow-hidden shadow-2xl border-4 border-white ring-8 ring-primary/5 transition-transform duration-500 hover:scale-[1.01]">
@@ -263,7 +263,7 @@ export default function Home() {
               <div key={i} className="p-6 bg-white rounded-[1.5rem] shadow-sm border hover:shadow-xl hover:border-primary/20 transition-all group flex flex-col gap-3 text-left hover:-rotate-1 hover:scale-105">
                 <div className="flex items-center gap-4">
                   <div className="w-10 h-10 bg-primary/10 rounded-xl flex items-center justify-center text-primary group-hover:bg-primary group-hover:text-white transition-all transform group-hover:animate-wiggle shrink-0">
-                    <v.icon size={20} strokeWidth={1.5} />
+                    <v.icon size={20} strokeWidth={1} />
                   </div>
                   <h4 className="text-xl font-bold text-foreground group-hover:text-primary transition-colors">{v.title}</h4>
                 </div>
@@ -392,31 +392,31 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="py-12 md:py-16 bg-primary/90 relative overflow-hidden min-h-[500px] flex items-center">
-        {/* Continuous Scrolling Background */}
-        <div className="absolute inset-0 z-0 opacity-40 pointer-events-none flex flex-col justify-center overflow-hidden">
+      <section className="py-4 bg-primary/70 relative overflow-hidden flex items-center">
+        {/* Continuous Scrolling Background - Size adjusted to image height */}
+        <div className="absolute inset-0 z-0 opacity-60 pointer-events-none flex flex-col justify-center overflow-hidden">
           <div className="flex animate-marquee whitespace-nowrap min-w-full items-center gap-6">
             {achievementImages.map((img, idx) => (
-              <div key={`scroll-1-${idx}`} className="relative h-[250px] md:h-[350px] aspect-[4/3] min-w-[300px] md:min-w-[450px] rounded-[2rem] overflow-hidden shadow-2xl">
+              <div key={`scroll-1-${idx}`} className="relative h-[250px] md:h-[400px] aspect-[4/3] min-w-[300px] md:min-w-[530px] rounded-[2rem] overflow-hidden shadow-2xl">
                 <Image src={img.imageUrl} alt="" fill className="object-cover" />
               </div>
             ))}
             {/* Duplicate for seamless loop */}
             {achievementImages.map((img, idx) => (
-              <div key={`scroll-1-dup-${idx}`} className="relative h-[250px] md:h-[350px] aspect-[4/3] min-w-[300px] md:min-w-[450px] rounded-[2rem] overflow-hidden shadow-2xl">
+              <div key={`scroll-1-dup-${idx}`} className="relative h-[250px] md:h-[400px] aspect-[4/3] min-w-[300px] md:min-w-[530px] rounded-[2rem] overflow-hidden shadow-2xl">
                 <Image src={img.imageUrl} alt="" fill className="object-cover" />
               </div>
             ))}
           </div>
         </div>
 
-        <div className="max-w-7xl mx-auto px-6 text-center relative z-10 w-full py-12">
-          <div className="flex flex-col items-center gap-2 drop-shadow-2xl">
-            <div className="text-8xl md:text-[12rem] font-black text-white leading-none">
+        <div className="max-w-7xl mx-auto px-6 text-center relative z-10 w-full py-6 md:py-10">
+          <div className="flex flex-col items-center gap-1 drop-shadow-2xl">
+            <div className="text-6xl md:text-[10rem] font-black text-white leading-none">
               <Counter end={100} />
             </div>
-            <div className="text-2xl md:text-4xl font-bold text-accent uppercase tracking-[0.2em]">Board Exam Record</div>
-            <p className="max-w-2xl text-white mt-4 text-lg md:text-xl font-semibold leading-relaxed">
+            <div className="text-xl md:text-3xl font-bold text-accent uppercase tracking-[0.2em]">Board Exam Record</div>
+            <p className="max-w-xl text-white mt-2 text-sm md:text-lg font-semibold leading-relaxed">
               We are proud to have maintained a 100% pass record in the Grade 10 Board Examinations year after year.
             </p>
           </div>
