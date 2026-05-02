@@ -176,7 +176,7 @@ export default function AboutPage() {
             <div className="relative h-[500px] rounded-[3rem] overflow-hidden shadow-xl">
               {staffImg?.imageUrl && (
                 <Image 
-                  src={staffImg.imageUrl} 
+                  src="/assets/Staff.JPG" 
                   alt="Staff Representative" 
                   fill 
                   className="object-cover"

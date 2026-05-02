@@ -28,7 +28,7 @@
     {
       "id": "staff-representative",
       "description": "Diverse group of smiling school teachers",
-      "imageUrl": "https://picsum.photos/seed/staff/800/600",
+      "imageUrl": "/assets/Staff.JPG",
       "imageHint": "school teachers"
     },
     {

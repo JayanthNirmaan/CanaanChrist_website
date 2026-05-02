@@ -308,7 +308,7 @@ export default function Home() {
                       <f.icon size={24} />
                     </div>
                     <div className="space-y-2">
-                      <h4 className="text-xl font-bold text-foreground group-hover:text-white transition-colors">
+                      <h4 className="text-2xl font-bold text-foreground group-hover:text-white transition-colors">
                         {f.title}
                       </h4>
                       <p className="text-muted-foreground text-xs leading-relaxed group-hover:text-white/90 transition-all duration-300 line-clamp-2 group-hover:line-clamp-none">
