@@ -5,6 +5,9 @@ import { Toaster } from '@/components/ui/toaster';
 export const metadata: Metadata = {
   title: 'Canaan Christ Public School | Excellence in Education',
   description: 'Canaan Christ Public School (Canaan Connect) offers state syllabus education from KG to 10th grade in BTM Layout, Bengaluru.',
+  icons: {
+    icon: '/assets/Canaan Christ logo.png',
+  },
 };
 
 export default function RootLayout({
