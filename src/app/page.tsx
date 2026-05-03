@@ -392,9 +392,9 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="py-4 bg-primary/70 relative overflow-hidden flex items-center">
+      <section className="bg-primary/50 relative overflow-hidden flex items-center">
         {/* Continuous Scrolling Background - Size adjusted to image height */}
-        <div className="absolute inset-0 z-0 opacity-60 pointer-events-none flex flex-col justify-center overflow-hidden">
+        <div className="absolute inset-0 z-0 opacity-80 pointer-events-none flex flex-col justify-center overflow-hidden">
           <div className="flex animate-marquee whitespace-nowrap min-w-full items-center gap-6">
             {achievementImages.map((img, idx) => (
               <div key={`scroll-1-${idx}`} className="relative h-[250px] md:h-[400px] aspect-[4/3] min-w-[300px] md:min-w-[530px] rounded-[2rem] overflow-hidden shadow-2xl">
