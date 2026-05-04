@@ -32,49 +32,49 @@ const facilities = [
   { 
     icon: Monitor, 
     title: 'Smart Classrooms', 
-    desc: 'Well-equipped with smart boards, projectors, and proper ventilation.',
+    desc: 'Well-equipped with smart boards, projectors, and proper ventilation for an interactive learning experience.',
     imageId: 'facility-smart-classroom'
   },
   { 
     icon: FlaskConical, 
     title: 'Science Laboratory', 
-    desc: 'Hands-on learning for physics, chemistry, and biology.',
+    desc: 'Hands-on learning for physics, chemistry, and biology with modern equipment and safety standards.',
     imageId: 'facility-science-lab'
   },
   { 
     icon: Cpu, 
     title: 'Robotics Lab', 
-    desc: 'Innovation and robotics lab for future-ready skills.',
+    desc: 'Innovation and robotics lab equipped with the latest technology to foster future-ready STEM skills.',
     imageId: 'facility-robotics'
   },
   { 
     icon: LibraryIcon, 
     title: 'Digital Library', 
-    desc: 'Resources including books, journals, and digital assets.',
+    desc: 'A vast collection of resources including traditional books, academic journals, and modern digital assets.',
     imageId: 'facility-library'
   },
   { 
     icon: Languages, 
     title: 'Language Lab', 
-    desc: 'Focused training for communication and linguistic skills.',
+    desc: 'Focused training for communication and linguistic skills to excel in a globalized environment.',
     imageId: 'facility-language'
   },
   { 
     icon: Zap, 
     title: 'Playground', 
-    desc: 'Safe spaces for kindergarten and primary students.',
+    desc: 'Safe, colorful, and engaging spaces designed specifically for kindergarten and primary students to play and grow.',
     imageId: 'facility-playground'
   },
   { 
     icon: Video, 
     title: 'Auditorium', 
-    desc: 'A hub for cultural activities, seminars, and events.',
+    desc: 'A vibrant hub for cultural activities, academic seminars, student performances, and school events.',
     imageId: 'facility-auditorium'
   },
   { 
     icon: Bus, 
     title: 'Transport', 
-    desc: 'Safe and reliable school transport facility.',
+    desc: 'Safe, reliable, and well-monitored school transport facility covering major routes in the BTM Layout area.',
     imageId: 'facility-transport'
   },
 ];
@@ -284,40 +284,82 @@ export default function Home() {
               <Link href="/contact">Inquire for Visit</Link>
             </Button>
           </div>
-          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6">
-            {facilities.map((f, i) => {
-              const facilityImage = PlaceHolderImages.find(img => img.id === f.imageId);
-              return (
-                <div key={i} className="group relative h-72 overflow-hidden rounded-[2rem] border transition-all duration-500 hover:shadow-2xl hover:-translate-y-2">
-                  <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-all duration-700 ease-in-out">
-                    {facilityImage?.imageUrl && (
-                      <Image 
-                        src={facilityImage.imageUrl} 
-                        alt={f.title} 
-                        fill 
-                        className="object-cover scale-110 group-hover:scale-100 transition-transform duration-1000"
-                        data-ai-hint={facilityImage.imageHint}
-                      />
-                    )}
-                    <div className="absolute inset-0 bg-primary/80 mix-blend-multiply" />
-                  </div>
+          
+          <div className="space-y-4">
+            <div className="flex flex-col md:flex-row gap-4 h-auto md:h-[350px]">
+              {facilities.slice(0, 4).map((f, i) => {
+                const facilityImage = PlaceHolderImages.find(img => img.id === f.imageId);
+                return (
+                  <div key={i} className="group relative flex-1 overflow-hidden rounded-[2.5rem] border bg-white transition-all duration-700 ease-in-out md:hover:flex-[2.5] shadow-sm hover:shadow-2xl cursor-pointer">
+                    <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-all duration-700 ease-in-out">
+                      {facilityImage?.imageUrl && (
+                        <Image 
+                          src={facilityImage.imageUrl} 
+                          alt={f.title} 
+                          fill 
+                          className="object-cover scale-110 group-hover:scale-100 transition-transform duration-1000"
+                          data-ai-hint={facilityImage.imageHint}
+                        />
+                      )}
+                      <div className="absolute inset-0 bg-primary/80 mix-blend-multiply" />
+                    </div>
 
-                  <div className="relative h-full p-8 flex flex-col justify-between z-10 transition-all duration-500">
-                    <div className="shrink-0 w-12 h-12 bg-primary text-white rounded-2xl flex items-center justify-center shadow-lg group-hover:bg-white group-hover:text-primary transition-all duration-300">
-                      <f.icon size={24} />
-                    </div>
-                    <div className="space-y-2">
-                      <h4 className="text-2xl font-bold text-foreground group-hover:text-white transition-colors">
-                        {f.title}
-                      </h4>
-                      <p className="text-muted-foreground text-xs leading-relaxed group-hover:text-white/90 transition-all duration-300 line-clamp-2 group-hover:line-clamp-none">
-                        {f.desc}
-                      </p>
+                    <div className="relative h-full p-8 flex flex-col justify-between z-10 transition-all duration-500">
+                      <div className="shrink-0 w-12 h-12 bg-primary text-white rounded-2xl flex items-center justify-center shadow-lg group-hover:bg-white group-hover:text-primary transition-all duration-300">
+                        <f.icon size={24} />
+                      </div>
+                      <div className="space-y-2">
+                        <h4 className="text-2xl font-bold text-foreground group-hover:text-white transition-colors whitespace-nowrap">
+                          {f.title}
+                        </h4>
+                        <div className="overflow-hidden">
+                          <p className="text-muted-foreground text-sm leading-relaxed group-hover:text-white/90 transition-all duration-500 line-clamp-2 md:line-clamp-3 group-hover:line-clamp-none max-w-sm">
+                            {f.desc}
+                          </p>
+                        </div>
+                      </div>
                     </div>
                   </div>
-                </div>
-              );
-            })}
+                );
+              })}
+            </div>
+            <div className="flex flex-col md:flex-row gap-4 h-auto md:h-[350px]">
+              {facilities.slice(4, 8).map((f, i) => {
+                const facilityImage = PlaceHolderImages.find(img => img.id === f.imageId);
+                return (
+                  <div key={i} className="group relative flex-1 overflow-hidden rounded-[2.5rem] border bg-white transition-all duration-700 ease-in-out md:hover:flex-[2.5] shadow-sm hover:shadow-2xl cursor-pointer">
+                    <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-all duration-700 ease-in-out">
+                      {facilityImage?.imageUrl && (
+                        <Image 
+                          src={facilityImage.imageUrl} 
+                          alt={f.title} 
+                          fill 
+                          className="object-cover scale-110 group-hover:scale-100 transition-transform duration-1000"
+                          data-ai-hint={facilityImage.imageHint}
+                        />
+                      )}
+                      <div className="absolute inset-0 bg-primary/80 mix-blend-multiply" />
+                    </div>
+
+                    <div className="relative h-full p-8 flex flex-col justify-between z-10 transition-all duration-500">
+                      <div className="shrink-0 w-12 h-12 bg-primary text-white rounded-2xl flex items-center justify-center shadow-lg group-hover:bg-white group-hover:text-primary transition-all duration-300">
+                        <f.icon size={24} />
+                      </div>
+                      <div className="space-y-2">
+                        <h4 className="text-2xl font-bold text-foreground group-hover:text-white transition-colors whitespace-nowrap">
+                          {f.title}
+                        </h4>
+                        <div className="overflow-hidden">
+                          <p className="text-muted-foreground text-sm leading-relaxed group-hover:text-white/90 transition-all duration-500 line-clamp-2 md:line-clamp-3 group-hover:line-clamp-none max-w-sm">
+                            {f.desc}
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                );
+              })}
+            </div>
           </div>
         </div>
       </section>
