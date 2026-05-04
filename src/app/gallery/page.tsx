@@ -64,7 +64,7 @@ export default function GalleryPage() {
                     data-ai-hint={item.imageHint}
                   />
                   
-                  {/* Hover Overlay with Gaegu Font */}
+                  {/* Hover Overlay */}
                   <div className="absolute inset-0 bg-primary/80 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center p-6 text-center">
                     <h3 className="text-white text-2xl md:text-3xl font-headline font-bold transform translate-y-4 group-hover:translate-y-0 transition-transform duration-300">
                       {item.description}
