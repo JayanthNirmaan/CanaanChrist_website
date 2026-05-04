@@ -439,13 +439,13 @@ export default function Home() {
           <div className="flex animate-marquee whitespace-nowrap min-w-full items-center gap-6">
             {achievementImages.map((img, idx) => (
               <div key={`scroll-1-${idx}`} className="relative h-[250px] md:h-[400px] aspect-[4/3] min-w-[300px] md:min-w-[530px] rounded-[2rem] overflow-hidden shadow-2xl">
-                <Image src={img.imageUrl} alt="" fill className="object-cover" />
+                <Image src={img.imageUrl} alt="" fill className="object-cover grayscale" />
               </div>
             ))}
             {/* Duplicate for seamless loop */}
             {achievementImages.map((img, idx) => (
               <div key={`scroll-1-dup-${idx}`} className="relative h-[250px] md:h-[400px] aspect-[4/3] min-w-[300px] md:min-w-[530px] rounded-[2rem] overflow-hidden shadow-2xl">
-                <Image src={img.imageUrl} alt="" fill className="object-cover" />
+                <Image src={img.imageUrl} alt="" fill className="object-cover grayscale" />
               </div>
             ))}
           </div>
