@@ -139,7 +139,7 @@ export default function Home() {
         
         <div className="relative z-10 text-center space-y-4 px-6 max-w-4xl">
           <div className="space-y-4">
-            <h1 className="text-4xl md:text-6xl lg:text-7xl tracking-tight uppercase text-primary animate-in fade-in slide-in-from-bottom-4 duration-1000">
+            <h1 className="text-4xl md:text-6xl lg:text-7xl font-brand tracking-tight uppercase text-primary animate-in fade-in slide-in-from-bottom-4 duration-1000">
               Canaan Christ Public School
             </h1>
             <p className="text-lg md:text-xl font-medium text-muted-foreground italic animate-in fade-in slide-in-from-bottom-4 duration-1000 delay-300">
@@ -196,7 +196,7 @@ export default function Home() {
             <div className="inline-block bg-primary/10 text-primary px-4 py-1.5 rounded-full text-sm font-bold transition-all duration-500 group-has-[.image-trigger:hover]/section:bg-white group-has-[.image-trigger:hover]/section:text-primary">
               Established 2001
             </div>
-            <h2 className="text-3xl md:text-5xl font-bold text-primary transition-colors duration-500 group-has-[.image-trigger:hover]/section:text-white">Affordable, Quality Education for Every Child</h2>
+            <h2 className="text-3xl md:text-5xl font-brand font-bold text-primary transition-colors duration-500 group-has-[.image-trigger:hover]/section:text-white">Affordable, Quality Education for Every Child</h2>
             <p className="text-base md:text-lg text-muted-foreground leading-relaxed transition-colors duration-500 group-has-[.image-trigger:hover]/section:text-white/90">
               Canaan Christ Public School offers a holistic learning environment under the State Syllabus, catering to students from Kindergarten to 10th Grade. Our mission is to empower every child—regardless of background—to grow intellectually, emotionally, and ethically.
             </p>
@@ -234,7 +234,7 @@ export default function Home() {
             <div className="absolute -right-8 -bottom-8 text-white/40 opacity-0 group-hover:opacity-100 group-hover:scale-125 transition-all duration-700 pointer-events-none rotate-12">
               <Eye size={240} strokeWidth={1} />
             </div>
-            <h2 className="text-2xl md:text-3xl font-bold relative z-10">Our Vision</h2>
+            <h2 className="text-2xl md:text-3xl font-brand font-bold relative z-10">Our Vision</h2>
             <p className="text-base md:text-lg opacity-90 leading-relaxed relative z-10">
               To nurture compassionate, curious, and confident learners who contribute meaningfully to society, while rooted in values, culture, and excellence.
             </p>
@@ -243,7 +243,7 @@ export default function Home() {
             <div className="absolute -right-8 -bottom-8 text-white/40 opacity-0 group-hover:opacity-100 group-hover:scale-125 transition-all duration-700 pointer-events-none -rotate-12">
               <Target size={240} strokeWidth={1} />
             </div>
-            <h2 className="text-2xl md:text-3xl font-bold relative z-10">Our Mission</h2>
+            <h2 className="text-2xl md:text-3xl font-brand font-bold relative z-10">Our Mission</h2>
             <p className="text-base md:text-lg opacity-90 leading-relaxed relative z-10">
               Our mission is to provide affordable, quality education that empowers every child—regardless of background—to grow intellectually, emotionally, and ethically. We aim to foster an inclusive learning environment that encourages creativity, critical thinking, and a deep sense of social responsibility, while staying connected to the local community and culture of Bangalore.
             </p>
@@ -254,7 +254,7 @@ export default function Home() {
       <section className="py-4 md:py-6 bg-white">
         <div className="max-w-7xl mx-auto px-6 text-center space-y-8">
           <div className="space-y-4">
-            <h2 className="text-3xl md:text-4xl font-bold text-primary">Our Core Values</h2>
+            <h2 className="text-3xl md:text-4xl font-brand font-bold text-primary">Our Core Values</h2>
             <p className="text-muted-foreground max-w-2xl mx-auto text-sm md:text-base">The pillars that define the character and conduct of every student at Canaan Christ.</p>
           </div>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
@@ -277,7 +277,7 @@ export default function Home() {
         <div className="max-w-7xl mx-auto px-6 space-y-8">
           <div className="flex flex-col md:flex-row justify-between items-end gap-4 text-center md:text-left">
             <div className="space-y-2">
-              <h2 className="text-3xl md:text-4xl font-bold text-primary">Campus Facilities</h2>
+              <h2 className="text-3xl md:text-4xl font-brand font-bold text-primary">Campus Facilities</h2>
               <p className="text-muted-foreground max-md text-sm md:text-base">Investing in infrastructure to support intellectual and creative growth.</p>
             </div>
             <Button variant="outline" className="rounded-full border-primary text-primary hover:bg-primary hover:text-white transition-all" asChild>
@@ -368,7 +368,7 @@ export default function Home() {
         <div className="max-w-7xl mx-auto px-6 space-y-8">
           <div className="flex flex-col md:flex-row justify-between items-end gap-4 text-center md:text-left">
             <div className="space-y-2">
-              <h2 className="text-3xl md:text-4xl font-bold text-primary">Campus Moments</h2>
+              <h2 className="text-3xl md:text-4xl font-brand font-bold text-primary">Campus Moments</h2>
               <p className="text-muted-foreground max-w-md text-sm md:text-base">Captured joy, learning, and growth in our school gallery.</p>
             </div>
             <Button variant="outline" className="rounded-full border-primary text-primary hover:bg-primary hover:text-white transition-all" asChild>
@@ -403,7 +403,7 @@ export default function Home() {
 
       <section className="py-4 md:py-6 bg-white">
         <div className="max-w-7xl mx-auto px-6 space-y-8">
-          <h2 className="text-3xl md:text-4xl font-bold text-primary text-center">School Leadership</h2>
+          <h2 className="text-3xl md:text-4xl font-brand font-bold text-primary text-center">School Leadership</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-5xl mx-auto">
             <Card className="overflow-hidden border-none shadow-2xl rounded-[2.5rem]">
               <div className="relative h-80 md:h-96">
@@ -433,19 +433,19 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="bg-primary/50 relative overflow-hidden flex items-center h-[350px] md:h-[450px]">
-        {/* Continuous Scrolling Background */}
-        <div className="absolute inset-0 z-0 opacity-80 pointer-events-none flex flex-col justify-center overflow-hidden">
-          <div className="flex animate-marquee whitespace-nowrap min-w-full items-center gap-6">
+      <section className="relative overflow-hidden flex items-center h-[350px] md:h-[450px]">
+        {/* Continuous Seamless Scrolling Background */}
+        <div className="absolute inset-0 z-0 pointer-events-none flex flex-col justify-center overflow-hidden bg-black">
+          <div className="flex animate-marquee whitespace-nowrap min-w-full items-center gap-0">
             {achievementImages.map((img, idx) => (
-              <div key={`scroll-1-${idx}`} className="relative h-[250px] md:h-[400px] aspect-[4/3] min-w-[300px] md:min-w-[530px] rounded-[2rem] overflow-hidden shadow-2xl">
-                <Image src={img.imageUrl} alt="" fill className="object-cover grayscale" />
+              <div key={`scroll-1-${idx}`} className="relative h-[350px] md:h-[450px] aspect-[16/9] min-w-[400px] md:min-w-[800px] overflow-hidden">
+                <Image src={img.imageUrl} alt="" fill className="object-cover grayscale opacity-60" />
               </div>
             ))}
             {/* Duplicate for seamless loop */}
             {achievementImages.map((img, idx) => (
-              <div key={`scroll-1-dup-${idx}`} className="relative h-[250px] md:h-[400px] aspect-[4/3] min-w-[300px] md:min-w-[530px] rounded-[2rem] overflow-hidden shadow-2xl">
-                <Image src={img.imageUrl} alt="" fill className="object-cover grayscale" />
+              <div key={`scroll-1-dup-${idx}`} className="relative h-[350px] md:h-[450px] aspect-[16/9] min-w-[400px] md:min-w-[800px] overflow-hidden">
+                <Image src={img.imageUrl} alt="" fill className="object-cover grayscale opacity-60" />
               </div>
             ))}
           </div>
@@ -453,13 +453,13 @@ export default function Home() {
 
         <div className="max-w-7xl mx-auto px-6 text-center relative z-10 w-full py-6 md:py-10">
           <div className="flex flex-col items-center gap-2">
-            <div className="text-7xl md:text-[12rem] font-black text-white leading-none drop-shadow-[0_10px_10px_rgba(0,0,0,0.5)]">
+            <div className="text-7xl md:text-[12rem] font-black text-white leading-none drop-shadow-[0_10px_10px_rgba(0,0,0,0.8)]">
               <Counter end={100} />
             </div>
-            <div className="text-2xl md:text-5xl font-black text-accent uppercase tracking-wider drop-shadow-[0_4px_4px_rgba(0,0,0,0.5)]">
+            <div className="text-2xl md:text-5xl font-black text-accent uppercase tracking-wider drop-shadow-[0_4px_4px_rgba(0,0,0,0.8)]">
               Board Exam Record
             </div>
-            <p className="max-w-2xl text-white mt-4 text-base md:text-2xl font-bold leading-relaxed drop-shadow-[0_2px_4px_rgba(0,0,0,0.8)] px-4">
+            <p className="max-w-2xl text-white mt-4 text-base md:text-2xl font-bold leading-relaxed drop-shadow-[0_2px_4px_rgba(0,0,0,1)] px-4">
               We are proud to have maintained a 100% pass record in the Grade 10 Board Examinations year after year.
             </p>
           </div>
@@ -471,7 +471,7 @@ export default function Home() {
           <div className="absolute top-0 right-0 w-80 h-80 bg-white/10 rounded-full -translate-y-1/2 translate-x-1/2 blur-3xl"></div>
           <div className="absolute bottom-0 left-0 w-80 h-80 bg-primary/10 rounded-full translate-y-1/2 -translate-x-1/2 blur-3xl"></div>
           <div className="relative z-10 space-y-6">
-            <h2 className="text-3xl md:text-5xl lg:text-6xl font-bold tracking-tight">Admissions Open 2026–27</h2>
+            <h2 className="text-3xl md:text-5xl lg:text-6xl font-brand font-bold tracking-tight">Admissions Open 2026–27</h2>
             <div className="flex flex-wrap justify-center gap-4 md:gap-8 text-sm md:text-lg font-medium">
               <span className="flex items-center gap-2"><CheckCircle2 className="text-accent" size={20} /> No Admission Fee</span>
               <span className="flex items-center gap-2"><CheckCircle2 className="text-accent" size={20} /> No Donation Policy</span>
@@ -492,7 +492,7 @@ export default function Home() {
       <section id="contact" className="py-6 bg-white">
         <div className="max-w-7xl mx-auto px-6 grid grid-cols-1 md:grid-cols-2 gap-12">
           <div className="space-y-6">
-            <h2 className="text-3xl md:text-4xl font-bold text-primary">Get in Touch</h2>
+            <h2 className="text-3xl md:text-4xl font-brand font-bold text-primary">Get in Touch</h2>
             <p className="text-base md:text-lg text-muted-foreground leading-relaxed">
               Have questions about admissions or school policies? Our team is ready to help you.
             </p>
