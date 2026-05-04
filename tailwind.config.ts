@@ -12,6 +12,7 @@ export default {
       fontFamily: {
         body: ['Inter', 'sans-serif'],
         headline: ['Gaegu', 'cursive'],
+        brand: ['"Love Ya Like A Sister"', 'cursive'],
         code: ['monospace'],
       },
       colors: {

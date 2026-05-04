@@ -36,7 +36,7 @@ export default function GalleryPage() {
       <section className="pt-32 pb-12 bg-background text-center relative overflow-hidden">
         <div className="absolute inset-0 scribble-bg opacity-100 pointer-events-none" />
         <div className="max-w-4xl mx-auto px-6 space-y-4 relative z-10">
-          <h1 className="text-6xl font-bold text-primary">Campus Snapshots</h1>
+          <h1 className="text-6xl font-brand text-primary">Campus Snapshots</h1>
           <p className="text-xl text-muted-foreground italic">Captured moments of joy, learning, and growth at Canaan Christ.</p>
         </div>
       </section>

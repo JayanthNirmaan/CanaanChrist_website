@@ -14,7 +14,7 @@ export default function ContactPage() {
       {/* Header */}
       <section className="pt-32 pb-12 bg-background text-center">
         <div className="max-w-4xl mx-auto px-6 space-y-4">
-          <h1 className="text-5xl font-bold text-primary">Contact Us</h1>
+          <h1 className="text-5xl font-brand text-primary">Contact Us</h1>
           <p className="text-xl text-muted-foreground">Get in touch with the Canaan Christ family. We're here to help.</p>
         </div>
       </section>

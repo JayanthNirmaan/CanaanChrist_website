@@ -1,4 +1,3 @@
-
 import Image from 'next/image';
 import { Navbar } from '@/components/layout/Navbar';
 import { Footer } from '@/components/layout/Footer';
@@ -17,7 +16,7 @@ export default function AboutPage() {
       
       <section className="pt-24 pb-12 bg-background text-center">
         <div className="max-w-4xl mx-auto px-6 space-y-4">
-          <h1 className="text-5xl font-bold text-primary">About Our School</h1>
+          <h1 className="text-5xl font-brand text-primary">About Our School</h1>
           <p className="text-xl text-muted-foreground">"Righteousness And Truth" - Since 2001</p>
         </div>
       </section>

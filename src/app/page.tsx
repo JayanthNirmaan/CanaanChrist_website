@@ -1,4 +1,3 @@
-
 import Image from 'next/image';
 import Link from 'next/link';
 import { Button } from '@/components/ui/button';
@@ -140,7 +139,7 @@ export default function Home() {
         
         <div className="relative z-10 text-center space-y-4 px-6 max-w-4xl">
           <div className="space-y-4">
-            <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold tracking-tight uppercase text-primary animate-in fade-in slide-in-from-bottom-4 duration-1000">
+            <h1 className="text-4xl md:text-6xl lg:text-7xl font-brand tracking-tight uppercase text-primary animate-in fade-in slide-in-from-bottom-4 duration-1000">
               Canaan Christ Public School
             </h1>
             <p className="text-lg md:text-xl font-medium text-muted-foreground italic animate-in fade-in slide-in-from-bottom-4 duration-1000 delay-300">

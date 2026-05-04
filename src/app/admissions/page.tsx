@@ -44,7 +44,7 @@ export default function AdmissionsPage() {
       {/* Header */}
       <section className="pt-32 pb-12 bg-background text-center">
         <div className="max-w-4xl mx-auto px-6 space-y-4">
-          <h1 className="text-5xl font-bold text-primary">Admissions 2026-27</h1>
+          <h1 className="text-5xl font-brand text-primary">Admissions 2026-27</h1>
           <p className="text-xl text-muted-foreground">Join the Canaan Christ family. Quality education for all walks of life.</p>
         </div>
       </section>
