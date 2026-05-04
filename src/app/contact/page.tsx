@@ -14,7 +14,7 @@ export default function ContactPage() {
       {/* Header */}
       <section className="pt-32 pb-12 bg-background text-center">
         <div className="max-w-4xl mx-auto px-6 space-y-4">
-          <h1 className="text-5xl font-brand text-primary">Contact Us</h1>
+          <h1 className="text-5xl text-primary">Contact Us</h1>
           <p className="text-xl text-muted-foreground">Get in touch with the Canaan Christ family. We're here to help.</p>
         </div>
       </section>
@@ -74,7 +74,7 @@ export default function ContactPage() {
 
           <div className="space-y-8">
             <div className="bg-white p-10 rounded-[3rem] shadow-2xl border-2 border-primary/5">
-              <h2 className="text-3xl font-bold text-primary mb-6">Send an Enquiry</h2>
+              <h2 className="text-3xl text-primary mb-6">Send an Enquiry</h2>
               <p className="text-muted-foreground mb-10">Fill in the details below and our admissions office will contact you within 24 hours.</p>
               <ContactForm />
             </div>

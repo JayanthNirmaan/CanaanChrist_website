@@ -44,7 +44,7 @@ export default function AdmissionsPage() {
       {/* Header */}
       <section className="pt-32 pb-12 bg-background text-center">
         <div className="max-w-4xl mx-auto px-6 space-y-4">
-          <h1 className="text-5xl font-brand text-primary">Admissions 2026-27</h1>
+          <h1 className="text-5xl text-primary">Admissions 2026-27</h1>
           <p className="text-xl text-muted-foreground">Join the Canaan Christ family. Quality education for all walks of life.</p>
         </div>
       </section>
@@ -75,7 +75,7 @@ export default function AdmissionsPage() {
           
           <div className="lg:col-span-7 space-y-12">
             <div className="bg-background p-10 rounded-[2.5rem] shadow-sm border space-y-8">
-              <h2 className="text-3xl font-bold text-primary flex items-center gap-3">
+              <h2 className="text-3xl text-primary flex items-center gap-3">
                 <FileText className="text-secondary" /> Admission Process
               </h2>
               <div className="space-y-6">
@@ -131,7 +131,7 @@ export default function AdmissionsPage() {
           <aside className="lg:col-span-5 space-y-8">
             <div className="sticky top-32">
               <div className="bg-white p-10 rounded-[3rem] shadow-2xl border-2 border-primary/5">
-                <h2 className="text-2xl font-bold text-primary mb-2">Admission Inquiry</h2>
+                <h2 className="text-2xl text-primary mb-2">Admission Inquiry</h2>
                 <p className="text-sm text-muted-foreground mb-8">Start your child's journey with us today.</p>
                 <RegistrationForm />
               </div>

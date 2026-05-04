@@ -36,7 +36,7 @@ export default function GalleryPage() {
       <section className="pt-32 pb-12 bg-background text-center relative overflow-hidden">
         <div className="absolute inset-0 scribble-bg opacity-100 pointer-events-none" />
         <div className="max-w-4xl mx-auto px-6 space-y-4 relative z-10">
-          <h1 className="text-6xl font-brand text-primary">Campus Snapshots</h1>
+          <h1 className="text-6xl text-primary">Campus Snapshots</h1>
           <p className="text-xl text-muted-foreground italic">Captured moments of joy, learning, and growth at Canaan Christ.</p>
         </div>
       </section>
@@ -66,7 +66,7 @@ export default function GalleryPage() {
                   
                   {/* Hover Overlay */}
                   <div className="absolute inset-0 bg-primary/80 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center p-6 text-center">
-                    <h3 className="text-white text-2xl md:text-3xl font-headline font-bold transform translate-y-4 group-hover:translate-y-0 transition-transform duration-300">
+                    <h3 className="text-white text-2xl md:text-3xl font-bold transform translate-y-4 group-hover:translate-y-0 transition-transform duration-300">
                       {item.description}
                     </h3>
                   </div>

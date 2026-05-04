@@ -7,7 +7,6 @@ import { History, Target, Eye, Shield } from 'lucide-react';
 const principalImg = PlaceHolderImages.find(img => img.id === 'principal');
 const chairmanImg = PlaceHolderImages.find(img => img.id === 'chairman');
 const staffImg = PlaceHolderImages.find(img => img.id === 'staff-representative');
-const gallery = PlaceHolderImages.filter(img => img.id.startsWith('gallery'));
 
 export default function AboutPage() {
   return (
@@ -16,7 +15,7 @@ export default function AboutPage() {
       
       <section className="pt-24 pb-12 bg-background text-center">
         <div className="max-w-4xl mx-auto px-6 space-y-4">
-          <h1 className="text-5xl font-brand text-primary">About Our School</h1>
+          <h1 className="text-5xl text-primary">About Our School</h1>
           <p className="text-xl text-muted-foreground">"Righteousness And Truth" - Since 2001</p>
         </div>
       </section>
