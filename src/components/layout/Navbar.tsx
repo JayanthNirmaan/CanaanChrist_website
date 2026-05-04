@@ -36,29 +36,29 @@ export function Navbar() {
       className={cn(
         'fixed top-0 w-full z-50 transition-all duration-300 px-6',
         scrolled 
-          ? 'bg-background/80 backdrop-blur-md border-b border-border/40 py-1.5 shadow-lg' 
-          : 'bg-transparent py-3'
+          ? 'bg-background/80 backdrop-blur-md border-b border-border/40 py-1 shadow-lg' 
+          : 'bg-transparent py-1.5'
       )}
     >
       <div className="max-w-7xl mx-auto flex items-center justify-between">
-        <Link href="/" className="flex items-center gap-3 group">
+        <Link href="/" className="flex items-center gap-4 group">
           <div className="transition-all duration-300 group-hover:scale-105 shrink-0">
             {logo?.imageUrl ? (
               <Image 
                 src={logo.imageUrl} 
                 alt="Canaan Christ Public School Logo" 
-                width={45} 
-                height={45} 
+                width={56} 
+                height={56} 
                 className="object-contain"
                 priority
               />
             ) : (
-              <div className="w-9 h-9 bg-primary text-white rounded-lg flex items-center justify-center font-bold text-lg shadow-lg">CC</div>
+              <div className="w-12 h-12 bg-primary text-white rounded-lg flex items-center justify-center font-bold text-xl shadow-lg">CC</div>
             )}
           </div>
           <div className="flex flex-col justify-center">
-            <span className="text-lg font-bold tracking-tight text-primary leading-tight hidden sm:block">Canaan Christ</span>
-            <span className="text-[9px] font-bold text-muted-foreground tracking-widest uppercase hidden sm:block">Public School</span>
+            <span className="text-xl font-bold tracking-tight text-primary leading-tight hidden sm:block">Canaan Christ</span>
+            <span className="text-[10px] font-bold text-muted-foreground tracking-widest uppercase hidden sm:block">Public School</span>
           </div>
         </Link>
 
