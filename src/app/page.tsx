@@ -234,7 +234,7 @@ export default function Home() {
             <div className="absolute -right-8 -bottom-8 text-white/40 opacity-0 group-hover:opacity-100 group-hover:scale-125 transition-all duration-700 pointer-events-none rotate-12">
               <Eye size={240} strokeWidth={1} />
             </div>
-            <h3 className="text-2xl md:text-3xl font-bold relative z-10">Our Vision</h3>
+            <h2 className="text-2xl md:text-3xl font-bold relative z-10">Our Vision</h2>
             <p className="text-base md:text-lg opacity-90 leading-relaxed relative z-10">
               To nurture compassionate, curious, and confident learners who contribute meaningfully to society, while rooted in values, culture, and excellence.
             </p>
@@ -243,7 +243,7 @@ export default function Home() {
             <div className="absolute -right-8 -bottom-8 text-white/40 opacity-0 group-hover:opacity-100 group-hover:scale-125 transition-all duration-700 pointer-events-none -rotate-12">
               <Target size={240} strokeWidth={1} />
             </div>
-            <h3 className="text-2xl md:text-3xl font-bold relative z-10">Our Mission</h3>
+            <h2 className="text-2xl md:text-3xl font-bold relative z-10">Our Mission</h2>
             <p className="text-base md:text-lg opacity-90 leading-relaxed relative z-10">
               Our mission is to provide affordable, quality education that empowers every child—regardless of background—to grow intellectually, emotionally, and ethically. We aim to foster an inclusive learning environment that encourages creativity, critical thinking, and a deep sense of social responsibility, while staying connected to the local community and culture of Bangalore.
             </p>
@@ -433,7 +433,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="bg-primary/50 relative overflow-hidden flex items-center">
+      <section className="bg-primary/50 relative overflow-hidden flex items-center h-[350px] md:h-[450px]">
         {/* Continuous Scrolling Background */}
         <div className="absolute inset-0 z-0 opacity-80 pointer-events-none flex flex-col justify-center overflow-hidden">
           <div className="flex animate-marquee whitespace-nowrap min-w-full items-center gap-6">
@@ -452,12 +452,14 @@ export default function Home() {
         </div>
 
         <div className="max-w-7xl mx-auto px-6 text-center relative z-10 w-full py-6 md:py-10">
-          <div className="flex flex-col items-center gap-1 drop-shadow-2xl">
-            <div className="text-6xl md:text-[10rem] font-black text-white leading-none">
+          <div className="flex flex-col items-center gap-2">
+            <div className="text-7xl md:text-[12rem] font-black text-white leading-none drop-shadow-[0_10px_10px_rgba(0,0,0,0.5)]">
               <Counter end={100} />
             </div>
-            <div className="text-xl md:text-3xl font-bold text-accent uppercase tracking-[0.2em]">Board Exam Record</div>
-            <p className="max-w-xl text-white mt-2 text-sm md:text-lg font-semibold leading-relaxed">
+            <div className="text-2xl md:text-5xl font-black text-accent uppercase tracking-wider drop-shadow-[0_4px_4px_rgba(0,0,0,0.5)]">
+              Board Exam Record
+            </div>
+            <p className="max-w-2xl text-white mt-4 text-base md:text-2xl font-bold leading-relaxed drop-shadow-[0_2px_4px_rgba(0,0,0,0.8)] px-4">
               We are proud to have maintained a 100% pass record in the Grade 10 Board Examinations year after year.
             </p>
           </div>
