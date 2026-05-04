@@ -1,4 +1,3 @@
-
 'use client';
 
 import React, { useState, useEffect } from 'react';
@@ -43,7 +42,7 @@ export function Navbar() {
     >
       <div className="max-w-7xl mx-auto flex items-center justify-between">
         <Link href="/" className="flex items-center gap-3 group">
-          <div className="transition-all duration-300 group-hover:scale-105">
+          <div className="transition-all duration-300 group-hover:scale-105 shrink-0">
             {logo?.imageUrl ? (
               <Image 
                 src={logo.imageUrl} 
@@ -57,9 +56,9 @@ export function Navbar() {
               <div className="w-9 h-9 bg-primary text-white rounded-lg flex items-center justify-center font-bold text-lg shadow-lg">CC</div>
             )}
           </div>
-          <div className="flex flex-col">
-            <span className="text-sm font-bold tracking-tight text-primary leading-none hidden sm:block">Canaan Christ</span>
-            <span className="text-[7px] font-bold text-muted-foreground tracking-widest uppercase hidden sm:block">Public School</span>
+          <div className="flex flex-col justify-center">
+            <span className="text-lg font-bold tracking-tight text-primary leading-tight hidden sm:block">Canaan Christ</span>
+            <span className="text-[9px] font-bold text-muted-foreground tracking-widest uppercase hidden sm:block">Public School</span>
           </div>
         </Link>
 
