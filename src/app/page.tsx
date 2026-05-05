@@ -139,8 +139,13 @@ export default function Home() {
         
         <div className="relative z-10 text-center space-y-4 px-6 max-w-4xl">
           <div className="space-y-4">
-            <h1 className="text-4xl md:text-6xl lg:text-7xl font-brand tracking-tight uppercase text-primary animate-in fade-in slide-in-from-bottom-4 duration-1000">
-              Canaan Christ Public School
+            <h1 className="flex flex-col items-center animate-in fade-in slide-in-from-bottom-4 duration-1000">
+              <span className="text-5xl md:text-8xl lg:text-9xl font-brand tracking-tighter uppercase text-primary leading-[0.8]">
+                Canaan Christ
+              </span>
+              <span className="text-lg md:text-2xl lg:text-3xl font-brand tracking-[0.4em] uppercase text-muted-foreground/60 mt-4">
+                Public School
+              </span>
             </h1>
             <p className="text-lg md:text-xl font-medium text-muted-foreground italic animate-in fade-in slide-in-from-bottom-4 duration-1000 delay-300">
               "Righteousness And Truth"
