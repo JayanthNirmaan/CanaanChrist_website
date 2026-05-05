@@ -113,7 +113,17 @@ export function RegistrationForm() {
 
         <div className="space-y-2">
           <Label htmlFor="phone">Phone Number</Label>
-          <Input id="phone" name="phone" type="tel" placeholder="+91 98765 43210" required disabled={isPending} />
+          <Input 
+            id="phone" 
+            name="phone" 
+            type="tel" 
+            placeholder="9876543210" 
+            required 
+            disabled={isPending}
+            pattern="[0-9]{10}"
+            maxLength={10}
+            title="Please enter a valid 10-digit mobile number"
+          />
         </div>
       </div>
 

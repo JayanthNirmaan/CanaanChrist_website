@@ -1,4 +1,3 @@
-
 'use server';
 
 import { db } from '@/lib/firebase';
@@ -7,7 +6,7 @@ import { z } from 'zod';
 
 const EnquirySchema = z.object({
   name: z.string().min(2, 'Name must be at least 2 characters'),
-  phone: z.string().min(10, 'Phone must be at least 10 digits'),
+  phone: z.string().regex(/^[0-9]{10}$/, 'Phone number must be exactly 10 digits'),
   message: z.string().min(5, 'Message must be at least 5 characters'),
 });
 
@@ -24,7 +23,7 @@ export async function submitEnquiry(formData: FormData) {
 
   if (!validatedFields.success) {
     return {
-      error: 'Invalid input. Please check your data.',
+      error: 'Invalid input. Please ensure the phone number is 10 digits.',
     };
   }
 

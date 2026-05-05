@@ -58,7 +58,16 @@ export function ContactForm() {
         </div>
         <div className="space-y-2">
           <label className="text-sm font-medium">Phone Number</label>
-          <Input name="phone" placeholder="+91 98765 43210" required disabled={isPending} />
+          <Input 
+            name="phone" 
+            placeholder="9876543210" 
+            required 
+            disabled={isPending} 
+            type="tel"
+            pattern="[0-9]{10}"
+            maxLength={10}
+            title="Please enter a valid 10-digit mobile number"
+          />
         </div>
       </div>
       <div className="space-y-2">

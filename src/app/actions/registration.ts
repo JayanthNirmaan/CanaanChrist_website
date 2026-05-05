@@ -9,7 +9,7 @@ const RegistrationSchema = z.object({
   gradeApplying: z.string().min(1, 'Please select a grade'),
   parentType: z.enum(['Father', 'Mother', 'Guardian']),
   parentName: z.string().min(2, 'Parent name must be at least 2 characters'),
-  phone: z.string().min(10, 'Phone must be at least 10 digits'),
+  phone: z.string().regex(/^[0-9]{10}$/, 'Phone number must be exactly 10 digits'),
   previousBoard: z.enum(['CBSE', 'ICSE', 'State Board', 'None/Other']),
 });
 
@@ -27,13 +27,11 @@ export async function submitRegistration(formData: FormData) {
 
   if (!validatedFields.success) {
     return {
-      error: 'Invalid input. Please check all fields.',
+      error: 'Invalid input. Please check all fields and ensure the phone number is 10 digits.',
     };
   }
 
   try {
-    // In a production environment, this Firestore write would trigger a 
-    // Cloud Function or a service like Resend/SendGrid to send the email.
     await addDoc(collection(db, 'registrations'), {
       ...data,
       timestamp: serverTimestamp(),
