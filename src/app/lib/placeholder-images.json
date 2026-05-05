@@ -180,6 +180,12 @@
       "description": "School bus transport fleet",
       "imageUrl": "/assets/Transport.png",
       "imageHint": "school bus"
+    },
+    {
+      "id": "nirmaan-logo",
+      "description": "Nirmaan Education Logo",
+      "imageUrl": "/assets/nirmaan-logo.png",
+      "imageHint": "nirmaan logo"
     }
   ]
 }

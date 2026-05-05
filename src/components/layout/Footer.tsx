@@ -1,3 +1,4 @@
+
 import Link from 'next/link';
 import Image from 'next/image';
 import { MapPin, Phone, Mail, Youtube, Instagram } from 'lucide-react';
@@ -5,6 +6,7 @@ import { PlaceHolderImages } from '@/lib/placeholder-images';
 
 export function Footer() {
   const logo = PlaceHolderImages.find(img => img.id === 'school-logo');
+  const nirmaanLogo = PlaceHolderImages.find(img => img.id === 'nirmaan-logo');
 
   return (
     <footer className="bg-primary text-primary-foreground pt-12 pb-8">
@@ -77,8 +79,26 @@ export function Footer() {
           </Link>
         </div>
       </div>
-      <div className="max-w-7xl mx-auto px-6 mt-12 pt-6 border-t border-white/20 text-center text-primary-foreground/60 text-sm">
-        <p>&copy; {new Date().getFullYear()} Canaan Christ Public School. All rights reserved.</p>
+      
+      <div className="max-w-7xl mx-auto px-6 mt-12 pt-6 border-t border-white/20 flex flex-col md:flex-row items-center justify-between gap-4 text-primary-foreground/60 text-sm">
+        <p className="text-center md:text-left">&copy; {new Date().getFullYear()} Canaan Christ Public School. All rights reserved.</p>
+        <a 
+          href="https://nirmaan.education/" 
+          target="_blank" 
+          rel="noopener noreferrer" 
+          className="flex items-center gap-2 hover:text-white transition-colors group"
+        >
+          <span>Built by</span>
+          {nirmaanLogo?.imageUrl && (
+            <Image 
+              src={nirmaanLogo.imageUrl} 
+              alt="Nirmaan" 
+              width={80} 
+              height={24} 
+              className="object-contain brightness-0 invert opacity-60 group-hover:opacity-100 transition-opacity"
+            />
+          )}
+        </a>
       </div>
     </footer>
   );
