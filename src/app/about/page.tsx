@@ -35,7 +35,7 @@ export default function AboutPage() {
                   className="object-cover"
                   data-ai-hint="school campus"
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent pointer-events-none" />
+                <div className="absolute inset-0 bg-gradient-t from-black/40 to-transparent pointer-events-none" />
                 <div className="absolute bottom-8 left-8 text-white">
                   <h3 className="text-2xl font-bold">Our Campus</h3>
                   <p className="opacity-80">BTM 1st Stage, Bengaluru</p>
@@ -106,10 +106,10 @@ export default function AboutPage() {
       <section className="py-16 bg-white border-t">
         <div className="max-w-7xl mx-auto px-6 space-y-24">
           
-          {/* Chairman */}
+          {/* Founders */}
           <div className="grid grid-cols-1 md:grid-cols-2 gap-20 items-center">
             <div className="space-y-6">
-              <h2 className="text-3xl font-bold text-primary">Chairman's Message</h2>
+              <h2 className="text-3xl font-bold text-primary">Founders' Message</h2>
               <div className="space-y-4 text-lg text-muted-foreground leading-relaxed">
                 <p>
                   "Canaan Christ Public School was born out of a dream—to create a place where education isn’t a privilege, but a right. A place where every child, no matter their background, has the chance to learn, grow, and thrive."
@@ -119,13 +119,13 @@ export default function AboutPage() {
                 </p>
               </div>
               <div>
-                <h4 className="text-xl font-bold">Mr. Chairman</h4>
-                <p className="text-primary">Chairman / Director</p>
+                <h4 className="text-xl font-bold">Mr. Doss and Mrs. Doss</h4>
+                <p className="text-primary">Founders</p>
               </div>
             </div>
             <div className="relative h-[500px] rounded-[3rem] overflow-hidden shadow-xl">
               {chairmanImg?.imageUrl && (
-                <Image src={chairmanImg.imageUrl} alt="Chairman" fill className="object-cover" />
+                <Image src={chairmanImg.imageUrl} alt="Founders" fill className="object-cover" />
               )}
             </div>
           </div>
