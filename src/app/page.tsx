@@ -475,7 +475,7 @@ export default function Home() {
           <div className="absolute top-0 right-0 w-80 h-80 bg-white/10 rounded-full -translate-y-1/2 translate-x-1/2 blur-3xl"></div>
           <div className="absolute bottom-0 left-0 w-80 h-80 bg-primary/10 rounded-full translate-y-1/2 -translate-x-1/2 blur-3xl"></div>
           <div className="relative z-10 space-y-6">
-            <h2 className="text-3xl md:text-5xl lg:text-6xl font-brand font-bold tracking-tight">Admissions Open 2026–27</h2>
+            <h2 className="text-3xl md:text-5xl lg:text-6xl font-brand font-bold tracking-normal">Admissions Open 2026–27</h2>
             <div className="flex flex-wrap justify-center gap-4 md:gap-8 text-sm md:text-lg font-medium">
               <span className="flex items-center gap-2"><CheckCircle2 className="text-accent" size={20} /> No Admission Fee</span>
               <span className="flex items-center gap-2"><CheckCircle2 className="text-accent" size={20} /> No Donation Policy</span>
