@@ -169,6 +169,21 @@ export default function Home() {
         </div>
       </section>
 
+      {/* Featured Video Section */}
+      <section className="py-16 md:py-24 bg-white">
+        <div className="max-w-6xl mx-auto px-6">
+          <div className="relative aspect-video rounded-[2.5rem] md:rounded-[3.5rem] overflow-hidden shadow-[0_35px_60px_-15px_rgba(0,0,0,0.3)] border-[6px] md:border-[12px] border-white ring-1 ring-border/20">
+            <iframe
+              className="absolute inset-0 w-full h-full"
+              src="https://www.youtube.com/embed/PE4r5NmBrVM"
+              title="Canaan Christ Public School Video"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowFullScreen
+            ></iframe>
+          </div>
+        </div>
+      </section>
+
       <section className="py-4 md:py-6 bg-white relative group/section transition-all duration-700 overflow-hidden">
         <div className="absolute top-1/2 right-[25%] -translate-y-1/2 translate-x-1/2 w-0 h-0 bg-primary rounded-full transition-all duration-1000 ease-in-out group-has-[.image-trigger:hover]/section:w-[300vw] group-has-[.image-trigger:hover]/section:h-[300vw] pointer-events-none z-0" />
 
