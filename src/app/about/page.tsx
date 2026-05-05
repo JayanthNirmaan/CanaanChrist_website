@@ -1,3 +1,4 @@
+
 import Image from 'next/image';
 import { Navbar } from '@/components/layout/Navbar';
 import { Footer } from '@/components/layout/Footer';
@@ -5,6 +6,7 @@ import { PlaceHolderImages } from '@/lib/placeholder-images';
 import { History, Target, Eye, Shield } from 'lucide-react';
 
 const principalImg = PlaceHolderImages.find(img => img.id === 'principal');
+const headmistressImg = PlaceHolderImages.find(img => img.id === 'headmistress');
 const chairmanImg = PlaceHolderImages.find(img => img.id === 'chairman');
 const staffImg = PlaceHolderImages.find(img => img.id === 'staff-representative');
 
@@ -149,13 +151,54 @@ export default function AboutPage() {
               </div>
               <div>
                 <h4 className="text-xl font-bold">Mrs. Principal</h4>
-                <p className="text-primary">Principal / HM</p>
+                <p className="text-primary">Principal</p>
               </div>
+            </div>
+          </div>
+
+          {/* Headmistress */}
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-20 items-center">
+            <div className="space-y-6">
+              <h2 className="text-3xl font-bold text-primary">Headmistress's Message</h2>
+              <div className="space-y-4 text-lg text-muted-foreground leading-relaxed">
+                <p>
+                  "Our commitment is to foster a safe, inclusive, and challenging environment where every student is encouraged to reach their full potential. We focus not just on academic brilliance but on building strong character and ethical values."
+                </p>
+                <p>
+                  "We believe that every child has a unique light within them. Our goal as educators is to provide the sparks that ignite their curiosity and the guidance that helps them find their own path of 'Righteousness and Truth'."
+                </p>
+              </div>
+              <div>
+                <h4 className="text-xl font-bold">Shanthi Murugesh</h4>
+                <p className="text-primary">Headmistress</p>
+              </div>
+            </div>
+            <div className="relative h-[500px] rounded-[3rem] overflow-hidden shadow-xl">
+              {headmistressImg?.imageUrl && (
+                <Image 
+                  src={headmistressImg.imageUrl} 
+                  alt="Headmistress Shanthi Murugesh" 
+                  fill 
+                  className="object-cover"
+                  data-ai-hint="teacher portrait"
+                />
+              )}
             </div>
           </div>
 
           {/* Staff Message */}
           <div className="grid grid-cols-1 md:grid-cols-2 gap-20 items-center">
+            <div className="relative h-[500px] rounded-[3rem] overflow-hidden shadow-xl md:order-last">
+              {staffImg?.imageUrl && (
+                <Image 
+                  src="/assets/Staff.JPG" 
+                  alt="Staff Representative" 
+                  fill 
+                  className="object-cover"
+                  data-ai-hint="school teachers"
+                />
+              )}
+            </div>
             <div className="space-y-6">
               <h2 className="text-3xl font-bold text-primary">Staff's Perspective</h2>
               <div className="space-y-4 text-lg text-muted-foreground leading-relaxed">
@@ -170,17 +213,6 @@ export default function AboutPage() {
                 <h4 className="text-xl font-bold">Senior Faculty</h4>
                 <p className="text-primary">Teaching Staff Representative</p>
               </div>
-            </div>
-            <div className="relative h-[500px] rounded-[3rem] overflow-hidden shadow-xl">
-              {staffImg?.imageUrl && (
-                <Image 
-                  src="/assets/Staff.JPG" 
-                  alt="Staff Representative" 
-                  fill 
-                  className="object-cover"
-                  data-ai-hint="school teachers"
-                />
-              )}
             </div>
           </div>
 

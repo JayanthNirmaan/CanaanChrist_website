@@ -20,6 +20,12 @@
       "imageHint": "principal portrait"
     },
     {
+      "id": "headmistress",
+      "description": "Professional female headmistress portrait",
+      "imageUrl": "https://picsum.photos/seed/headmistress/600/800",
+      "imageHint": "teacher portrait"
+    },
+    {
       "id": "chairman",
       "description": "Professional male chairman portrait",
       "imageUrl": "/assets/chairman.jpg",
