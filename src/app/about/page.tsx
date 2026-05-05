@@ -150,7 +150,7 @@ export default function AboutPage() {
                 </p>
               </div>
               <div>
-                <h4 className="text-xl font-bold">Mrs Shylaja Stephen</h4>
+                <h4 className="text-xl font-bold">Mrs. Shylaja Stephen</h4>
                 <p className="text-primary">Principal</p>
               </div>
             </div>
