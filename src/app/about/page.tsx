@@ -169,7 +169,7 @@ export default function AboutPage() {
                 </p>
               </div>
               <div>
-                <h4 className="text-xl font-bold">Shanthi Murugesh</h4>
+                <h4 className="text-xl font-bold">Mrs. Shanthi Murugesh</h4>
                 <p className="text-primary">Headmistress</p>
               </div>
             </div>
@@ -177,7 +177,7 @@ export default function AboutPage() {
               {headmistressImg?.imageUrl && (
                 <Image 
                   src={headmistressImg.imageUrl} 
-                  alt="Headmistress Shanthi Murugesh" 
+                  alt="Headmistress Mrs. Shanthi Murugesh" 
                   fill 
                   className="object-cover"
                   data-ai-hint="teacher portrait"
