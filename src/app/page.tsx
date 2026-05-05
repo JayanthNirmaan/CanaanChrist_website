@@ -164,30 +164,6 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Video Section */}
-      <section className="py-4 md:py-6 bg-white overflow-hidden">
-        <div className="max-w-5xl mx-auto px-6">
-          <div className="relative group">
-            <div className="absolute -top-6 -left-6 text-accent animate-float opacity-40">
-              <Wind size={48} strokeWidth={1} />
-            </div>
-            <div className="absolute -bottom-6 -right-6 text-secondary animate-float opacity-40" style={{ animationDelay: '1s' }}>
-              <Palette size={48} strokeWidth={1} />
-            </div>
-            
-            <div className="relative aspect-video rounded-[2.5rem] overflow-hidden shadow-2xl border-4 border-white ring-8 ring-primary/5 transition-transform duration-500 hover:scale-[1.01]">
-              <iframe
-                className="absolute inset-0 w-full h-full"
-                src="https://www.youtube.com/embed/Kk4pM6j1uZs"
-                title="Canaan Christ Campus Tour"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                allowFullScreen
-              ></iframe>
-            </div>
-          </div>
-        </div>
-      </section>
-
       <section className="py-4 md:py-6 bg-white relative group/section transition-all duration-700 overflow-hidden">
         <div className="absolute top-1/2 right-[25%] -translate-y-1/2 translate-x-1/2 w-0 h-0 bg-primary rounded-full transition-all duration-1000 ease-in-out group-has-[.image-trigger:hover]/section:w-[300vw] group-has-[.image-trigger:hover]/section:h-[300vw] pointer-events-none z-0" />
 
@@ -369,20 +345,32 @@ export default function Home() {
           <div className="flex flex-col md:flex-row justify-between items-end gap-4 text-center md:text-left">
             <div className="space-y-2">
               <h2 className="text-3xl md:text-4xl font-brand font-bold text-primary">Campus Moments</h2>
-              <p className="text-muted-foreground max-w-md text-sm md:text-base">Captured joy, learning, and growth in our school gallery.</p>
+              <p className="text-muted-foreground max-w-md text-sm md:text-base">Captured joy, learning, and growth in our school gallery and campus tour.</p>
             </div>
             <Button variant="outline" className="rounded-full border-primary text-primary hover:bg-primary hover:text-white transition-all" asChild>
               <Link href="/gallery">View Full Gallery</Link>
             </Button>
           </div>
           
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-2 h-[400px]">
-            {gallery.slice(0, 4).map((img, idx) => {
-              const tilts = ["rotate-1", "-rotate-2", "rotate-2", "-rotate-1"];
+          <div className="grid grid-cols-2 md:grid-cols-6 gap-2">
+            {/* YouTube Video Featured */}
+            <div className="relative col-span-2 md:col-span-3 aspect-video rounded-xl overflow-hidden shadow-lg border-4 border-white group">
+              <iframe
+                className="absolute inset-0 w-full h-full"
+                src="https://www.youtube.com/embed/Kk4pM6j1uZs"
+                title="Canaan Christ Campus Tour"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowFullScreen
+              ></iframe>
+            </div>
+
+            {/* Gallery Images Around Video */}
+            {gallery.slice(0, 3).map((img, idx) => {
+              const tilts = ["rotate-1", "-rotate-2", "rotate-2"];
               return (
                 <div key={img.id} className={cn(
-                  "relative rounded-xl overflow-hidden group shadow-lg border-4 border-white transition-all duration-500 hover:rotate-0 hover:scale-105 hover:z-20 cursor-pointer",
-                  idx === 0 || idx === 3 ? "md:col-span-2" : "md:col-span-1",
+                  "relative rounded-xl overflow-hidden group shadow-lg border-4 border-white transition-all duration-500 hover:rotate-0 hover:scale-105 hover:z-20 cursor-pointer aspect-square md:aspect-auto",
+                  idx === 0 ? "md:col-span-1" : "md:col-span-1",
                   tilts[idx]
                 )}>
                   <Image 
@@ -392,7 +380,7 @@ export default function Home() {
                     className="object-cover transition-transform duration-700" 
                   />
                   <div className="absolute inset-0 bg-primary/60 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center p-4 text-center">
-                    <span className="text-white text-lg md:text-xl">{img.description}</span>
+                    <span className="text-white text-xs md:text-sm font-bold">{img.description}</span>
                   </div>
                 </div>
               );
