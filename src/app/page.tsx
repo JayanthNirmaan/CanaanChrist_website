@@ -414,11 +414,11 @@ export default function Home() {
             <Card className="overflow-hidden border-none shadow-2xl rounded-[2.5rem]">
               <div className="relative h-80 md:h-96">
                 {chairmanImg?.imageUrl && (
-                  <Image src={chairmanImg.imageUrl} alt="Chairman" fill className="object-cover" />
+                  <Image src={chairmanImg.imageUrl} alt="Founders" fill className="object-cover" />
                 )}
               </div>
               <CardContent className="p-8 text-center bg-white">
-                <h4 className="text-2xl font-bold">Chairman's Vision</h4>
+                <h4 className="text-2xl font-bold">Founders' Vision</h4>
                 <p className="text-primary font-bold mb-3">"Education is a right, not a privilege."</p>
                 <p className="text-sm text-muted-foreground italic leading-relaxed">"We don’t just prepare students for exams—we prepare them for life and leadership."</p>
               </CardContent>

@@ -119,7 +119,7 @@ export default function AboutPage() {
                 </p>
               </div>
               <div>
-                <h4 className="text-xl font-bold">Mr. Doss and Mrs. Doss</h4>
+                <h4 className="text-xl font-bold">Shri Jeevandoss and Smt Jayamma Jeevan Doss</h4>
                 <p className="text-primary">Founders</p>
               </div>
             </div>
