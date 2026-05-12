@@ -30,6 +30,12 @@ export default async function GalleryPage() {
             name: name,
             isVideo: isVideo
           };
+        })
+        // Prioritize videos: move isVideo: true to the top
+        .sort((a, b) => {
+          if (a.isVideo && !b.isVideo) return -1;
+          if (!a.isVideo && b.isVideo) return 1;
+          return 0;
         });
     }
   } catch (error) {
