@@ -1,7 +1,6 @@
 'use client';
 
 import React, { useState, useEffect, useRef } from 'react';
-import Image from 'next/image';
 import { cn } from '@/lib/utils';
 
 interface GalleryItem {
@@ -12,7 +11,6 @@ interface GalleryItem {
 }
 
 export function GalleryClient({ items }: { items: GalleryItem[] }) {
-  const containerRef = useRef<HTMLDivElement>(null);
   const scrollRef = useRef<HTMLDivElement>(null);
   const [isAutoScrolling, setIsAutoScrolling] = useState(true);
   const lastInteractionTime = useRef(Date.now());
@@ -34,13 +32,13 @@ export function GalleryClient({ items }: { items: GalleryItem[] }) {
       }
 
       if (isAutoScrolling) {
-        scrollAmount.current += 0.4; // Very slow speed
+        scrollAmount.current += 0.35; // Gentle flow
         if (scrollAmount.current >= scrollContainer.scrollHeight - scrollContainer.clientHeight) {
-          scrollAmount.current = 0; // Reset to top for continuous feel (optional loop)
+          scrollAmount.current = 0; 
         }
         scrollContainer.scrollTop = scrollAmount.current;
       } else {
-        // Sync scrollAmount with manual scroll
+        // Sync scrollAmount with manual scroll position
         scrollAmount.current = scrollContainer.scrollTop;
       }
 
@@ -76,22 +74,19 @@ export function GalleryClient({ items }: { items: GalleryItem[] }) {
   }
 
   return (
-    <section className="bg-[#fafafa] relative h-[80vh] border-y overflow-hidden group">
-      {/* Decorative scribbles in the background */}
-      <div className="absolute top-10 left-10 w-32 h-32 text-primary/10 -rotate-12 pointer-events-none">
-        <svg viewBox="0 0 100 100" fill="none" stroke="currentColor" strokeWidth="2">
-          <path d="M10,50 Q30,10 50,50 T90,50" />
-        </svg>
-      </div>
+    <section className="bg-white relative h-[85vh] overflow-hidden group">
+      {/* Subtle decorative background element */}
+      <div className="absolute top-1/4 left-10 w-64 h-64 bg-primary/5 rounded-full blur-3xl pointer-events-none" />
+      <div className="absolute bottom-1/4 right-10 w-64 h-64 bg-secondary/5 rounded-full blur-3xl pointer-events-none" />
 
       <div 
         ref={scrollRef}
         className="h-full overflow-y-auto no-scrollbar scroll-smooth"
       >
-        <div className="max-w-7xl mx-auto px-6 py-20">
-          <div className="columns-1 sm:columns-2 lg:columns-3 xl:columns-4 gap-8 space-y-8">
+        <div className="max-w-[1400px] mx-auto px-6 py-20">
+          <div className="columns-1 md:columns-2 lg:columns-3 gap-12 space-y-12">
             {items.map((item, index) => {
-              // Procedural rotation for variety
+              // Procedural rotation and slight scaling for the creative wall feel
               const rotations = ['rotate-1', '-rotate-1', 'rotate-2', '-rotate-2', 'rotate-0'];
               const rotation = rotations[index % rotations.length];
               
@@ -99,50 +94,42 @@ export function GalleryClient({ items }: { items: GalleryItem[] }) {
                 <div 
                   key={item.id}
                   className={cn(
-                    "break-inside-avoid relative group cursor-pointer transition-all duration-500",
+                    "break-inside-avoid relative group cursor-pointer transition-all duration-1000",
                     "hover:scale-[1.03] hover:z-20",
                     rotation
                   )}
                 >
                   <div className={cn(
-                    "relative overflow-hidden rounded-[2rem] bg-white p-3",
-                    "shadow-[0_10px_30px_rgba(0,0,0,0.08)]",
-                    "border-4 border-white group-hover:shadow-[0_20px_50px_rgba(0,0,0,0.15)]",
-                    "transition-all duration-500"
+                    "relative overflow-hidden rounded-[2.5rem] bg-muted",
+                    "shadow-[0_20px_50px_rgba(0,0,0,0.1)] group-hover:shadow-[0_40px_80px_rgba(0,0,0,0.18)]",
+                    "transition-all duration-700"
                   )}>
-                    <div className="relative aspect-auto rounded-[1.5rem] overflow-hidden bg-muted">
-                      {item.isVideo ? (
-                        <video 
-                          src={item.src}
-                          className="w-full h-auto object-cover"
-                          muted
-                          loop
-                          playsInline
-                          autoPlay
-                        />
-                      ) : (
-                        <img 
-                          src={item.src} 
-                          alt={item.name} 
-                          className="w-full h-auto object-cover"
-                        />
-                      )}
-                      
-                      {/* Hover Caption */}
-                      <div className="absolute inset-0 bg-primary/90 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col items-center justify-center p-6 text-center text-white">
-                        <span className="text-xs uppercase tracking-[0.2em] mb-2 opacity-70">Moment</span>
-                        <h3 className="text-xl md:text-2xl font-brand capitalize">
-                          {item.name}
-                        </h3>
-                        <div className="w-8 h-1 bg-accent mt-4 rounded-full" />
-                      </div>
+                    {item.isVideo ? (
+                      <video 
+                        src={item.src}
+                        className="w-full h-auto object-cover block"
+                        muted
+                        loop
+                        playsInline
+                        autoPlay
+                      />
+                    ) : (
+                      <img 
+                        src={item.src} 
+                        alt={item.name} 
+                        className="w-full h-auto object-cover block"
+                      />
+                    )}
+                    
+                    {/* Hover Caption Overlay */}
+                    <div className="absolute inset-0 bg-primary/80 opacity-0 group-hover:opacity-100 transition-all duration-500 flex flex-col items-center justify-center p-8 text-center text-white backdrop-blur-[2px]">
+                      <span className="text-[10px] uppercase tracking-[0.4em] mb-3 opacity-80 font-bold">Canaan Snapshots</span>
+                      <h3 className="text-2xl md:text-3xl font-brand capitalize drop-shadow-md">
+                        {item.name}
+                      </h3>
+                      <div className="w-12 h-1 bg-accent mt-6 rounded-full" />
                     </div>
                   </div>
-                  
-                  {/* Decorative tape effect on some items */}
-                  {index % 3 === 0 && (
-                    <div className="absolute -top-4 left-1/2 -translate-x-1/2 w-16 h-8 bg-white/40 backdrop-blur-sm border border-white/20 -rotate-3 z-10 hidden md:block" />
-                  )}
                 </div>
               );
             })}
@@ -150,15 +137,24 @@ export function GalleryClient({ items }: { items: GalleryItem[] }) {
         </div>
       </div>
       
-      {/* Auto-scroll indicator/fade */}
-      <div className="absolute top-0 left-0 right-0 h-32 bg-gradient-to-b from-[#fafafa] to-transparent pointer-events-none z-10" />
-      <div className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-[#fafafa] to-transparent pointer-events-none z-10" />
-      
-      {/* Scroll Hint */}
-      <div className="absolute bottom-8 right-8 z-20 flex items-center gap-3 bg-white/80 backdrop-blur-md px-4 py-2 rounded-full shadow-lg border text-xs font-bold text-primary/60 transition-opacity duration-500 group-hover:opacity-100 opacity-30">
-        <div className="w-1.5 h-1.5 rounded-full bg-accent animate-ping" />
-        {isAutoScrolling ? 'Living Showcase Mode' : 'Paused - Inactive to Resume'}
+      {/* Auto-scroll Status Hint */}
+      <div className="absolute bottom-8 right-8 z-30 flex items-center gap-3 bg-white/95 backdrop-blur-xl px-6 py-3 rounded-full shadow-2xl border text-[10px] font-bold tracking-widest text-primary uppercase transition-all duration-500 group-hover:opacity-100 opacity-20">
+        <div className="relative flex h-2 w-2">
+          <span className={cn(
+            "animate-ping absolute inline-flex h-full w-full rounded-full opacity-75",
+            isAutoScrolling ? "bg-accent" : "bg-muted-foreground"
+          )}></span>
+          <span className={cn(
+            "relative inline-flex rounded-full h-2 w-2",
+            isAutoScrolling ? "bg-accent" : "bg-muted-foreground"
+          )}></span>
+        </div>
+        {isAutoScrolling ? 'Live Showcase Active' : 'Showcase Paused'}
       </div>
+
+      {/* Edge Fades for smoothness */}
+      <div className="absolute top-0 left-0 right-0 h-32 bg-gradient-to-b from-white to-transparent pointer-events-none z-10" />
+      <div className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-white to-transparent pointer-events-none z-10" />
     </section>
   );
 }
