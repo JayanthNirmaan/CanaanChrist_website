@@ -39,7 +39,7 @@ export default function ContactPage() {
                   <div className="p-3 bg-primary/10 text-primary rounded-lg shrink-0"><Phone size={24} /></div>
                   <div>
                     <h4 className="font-bold text-lg">Call Us</h4>
-                    <p className="text-muted-foreground">+91 80 1234 5678</p>
+                    <p className="text-muted-foreground">+91 80 26785829</p>
                   </div>
                 </div>
                 <div className="flex items-start gap-4">

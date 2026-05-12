@@ -22,12 +22,6 @@ export default function GalleryPage() {
     return layouts[index % layouts.length];
   };
 
-  // Playful rotations for a kids-friendly "scattered" feel
-  const getRotationClass = (index: number) => {
-    const rotations = ["rotate-1", "-rotate-1", "rotate-2", "-rotate-2", "rotate-3", "-rotate-3"];
-    return rotations[index % rotations.length];
-  };
-
   return (
     <main className="min-h-screen bg-white">
       <Navbar />
@@ -41,21 +35,20 @@ export default function GalleryPage() {
         </div>
       </section>
 
-      {/* Grid Gallery Section - Tight Packed & Fun */}
-      <section className="py-8 bg-white px-4 md:px-6">
-        <div className="max-w-7xl mx-auto">
-          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-1.5 md:gap-2 auto-rows-min">
+      {/* Grid Gallery Section - Tightly Packed */}
+      <section className="bg-white">
+        <div className="max-w-[100vw] overflow-hidden">
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-1 auto-rows-min">
             {gallery.map((item, index) => (
               <div 
                 key={item.id}
                 className={cn(
-                  "group relative rounded-xl overflow-hidden shadow-md transition-all duration-500 cursor-pointer",
-                  "hover:scale-[1.05] hover:z-30 hover:shadow-2xl hover:rotate-0 bg-muted border-4 border-white",
-                  getSizeClass(index),
-                  getRotationClass(index)
+                  "group relative overflow-hidden transition-all duration-500 cursor-pointer",
+                  "hover:scale-[1.02] hover:z-30 hover:shadow-2xl bg-muted",
+                  getSizeClass(index)
                 )}
               >
-                <div className="relative w-full h-full min-h-[200px]">
+                <div className="relative w-full h-full min-h-[250px]">
                   <Image 
                     src={item.imageUrl} 
                     alt={item.description} 

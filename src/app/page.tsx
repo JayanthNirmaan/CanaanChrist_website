@@ -414,7 +414,7 @@ export default function Home() {
             <Card className="overflow-hidden border-none shadow-2xl rounded-[2.5rem]">
               <div className="relative h-80 md:h-96">
                 {chairmanImg?.imageUrl && (
-                  <Image src={chairmanImg.imageUrl} alt="Founders" fill className="object-cover" />
+                  <Image src={"/assets/Founder.jpg"} alt="Founders" fill className="object-cover" />
                 )}
               </div>
               <CardContent className="p-8 text-center bg-white">
@@ -512,7 +512,7 @@ export default function Home() {
                 <div className="p-3 bg-primary/10 text-primary rounded-xl shadow-sm"><Phone size={24} /></div>
                 <div>
                   <h4 className="font-bold text-lg mb-1">Call Us</h4>
-                  <p className="text-muted-foreground text-base">+91 80 1234 5678</p>
+                  <p className="text-muted-foreground text-base">+91 80 26785829</p>
                 </div>
               </div>
             </div>
