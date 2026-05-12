@@ -1,14 +1,40 @@
-'use client';
-
 import React from 'react';
 import Image from 'next/image';
+import fs from 'fs';
+import path from 'path';
 import { Navbar } from '@/components/layout/Navbar';
 import { Footer } from '@/components/layout/Footer';
-import { PlaceHolderImages } from '@/lib/placeholder-images';
 import { cn } from '@/lib/utils';
 
 export default function GalleryPage() {
-  const gallery = PlaceHolderImages.filter(img => img.id.startsWith('gallery-'));
+  // Define the path to the Gallery folder
+  const galleryDirPath = path.join(process.cwd(), 'public', 'assets', 'Gallery');
+  
+  let galleryItems: { src: string; name: string; isVideo: boolean; id: string }[] = [];
+
+  try {
+    // Read files from the directory
+    if (fs.existsSync(galleryDirPath)) {
+      const files = fs.readdirSync(galleryDirPath);
+      
+      galleryItems = files
+        .filter(file => /\.(jpe?g|png|webp|gif|mp4|webm|mov)$/i.test(file))
+        .map((file, index) => {
+          const extension = path.extname(file);
+          const name = path.basename(file, extension);
+          const isVideo = /\.(mp4|webm|mov)$/i.test(file);
+          
+          return {
+            id: `dynamic-${index}`,
+            src: `/assets/Gallery/${file}`,
+            name: name,
+            isVideo: isVideo
+          };
+        });
+    }
+  } catch (error) {
+    console.error("Error reading Gallery directory:", error);
+  }
 
   // Deterministic sizing logic for masonry feel
   const getSizeClass = (index: number) => {
@@ -35,49 +61,54 @@ export default function GalleryPage() {
         </div>
       </section>
 
-      {/* Grid Gallery Section - Tightly Packed with Dense Flow */}
+      {/* Grid Gallery Section - Dynamic and Tightly Packed */}
       <section className="bg-white">
         <div className="max-w-[100vw] overflow-hidden">
-          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-1 grid-flow-dense">
-            {/* Campus Tour Video Integrated in Grid */}
-            <div className="lg:col-span-2 lg:row-span-1 aspect-video relative overflow-hidden bg-muted group shadow-lg">
-              <iframe
-                className="absolute inset-0 w-full h-full"
-                src="https://www.youtube.com/embed/Kk4pM6j1uZs"
-                title="Canaan Christ Campus Tour"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                allowFullScreen
-              ></iframe>
-            </div>
-
-            {gallery.map((item, index) => (
-              <div 
-                key={item.id}
-                className={cn(
-                  "group relative overflow-hidden transition-all duration-500 cursor-pointer",
-                  "hover:scale-[1.02] hover:z-30 hover:shadow-2xl bg-muted",
-                  getSizeClass(index)
-                )}
-              >
-                <div className="relative w-full h-full min-h-[250px]">
-                  <Image 
-                    src={item.imageUrl} 
-                    alt={item.description} 
-                    fill 
-                    className="object-cover transition-all duration-500"
-                    data-ai-hint={item.imageHint}
-                  />
-                  
-                  {/* Hover Overlay */}
-                  <div className="absolute inset-0 bg-primary/80 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center p-6 text-center">
-                    <h3 className="text-white text-2xl md:text-3xl font-bold transform translate-y-4 group-hover:translate-y-0 transition-transform duration-300">
-                      {item.description}
-                    </h3>
+          {galleryItems.length > 0 ? (
+            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-1 grid-flow-dense">
+              {galleryItems.map((item, index) => (
+                <div 
+                  key={item.id}
+                  className={cn(
+                    "group relative overflow-hidden transition-all duration-500 cursor-pointer",
+                    "hover:scale-[1.02] hover:z-30 hover:shadow-2xl bg-muted",
+                    getSizeClass(index)
+                  )}
+                >
+                  <div className="relative w-full h-full min-h-[250px]">
+                    {item.isVideo ? (
+                      <video 
+                        src={item.src}
+                        className="absolute inset-0 w-full h-full object-cover"
+                        muted
+                        loop
+                        playsInline
+                        autoPlay
+                      />
+                    ) : (
+                      <Image 
+                        src={item.src} 
+                        alt={item.name} 
+                        fill 
+                        className="object-cover transition-all duration-500"
+                      />
+                    )}
+                    
+                    {/* Hover Overlay */}
+                    <div className="absolute inset-0 bg-primary/80 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center p-6 text-center">
+                      <h3 className="text-white text-2xl md:text-3xl font-bold transform translate-y-4 group-hover:translate-y-0 transition-transform duration-300 capitalize">
+                        {item.name}
+                      </h3>
+                    </div>
                   </div>
                 </div>
-              </div>
-            ))}
-          </div>
+              ))}
+            </div>
+          ) : (
+            <div className="py-24 text-center text-muted-foreground">
+              <p>No media files found in assets/Gallery.</p>
+            </div>
+          )}
         </div>
       </section>
 
