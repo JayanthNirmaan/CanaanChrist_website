@@ -39,6 +39,17 @@ export default function GalleryPage() {
       <section className="bg-white">
         <div className="max-w-[100vw] overflow-hidden">
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-1 grid-flow-dense">
+            {/* Campus Tour Video Integrated in Grid */}
+            <div className="lg:col-span-2 lg:row-span-1 aspect-video relative overflow-hidden bg-muted group shadow-lg">
+              <iframe
+                className="absolute inset-0 w-full h-full"
+                src="https://www.youtube.com/embed/Kk4pM6j1uZs"
+                title="Canaan Christ Campus Tour"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowFullScreen
+              ></iframe>
+            </div>
+
             {gallery.map((item, index) => (
               <div 
                 key={item.id}

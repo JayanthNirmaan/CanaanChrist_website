@@ -175,7 +175,7 @@ export default function Home() {
           <div className="relative aspect-video rounded-[2.5rem] md:rounded-[3.5rem] overflow-hidden shadow-[0_35px_60px_-15px_rgba(0,0,0,0.3)] border-[6px] md:border-[12px] border-white ring-1 ring-border/20">
             <iframe
               className="absolute inset-0 w-full h-full"
-              src="https://www.youtube.com/embed/PE4r5NmBrVM"
+              src="https://www.youtube.com/embed/E89k_9wGwXY?si=hmZ7oF9VtckLeGWP"
               title="Canaan Christ Public School Video"
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
               allowFullScreen
