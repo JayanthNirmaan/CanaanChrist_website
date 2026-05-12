@@ -35,10 +35,10 @@ export default function GalleryPage() {
         </div>
       </section>
 
-      {/* Grid Gallery Section - Tightly Packed */}
+      {/* Grid Gallery Section - Tightly Packed with Dense Flow */}
       <section className="bg-white">
         <div className="max-w-[100vw] overflow-hidden">
-          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-1 auto-rows-min">
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-1 grid-flow-dense">
             {gallery.map((item, index) => (
               <div 
                 key={item.id}
