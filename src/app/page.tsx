@@ -1,3 +1,4 @@
+
 import Image from 'next/image';
 import Link from 'next/link';
 import { Button } from '@/components/ui/button';
@@ -81,7 +82,7 @@ const facilities = [
 
 const gallery = PlaceHolderImages.filter(img => img.id.startsWith('gallery'));
 const achievementImages = PlaceHolderImages.filter(img => img.id.startsWith('achievement-'));
-const chairmanImg = PlaceHolderImages.find(img => img.id === 'chairman');
+const foundersImg = PlaceHolderImages.find(img => img.id === 'founders');
 const principalImg = PlaceHolderImages.find(img => img.id === 'principal');
 
 const ScribbleBackground = () => (
@@ -413,8 +414,8 @@ export default function Home() {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-5xl mx-auto">
             <Card className="overflow-hidden border-none shadow-2xl rounded-[2.5rem]">
               <div className="relative h-80 md:h-96">
-                {chairmanImg?.imageUrl && (
-                  <Image src={"/assets/Founder.jpg"} alt="Founders" fill className="object-cover" />
+                {foundersImg?.imageUrl && (
+                  <Image src={foundersImg.imageUrl} alt="Founders Shri Jeevandoss and Smt Jayamma Jeevan Doss" fill className="object-cover" />
                 )}
               </div>
               <CardContent className="p-8 text-center bg-white">
@@ -426,7 +427,7 @@ export default function Home() {
             <Card className="overflow-hidden border-none shadow-2xl rounded-[2.5rem]">
               <div className="relative h-80 md:h-96">
                 {principalImg?.imageUrl && (
-                  <Image src={principalImg.imageUrl} alt="Principal" fill className="object-cover" />
+                  <Image src={principalImg.imageUrl} alt="Principal Mrs. Shylaja Stephen" fill className="object-cover" />
                 )}
               </div>
               <CardContent className="p-8 text-center bg-white">

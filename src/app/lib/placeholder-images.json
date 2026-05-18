@@ -15,21 +15,21 @@
     },
     {
       "id": "principal",
-      "description": "Professional female principal portrait",
-      "imageUrl": "/assets/principal.jpg",
-      "imageHint": "principal portrait"
+      "description": "Mrs. Shylaja Stephen - Principal of Canaan Christ Public School",
+      "imageUrl": "https://picsum.photos/seed/principal-shylaja/600/800",
+      "imageHint": "female principal"
     },
     {
       "id": "headmistress",
-      "description": "Professional female headmistress portrait",
+      "description": "Mrs. Shanthi Murugesh - Headmistress",
       "imageUrl": "https://picsum.photos/seed/headmistress/600/800",
       "imageHint": "teacher portrait"
     },
     {
-      "id": "chairman",
-      "description": "Professional male chairman portrait",
-      "imageUrl": "/assets/chairman.jpg",
-      "imageHint": "chairman portrait"
+      "id": "founders",
+      "description": "Shri Jeevandoss and Smt Jayamma Jeevan Doss - Founders",
+      "imageUrl": "/assets/Founder.jpg",
+      "imageHint": "founders portrait"
     },
     {
       "id": "staff-representative",

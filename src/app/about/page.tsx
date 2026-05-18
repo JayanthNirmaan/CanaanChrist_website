@@ -7,7 +7,7 @@ import { History, Target, Eye, Shield } from 'lucide-react';
 
 const principalImg = PlaceHolderImages.find(img => img.id === 'principal');
 const headmistressImg = PlaceHolderImages.find(img => img.id === 'headmistress');
-const chairmanImg = PlaceHolderImages.find(img => img.id === 'chairman');
+const foundersImg = PlaceHolderImages.find(img => img.id === 'founders');
 const staffImg = PlaceHolderImages.find(img => img.id === 'staff-representative');
 
 export default function AboutPage() {
@@ -126,8 +126,8 @@ export default function AboutPage() {
               </div>
             </div>
             <div className="relative h-[500px] rounded-[3rem] overflow-hidden shadow-xl">
-              {chairmanImg?.imageUrl && (
-                <Image src={chairmanImg.imageUrl} alt="Founders" fill className="object-cover" />
+              {foundersImg?.imageUrl && (
+                <Image src={foundersImg.imageUrl} alt="Founders Shri Jeevandoss and Smt Jayamma Jeevan Doss" fill className="object-cover" />
               )}
             </div>
           </div>
@@ -136,7 +136,7 @@ export default function AboutPage() {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-20 items-center">
             <div className="relative h-[500px] rounded-[3rem] overflow-hidden shadow-xl md:order-last">
               {principalImg?.imageUrl && (
-                <Image src={principalImg.imageUrl} alt="Principal" fill className="object-cover" />
+                <Image src={principalImg.imageUrl} alt="Principal Mrs. Shylaja Stephen" fill className="object-cover" />
               )}
             </div>
             <div className="space-y-6">
@@ -180,7 +180,6 @@ export default function AboutPage() {
                   alt="Headmistress Mrs. Shanthi Murugesh" 
                   fill 
                   className="object-cover"
-                  data-ai-hint="teacher portrait"
                 />
               )}
             </div>
@@ -191,11 +190,10 @@ export default function AboutPage() {
             <div className="relative h-[500px] rounded-[3rem] overflow-hidden shadow-xl md:order-last">
               {staffImg?.imageUrl && (
                 <Image 
-                  src="/assets/Staff.JPG" 
+                  src={staffImg.imageUrl} 
                   alt="Staff Representative" 
                   fill 
                   className="object-cover"
-                  data-ai-hint="school teachers"
                 />
               )}
             </div>
