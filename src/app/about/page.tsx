@@ -1,4 +1,3 @@
-
 import Image from 'next/image';
 import { Navbar } from '@/components/layout/Navbar';
 import { Footer } from '@/components/layout/Footer';
@@ -9,6 +8,7 @@ const principalImg = PlaceHolderImages.find(img => img.id === 'principal');
 const headmistressImg = PlaceHolderImages.find(img => img.id === 'headmistress');
 const foundersImg = PlaceHolderImages.find(img => img.id === 'founders');
 const staffImg = PlaceHolderImages.find(img => img.id === 'staff-representative');
+const heroImg = PlaceHolderImages.find(img => img.id === 'hero-bg');
 
 export default function AboutPage() {
   return (
@@ -30,13 +30,15 @@ export default function AboutPage() {
             {/* Left: Sticky Image Container */}
             <div className="lg:sticky lg:top-32 self-start h-fit">
               <div className="relative h-[600px] rounded-3xl overflow-hidden shadow-2xl border-8 border-muted/20">
-                <Image 
-                  src="/assets/CanaanChristSchool.png" 
-                  alt="School Campus" 
-                  fill 
-                  className="object-cover"
-                  data-ai-hint="school campus"
-                />
+                {heroImg?.imageUrl && (
+                  <Image 
+                    src={heroImg.imageUrl} 
+                    alt="School Campus" 
+                    fill 
+                    className="object-cover"
+                    data-ai-hint={heroImg.imageHint}
+                  />
+                )}
                 <div className="absolute inset-0 bg-gradient-t from-black/40 to-transparent pointer-events-none" />
                 <div className="absolute bottom-8 left-8 text-white">
                   <h3 className="text-2xl font-bold">Our Campus</h3>

@@ -1,4 +1,3 @@
-
 import Image from 'next/image';
 import Link from 'next/link';
 import { Button } from '@/components/ui/button';
@@ -84,6 +83,7 @@ const gallery = PlaceHolderImages.filter(img => img.id.startsWith('gallery'));
 const achievementImages = PlaceHolderImages.filter(img => img.id.startsWith('achievement-'));
 const foundersImg = PlaceHolderImages.find(img => img.id === 'founders');
 const principalImg = PlaceHolderImages.find(img => img.id === 'principal');
+const heroImg = PlaceHolderImages.find(img => img.id === 'hero-bg');
 
 const ScribbleBackground = () => (
   <div className="absolute inset-0 overflow-hidden pointer-events-none select-none">
@@ -214,13 +214,15 @@ export default function Home() {
             </Button>
           </div>
           <div className="image-trigger relative h-[400px] md:h-[500px] rounded-[2rem] overflow-hidden shadow-2xl border-4 border-white transition-all duration-500 hover:scale-105 hover:shadow-primary/40 hover:border-white/50 cursor-pointer">
-            <Image 
-              src="/assets/CanaanChristSchool.png" 
-              alt="School Campus" 
-              fill 
-              className="object-cover transition-transform duration-700"
-              data-ai-hint="school building"
-            />
+            {heroImg?.imageUrl && (
+              <Image 
+                src={heroImg.imageUrl} 
+                alt="School Campus" 
+                fill 
+                className="object-cover transition-transform duration-700"
+                data-ai-hint={heroImg.imageHint}
+              />
+            )}
           </div>
         </div>
       </section>

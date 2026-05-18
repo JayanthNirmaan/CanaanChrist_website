@@ -6,7 +6,7 @@ export const metadata: Metadata = {
   title: 'Canaan Christ Public School | Excellence in Education',
   description: 'Canaan Christ Public School (Canaan Connect) offers state syllabus education from KG to 10th grade in BTM Layout, Bengaluru.',
   icons: {
-    icon: "public/assets/CanaanChristFavicon.png",
+    icon: "/assets/CanaanChristFavicon.png",
   },
 };
 
